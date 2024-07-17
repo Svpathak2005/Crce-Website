@@ -4,43 +4,52 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ChevronDown, MoveRight, X } from 'lucide-react'
 
-const Navbar = () => {
-  const [dropdown, setDropdown] = useState(null)
+interface DropdownItem {
+  name: string
+  href: string
+}
 
-  const handleDropdown = (menu) => {
+interface DropdownContent {
+  [key: string]: DropdownItem[]
+}
+
+const dropdownContent: DropdownContent = {
+  academics: [
+    { name: 'Programs', href: '/academics/programs' },
+    { name: 'Departments', href: '/academics/departments' },
+    { name: 'Online Courses', href: '/academics/online-courses' },
+  ],
+  research: [
+    { name: 'Projects', href: '/research/projects' },
+    { name: 'Publications', href: '/research/publications' },
+    { name: 'Funding', href: '/research/funding' },
+  ],
+  campusLife: [
+    { name: 'Housing', href: '/campus-life/housing' },
+    { name: 'Dining', href: '/campus-life/dining' },
+    { name: 'Activities', href: '/campus-life/activities' },
+  ],
+  international: [
+    { name: 'Programs', href: '/international/programs' },
+    { name: 'Partnerships', href: '/international/partnerships' },
+    { name: 'Admissions', href: '/international/admissions' },
+  ],
+  about: [
+    { name: 'Our Story', href: '/about/our-story' },
+    { name: 'Leadership', href: '/about/leadership' },
+    { name: 'Contact', href: '/about/contact' },
+  ],
+}
+
+const Navbar: React.FC = () => {
+  const [dropdown, setDropdown] = useState<string | null>(null)
+
+  const handleDropdown = (menu: string) => {
     if (dropdown === menu) {
       setDropdown(null)
     } else {
       setDropdown(menu)
     }
-  }
-
-  const dropdownContent = {
-    academics: [
-      { name: 'Programs', href: '/academics/programs' },
-      { name: 'Departments', href: '/academics/departments' },
-      { name: 'Online Courses', href: '/academics/online-courses' },
-    ],
-    research: [
-      { name: 'Projects', href: '/research/projects' },
-      { name: 'Publications', href: '/research/publications' },
-      { name: 'Funding', href: '/research/funding' },
-    ],
-    campusLife: [
-      { name: 'Housing', href: '/campus-life/housing' },
-      { name: 'Dining', href: '/campus-life/dining' },
-      { name: 'Activities', href: '/campus-life/activities' },
-    ],
-    international: [
-      { name: 'Programs', href: '/international/programs' },
-      { name: 'Partnerships', href: '/international/partnerships' },
-      { name: 'Admissions', href: '/international/admissions' },
-    ],
-    about: [
-      { name: 'Our Story', href: '/about/our-story' },
-      { name: 'Leadership', href: '/about/leadership' },
-      { name: 'Contact', href: '/about/contact' },
-    ],
   }
 
   return (
@@ -102,6 +111,7 @@ const Navbar = () => {
               </div>
             </Link>
           </div>
+          <div className="border-t border-gray-700"></div>
           <div className="flex h-2/3">
             <div className="flex w-1/4 items-center justify-center">
               <Link href="/">

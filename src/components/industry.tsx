@@ -3,7 +3,7 @@ import React from 'react'
 const Industry = () => {
   const images = [
     'accectire.png',
-    'colgate.png',
+    'colgate.jpg',
     'godrej.jpg',
     'infosis.jpg',
     'jp.png',
@@ -22,7 +22,8 @@ const Industry = () => {
             across top corporations.
           </p>
           <p className="text-lg text-black">
-          Our faculty have pursued career opportunities in some of the best organizations including these 
+            Our faculty have pursued career opportunities in some of the best
+            organizations including these
           </p>
         </div>
       </div>
