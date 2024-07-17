@@ -31,3 +31,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.hero{
+height:calc(100vh - 160px);
+}
