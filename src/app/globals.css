@@ -32,6 +32,6 @@ body {
   }
 }
 
-.hero{
-height:calc(100vh - 160px);
+.hero {
+  height: calc(100vh - 160px);
 }
