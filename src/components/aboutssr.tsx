@@ -7,14 +7,15 @@ const PresidentPage = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       <main className="container mx-auto px-4 py-16">
         <div className="rounded-xl bg-white p-8 shadow-lg">
-          <h2 className="font-HelveticaNeue mb-10 text-center text-5xl font-semibold text-gray-800">
+          <h2 className="font-ptserif mb-10 text-center text-5xl font-semibold text-gray-800">
             Principal - Dr. Surendra Singh Rathod
           </h2>
+
           <div className="flex flex-col items-center lg:flex-row lg:items-start">
             <div className="mb-8 lg:mb-0 lg:w-1/2">
               <Image
-                src="/ssr.png"
-                alt="Principal Dr. Surendra Singh Rathod"
+                src="/ssr3.png"
+                alt="Principal"
                 width={600}
                 height={400}
                 className="rounded-lg shadow-md"
