@@ -2,11 +2,31 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ChevronDown, MoveRight, X } from 'lucide-react'
+import {
+  ChevronDown,
+  ChevronRight,
+  X,
+  Menu,
+  ArrowLeft,
+  Home,
+  Book,
+  Search,
+  Users,
+  GraduationCap,
+  NewspaperIcon,
+  Calendar,
+  Briefcase,
+  Phone,
+  MoveRight,
+  Globe,
+  Info,
+  School,
+} from 'lucide-react'
 
 interface DropdownItem {
   name: string
   href: string
+  icon?: React.ReactNode
 }
 
 interface DropdownContent {
@@ -15,34 +35,125 @@ interface DropdownContent {
 
 const dropdownContent: DropdownContent = {
   academics: [
-    { name: 'Programs', href: '/academics/programs' },
-    { name: 'Departments', href: '/academics/departments' },
-    { name: 'Online Courses', href: '/academics/online-courses' },
+    { name: 'Programs', href: '/academics/programs', icon: <Book size={18} /> },
+    {
+      name: 'Departments',
+      href: '/academics/departments',
+      icon: <Users size={18} />,
+    },
+    {
+      name: 'Online Courses',
+      href: '/academics/online-courses',
+      icon: <GraduationCap size={18} />,
+    },
   ],
   research: [
-    { name: 'Projects', href: '/research/projects' },
-    { name: 'Publications', href: '/research/publications' },
-    { name: 'Funding', href: '/research/funding' },
+    {
+      name: 'Projects',
+      href: '/research/projects',
+      icon: <Search size={18} />,
+    },
+    {
+      name: 'Publications',
+      href: '/research/publications',
+      icon: <NewspaperIcon size={18} />,
+    },
+    {
+      name: 'Funding',
+      href: '/research/funding',
+      icon: <Briefcase size={18} />,
+    },
   ],
   campusLife: [
-    { name: 'Housing', href: '/campus-life/housing' },
-    { name: 'Dining', href: '/campus-life/dining' },
-    { name: 'Activities', href: '/campus-life/activities' },
+    { name: 'Housing', href: '/campus-life/housing', icon: <Home size={18} /> },
+    {
+      name: 'Dining',
+      href: '/campus-life/dining',
+      icon: <ChevronRight size={18} />,
+    },
+    {
+      name: 'Activities',
+      href: '/campus-life/activities',
+      icon: <Calendar size={18} />,
+    },
   ],
   international: [
-    { name: 'Programs', href: '/international/programs' },
-    { name: 'Partnerships', href: '/international/partnerships' },
-    { name: 'Admissions', href: '/international/admissions' },
+    {
+      name: 'Programs',
+      href: '/international/programs',
+      icon: <Globe size={18} />,
+    },
+    {
+      name: 'Partnerships',
+      href: '/international/partnerships',
+      icon: <Users size={18} />,
+    },
+    {
+      name: 'Admissions',
+      href: '/international/admissions',
+      icon: <School size={18} />,
+    },
   ],
   about: [
-    { name: 'Our Story', href: '/about/our-story' },
-    { name: 'Leadership', href: '/about/leadership' },
-    { name: 'Contact', href: '/about/contact' },
+    { name: 'Our Story', href: '/about/our-story', icon: <Info size={18} /> },
+    {
+      name: 'Leadership',
+      href: '/about/leadership',
+      icon: <Users size={18} />,
+    },
+    { name: 'Contact', href: '/about/contact', icon: <Phone size={18} /> },
+  ],
+  meetPrinceton: [
+    {
+      name: 'In Service of Humanity',
+      href: '/meet-princeton/service',
+      icon: <Users size={18} />,
+    },
+    {
+      name: 'Facts & Figures',
+      href: '/meet-princeton/facts',
+      icon: <ChevronRight size={18} />,
+    },
+    {
+      name: 'History',
+      href: '/meet-princeton/history',
+      icon: <Book size={18} />,
+    },
+    {
+      name: 'Honors & Awards',
+      href: '/meet-princeton/honors',
+      icon: <GraduationCap size={18} />,
+    },
+    {
+      name: 'Contact Us',
+      href: '/meet-princeton/contact',
+      icon: <Phone size={18} />,
+    },
+    {
+      name: 'Visit Us',
+      href: '/meet-princeton/visit',
+      icon: <Home size={18} />,
+    },
+  ],
+  admissionAid: [
+    {
+      name: 'Apply',
+      href: '/admission/apply',
+      icon: <ChevronRight size={18} />,
+    },
+    {
+      name: 'Financial Aid',
+      href: '/admission/aid',
+      icon: <Briefcase size={18} />,
+    },
+    { name: 'Visit', href: '/admission/visit', icon: <Home size={18} /> },
   ],
 }
 
 const Navbar: React.FC = () => {
   const [dropdown, setDropdown] = useState<string | null>(null)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null)
 
   const handleDropdown = (menu: string) => {
     if (dropdown === menu) {
@@ -52,9 +163,23 @@ const Navbar: React.FC = () => {
     }
   }
 
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen)
+    setMobileSubmenu(null)
+  }
+
+  const openMobileSubmenu = (menu: string) => {
+    setMobileSubmenu(menu)
+  }
+
+  const closeMobileSubmenu = () => {
+    setMobileSubmenu(null)
+  }
+
   return (
     <>
-      <nav className="fixed top-0 z-50 w-full bg-gray-800 font-semibold text-white">
+      {/* Desktop Navigation */}
+      <nav className="fixed top-0 z-50 hidden w-full bg-gray-800 font-semibold text-white md:block">
         <div className="flex flex-col px-20">
           <div className="flex h-1/3 items-center justify-between px-6 py-3">
             <div className="flex space-x-6 text-sm">
@@ -168,7 +293,7 @@ const Navbar: React.FC = () => {
         </div>
       </nav>
       {dropdown && (
-        <div className="fixed top-[100px] z-40 w-full bg-blue-900 text-white transition-all duration-300 ease-out">
+        <div className="fixed top-[100px] z-40 hidden w-full bg-blue-900 text-white transition-all duration-300 ease-out md:block">
           <div className="flex flex-col items-start px-4 py-8">
             <button
               className="absolute right-2 top-2 text-xl"
@@ -190,6 +315,145 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Mobile Navigation */}
+      <nav className="fixed top-0 z-50 w-full bg-gray-900 font-semibold capitalize text-white md:hidden">
+        <div className="flex items-center justify-between px-4 py-3">
+          <Link href="/">
+            <Image
+              src="/clogo.png"
+              alt="Logo"
+              width={150}
+              height={50}
+              className="h-auto w-auto"
+            />
+          </Link>
+          <button
+            onClick={toggleMobileMenu}
+            className="p-2 transition-colors hover:bg-gray-800"
+          >
+            <Menu size={24} />
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile Menu */}
+      <div
+        className={`fixed inset-0 z-50 transform overflow-y-auto bg-gray-900 capitalize text-white transition-transform duration-300 ease-in-out md:hidden ${
+          mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <div className="flex flex-col p-4">
+          <div className="mb-6 flex items-center justify-between">
+            <Image
+              src="/clogo.png"
+              alt="Logo"
+              width={150}
+              height={50}
+              className="h-auto w-auto"
+            />
+            <button
+              className="p-2 transition-colors hover:bg-gray-800"
+              onClick={toggleMobileMenu}
+            >
+              <X size={24} />
+            </button>
+          </div>
+
+          {/* Main Menu Items */}
+          {Object.keys(dropdownContent).map((key) => (
+            <button
+              key={key}
+              onClick={() => openMobileSubmenu(key)}
+              className="mb-2 flex items-center justify-between border-b border-gray-700 py-3 text-left text-lg font-medium transition-colors hover:bg-gray-800"
+            >
+              <span>{key.replace(/([A-Z])/g, ' $1').trim()}</span>
+              <ChevronRight size={20} />
+            </button>
+          ))}
+
+          {/* Additional Links */}
+          <div className="mt-6 space-y-2">
+            <Link
+              href="/news"
+              className="block py-2 text-sm hover:text-orange-500"
+            >
+              News
+            </Link>
+            <Link
+              href="/events"
+              className="block py-2 text-sm hover:text-orange-500"
+            >
+              Events
+            </Link>
+            <Link
+              href="/careers"
+              className="block py-2 text-sm hover:text-orange-500"
+            >
+              Work at Princeton
+            </Link>
+            <Link
+              href="/student-links"
+              className="block py-2 text-sm hover:text-orange-500"
+            >
+              Student Links
+            </Link>
+          </div>
+
+          {/* Athletics Section */}
+          <div className="mt-6 border-t border-gray-700 pt-4">
+            <h3 className="mb-2 text-sm font-semibold text-gray-400">
+              Athletics
+            </h3>
+            <Link
+              href="/athletics"
+              className="flex items-center space-x-2 text-orange-500 hover:underline"
+            >
+              <span>Go Princeton Tigers</span>
+              <Image
+                src="/princeton-p-logo.png"
+                alt="Princeton P Logo"
+                width={30}
+                height={30}
+                className="h-auto w-auto"
+              />
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Submenu */}
+      <div
+        className={`fixed inset-0 z-50 transform overflow-y-auto bg-gray-800 capitalize text-white transition-transform duration-300 ease-in-out md:hidden ${
+          mobileSubmenu ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        {mobileSubmenu && (
+          <div className="flex flex-col p-4">
+            <button
+              className="mb-6 flex items-center text-lg font-medium"
+              onClick={closeMobileSubmenu}
+            >
+              <ArrowLeft size={24} className="mr-2" />
+              Back
+            </button>
+            <h2 className="mb-4 text-2xl font-bold">
+              {mobileSubmenu.replace(/([A-Z])/g, ' $1').trim()}
+            </h2>
+            {dropdownContent[mobileSubmenu].map((item, index) => (
+              <Link
+                key={index}
+                href={item.href}
+                className="mb-2 flex items-center space-x-3 border-b border-gray-700 py-3 text-lg transition-colors hover:bg-gray-700"
+                onClick={toggleMobileMenu}
+              >
+                {item.icon}
+                <span>{item.name}</span>
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
     </>
   )
 }
