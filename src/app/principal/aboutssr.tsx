@@ -7,7 +7,7 @@ const PresidentPage = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       <main className="container mx-auto px-4 py-16">
         <div className="rounded-xl bg-white p-8 shadow-lg">
-          <h2 className="font-ptserif mb-10 text-center text-5xl font-semibold text-gray-800">
+          <h2 className="font-ptserif mb-10 text-center text-5xl font-semibold text-blue-950">
             Principal - Dr. Surendra Singh Rathod
           </h2>
 
