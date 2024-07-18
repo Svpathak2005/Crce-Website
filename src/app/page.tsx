@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Industry from '@/components/industry'
 import HeroSection from '@/components/hero-section'
+import PresidentPage from '@/components/aboutssr'
 
 import Newsandupcoming from '@/components/newsandupcoming'
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Newsandupcoming />
 
       <Industry />
+      <PresidentPage />
     </main>
   )
 }

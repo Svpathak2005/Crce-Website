@@ -12,7 +12,7 @@ const Happenings = () => {
     {
       date: '5th July 2024',
       title:
-        'In recognition of the contribution towards ‘Industry Academia Community',
+        'In recognition of the contribution towards Industry Academia Community',
       imageUrl: '/ssr2.png',
     },
     {
@@ -44,16 +44,18 @@ const Happenings = () => {
           {events.map((event, index) => (
             <div
               key={index}
-              className="h-64 overflow-hidden rounded-lg bg-white shadow-sm"
+              className="group h-64 overflow-hidden rounded-lg bg-white shadow-sm transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-md"
               style={{
                 backgroundImage: `url(${event.imageUrl})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
             >
-              <div className="flex h-full flex-col justify-end bg-black bg-opacity-50 p-4">
-                <p className="mb-2 text-sm text-gray-200">{event.date}</p>
-                <h3 className="line-clamp-2 text-base font-semibold text-white">
+              <div className="flex h-full flex-col justify-end bg-black bg-opacity-50 p-4 transition-all duration-300 group-hover:bg-opacity-70">
+                <p className="mb-2 text-sm text-gray-200 transition-colors duration-300 group-hover:text-white">
+                  {event.date}
+                </p>
+                <h3 className="line-clamp-2 text-base font-semibold text-white transition-all duration-300 group-hover:text-lg group-hover:text-blue-200">
                   {event.title}
                 </h3>
               </div>
@@ -84,30 +86,17 @@ const Newsandupcoming = () => {
       </div>
 
       <div className="mb-10 flex items-center justify-center gap-8">
-        <button
-          className={`select-none rounded-sm bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-800 focus:z-10 focus:bg-blue-800 focus:text-white ${
-            activeTab === 'news' ? 'text-blue-700' : ''
-          }`}
-          onClick={() => handleTabClick('news')}
-        >
-          News
-        </button>
-        <button
-          className={`select-none rounded-sm bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-800 focus:z-10 focus:bg-blue-800 focus:text-white ${
-            activeTab === 'events' ? 'text-blue-700' : ''
-          }`}
-          onClick={() => handleTabClick('events')}
-        >
-          Events
-        </button>
-        <button
-          className={`select-none rounded-sm bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-800 focus:z-10 focus:bg-blue-800 focus:text-white ${
-            activeTab === 'deadlines' ? 'text-blue-700' : ''
-          }`}
-          onClick={() => handleTabClick('deadlines')}
-        >
-          Deadlines
-        </button>
+        {['news', 'events', 'deadlines'].map((tab) => (
+          <button
+            key={tab}
+            className={`select-none rounded-sm bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900 transition-all duration-300 hover:bg-gray-100 hover:text-blue-800 focus:z-10 focus:bg-blue-800 focus:text-white ${
+              activeTab === tab ? 'bg-blue-700 text-black' : 'hover:shadow-md'
+            }`}
+            onClick={() => handleTabClick(tab)}
+          >
+            {tab.charAt(0).toUpperCase() + tab.slice(1)}
+          </button>
+        ))}
       </div>
 
       <div id="contentArea" className="mt-6 text-center text-lg">
