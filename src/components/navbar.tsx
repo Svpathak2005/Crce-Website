@@ -276,7 +276,7 @@ const Navbar: React.FC = () => {
                   Contact us
                 </Link>
               </div>
-              <div className="flex justify-center space-x-8 py-3">
+              <div className="flex justify-center space-x-8 py-4">
                 {Object.keys(dropdownContent).map((key) => (
                   <button
                     key={key}
@@ -344,7 +344,7 @@ const Navbar: React.FC = () => {
         }`}
       >
         <div className="flex flex-col p-4">
-          <div className="mb-6 flex items-center justify-between">
+          <div className="flex items-center justify-between pb-6">
             <Image
               src="/clogo.png"
               alt="Logo"
@@ -365,7 +365,7 @@ const Navbar: React.FC = () => {
             <button
               key={key}
               onClick={() => openMobileSubmenu(key)}
-              className="mb-2 flex items-center justify-between border-b border-gray-700 py-3 text-left text-lg font-medium transition-colors hover:bg-gray-800"
+              className="flex items-center justify-between border-b border-gray-700 py-3 pb-2 text-left text-lg font-medium transition-colors hover:bg-gray-800"
             >
               <span>{key.replace(/([A-Z])/g, ' $1').trim()}</span>
               <ChevronRight size={20} />
@@ -402,7 +402,7 @@ const Navbar: React.FC = () => {
 
           {/* Athletics Section */}
           <div className="mt-6 border-t border-gray-700 pt-4">
-            <h3 className="mb-2 text-sm font-semibold text-gray-400">
+            <h3 className="pb-2 text-sm font-semibold text-gray-400">
               Athletics
             </h3>
             <Link
@@ -431,20 +431,20 @@ const Navbar: React.FC = () => {
         {mobileSubmenu && (
           <div className="flex flex-col p-4">
             <button
-              className="mb-6 flex items-center text-lg font-medium"
+              className="flex items-center pb-6 text-lg font-medium"
               onClick={closeMobileSubmenu}
             >
               <ArrowLeft size={24} className="mr-2" />
               Back
             </button>
-            <h2 className="mb-4 text-2xl font-bold">
+            <h2 className="pb-4 text-2xl font-bold">
               {mobileSubmenu.replace(/([A-Z])/g, ' $1').trim()}
             </h2>
             {dropdownContent[mobileSubmenu].map((item, index) => (
               <Link
                 key={index}
                 href={item.href}
-                className="mb-2 flex items-center space-x-3 border-b border-gray-700 py-3 text-lg transition-colors hover:bg-gray-700"
+                className="flex items-center space-x-3 border-b border-gray-700 py-3 pb-2 text-lg transition-colors hover:bg-gray-700"
                 onClick={toggleMobileMenu}
               >
                 {item.icon}
