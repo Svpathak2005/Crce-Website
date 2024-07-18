@@ -116,11 +116,11 @@ const Navbar: React.FC = () => {
             <div className="flex w-1/4 items-center justify-center">
               <Link href="/">
                 <Image
-                  src="/logo.jpeg"
+                  src="/clogo.png"
                   alt="SRM Logo"
-                  width={200}
-                  height={100}
-                  className="rounded-md"
+                  width={150}
+                  height={150}
+                  className="scale-x-125"
                 />
               </Link>
             </div>
@@ -156,7 +156,7 @@ const Navbar: React.FC = () => {
                   <button
                     key={key}
                     onClick={() => handleDropdown(key)}
-                    className="flex items-center space-x-1 text-lg transition duration-300 hover:text-yellow-300"
+                    className="flex items-center space-x-1 text-base transition duration-300 hover:text-yellow-300"
                   >
                     <span>{key.charAt(0).toUpperCase() + key.slice(1)}</span>
                     <ChevronDown size={20} />
@@ -169,7 +169,7 @@ const Navbar: React.FC = () => {
       </nav>
       {dropdown && (
         <div className="fixed top-[100px] z-40 w-full bg-blue-900 text-white transition-all duration-300 ease-out">
-          <div className="flex flex-col items-center py-8">
+          <div className="flex flex-col items-start px-4 py-8">
             <button
               className="absolute right-2 top-2 text-xl"
               onClick={() => setDropdown(null)}
@@ -180,7 +180,7 @@ const Navbar: React.FC = () => {
               {dropdownContent[dropdown].map((item, index) => (
                 <li
                   key={index}
-                  className="flex items-center justify-center space-x-2 font-semibold"
+                  className="flex items-start justify-center space-x-2 font-semibold"
                 >
                   <Link href={item.href}>{item.name}</Link>
                   <MoveRight className="transition-transform duration-300 group-hover:translate-x-2" />
