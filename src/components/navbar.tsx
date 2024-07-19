@@ -34,7 +34,7 @@ interface DropdownContent {
 }
 
 const dropdownContent: DropdownContent = {
-  academics: [
+  Academics: [
     { name: 'Programs', href: '/academics/programs', icon: <Book size={18} /> },
     {
       name: 'Departments',
@@ -47,7 +47,7 @@ const dropdownContent: DropdownContent = {
       icon: <GraduationCap size={18} />,
     },
   ],
-  research: [
+  Research: [
     {
       name: 'Projects',
       href: '/research/projects',
@@ -64,7 +64,7 @@ const dropdownContent: DropdownContent = {
       icon: <Briefcase size={18} />,
     },
   ],
-  campusLife: [
+  Campus: [
     { name: 'Housing', href: '/campus-life/housing', icon: <Home size={18} /> },
     {
       name: 'Dining',
@@ -77,7 +77,7 @@ const dropdownContent: DropdownContent = {
       icon: <Calendar size={18} />,
     },
   ],
-  international: [
+  International: [
     {
       name: 'Programs',
       href: '/international/programs',
@@ -94,7 +94,7 @@ const dropdownContent: DropdownContent = {
       icon: <School size={18} />,
     },
   ],
-  about: [
+  About: [
     { name: 'Our Story', href: '/about/our-story', icon: <Info size={18} /> },
     {
       name: 'Leadership',
@@ -103,7 +103,7 @@ const dropdownContent: DropdownContent = {
     },
     { name: 'Contact', href: '/about/contact', icon: <Phone size={18} /> },
   ],
-  meetPrinceton: [
+  Visit: [
     {
       name: 'In Service of Humanity',
       href: '/meet-princeton/service',
@@ -135,7 +135,7 @@ const dropdownContent: DropdownContent = {
       icon: <Home size={18} />,
     },
   ],
-  admissionAid: [
+  Admission: [
     {
       name: 'Apply',
       href: '/admission/apply',
@@ -292,30 +292,40 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </nav>
-      {dropdown && (
-        <div className="fixed top-[100px] z-40 hidden w-full bg-blue-900 text-white transition-all duration-300 ease-out md:block">
-          <div className="flex flex-col items-start px-4 py-8">
+      {dropdown && dropdownContent[dropdown] && (
+        <div className="fixed top-[150px] z-40 hidden w-full bg-white text-black shadow-lg transition-all duration-300 ease-out md:block">
+          <div className="container mx-auto px-8 py-12">
             <button
-              className="absolute right-2 top-2 text-xl"
+              className="absolute right-8 top-8 text-xl text-gray-600 hover:text-gray-800"
               onClick={() => setDropdown(null)}
             >
               <X size={30} />
             </button>
-            <ul className="space-y-4 text-lg">
+            <div className="mb-6">
+              <h2 className="text-3xl font-bold capitalize">{dropdown}</h2>
+            </div>
+            <ul className="grid grid-cols-3 gap-x-8 gap-y-4">
               {dropdownContent[dropdown].map((item, index) => (
-                <li
-                  key={index}
-                  className="flex items-start justify-center space-x-2 font-semibold"
-                >
-                  <Link href={item.href}>{item.name}</Link>
-                  <MoveRight className="transition-transform duration-300 group-hover:translate-x-2" />
+                <li key={index} className="group">
+                  <Link
+                    href={item.href}
+                    className="flex items-center space-x-3 text-lg font-semibold transition duration-300 hover:text-blue-600"
+                  >
+                    <span className="text-blue-500 transition-colors duration-300 group-hover:text-blue-600">
+                      {item.icon}
+                    </span>
+                    <span>{item.name}</span>
+                    <ChevronRight
+                      className="ml-auto opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                      size={20}
+                    />
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
         </div>
-      )}
-
+      )}{' '}
       {/* Mobile Navigation */}
       <nav className="fixed top-0 z-50 w-full bg-gray-900 font-semibold capitalize text-white md:hidden">
         <div className="flex items-center justify-between px-4 py-3">
@@ -336,7 +346,6 @@ const Navbar: React.FC = () => {
           </button>
         </div>
       </nav>
-
       {/* Mobile Menu */}
       <div
         className={`fixed inset-0 z-50 transform overflow-y-auto bg-gray-900 capitalize text-white transition-transform duration-300 ease-in-out md:hidden ${
@@ -421,14 +430,13 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Mobile Submenu */}
       <div
         className={`fixed inset-0 z-50 transform overflow-y-auto bg-gray-800 capitalize text-white transition-transform duration-300 ease-in-out md:hidden ${
           mobileSubmenu ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        {mobileSubmenu && (
+        {mobileSubmenu && dropdownContent[mobileSubmenu] && (
           <div className="flex flex-col p-4">
             <button
               className="flex items-center pb-6 text-lg font-medium"
