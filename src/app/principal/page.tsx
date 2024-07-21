@@ -4,7 +4,7 @@ import PresidentPage from '@/app/principal/aboutssr'
 
 export default function Home() {
   return (
-    <main className="mt-[125px] flex flex-col items-center justify-between">
+    <main className="mt-[80px] flex flex-col items-center justify-between">
       <PresidentPage />
     </main>
   )
