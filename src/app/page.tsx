@@ -6,7 +6,7 @@ import PresidentPage from '@/app/principal/aboutssr'
 import Newsandupcoming from '@/components/newsandupcoming'
 export default function Home() {
   return (
-    <main className="mt-[160px] flex flex-col items-center justify-between">
+    <main className="flex flex-col items-center justify-between">
       <HeroSection />
       <Newsandupcoming />
 

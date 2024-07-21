@@ -441,6 +441,9 @@ const Navbar: React.FC = () => {
             ))}
           </div>
         )}
+      </div>{' '}
+      <div className="md:mt-[150px]">
+        {/* Content that comes below the navbar */}
       </div>
     </>
   )
