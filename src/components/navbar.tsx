@@ -399,33 +399,13 @@ const Navbar: React.FC = () => {
               href="/careers"
               className="block py-2 text-sm hover:text-orange-500"
             >
-              Work at Princeton
+              Work at FrCrce
             </Link>
             <Link
               href="/student-links"
               className="block py-2 text-sm hover:text-orange-500"
             >
               Student Links
-            </Link>
-          </div>
-
-          {/* Athletics Section */}
-          <div className="mt-6 border-t border-gray-700 pt-4">
-            <h3 className="pb-2 text-sm font-semibold text-gray-400">
-              Athletics
-            </h3>
-            <Link
-              href="/athletics"
-              className="flex items-center space-x-2 text-orange-500 hover:underline"
-            >
-              <span>Go Princeton Tigers</span>
-              <Image
-                src="/princeton-p-logo.png"
-                alt="Princeton P Logo"
-                width={30}
-                height={30}
-                className="h-auto w-auto"
-              />
             </Link>
           </div>
         </div>
