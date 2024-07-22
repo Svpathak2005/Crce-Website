@@ -50,7 +50,7 @@ const dropdownContent: DropdownContent = {
   Research: [
     {
       name: 'Projects',
-      href: '/research/projects',
+      href: 'https://frcrce.ac.in/index.php/academics/research-development/publications',
       icon: <Search size={18} />,
     },
     {
@@ -73,7 +73,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Activities',
-      href: '/campus-life/activities',
+      href: 'https://frcrce.ac.in/index.php/students/events-new',
       icon: <Calendar size={18} />,
     },
   ],
@@ -95,18 +95,26 @@ const dropdownContent: DropdownContent = {
     },
   ],
   About: [
-    { name: 'Our Story', href: '/about/our-story', icon: <Info size={18} /> },
+    {
+      name: 'Our Story',
+      href: 'https://frcrce.ac.in/index.php/about-us/about-crce',
+      icon: <Info size={18} />,
+    },
     {
       name: 'Leadership',
-      href: '/about/leadership',
+      href: 'https://frcrce.ac.in/index.php/about-us/director',
       icon: <Users size={18} />,
     },
-    { name: 'Contact', href: '/about/contact', icon: <Phone size={18} /> },
+    {
+      name: 'Contact',
+      href: 'https://frcrce.ac.in/index.php/about-us/contact-us',
+      icon: <Phone size={18} />,
+    },
   ],
   Visit: [
     {
       name: 'In Service of Humanity',
-      href: '/meet-princeton/service',
+      href: 'https://frcrce.ac.in/index.php/about-us/vision-mission',
       icon: <Users size={18} />,
     },
     {
@@ -138,12 +146,12 @@ const dropdownContent: DropdownContent = {
   Admission: [
     {
       name: 'Apply',
-      href: '/admission/apply',
+      href: 'https://frcrce.ac.in/index.php?view=page&id=497',
       icon: <ChevronRight size={18} />,
     },
     {
       name: 'Financial Aid',
-      href: '/admission/aid',
+      href: 'https://frcrce.ac.in/index.php/students/student-info/scholarships',
       icon: <Briefcase size={18} />,
     },
     { name: 'Visit', href: '/admission/visit', icon: <Home size={18} /> },
@@ -184,13 +192,13 @@ const Navbar: React.FC = () => {
           <div className="flex h-1/3 items-center justify-between px-6 py-3">
             <div className="flex space-x-6 text-sm">
               <Link
-                href="/students"
+                href="http://granth.fragnel.edu.in:5186/pinfo/index.php"
                 className="transition duration-300 hover:text-yellow-300"
               >
                 Students
               </Link>
               <Link
-                href="/faculty-staff"
+                href="https://frcrce.ac.in/images/2023/02/College_Committees_2023-24.pdf"
                 className="transition duration-300 hover:text-yellow-300"
               >
                 Faculty & Staff
@@ -208,19 +216,19 @@ const Navbar: React.FC = () => {
                 Visitors
               </Link>
               <Link
-                href="/alumni"
+                href="https://alumni.frcrce.ac.in/"
                 className="transition duration-300 hover:text-yellow-300"
               >
                 Alumni
               </Link>
               <Link
-                href="/examinations"
+                href="https://frcrce.ac.in/index.php/academics/examination/exam-process"
                 className="transition duration-300 hover:text-yellow-300"
               >
                 Examinations
               </Link>
               <Link
-                href="/campuses"
+                href=""
                 className="transition duration-300 hover:text-yellow-300"
               >
                 Campuses
