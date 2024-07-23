@@ -34,127 +34,203 @@ interface DropdownContent {
 }
 
 const dropdownContent: DropdownContent = {
-  Academics: [
-    { name: 'Programs', href: '/academics/programs', icon: <Book size={18} /> },
-    {
-      name: 'Departments',
-      href: '/academics/departments',
-      icon: <Users size={18} />,
-    },
-    {
-      name: 'Online Courses',
-      href: '/academics/online-courses',
-      icon: <GraduationCap size={18} />,
-    },
-  ],
-  Research: [
-    {
-      name: 'Projects',
-      href: 'https://frcrce.ac.in/index.php/academics/research-development/publications',
-      icon: <Search size={18} />,
-    },
-    {
-      name: 'Publications',
-      href: '/research/publications',
-      icon: <NewspaperIcon size={18} />,
-    },
-    {
-      name: 'Funding',
-      href: '/research/funding',
-      icon: <Briefcase size={18} />,
-    },
-  ],
-  Campus: [
-    { name: 'Housing', href: '/campus-life/housing', icon: <Home size={18} /> },
-    {
-      name: 'Dining',
-      href: '/campus-life/dining',
-      icon: <ChevronRight size={18} />,
-    },
-    {
-      name: 'Activities',
-      href: 'https://frcrce.ac.in/index.php/students/events-new',
-      icon: <Calendar size={18} />,
-    },
-  ],
-  International: [
-    {
-      name: 'Programs',
-      href: '/international/programs',
-      icon: <Globe size={18} />,
-    },
-    {
-      name: 'Partnerships',
-      href: '/international/partnerships',
-      icon: <Users size={18} />,
-    },
-    {
-      name: 'Admissions',
-      href: '/international/admissions',
-      icon: <School size={18} />,
-    },
-  ],
   About: [
     {
-      name: 'Our Story',
+      name: 'About CRCE',
       href: 'https://frcrce.ac.in/index.php/about-us/about-crce',
       icon: <Info size={18} />,
     },
     {
-      name: 'Leadership',
+      name: "From Director's ",
       href: 'https://frcrce.ac.in/index.php/about-us/director',
       icon: <Users size={18} />,
     },
     {
-      name: 'Contact',
+      name: 'Principal- Dr. Surendra Singh Rathod',
       href: 'https://frcrce.ac.in/index.php/about-us/contact-us',
       icon: <Phone size={18} />,
     },
-  ],
-  Visit: [
     {
-      name: 'In Service of Humanity',
+      name: 'Vision and Mission',
+      href: 'https://frcrce.ac.in/index.php/about-us/about-crce',
+      icon: <Info size={18} />,
+    },
+    {
+      name: 'Adminstration ',
+      href: 'https://frcrce.ac.in/index.php/about-us/director',
+      icon: <Users size={18} />,
+    },
+    {
+      name: 'General Information',
+      href: 'https://frcrce.ac.in/index.php/about-us/contact-us',
+      icon: <Phone size={18} />,
+    },
+    {
+      name: 'Mandatory Disclosure',
       href: 'https://frcrce.ac.in/index.php/about-us/vision-mission',
       icon: <Users size={18} />,
     },
     {
-      name: 'Facts & Figures',
+      name: 'Contact Us',
       href: '/meet-princeton/facts',
       icon: <ChevronRight size={18} />,
     },
+  ],
+  Academics: [
     {
-      name: 'History',
-      href: '/meet-princeton/history',
+      name: 'Autonomous Curriculum',
+      href: '/academics/programs',
       icon: <Book size={18} />,
     },
     {
-      name: 'Honors & Awards',
-      href: '/meet-princeton/honors',
+      name: 'Academic/Holiday Calender',
+      href: '/academics/departments',
+      icon: <Users size={18} />,
+    },
+    {
+      name: 'Outreach Programmes',
+      href: '/academics/online-courses',
       icon: <GraduationCap size={18} />,
     },
     {
-      name: 'Contact Us',
-      href: '/meet-princeton/contact',
-      icon: <Phone size={18} />,
+      name: "List of MOU's",
+      href: '/academics/programs',
+      icon: <Book size={18} />,
     },
     {
-      name: 'Visit Us',
-      href: '/meet-princeton/visit',
-      icon: <Home size={18} />,
+      name: 'Examination',
+      href: '/academics/departments',
+      icon: <Users size={18} />,
+    },
+    {
+      name: 'Teaching Learning Process',
+      href: '/academics/online-courses',
+      icon: <GraduationCap size={18} />,
+    },
+    {
+      name: 'NAAC',
+      href: 'https://frcrce.ac.in/index.php/academics/research-development/publications',
+      icon: <Search size={18} />,
+    },
+    {
+      name: 'Research & Development',
+      href: '/research/publications',
+      icon: <NewspaperIcon size={18} />,
+    },
+    {
+      name: 'IQAC-CRCE',
+      href: '/research/funding',
+      icon: <Briefcase size={18} />,
+    },
+    {
+      name: 'Library',
+      href: '/research/funding',
+      icon: <Briefcase size={18} />,
+    },
+  ],
+  Students: [
+    {
+      name: 'Campus Placements',
+      href: '/international/programs',
+      icon: <Globe size={18} />,
+    },
+    {
+      name: 'Forums',
+      href: '/international/partnerships',
+      icon: <Users size={18} />,
+    },
+    {
+      name: 'Students Council',
+      href: '/international/admissions',
+      icon: <School size={18} />,
+    },
+    {
+      name: 'Alumni',
+      href: '/international/programs',
+      icon: <Globe size={18} />,
+    },
+    {
+      name: 'Project Groups',
+      href: '/international/partnerships',
+      icon: <Users size={18} />,
+    },
+    {
+      name: 'Notices',
+      href: '/international/admissions',
+      icon: <School size={18} />,
+    },
+    {
+      name: 'Students Information',
+      href: '/international/programs',
+      icon: <Globe size={18} />,
+    },
+    {
+      name: 'Events',
+      href: '/international/partnerships',
+      icon: <Users size={18} />,
+    },
+    {
+      name: 'Grievances',
+      href: '/international/admissions',
+      icon: <School size={18} />,
+    },
+    {
+      name: 'Image Gallery',
+      href: '/international/admissions',
+      icon: <School size={18} />,
+    },
+  ],
+  Departments: [
+    {
+      name: 'Computer Engineering',
+      href: 'https://frcrce.ac.in/index.php/academics/research-development/publications',
+      icon: <Search size={18} />,
+    },
+    {
+      name: 'Electronics and Computer Science',
+      href: '/research/publications',
+      icon: <NewspaperIcon size={18} />,
+    },
+    {
+      name: 'Mechanical Engineering',
+      href: '/research/funding',
+      icon: <Briefcase size={18} />,
+    },
+    {
+      name: 'Science and Humanities',
+      href: '/research/funding',
+      icon: <Briefcase size={18} />,
+    },
+    {
+      name: 'Computer Science and Engineering',
+      href: '/research/funding',
+      icon: <Briefcase size={18} />,
     },
   ],
   Admission: [
     {
-      name: 'Apply',
-      href: 'https://frcrce.ac.in/index.php?view=page&id=497',
+      name: 'Under Graduate',
+      href: 'https://frcrce.ac.in/index.php/about-us/vision-mission',
+      icon: <Users size={18} />,
+    },
+    {
+      name: 'Post Graduate',
+      href: '/meet-princeton/facts',
       icon: <ChevronRight size={18} />,
     },
     {
-      name: 'Financial Aid',
-      href: 'https://frcrce.ac.in/index.php/students/student-info/scholarships',
-      icon: <Briefcase size={18} />,
+      name: 'Ph.D',
+      href: '/meet-princeton/history',
+      icon: <Book size={18} />,
     },
-    { name: 'Visit', href: '/admission/visit', icon: <Home size={18} /> },
+  ],
+
+  Online: [
+    {
+      name: 'Make Online Payment',
+      href: 'https://frcrce.ac.in/index.php/about-us/vision-mission',
+      icon: <Users size={18} />,
+    },
   ],
 }
 
