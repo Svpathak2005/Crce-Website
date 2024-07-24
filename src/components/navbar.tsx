@@ -356,7 +356,7 @@ const Navbar: React.FC = () => {
                 />
               </Link>
             </div>
-            <div className="flex w-3/4 flex-col">
+            <div className="flex w-3/4 flex-col pb-1.5">
               <div className="flex justify-end space-x-6 py-3 text-sm">
                 <Link
                   href="/news"
@@ -549,7 +549,7 @@ const Navbar: React.FC = () => {
           </div>
         )}
       </div>{' '}
-      <div className="md:mt-[150px] lg:mt-[155px]">
+      <div className="md:mt-[150px] lg:mt-[160px]">
         {/* Content that comes below the navbar */}
       </div>
     </>
