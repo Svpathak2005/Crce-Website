@@ -51,7 +51,7 @@ const Happenings = () => {
                 backgroundPosition: 'center',
               }}
             >
-              <div className="flex h-full flex-col justify-end bg-black bg-opacity-50 p-4 transition-all duration-300 group-hover:bg-opacity-70">
+              <div className="flex h-full flex-col justify-end bg-black bg-opacity-50 p-4 transition-all duration-300 group-hover:bg-opacity-0">
                 <p className="mb-2 text-sm text-gray-200 transition-colors duration-300 group-hover:text-white">
                   {event.date}
                 </p>

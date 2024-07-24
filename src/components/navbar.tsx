@@ -288,7 +288,7 @@ const Navbar: React.FC = () => {
       {/* Desktop Navigation */}
       <nav className="fixed top-0 z-50 hidden w-full bg-gray-800 font-semibold text-white md:block">
         <div className="flex flex-col px-20">
-          <div className="flex h-1/3 items-center justify-between px-6 py-3">
+          <div className="flex h-1/3 items-center justify-between px-6 pb-1.5 pt-3">
             <div className="flex space-x-6 text-sm">
               <Link
                 href="http://granth.fragnel.edu.in:5186/pinfo/index.php"
@@ -549,7 +549,7 @@ const Navbar: React.FC = () => {
           </div>
         )}
       </div>{' '}
-      <div className="md:mt-[150px] lg:mt-[160px]">
+      <div className="md:mt-[150px] lg:mt-[155px]">
         {/* Content that comes below the navbar */}
       </div>
     </>

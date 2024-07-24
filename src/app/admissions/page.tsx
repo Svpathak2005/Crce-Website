@@ -13,39 +13,56 @@ const Page = () => {
   return (
     <div className="flex h-fit w-full flex-col bg-white text-gray-900">
       <div
-        className="flex h-full w-full flex-col bg-[#001f3f] md:flex-row"
+        className="flex h-full w-full flex-col bg-gradient-to-br from-[#001f3f] to-[#003366] md:flex-row"
         id="admission"
       >
-        <div className="flex w-full flex-col items-center justify-center p-4 text-white md:w-2/3 md:p-8">
-          <h1 className="mb-4 text-3xl font-bold md:text-4xl lg:text-6xl">
+        <div className="flex w-full flex-col items-center justify-center p-8 pt-40 text-white md:w-2/3 md:p-16 md:pt-16">
+          <h1
+            className={`${zilla.className} mb-6 text-4xl font-bold md:text-5xl lg:text-7xl`}
+          >
             ADMISSIONS & AID
           </h1>
-          <p className="rounded bg-[#003366] px-3 py-1 text-xs font-light text-white md:text-sm">
+          <p className="rounded-full bg-white/20 px-4 py-2 text-sm font-light text-white backdrop-blur-sm md:text-base">
             Home {'>'} Admissions & Aid
           </p>
         </div>
-        <div className="mb-4 mt-8 flex w-full flex-col justify-center space-y-4 bg-[#003366] p-4 text-white md:mb-10 md:mr-16 md:mt-32 md:w-1/3 md:rounded-md md:p-8">
-          <h2 className="text-xl font-semibold md:text-2xl">
-            Enquiry Form for Admissions
-          </h2>
+        <div className="relative mb-8 mt-8 flex w-full flex-col justify-center space-y-6 rounded-lg bg-white p-8 shadow-2xl md:mb-16 md:mr-16 md:mt-32 md:w-1/3 lg:p-10">
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2 transform rounded-full bg-[#4a90e2] px-6 py-2 text-white">
+            <h2
+              className={`${zilla.className} text-xl font-semibold md:text-2xl`}
+            >
+              Enquiry Form
+            </h2>
+          </div>
+          <p className="mt-4 text-center text-gray-600">
+            We&apos;re here to help you with your admissions journey
+          </p>
           <Link
             href="/"
-            className="rounded-md bg-[#4a90e2] px-4 py-2 text-center text-sm font-semibold transition-colors hover:bg-[#357abd] md:text-base"
+            className="rounded-full bg-gradient-to-r from-[#4a90e2] to-[#357abd] px-6 py-3 text-center text-sm font-semibold text-white transition-all hover:from-[#357abd] hover:to-[#4a90e2] hover:shadow-lg md:text-base"
           >
-            Fill Form
+            Fill Out Enquiry Form
           </Link>
-          <div className="mt-4">
-            <h3 className="text-base font-semibold md:text-lg">
+          <div className="mt-6 rounded-lg bg-gray-100 p-4">
+            <h3
+              className={`${zilla.className} mb-2 text-lg font-semibold text-[#001f3f] md:text-xl`}
+            >
               Meet for Enquiries
             </h3>
-            <p className="text-sm md:text-base">Monday to Friday</p>
-            <p className="text-sm md:text-base">1:30pm to 2:30pm</p>
+            <p className="text-sm text-gray-600 md:text-base">
+              Monday to Friday
+            </p>
+            <p className="text-sm font-semibold text-[#4a90e2] md:text-base">
+              1:30pm to 2:30pm
+            </p>
           </div>
         </div>
       </div>
       <div className="flex flex-col md:flex-row">
-        <div className="hidden w-full border-r border-gray-200 p-4 md:block md:w-1/4 lg:p-6">
-          <h2 className="mb-4 text-lg font-bold text-[#001f3f] lg:text-xl">
+        <div className="hidden w-full border-r border-gray-200 p-6 md:block md:w-1/4 lg:p-8">
+          <h2
+            className={`${zilla.className} mb-6 text-xl font-bold text-[#001f3f] lg:text-2xl`}
+          >
             Quick Links
           </h2>
           <nav className="flex flex-col">
@@ -113,51 +130,31 @@ const Page = () => {
             </Link>
           </nav>
         </div>
-        <div className="flex-grow p-4 text-[#534a43] md:p-6 lg:p-8">
+        <div className="flex-grow p-6 text-[#534a43] md:p-8 lg:p-12">
           <div className="mx-auto max-w-3xl">
-            <div className={zilla.className}>
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-                Undergraduate Admissions
-              </h2>
-            </div>
-            <p className="mb-4 text-sm md:text-base">
-              We accept applications for the fall semester from August through
-              January (through March for transfer applicants) for undergraduate
-              admission to our School of Arts and Sciences and/or our School of
-              Engineering.
-            </p>
-            <button className="mb-8 rounded bg-[#4a90e2] px-3 py-1 text-sm font-semibold text-white transition-colors hover:bg-[#357abd] md:px-4 md:py-2 md:text-base">
-              MORE ABOUT UNDERGRADUATE ADMISSIONS
-            </button>
-
-            <div className={zilla.className}>
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-                Graduate Admissions
-              </h2>
-            </div>
-            <p className="mb-4 text-sm md:text-base">
-              Our faculty and students study, teach, and learn in and across
-              more than 180 programs regularly recognized as being among the
-              nation's best. All nine of our academic divisions offer full-time
-              graduate programs.
-            </p>
-            <button className="mb-8 rounded bg-[#4a90e2] px-3 py-1 text-sm font-semibold text-white transition-colors hover:bg-[#357abd] md:px-4 md:py-2 md:text-base">
-              MORE ABOUT GRADUATE ADMISSIONS
-            </button>
-
-            <div className={zilla.className}>
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
-                Scholarships and Loans
-              </h2>
-            </div>
-            <p className="mb-4 text-sm md:text-base">
-              We aim to bring the best students to campus. In order to do that,
-              we are committed to making their education affordable. We expect
-              the best from our students, and they can expect the same from us.
-            </p>
-            <button className="rounded bg-[#4a90e2] px-3 py-1 text-sm font-semibold text-white transition-colors hover:bg-[#357abd] md:px-4 md:py-2 md:text-base">
-              MORE ABOUT FINANCING YOUR EDUCATION
-            </button>
+            {[
+              'Undergraduate Admissions',
+              'Graduate Admissions',
+              'Scholarships and Loans',
+            ].map((title, index) => (
+              <div key={index} className="mb-12">
+                <h2
+                  className={`${zilla.className} mb-4 text-3xl font-bold text-[#001f3f] md:text-4xl lg:text-5xl`}
+                >
+                  {title}
+                </h2>
+                <p className="mb-6 text-base leading-relaxed md:text-lg">
+                  {index === 0
+                    ? 'We accept applications for the fall semester from August through January (through March for transfer applicants) for undergraduate admission to our School of Arts and Sciences and/or our School of Engineering.'
+                    : index === 1
+                      ? "Our faculty and students study, teach, and learn in and across more than 180 programs regularly recognized as being among the nation's best. All nine of our academic divisions offer full-time graduate programs."
+                      : 'We aim to bring the best students to campus. In order to do that, we are committed to making their education affordable. We expect the best from our students, and they can expect the same from us.'}
+                </p>
+                <button className="rounded-full bg-gradient-to-r from-[#4a90e2] to-[#357abd] px-6 py-3 text-sm font-semibold text-white transition-all hover:from-[#357abd] hover:to-[#4a90e2] hover:shadow-lg md:text-base">
+                  MORE ABOUT {title.toUpperCase()}
+                </button>
+              </div>
+            ))}
           </div>
         </div>
       </div>
