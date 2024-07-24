@@ -18,6 +18,7 @@ const config: Config = {
         roboto: ['Roboto', 'sans-serif'],
         ptserif: ['PT Serif'],
         HelveticaNeue: ['Helvetica Neue'],
+        josefinsans: ['Josefin Sans'],
       },
     },
   },

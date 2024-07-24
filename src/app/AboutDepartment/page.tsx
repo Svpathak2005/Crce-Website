@@ -1,12 +1,9 @@
 import React from 'react'
 import AboutDepartment from './AboutDepartment'
+import { csDepartment } from './departmentData'
 
-const page = () => {
-  return (
-    <div>
-      <AboutDepartment />
-    </div>
-  )
+const ComputerSciencePage = () => {
+  return <AboutDepartment {...csDepartment} />
 }
 
-export default page
+export default ComputerSciencePage
