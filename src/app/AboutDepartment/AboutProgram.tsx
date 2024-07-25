@@ -4,6 +4,28 @@ import React, { useState } from 'react'
 const ProgramInfo = () => {
   const [activeTab, setActiveTab] = useState('Placements')
 
+  const events = [
+    {
+      imageUrl: '/godrej.png',
+    },
+    {
+      imageUrl: '/quantifi.png',
+    },
+    {
+      imageUrl: '/ubs.png',
+    },
+    {
+      imageUrl: '/carwale.png',
+    },
+
+    {
+      imageUrl: '/godrej.png',
+    },
+    {
+      imageUrl: '/quantifi.png',
+    },
+  ]
+
   const tabContents = {
     Placements: (
       <div className="mx-auto p-6 font-roboto">
@@ -149,9 +171,22 @@ const ProgramInfo = () => {
       </div>
     ),
     Recruiters: (
-      <div>
-        <h2 className="mb-4 text-xl font-bold">Recruiters</h2>
-        <p>.</p>
+      <div className="mt-5 w-full bg-white py-8">
+        <div className="container mx-auto max-w-6xl px-4">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {events.map((event, index) => (
+              <div
+                key={index}
+                className="group h-20 overflow-hidden rounded-lg bg-white shadow-sm transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-md"
+                style={{
+                  backgroundImage: `url(${event.imageUrl})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              ></div>
+            ))}
+          </div>
+        </div>
       </div>
     ),
     Eligibility: (
