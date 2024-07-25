@@ -2,11 +2,8 @@ export default function HeroSection() {
   return (
     <section className="hero body-font relative w-full text-gray-600">
       <div className="absolute inset-0">
-        <video className="h-full w-full object-cover" autoPlay muted>
-          <source
-            src="https://videos.pexels.com/video-files/2002527/2002527-hd_1920_1080_30fps.mp4"
-            type="video/mp4"
-          />
+        <video className="h-full w-full object-cover" autoPlay muted loop>
+          <source src="vid.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
