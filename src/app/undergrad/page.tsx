@@ -2,7 +2,14 @@ import Image from 'next/image'
 import Industry from '@/components/industry'
 import HeroSection from '@/components/hero-section'
 import Newsandupcoming from '@/components/newsandupcoming'
+import { Zilla_Slab } from 'next/font/google'
 
+const zilla = Zilla_Slab({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 export default function Home() {
   return (
     <main className="bg-white">
@@ -45,7 +52,7 @@ export default function Home() {
         <div className="w-full">
           <div className="flex flex-col md:flex-row gap-8">
             <div className='w-full md:w-2/3'>
-              <h1 className="text-5xl md:text-7xl font-bold text-blue-900 mb-8">Why choose us?</h1>
+              <h1 className={`${zilla.className} mb-6 text-blue-900 text-4xl font-bold md:text-5xl lg:text-7xl`}>Why choose us?</h1>
               <div className='px-4 md:px-10 py-6'>
                 <p className="text-xl md:text-2xl text-blue-800 mb-6">
                   Life as a Hopkins student means discovering new ways to express yourself, sharing ideas with friends and classmates, and collaborating on solutions to the big challenges facing today's society.
@@ -57,7 +64,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full md:w-1/3 bg-white p-8 rounded-lg shadow-lg">
-              <h2 className="text-2xl font-bold text-blue-900 mb-6">Application Deadlines</h2>
+              <h2 className={`${zilla.className} text-2xl font-bold text-blue-900 mb-6`}>Application Deadlines</h2>
               <ul className="text-gray-700 space-y-4">
                 {[
                   ["Early Decision I", "NOV. 1"],
@@ -80,7 +87,7 @@ export default function Home() {
       <section className="min-h-screen flex items-center bg-gray-50 p-4 md:p-8">
         <div className="w-full">
           <div className="flex flex-col md:flex-row justify-between items-center mb-12">
-            <h1 className="text-5xl md:text-7xl font-bold text-blue-900 mb-4 md:mb-0">Academics & Research</h1>
+            <h1 className={`${zilla.className} mb-6 text-blue-900 text-4xl font-bold md:text-5xl lg:text-7xl`}>Academics & Research</h1>
             <a href="#" className="text-green-600 font-semibold text-xl hover:underline">LEARN MORE &rarr;</a>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
@@ -110,7 +117,7 @@ export default function Home() {
 
       <section className="min-h-screen flex items-center p-4 md:p-8">
         <div className="w-full">
-          <h1 className="text-5xl md:text-7xl font-bold text-blue-900 mb-8">Eligibility</h1>
+          <h1 className={`${zilla.className} mb-6 text-blue-900 text-4xl font-bold md:text-5xl lg:text-7xl`}>Eligibility</h1>
           <ul className="list-disc list-inside text-gray-700 text-lg mb-8 space-y-4">
             <li>Students who are currently in high school.</li>
             <li>Students who have graduated high school or earned a GED and have less than 12 semester-based credits from another institution. This does not include college credit earned while in high school.</li>
@@ -120,7 +127,7 @@ export default function Home() {
           </p>
 
           <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">Deadlines & Important Dates</h2>
+            <h2 className={`${zilla.className} mb-6 text-blue-900 text-3xl font-bold md:text-4xl lg:text-6xl`}>Deadlines & Important Dates</h2>
             <p className="text-xl text-gray-700 mb-6">Updated dates are made public on August 1st each year.</p>
             <div className="overflow-x-auto">
               <table className="w-full bg-white border border-gray-200">
@@ -153,7 +160,7 @@ export default function Home() {
 
       <section className="min-h-screen flex items-center bg-gray-50 p-4 md:p-8">
         <div className="w-full">
-          <h1 className="text-5xl md:text-7xl font-bold text-blue-900 mb-12">Frequently Asked Questions</h1>
+          <h1 className={`${zilla.className} mb-6 text-blue-900 text-4xl font-bold md:text-5xl lg:text-7xl`}>Frequently Asked Questions</h1>
 
           <div className="space-y-6">
             {[
@@ -163,7 +170,7 @@ export default function Home() {
               { question: "What are the eligibility criteria for applying?", answer: "Students currently in high school or those who have graduated high school or earned a GED with less than 12 semester-based credits from another institution are eligible to apply. Those with a bachelor's degree are encouraged to explore our graduate programs." }
             ].map((item, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4">{item.question}</h2>
+                <h2 className="text-xl md:text-2xl font-bold text-blue-900 mb-4">{item.question}</h2>
                 <p className="text-lg text-gray-700">{item.answer}</p>
               </div>
             ))}
