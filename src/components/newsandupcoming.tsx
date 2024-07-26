@@ -7,7 +7,7 @@ const Happenings = () => {
       date: '9 Jun 2024',
       title:
         'Fr. Conceicao Rodrigues College Of Engineering achieved an impressive milestone, securing the 3rd position among the top engineering colleges in Mumbai in the year 2024.',
-      imageUrl: '/ssr.png',
+      imageUrl: '/ssr2.png',
     },
     {
       date: '5th July 2024',
@@ -18,7 +18,7 @@ const Happenings = () => {
     {
       date: '',
       title: '',
-      imageUrl: '/ssr.png',
+      imageUrl: '/ssr2.png',
     },
     {
       date: '',

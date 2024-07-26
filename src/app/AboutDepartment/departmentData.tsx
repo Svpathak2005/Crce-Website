@@ -20,18 +20,18 @@ export const csDepartment = {
     description:
       'Graduates of our Computer Science program are well-prepared for a wide range of careers in the tech industry, research, and entrepreneurship.',
     careers: [
-      { name: 'Software Engineer', image: '/csdep2.png' },
-      { name: 'Data Scientist', image: '/csdep2.png' },
-      { name: 'AI Researcher', image: '/csdep2.png' },
+      { name: 'Software Engineer', image: '/1.png' },
+      { name: 'Data Scientist', image: '/2.png' },
+      { name: 'AI Researcher', image: '/3.png' },
       {
         name: 'Cybersecurity Analyst',
-        image: '/csdep2.png',
+        image: '/4.png',
       },
       {
         name: 'Full Stack Developer',
-        image: '/csdep2.png',
+        image: '/5.png',
       },
-      { name: 'Tech Entrepreneur', image: '/csdep2.png' },
+      { name: 'Tech Entrepreneur', image: '/6.png' },
     ],
   },
 }

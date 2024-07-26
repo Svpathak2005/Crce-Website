@@ -26,6 +26,17 @@ const ProgramInfo = () => {
     },
   ]
 
+  const images = [
+    'accectire.png',
+    'colgate.jpg',
+    'godrej.jpg',
+    'infosis.jpg',
+    'jp.png',
+    'lt.png',
+    'seclore.png',
+    'tcs.jpg',
+  ]
+
   const tabContents = {
     Placements: (
       <div className="mx-auto p-6 font-roboto">
@@ -171,18 +182,17 @@ const ProgramInfo = () => {
       </div>
     ),
     Recruiters: (
-      <div className="mt-5 w-full bg-white py-8">
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {events.map((event, index) => (
+      <div className="w-full bg-white p-6 py-8">
+        <h2 className="mb-6 font-roboto text-3xl font-semibold text-gray-900">
+          Our Recruiters
+        </h2>
+        <div className="w-full border-t border-gray-300 pt-6 md:border-t-0 md:pl-12 md:pt-0">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:gap-6">
+            {images.map((img, index) => (
               <div
                 key={index}
-                className="group h-20 overflow-hidden rounded-lg bg-white shadow-sm transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-md"
-                style={{
-                  backgroundImage: `url(${event.imageUrl})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
+                className="relative mx-auto h-20 w-20 overflow-hidden rounded-full bg-contain bg-center bg-no-repeat transition-all duration-300 ease-in-out hover:scale-110 sm:h-24 sm:w-24 md:h-28 md:w-28 lg:h-32 lg:w-32"
+                style={{ backgroundImage: `url('/company/${img}')` }}
               ></div>
             ))}
           </div>
@@ -190,9 +200,35 @@ const ProgramInfo = () => {
       </div>
     ),
     Eligibility: (
-      <div>
-        <h2 className="mb-4 text-xl font-bold">Eligibility</h2>
-        <p>.</p>
+      <div className="p-6">
+        <h2 className="mb-6 font-roboto text-3xl font-semibold text-gray-900">
+          Eligibility
+        </h2>
+        <div className="font-roboto">
+          <p>
+            <div className="font-roboto text-base">
+              <li>
+                For all B. Tech programmes candidates should have appeared in
+                JEE 2024 / MHTCET 2024 / PERA 2024 / MHTCET-B* 2024 / NEET* 2024
+                score.
+              </li>
+              <li>
+                Minimum 50% aggregate score in PCM/PCB* or Physics & Mathematics
+                with any Technical Vocational Subject. Physics, Mathematics &
+                English is Compulsory with Chemistry/Biotechnology* or
+                Biology*/Technical Vocational Courses in 10+2/Class 12th or
+                equivalent examination AND 50% aggregate score in Class
+                12th/HSC.
+              </li>
+              <li>
+                Reserved class category candidate belonging to Maharashtra State
+                only OR Minimum 60% aggregate score in Diploma in Engineering &
+                Technology in an appropriate branch from UGC approved University
+                (without backlog).
+              </li>
+            </div>
+          </p>
+        </div>
       </div>
     ),
   }
