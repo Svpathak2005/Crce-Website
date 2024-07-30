@@ -1,54 +1,26 @@
 import Link from 'next/link'
-import { headers } from 'next/headers'
 
-interface SiteData {
-  name: string
-  headerEntries: [string, string][]
-}
-
-async function getSiteData(domain: string | null): Promise<SiteData> {
-  const headersList = headers()
-  const entries = Array.from(headersList.entries())
-
-  return {
-    name: domain || 'Unknown Site',
-    headerEntries: entries,
-  }
-}
-
-export default async function NotFound() {
-  const headersList = headers()
-  const domain = headersList.get('host')
-  const data = await getSiteData(domain)
-
+export default function NotFound() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100 px-4 pt-32 lg:pt-10">
-      <div className="w-full max-w-3xl overflow-hidden rounded-lg bg-white shadow-lg">
-        <div className="bg-red-600 py-4 text-center text-white">
-          <h2 className="text-2xl font-bold">Not Found: {data.name}</h2>
-        </div>
-        <div className="p-6">
-          <p className="mb-4 text-gray-700">
-            Could not find requested resource
-          </p>
-          <div className="mb-4 rounded-lg bg-gray-50 p-4">
-            <h3 className="mb-2 text-lg font-semibold">All Header Entries:</h3>
-            <ul className="space-y-2">
-              {data.headerEntries.map(([key, value]) => (
-                <li key={key}>
-                  <span className="font-medium">{key}:</span> {value}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="text-center">
-            <Link
-              href="/"
-              className="inline-block rounded bg-blue-600 px-4 py-2 text-white transition duration-300 hover:bg-blue-700"
-            >
-              Return to Main Page
-            </Link>
-          </div>
+    <div className="flex min-h-full flex-col items-center justify-center bg-gray-100 py-12">
+      <div className="rounded-lg bg-white p-10 text-center shadow-lg">
+        <h2 className="mb-4 text-4xl font-bold text-gray-800">
+          404 - Not Found
+        </h2>
+        <p className="mb-6 text-lg text-gray-600">
+          Could not find the requested resource.
+        </p>
+        <div className="flex space-x-4">
+          <Link href="/">
+            <div className="rounded-lg bg-blue-600 px-6 py-3 text-white shadow transition-colors hover:bg-blue-700">
+              Return Home
+            </div>
+          </Link>
+          <Link href="/debug">
+            <div className="rounded-lg bg-green-600 px-6 py-3 text-white shadow transition-colors hover:bg-green-700">
+              Go to Debug Page
+            </div>
+          </Link>
         </div>
       </div>
     </div>
