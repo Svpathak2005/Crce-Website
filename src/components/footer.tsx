@@ -15,34 +15,34 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
             <div>
               <h3 className="mb-4 text-lg font-semibold text-blue-900">
-                Graduate Division
+                STAFF SERVICES
               </h3>
               <ul className="space-y-2">
                 <li>
                   <Link href="#" className="hover:text-blue-600">
-                    Contact the Graduate Division
+                    Agnel Mail Service
                   </Link>
                 </li>
                 <li>
                   <Link href="#" className="hover:text-blue-600">
-                    Workshops and Events
+                    Biometric Attendance Service
                   </Link>
                 </li>
                 <li>
                   <Link href="#" className="hover:text-blue-600">
-                    Graduate Publications
+                    Other Services
                   </Link>
                 </li>
                 <li>
                   <Link href="#" className="hover:text-blue-600">
-                    Organizational Chart (PDF)
+                    Site Login
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
               <h3 className="mb-4 text-lg font-semibold text-blue-900">
-                Our Sites
+                RESOURCES
               </h3>
               <ul className="space-y-2">
                 <li>
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
                     href="#"
                     className="inline-flex items-center hover:text-blue-600"
                   >
-                    GSI Teaching & Resource Center
+                    Tinkering Lab
                     <SquareArrowOutUpRight className="ml-1 h-4 w-4" />
                   </Link>
                 </li>
@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
                     href="#"
                     className="inline-flex items-center hover:text-blue-600"
                   >
-                    Graduate Lectures
+                    Moodle Access
                     <SquareArrowOutUpRight className="ml-1 h-4 w-4" />
                   </Link>
                 </li>
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
                     href="#"
                     className="inline-flex items-center hover:text-blue-600"
                   >
-                    Tanner Lectures
+                    Students Portal
                     <SquareArrowOutUpRight className="ml-1 h-4 w-4" />
                   </Link>
                 </li>
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
                     href="#"
                     className="inline-flex items-center hover:text-blue-600"
                   >
-                    Back-Up Child Care
+                    Student Notices
                     <SquareArrowOutUpRight className="ml-1 h-4 w-4" />
                   </Link>
                 </li>
@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
                     href="#"
                     className="inline-flex items-center hover:text-blue-600"
                   >
-                    Graduate Mentoring Awards
+                    Student's handbook- essentials of ethics
                     <SquareArrowOutUpRight className="ml-1 h-4 w-4" />
                   </Link>
                 </li>
@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
                     href="#"
                     className="inline-flex items-center hover:text-blue-600"
                   >
-                    SMART Mentoring
+                    Downloads
                     <SquareArrowOutUpRight className="ml-1 h-4 w-4" />
                   </Link>
                 </li>
@@ -104,7 +104,7 @@ const Footer: React.FC = () => {
                     href="#"
                     className="inline-flex items-center hover:text-blue-600"
                   >
-                    Grad Dashboard (for Faculty & Staff)
+                    Institutions Innovation Cell
                     <SquareArrowOutUpRight className="ml-1 h-4 w-4" />
                   </Link>
                 </li>
@@ -112,34 +112,73 @@ const Footer: React.FC = () => {
             </div>
             <div>
               <h3 className="mb-4 text-lg font-semibold text-blue-900">
-                Our Mission
+                RESOURCES
               </h3>
-              <p className="text-sm">
-                The Graduate Division oversees graduate admissions, fellowships,
-                grants, academic employment, preparation for teaching, mentoring
-                activities, professional development, academic progress and
-                degree milestones.
-              </p>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="#" className="text-sm hover:text-blue-600">
+                    Preincubation Details
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="text-sm hover:text-blue-600">
+                    IPR cell
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="text-sm hover:text-blue-600">
+                    Green Practices
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="text-sm hover:text-blue-600">
+                    Change Network Password
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="text-sm hover:text-blue-600">
+                    Agnel News Letter
+                  </Link>
+                </li>
+              </ul>
               <h4 className="text-md mb-2 mt-4 font-semibold text-blue-900">
                 Can't find something?
               </h4>
               <Link href="#" className="text-blue-600 hover:underline">
                 Give Feedback
               </Link>
-            </div>
+            </div>{' '}
             <div>
-              <Link href="https://www.berkeley.edu" className="inline-block">
-                <img src="/clogo.png" alt="FrCRCE" className="mb-4 h-12" />
-              </Link>
-              <p className="mb-4 text-sm">
-                Learn more about the Campaign for Graduate Fellowships.
-              </p>
-              <Link
-                href="#"
-                className="rounded bg-yellow-500 px-4 py-2 font-semibold text-blue-900 transition duration-300 hover:bg-yellow-400"
-              >
-                Support Graduate Division
-              </Link>
+              <h3 className="mb-4 text-lg font-semibold text-blue-900">
+                LIBRARY QUICK LINKS
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="#" className="hover:text-blue-600">
+                    Fr. Agnel College Library Blogs
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-blue-600">
+                    Online Library Catlog (WebOPAC)
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-blue-600">
+                    PG Students Resource Hub - PG Pathsala
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-blue-600">
+                    Rare Books Society of India
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-blue-600">
+                    IEEE Xplore
+                  </Link>
+                </li>
+              </ul>
               <div className="mt-4 flex space-x-4">
                 <Link href="#" className="text-gray-400 hover:text-blue-600">
                   <Twitter className="h-6 w-6" />
@@ -159,20 +198,20 @@ const Footer: React.FC = () => {
                 href="#"
                 className="text-sm text-gray-500 hover:text-blue-600"
               >
-                Privacy
+                Bank / NEFT Details
               </Link>
               <Link
                 href="#"
                 className="inline-flex items-center text-sm text-gray-500 hover:text-blue-600"
               >
-                Nondiscrimination
+                Mandatory Disclosure
                 <SquareArrowOutUpRight className="ml-1 h-4 w-4" />
               </Link>
               <Link
                 href="#"
                 className="inline-flex items-center text-sm text-gray-500 hover:text-blue-600"
               >
-                Accessibility
+                Online Grievance / Suggession / Feedback System
                 <SquareArrowOutUpRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
