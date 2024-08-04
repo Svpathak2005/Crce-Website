@@ -428,15 +428,15 @@ const Navbar: React.FC = () => {
       </nav>
       {dropdown && dropdownContent[dropdown] && (
         <div
-          className={`fixed top-[150px] z-40 hidden w-full bg-white text-black shadow-lg transition-all duration-300 ease-out md:block ${
+          className={`fixed top-[165px] z-40 hidden w-full bg-white text-black shadow-lg transition-all duration-300 ease-out md:block ${
             hasScrolled
               ? visible
                 ? 'md:translate-y-0'
-                : 'md:-translate-y-[150px]'
+                : 'md:-translate-y-[165px]'
               : 'md:-translate-y-full'
           }`}
         >
-          <div className="container mx-auto px-8 py-12">
+          <div className="container mx-auto px-8 pt-9 pb-11">
             <button
               className="absolute right-8 top-8 text-xl text-gray-600 hover:text-gray-800"
               onClick={() => setDropdown(null)}
