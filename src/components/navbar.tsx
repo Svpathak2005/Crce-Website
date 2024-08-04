@@ -262,26 +262,24 @@ const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null)
 
-
   const [visible, setVisible] = useState(true)
   const [hasScrolled, setHasScrolled] = useState(true)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
 
- useEffect(() => {
-   const handleScroll = () => {
-     const currentScrollPos = window.pageYOffset
-     const visible = prevScrollPos > currentScrollPos || currentScrollPos < 10
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset
+      const visible = prevScrollPos > currentScrollPos || currentScrollPos < 10
 
-     setVisible(visible)
-     setPrevScrollPos(currentScrollPos)
-     setHasScrolled(true)
-   }
+      setVisible(visible)
+      setPrevScrollPos(currentScrollPos)
+      setHasScrolled(true)
+    }
 
-   window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll)
 
-   return () => window.removeEventListener('scroll', handleScroll)
- }, [prevScrollPos])
-
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [prevScrollPos])
 
   const handleDropdown = (menu: string) => {
     if (dropdown === menu) {
@@ -308,7 +306,7 @@ const Navbar: React.FC = () => {
     <>
       {/* Desktop Navigation */}
       <nav
-        className={`fixed top-0 z-50 hidden w-full bg-gray-900 bg-opacity-90 font-semibold text-white md:transition-transform md:duration-300 md:ease-in-out md:block ${
+        className={`fixed top-0 z-50 hidden w-full bg-gray-900 bg-opacity-90 font-semibold text-white md:block md:transition-transform md:duration-300 md:ease-in-out ${
           hasScrolled
             ? visible
               ? 'md:translate-y-0'
@@ -429,13 +427,15 @@ const Navbar: React.FC = () => {
         </div>
       </nav>
       {dropdown && dropdownContent[dropdown] && (
-        <div className= {`fixed top-[150px] z-40 hidden w-full bg-white text-black shadow-lg transition-all duration-300 ease-out md:block  ${
-          hasScrolled
-            ? visible
-              ? 'md:translate-y-0'
-              : 'md:-translate-y-[150px]'
-            : 'md:-translate-y-full'
-        }`}>
+        <div
+          className={`fixed top-[150px] z-40 hidden w-full bg-white text-black shadow-lg transition-all duration-300 ease-out md:block ${
+            hasScrolled
+              ? visible
+                ? 'md:translate-y-0'
+                : 'md:-translate-y-[150px]'
+              : 'md:-translate-y-full'
+          }`}
+        >
           <div className="container mx-auto px-8 py-12">
             <button
               className="absolute right-8 top-8 text-xl text-gray-600 hover:text-gray-800"
