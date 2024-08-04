@@ -306,12 +306,12 @@ const Navbar: React.FC = () => {
     <>
       {/* Desktop Navigation */}
       <nav
-        className={`fixed top-0 z-50 hidden w-full bg-gray-900 bg-opacity-90 font-semibold text-white md:block md:transition-transform md:duration-300 md:ease-in-out ${
+        className={`fixed top-0 z-50 hidden w-full bg-gray-900 bg-opacity-90 font-semibold text-white md:block transition-transform duration-300 ease-in-out ${
           hasScrolled
             ? visible
-              ? 'md:translate-y-0'
-              : 'md:-translate-y-full'
-            : 'md:-translate-y-full'
+              ? 'translate-y-0'
+              : '-translate-y-full'
+            : '-translate-y-full'
         }`}
       >
         <div className="flex flex-col px-20">
@@ -469,7 +469,15 @@ const Navbar: React.FC = () => {
         </div>
       )}{' '}
       {/* Mobile Navigation */}
-      <nav className="fixed top-0 z-50 w-full bg-gray-900 font-semibold capitalize text-white md:hidden">
+      <nav
+        className={`fixed top-0 z-50 w-full bg-gray-900 bg-opacity-90 font-semibold capitalize text-white md:hidden transition-transform duration-300 ease-in-out ${
+          hasScrolled
+            ? visible
+              ? 'translate-y-0'
+              : '-translate-y-full'
+            : '-translate-y-full'
+        }`}
+      >
         <div className="flex items-center justify-between px-4 py-3">
           <Link href="/">
             <Image
