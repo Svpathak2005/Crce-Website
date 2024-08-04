@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import PresidentPage from '@/app/principal/aboutssr'
+import PresidentPage from '@/components/aboutssr'
 
 export default function Home() {
   return (

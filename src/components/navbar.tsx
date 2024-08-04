@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
@@ -61,42 +61,42 @@ const dropdownContent: DropdownContent = {
   About: [
     {
       name: 'About CRCE',
-      href: 'https://frcrce.ac.in/index.php/about-us/about-crce',
+      href: '/about/about-crce',
       icon: <Info size={18} />,
     },
     {
       name: "From Director's ",
-      href: 'https://frcrce.ac.in/index.php/about-us/director',
+      href: '/about/form-director',
       icon: <UserPlus size={18} />,
     },
     {
       name: 'Principal- Dr. Surendra Singh Rathod',
-      href: 'https://frcrce.ac.in/index.php/about-us/contact-us',
+      href: '/about/principal',
       icon: <UserCheck size={18} />,
     },
     {
       name: 'Vision and Mission',
-      href: 'https://frcrce.ac.in/index.php/about-us/about-crce',
+      href: '/about/vision-and-mission',
       icon: <Target size={18} />,
     },
     {
-      name: 'Adminstration ',
-      href: 'https://frcrce.ac.in/index.php/about-us/director',
+      name: 'Adminstration',
+      href: '/about/adminstration',
       icon: <Building2 size={18} />,
     },
     {
       name: 'General Information',
-      href: 'https://frcrce.ac.in/index.php/about-us/contact-us',
+      href: '/about/general-information',
       icon: <FileText size={18} />,
     },
     {
       name: 'Mandatory Disclosure',
-      href: 'https://frcrce.ac.in/index.php/about-us/vision-mission',
+      href: '/about/mandatory-disclosure',
       icon: <FileCheck2 size={18} />,
     },
     {
       name: 'Contact Us',
-      href: '/meet-princeton/facts',
+      href: '/about/contact-us',
       icon: <Phone size={18} />,
     },
   ],
@@ -262,6 +262,27 @@ const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null)
 
+
+  const [visible, setVisible] = useState(true)
+  const [hasScrolled, setHasScrolled] = useState(true)
+  const [prevScrollPos, setPrevScrollPos] = useState(0)
+
+ useEffect(() => {
+   const handleScroll = () => {
+     const currentScrollPos = window.pageYOffset
+     const visible = prevScrollPos > currentScrollPos || currentScrollPos < 10
+
+     setVisible(visible)
+     setPrevScrollPos(currentScrollPos)
+     setHasScrolled(true)
+   }
+
+   window.addEventListener('scroll', handleScroll)
+
+   return () => window.removeEventListener('scroll', handleScroll)
+ }, [prevScrollPos])
+
+
   const handleDropdown = (menu: string) => {
     if (dropdown === menu) {
       setDropdown(null)
@@ -286,7 +307,15 @@ const Navbar: React.FC = () => {
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="fixed top-0 z-50 hidden w-full bg-gray-900 bg-opacity-90 font-semibold text-white md:block">
+      <nav
+        className={`fixed top-0 z-50 hidden w-full bg-gray-900 bg-opacity-90 font-semibold text-white md:transition-transform md:duration-300 md:ease-in-out md:block ${
+          hasScrolled
+            ? visible
+              ? 'md:translate-y-0'
+              : 'md:-translate-y-full'
+            : 'md:-translate-y-full'
+        }`}
+      >
         <div className="flex flex-col px-20">
           <div className="flex h-1/3 items-center justify-between px-6 pb-1.5 pt-3">
             <div className="flex space-x-6 text-sm">
@@ -377,7 +406,7 @@ const Navbar: React.FC = () => {
                   Careers
                 </Link>
                 <Link
-                  href="/contact-us"
+                  href="/about/contact-us"
                   className="transition duration-300 hover:text-yellow-300"
                 >
                   Contact us
@@ -400,7 +429,13 @@ const Navbar: React.FC = () => {
         </div>
       </nav>
       {dropdown && dropdownContent[dropdown] && (
-        <div className="fixed top-[150px] z-40 hidden w-full bg-white text-black shadow-lg transition-all duration-300 ease-out md:block">
+        <div className= {`fixed top-[150px] z-40 hidden w-full bg-white text-black shadow-lg transition-all duration-300 ease-out md:block  ${
+          hasScrolled
+            ? visible
+              ? 'md:translate-y-0'
+              : 'md:-translate-y-[150px]'
+            : 'md:-translate-y-full'
+        }`}>
           <div className="container mx-auto px-8 py-12">
             <button
               className="absolute right-8 top-8 text-xl text-gray-600 hover:text-gray-800"
@@ -548,7 +583,7 @@ const Navbar: React.FC = () => {
             ))}
           </div>
         )}
-      </div>{' '}
+      </div>
       <div className="md:mt-[150px] lg:mt-[165px]">
         {/* Content that comes below the navbar */}
       </div>
