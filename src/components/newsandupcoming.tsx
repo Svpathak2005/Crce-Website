@@ -1,6 +1,14 @@
 'use client'
 import React, { useState } from 'react'
 
+import { Zilla_Slab } from 'next/font/google'
+const zilla = Zilla_Slab({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+})
+
 const Happenings = () => {
   const events = [
     {
@@ -107,14 +115,14 @@ const Newsandupcoming = () => {
   return (
     <div className="w-full bg-gray-50 px-4 py-12">
       <div className="mx-auto max-w-7xl">
-        <h1 className="mb-8 text-center font-serif text-3xl font-bold text-gray-800 sm:text-4xl">
+        <h1 className="mb-8 text-center text-3xl font-bold text-gray-800 sm:text-4xl">
           News & Upcoming Events
         </h1>
-        <div className="mb-8 flex flex-wrap items-center justify-center gap-2">
+        <div className="mb-8 flex flex-wrap items-center justify-center gap-10">
           {['news', 'events', 'deadlines'].map((tab) => (
             <button
               key={tab}
-              className={`select-none rounded px-4 py-2 text-sm font-medium transition-all duration-300 focus:outline-none ${
+              className={`select-none rounded-3xl px-5 py-3 text-sm font-medium transition-all duration-300 focus:outline-none ${
                 activeTab === tab
                   ? 'bg-blue-600 text-white shadow-md'
                   : 'border border-gray-300 text-gray-700 hover:bg-gray-100'
