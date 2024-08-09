@@ -1,47 +1,52 @@
-'use client'
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export const DirectorPage = () => {
+const DirectorPage = () => {
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-gray-50 to-gray-100">
       <main className="container mx-auto px-4 py-16">
-        <div className="rounded-xl bg-white p-8 shadow-lg">
+        <div className="rounded-xl bg-white p-10 shadow-lg">
           <h2 className="mb-10 text-center font-ptserif text-5xl font-semibold text-blue-950">
-            Principal's Message
+            Directors's Message
           </h2>
           <div className="flex flex-col items-center lg:flex-row lg:items-start">
-            <div className="mb-8 lg:mb-0 lg:w-1/2">
+            <div className="mb-8 lg:mb-0 lg:w-1/3">
               <Image
-                src="/principal-image.jpg"
-                alt="Principal"
-                width={600}
-                height={400}
+                src="/padre.jpg"
+                alt="Director"
+                width={250}
+                height={250}
                 className="rounded-lg shadow-md"
               />
             </div>
-            <div className="lg:ml-12 lg:w-1/2">
+            <div className="lg:ml-8 lg:w-2/3">
               <h3 className="mb-6 font-roboto text-2xl font-semibold text-gray-800">
                 Welcome to CRCE
               </h3>
               <p className="mb-4 font-roboto leading-relaxed text-gray-700">
-                Today's global education landscape is rapidly evolving, driven
-                by advancements in science and technology. At CRCE, we prepare
-                our students to meet the challenges of tomorrow's world.
+                The global education landscape is rapidly evolving, driven by
+                advancements in science and technology. At CRCE, we are
+                committed to equipping our students with the skills and
+                knowledge necessary to navigate and excel in this dynamic world.
               </p>
               <p className="mb-4 font-roboto leading-relaxed text-gray-700">
-                Our teaching-learning pedagogy aims to develop engineers with
-                both analytical and action-oriented skills, ready to become
-                organizational leaders in challenging environments.
+                Our teaching approach combines analytical thinking with
+                practical application, preparing future engineers to be not just
+                participants but leaders in challenging environments. We
+                emphasize the development of problem-solving skills, critical
+                thinking, and adaptability to ensure that our graduates are
+                well-prepared to meet the demands of the modern workforce.
               </p>
               <p className="mb-6 font-roboto leading-relaxed text-gray-700">
-                We pride ourselves on providing affordable, quality technical
-                education at all levels, as evidenced by our strong track record
-                in admissions, training, and placements.
+                We take pride in delivering affordable, high-quality technical
+                education. Our success is reflected in our outstanding record in
+                admissions, training, and placements. At CRCE, we believe in
+                creating an inclusive environment where every student has the
+                opportunity to thrive and reach their full potential.
               </p>
               <Link
-                href="#"
+                href="/about/about-crce"
                 className="inline-block rounded-lg bg-blue-900 px-6 py-3 font-roboto font-semibold text-white transition-colors duration-300 hover:bg-blue-800"
               >
                 Explore CRCE
@@ -53,3 +58,5 @@ export const DirectorPage = () => {
     </div>
   )
 }
+
+export default DirectorPage

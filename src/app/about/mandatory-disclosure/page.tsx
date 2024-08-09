@@ -3,7 +3,7 @@ import React from 'react'
 const PDFViewerPage = () => {
   return (
     <div className="flex min-h-screen flex-col bg-gray-100">
-      <header className="bg-blue-800 p-4 text-center text-white">
+      <header className="bg-gradient-to-br from-[#001f3f] to-[#003366] p-6 text-center text-white">
         <h1 className="text-2xl font-bold">Mandatory Disclosure</h1>
       </header>
 

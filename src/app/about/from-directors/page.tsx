@@ -1,5 +1,5 @@
 import React from 'react'
-import { DirectorPage } from '@/components/aboutDir'
+import DirectorPage from '@/components/aboutDir'
 const page = () => {
   return (
     <div>

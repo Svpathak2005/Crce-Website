@@ -65,8 +65,8 @@ const PresidentPage = () => {
         </main>
       </div>
       <Quote
-        name="Ron Daniels"
-        title="President"
+        name="Dr. Surendra Singh Rathod"
+        title="Principal"
         quote="A rich diversity of people, background, experience, and thought is central to our work; to our missions of education, research, and service; and to our commitment to freedom of inquiry and expression."
         imageSrc="/ssr3.png"
       />
