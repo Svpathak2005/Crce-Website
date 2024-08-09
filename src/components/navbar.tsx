@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import {
   ChevronDown,
   ChevronRight,
@@ -260,7 +260,6 @@ const dropdownContent: DropdownContent = {
 
 const Navbar: React.FC = () => {
   const pathname = usePathname()
-  const searchParams = useSearchParams()
   const [dropdown, setDropdown] = useState<string | null>(null)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null)
@@ -270,14 +269,14 @@ const Navbar: React.FC = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0)
 
   useEffect(() => {
-    const url = `${pathname}?${searchParams}`
+    const url = `${pathname}`
     console.log('URL changed:', url)
 
     // Close dropdown and mobile menus on URL change
     setDropdown(null)
     setMobileMenuOpen(false)
     setMobileSubmenu(null)
-  }, [pathname, searchParams])
+  }, [pathname])
 
   useEffect(() => {
     const handleScroll = () => {
