@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import {
   ChevronDown,
   ChevronRight,
@@ -66,7 +67,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: "From Director's ",
-      href: '/about/form-director',
+      href: '/about/from-directors',
       icon: <UserPlus size={18} />,
     },
     {
@@ -258,6 +259,7 @@ const dropdownContent: DropdownContent = {
 }
 
 const Navbar: React.FC = () => {
+  const pathname = usePathname()
   const [dropdown, setDropdown] = useState<string | null>(null)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null)
@@ -265,6 +267,16 @@ const Navbar: React.FC = () => {
   const [visible, setVisible] = useState(true)
   const [hasScrolled, setHasScrolled] = useState(true)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
+
+  useEffect(() => {
+    const url = `${pathname}`
+    console.log('URL changed:', url)
+
+    // Close dropdown and mobile menus on URL change
+    setDropdown(null)
+    setMobileMenuOpen(false)
+    setMobileSubmenu(null)
+  }, [pathname])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -306,7 +318,7 @@ const Navbar: React.FC = () => {
     <>
       {/* Desktop Navigation */}
       <nav
-        className={`fixed top-0 z-50 hidden w-full bg-gray-900 bg-opacity-90 font-semibold text-white md:block transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 z-50 hidden w-full bg-gray-900 bg-opacity-90 font-semibold text-white transition-transform duration-300 ease-in-out md:block ${
           hasScrolled
             ? visible
               ? 'translate-y-0'
@@ -436,7 +448,7 @@ const Navbar: React.FC = () => {
               : 'md:-translate-y-full'
           }`}
         >
-          <div className="container mx-auto px-8 pt-9 pb-11">
+          <div className="container mx-auto px-8 pb-11 pt-9">
             <button
               className="absolute right-8 top-8 text-xl text-gray-600 hover:text-gray-800"
               onClick={() => setDropdown(null)}
@@ -470,7 +482,7 @@ const Navbar: React.FC = () => {
       )}{' '}
       {/* Mobile Navigation */}
       <nav
-        className={`fixed top-0 z-50 w-full bg-gray-900 bg-opacity-90 font-semibold capitalize text-white md:hidden transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 z-50 w-full bg-gray-900 bg-opacity-90 font-semibold capitalize text-white transition-transform duration-300 ease-in-out md:hidden ${
           hasScrolled
             ? visible
               ? 'translate-y-0'

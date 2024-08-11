@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Zilla_Slab } from 'next/font/google'
+import Navigation from '@/components/navigation'
 
 const zilla = Zilla_Slab({
   weight: ['400', '700'],
@@ -10,6 +11,7 @@ const zilla = Zilla_Slab({
 })
 
 const Page = () => {
+  const navigationItems = [{ label: 'Admission', url: '/admissions' }]
   return (
     <div className="flex h-fit w-full flex-col bg-white text-gray-900">
       <div
@@ -22,9 +24,7 @@ const Page = () => {
           >
             ADMISSIONS & AID
           </h1>
-          <p className="rounded-full bg-white/20 px-4 py-2 text-sm font-light text-white backdrop-blur-sm md:text-base">
-            Home {'>'} Admissions & Aid
-          </p>
+          <Navigation items={navigationItems} />{' '}
         </div>
         <div className="relative mb-8 mt-8 flex w-full flex-col justify-center space-y-6 rounded-lg bg-white p-8 shadow-2xl md:mb-16 md:mr-16 md:mt-32 md:w-1/3 lg:p-10">
           <div className="absolute -top-4 left-1/2 -translate-x-1/2 transform rounded-full bg-[#4a90e2] px-6 py-2 text-white">

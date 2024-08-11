@@ -90,7 +90,7 @@ const AutonomousSyllabus = () => {
       <p className="mb-4 text-xl text-gray-600">A.Y. 2024-2025 (Autonomous)</p>
       <SyllabusTable />
       <div className="mt-4">
-        <h3 className="mb-2 text-lg font-semibold text-gray-800">
+        <h3 className="mb-2 text-center text-lg font-semibold text-gray-800">
           Honors / Minor (All Branches)
         </h3>
         <CourseDetails />
