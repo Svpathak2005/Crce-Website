@@ -3,6 +3,7 @@ import React, { FC, ReactElement } from 'react'
 interface AboutDepartmentProps {
   name: string
   description: string
+  video:Boolean
 //   programs: string[]
 //   courses: string[]
 //   features: string[]
@@ -12,14 +13,23 @@ interface AboutDepartmentProps {
 const AboutDepartment: FC<AboutDepartmentProps> = ({
   name,
   description,
+  video
 //   programs,
 //   courses,
 //   features,
   
 }): ReactElement => {
   return (
-    <div className="rounded-lg bg-white p-8 mx-10 shadow-sm">
+    <div className="mx-10 rounded-lg bg-white p-8 shadow-sm">
       <h2 className="mb-4 text-3xl font-bold">{name}</h2>
+      {video && <div className="relative aspect-video w-full overflow-hidden rounded-lg shadow-md mb-10">
+        <iframe
+          className="h-full w-full "
+          src="/compsdepttour.mp4"
+          allowFullScreen
+          title="Embedded Video"
+        />
+      </div>}
       <p className="mb-6 text-gray-700">{description}</p>
 
       {/* <div className="grid grid-cols-2 gap-6">

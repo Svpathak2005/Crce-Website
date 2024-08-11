@@ -2,7 +2,8 @@ export const AboutcsDepartment = {
   name: 'About Computer Engineering',
   description:
     'The Department of Computer Engineering at Fr.CRCE is committed to providing quality education in the field of computer engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in computer engineering principles and practices. Our faculty members are experts in their fields and are dedicated to providing students with a challenging and rewarding educational experience. The department has state-of-the-art labs and facilities that allow students to gain hands-on experience with the latest technologies and tools. We also offer a variety of research opportunities and industry collaborations that give students the chance to work on real-world problems and projects. Our graduates are highly sought after by employers and go on to successful careers in a variety of industries and fields.',
-//   features: [
+  video:true,
+    //   features: [
 //     'NBA accredited since 2017-18',
 //     'well equipped labs with state-of-the-art tools and software',
 //     'More than 95%BE result and more than 85% placements many students going for higher education in renowned Universities',
@@ -37,24 +38,29 @@ export const Vision = {
   name: 'Vision',
   description:
     'The Department of Computer Engineering at CRCE is committed to providing quality education in the field of computer science and engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in computer science and engineering principles and practices. ',
-}
+ video:false,
+  }
 export const Mission = {
   name: 'Mission',
   description:
     'The Department of Computer Engineering at CRCE is committed to providing quality education in the field of computer science and engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in computer science and engineering principles and practices.',
+  video: false,
 }
 export const ProgramOutcomes = {
   name: 'Program Outcomes',
   description:
     'The Department of Computer Engineering at CRCE is committed to providing quality education in the field of computer science and engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in computer science and engineering principles and practices.',
+  video: false,
 }
 export const ProgramEducationalObjectives = {
   name: 'Program Educational Objectives',
   description:
     'The Department of Computer Engineering at CRCE is committed to providing quality education in the field of computer science and engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in computer science and engineering principles and practices.',
+  video: false,
 }
 export const ProgrammeSpecificOutcomes = {
   name: 'Programme Specific Outcomes',
   description:
     'The Department of Computer Engineering at CRCE is committed to providing quality education in the field of computer science and engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in computer science and engineering principles and practices.',
+  video: false,
 }
