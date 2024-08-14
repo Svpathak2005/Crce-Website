@@ -4,7 +4,7 @@ import Link from 'next/link'
 interface TabData {
   id: string
   title: string
-  content: React.ReactNode
+ // content: React.ReactNode
 }
 
 interface SidebarProps {
@@ -26,7 +26,7 @@ const Sidebar = async ({ tabs, activeTab }: SidebarProps) => {
                 : 'text-gray-600 hover:text-blue-400'
             }`}
           >
-            <p className="">{tab.title}</p>
+            <p className="font-roboto">{tab.title}</p>
           </Link>
         ))}
       </div>

@@ -1,6 +1,7 @@
 import React, { FC, ReactElement } from 'react'
+import { Zilla_Slab } from 'next/font/google'
 
-interface AboutDepartmentProps {
+interface AboutDepartmentContainerProps {
   name: string
   description: string
   video:Boolean
@@ -9,8 +10,14 @@ interface AboutDepartmentProps {
 //   features: string[]
  
 }
+const zilla = Zilla_Slab({
+  weight: ['400','500', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
-const AboutDepartment: FC<AboutDepartmentProps> = ({
+const AboutDepartmentContainer: FC<AboutDepartmentContainerProps> = ({
   name,
   description,
   video
@@ -20,16 +27,22 @@ const AboutDepartment: FC<AboutDepartmentProps> = ({
   
 }): ReactElement => {
   return (
-    <div className="mx-10 rounded-lg bg-white p-8 shadow-sm">
-      <h2 className="mb-4 text-3xl font-bold">{name}</h2>
-      {video && <div className="relative aspect-video w-full overflow-hidden rounded-lg shadow-md mb-10">
-        <iframe
-          className="h-full w-full "
-          src="/compsdepttour.mp4"
-          allowFullScreen
-          title="Embedded Video"
-        />
-      </div>}
+    <div className="mx-10 rounded-lg bg-white ">
+      <h2
+        className={`${zilla.className} mb-4 text-3xl font-bold text-blue-950 md:text-4xl lg:text-6xl`}
+      >
+        {name}
+      </h2>
+      {video && (
+        <div className="relative mb-10 aspect-video w-full overflow-hidden rounded-lg">
+          <iframe
+            className="h-full w-full"
+            src="/compsdepttour.mp4"
+            allowFullScreen
+            title="Embedded Video"
+          />
+        </div>
+      )}
       <p className="mb-6 text-gray-700">{description}</p>
 
       {/* <div className="grid grid-cols-2 gap-6">
@@ -69,4 +82,4 @@ const AboutDepartment: FC<AboutDepartmentProps> = ({
   )
 }
 
-export default AboutDepartment
+export default AboutDepartmentContainer

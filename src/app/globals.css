@@ -46,6 +46,15 @@ body {
   }
 }
 
+.invisible-scrollbar {
+  overflow-y: auto;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
 .animate-carousel {
   animation: carousel 20s linear infinite;
 }

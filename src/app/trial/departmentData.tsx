@@ -1,5 +1,5 @@
 export const AboutcsDepartment = {
-  name: 'About Computer Engineering',
+  name: 'Computer Engineering Department',
   description:
     'The Department of Computer Engineering at Fr.CRCE is committed to providing quality education in the field of computer engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in computer engineering principles and practices. Our faculty members are experts in their fields and are dedicated to providing students with a challenging and rewarding educational experience. The department has state-of-the-art labs and facilities that allow students to gain hands-on experience with the latest technologies and tools. We also offer a variety of research opportunities and industry collaborations that give students the chance to work on real-world problems and projects. Our graduates are highly sought after by employers and go on to successful careers in a variety of industries and fields.',
   video:true,
@@ -64,3 +64,4 @@ export const ProgrammeSpecificOutcomes = {
     'The Department of Computer Engineering at CRCE is committed to providing quality education in the field of computer science and engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in computer science and engineering principles and practices.',
   video: false,
 }
+
