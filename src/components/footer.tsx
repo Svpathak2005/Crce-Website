@@ -195,8 +195,10 @@ const Footer: React.FC = () => {
           <div className="mt-8 flex flex-wrap items-center justify-between border-t border-gray-200 pt-8">
             <div className="space-x-4">
               <Link
-                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm text-gray-500 hover:text-blue-600"
+                href="/NEFTForm.pdf"
               >
                 Bank / NEFT Details
               </Link>
@@ -208,7 +210,7 @@ const Footer: React.FC = () => {
                 <SquareArrowOutUpRight className="ml-1 h-4 w-4" />
               </Link>
               <Link
-                href="#"
+                href="/students/grievance"
                 className="inline-flex items-center text-sm text-gray-500 hover:text-blue-600"
               >
                 Online Grievance / Suggession / Feedback System
