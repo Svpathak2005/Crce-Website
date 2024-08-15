@@ -37,7 +37,7 @@ const HighlightedSpeeches: React.FC = () => {
         {speeches.map((speech, index) => (
           <div
             key={index}
-            className="w-full rounded-lg bg-white p-6 shadow-md md:w-1/3"
+            className="w-full rounded-lg bg-white p-6 shadow-lg md:w-1/3"
           >
             <p className="mb-2 font-semibold text-blue-600">
               {speech.date.toUpperCase()}

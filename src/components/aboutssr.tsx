@@ -76,3 +76,4 @@ const PresidentPage = () => {
 }
 
 export default PresidentPage
+  
