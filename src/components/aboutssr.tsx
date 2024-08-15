@@ -9,8 +9,8 @@ import HighlightedSpeeches from './HighlightedSpeeches'
 const PresidentPage = () => {
   return (
     <>
-      <div className="min-h-screen w-full bg-gradient-to-b from-gray-50 to-gray-100">
-        <main className="container mx-auto px-4 py-16">
+      <div className="h-full w-full bg-gradient-to-b from-gray-50 to-[#E5F0FF]">
+        <main className="container mx-auto px-4 pb-12 pt-16">
           <div className="rounded-xl bg-white p-8 shadow-lg">
             <h2 className="mb-10 text-center font-ptserif text-5xl font-semibold text-blue-950">
               Principal - Dr. Surendra Singh Rathod
@@ -64,13 +64,13 @@ const PresidentPage = () => {
           </div>
         </main>
       </div>
-      <Quote
+      <HighlightedSpeeches />
+      {/* <Quote
         name="Dr. Surendra Singh Rathod"
         title="Principal"
         quote="A rich diversity of people, background, experience, and thought is central to our work; to our missions of education, research, and service; and to our commitment to freedom of inquiry and expression."
         imageSrc="/ssr3.png"
-      />
-      <HighlightedSpeeches />
+      /> */}
     </>
   )
 }
