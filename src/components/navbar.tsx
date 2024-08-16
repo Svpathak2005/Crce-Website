@@ -109,7 +109,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Academic/Holiday Calender',
-      href: '/academics/departments',
+      href: '/academics/calendar',
       icon: <Calendar size={18} />,
     },
     {
@@ -144,7 +144,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'IQAC-CRCE',
-      href: '/research/funding',
+      href: '/academics/IQAC',
       icon: <BadgeCheck size={18} />,
     },
     {
@@ -196,7 +196,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Grievances',
-      href: '/international/admissions',
+      href: '/students/grievance',
       icon: <MessageCircleWarning size={18} />,
     },
     {
@@ -318,7 +318,7 @@ const Navbar: React.FC = () => {
     <>
       {/* Desktop Navigation */}
       <nav
-        className={`fixed top-0 z-50 hidden w-full bg-gray-900 bg-opacity-90 font-semibold text-white transition-transform duration-300 ease-in-out md:block ${
+        className={`fixed top-0 z-50 hidden w-full bg-[#131929] bg-opacity-90 font-semibold text-white transition-transform duration-300 ease-in-out md:block ${
           hasScrolled
             ? visible
               ? 'translate-y-0'

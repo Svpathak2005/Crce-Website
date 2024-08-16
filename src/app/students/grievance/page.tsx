@@ -2,6 +2,7 @@
 import React, { useState, useCallback, ChangeEvent, FormEvent } from 'react'
 import { Zilla_Slab } from 'next/font/google'
 import { useReCaptcha } from 'next-recaptcha-v3'
+import Footer from '@/components/footer'
 
 const zilla = Zilla_Slab({
   weight: ['400', '700'],
@@ -87,9 +88,9 @@ const GrievanceForm: React.FC = () => {
   )
 
   return (
-    <div className="flex h-fit w-full flex-col bg-white text-gray-900">
-      <div className="flex h-full w-full flex-col justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] md:flex-row">
-        <div className="flex w-full flex-col items-center justify-center p-8 pt-40 text-white md:w-2/3 md:p-16 md:pt-16">
+    <div className="flex h-fit absolute top-0 w-full flex-col bg-gray-100 text-gray-900">
+      <div className="flex relative top-0 md:pt-40 pt-10 h-fit w-full flex-col items-center justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] ">
+        <div className="flex w-full relative top-0 flex-col items-center justify-center p-8 pt-40 text-white md:w-2/3 md:p-16 md:pt-16">
           <h1
             className={`${zilla.className} mb-6 text-4xl font-bold md:text-5xl lg:text-7xl`}
           >
@@ -101,10 +102,10 @@ const GrievanceForm: React.FC = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-16">
+      <div className="container bg-gray-100 mx-auto px-4 py-16">
         <form
           onSubmit={handleSubmit}
-          className="rounded-lg bg-white p-8 shadow-md"
+          className="rounded-lg bg-white p-8 shadow-lg"
         >
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <div>
@@ -217,6 +218,7 @@ const GrievanceForm: React.FC = () => {
           For any inquiries, please contact the main office at 67114000.
         </p>
       </div>
+      <Footer/>
     </div>
   )
 }

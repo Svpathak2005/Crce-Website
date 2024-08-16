@@ -9,7 +9,6 @@ import {
 
 const Footer: React.FC = () => {
   return (
-    <div className="pt-20">
       <footer className="border-t border-gray-200 bg-white py-8 text-gray-600">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
@@ -278,7 +277,6 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
   )
 }
 
