@@ -373,7 +373,7 @@ const Navbar: React.FC = () => {
               </Link>
             </div>
             <Link
-              href="/admissions"
+              href="/Admissions"
               className="rounded-md bg-yellow-500 px-6 py-2 font-bold text-black transition duration-300 hover:bg-yellow-600"
             >
               <div className="flex flex-row items-center space-x-2">
