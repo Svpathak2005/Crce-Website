@@ -13,7 +13,7 @@ const Industry = () => {
   ]
 
   return (
-    <div className="flex w-full flex-col bg-white p-4 text-gray-800 md:flex-row md:p-8">
+    <div className="flex w-full  flex-col bg-white p-4 text-gray-800 md:flex-row md:p-8">
       <div className="mb-6 flex w-full flex-col pr-0 md:mb-0 md:w-1/3 md:pr-12">
         <h2 className="mb-4 text-3xl font-extrabold leading-tight text-gray-900 md:text-4xl lg:text-5xl">
           Industry Partners
