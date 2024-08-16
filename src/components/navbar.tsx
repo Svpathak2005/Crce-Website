@@ -208,7 +208,7 @@ const dropdownContent: DropdownContent = {
   Departments: [
     {
       name: 'Computer Engineering',
-      href: 'https://frcrce.ac.in/index.php/academics/research-development/publications',
+      href: '/AboutDepartment/ComputerDepartment',
       icon: <Cpu size={18} />,
     },
     {
@@ -235,7 +235,7 @@ const dropdownContent: DropdownContent = {
   Admission: [
     {
       name: 'Under Graduate',
-      href: 'https://frcrce.ac.in/index.php/about-us/vision-mission',
+      href: '/admission/undergraduates',
       icon: <GraduationCap size={18} />,
     },
     {
