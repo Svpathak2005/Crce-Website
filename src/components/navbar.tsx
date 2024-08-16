@@ -81,8 +81,8 @@ const dropdownContent: DropdownContent = {
       icon: <Target size={18} />,
     },
     {
-      name: 'Adminstration',
-      href: '/about/adminstration',
+      name: 'Administration',
+      href: '/about/administration',
       icon: <Building2 size={18} />,
     },
     {
