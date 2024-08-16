@@ -113,7 +113,7 @@ const Newsandupcoming = () => {
   }
 
   return (
-    <div className="w-full bg-gray-50 px-4 py-12">
+    <div className="w-full px-4 py-12">
       <div className="mx-auto max-w-7xl">
         <h1 className="mb-8 text-center text-3xl font-bold text-gray-800 sm:text-4xl">
           News & Upcoming Events

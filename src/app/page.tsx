@@ -6,8 +6,10 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between">
       <HeroSection />
-      <Newsandupcoming />
-      <Industry />
+      {/* <div className='bg-gradient-to-b from-gray-50 to-[#E5F0FF] w-full'> */}
+        <Newsandupcoming />
+        <Industry />
+      {/* </div> */}
     </main>
   )
 }

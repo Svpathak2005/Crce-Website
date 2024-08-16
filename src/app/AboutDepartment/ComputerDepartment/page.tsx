@@ -56,7 +56,7 @@ const ComputerEngineeringPage = () => {
     <div className="flex-row">
       {/* Hero section */}
       <div>
-        <section className="hero relative overflow-hidden text-white">
+        <section className="hero min-h-screen relative overflow-hidden text-white">
           <div className="absolute inset-0 z-0">
             <Image
               src="/college2.avif"

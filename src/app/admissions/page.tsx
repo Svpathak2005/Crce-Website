@@ -13,9 +13,9 @@ const zilla = Zilla_Slab({
 const Page = () => {
   const navigationItems = [{ label: 'Admission', url: '/admissions' }]
   return (
-    <div className="flex h-fit w-full flex-col bg-white text-gray-900">
+    <div className="flex h-fit w-full flex-col bg-gradient-to-b from-gray-50 to-[#E5F0FF] text-gray-900">
       <div
-        className="flex h-full w-full flex-col bg-gradient-to-br from-[#001f3f] to-[#003366] md:flex-row"
+        className="flex h-full w-full pt-36 flex-col bg-gradient-to-br from-[#001f3f] to-[#003366] md:flex-row"
         id="admission"
       >
         <div className="flex w-full flex-col items-center justify-center p-8 pt-40 text-white md:w-2/3 md:p-16 md:pt-16">
