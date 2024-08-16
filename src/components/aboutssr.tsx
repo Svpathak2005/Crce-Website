@@ -9,7 +9,7 @@ import HighlightedSpeeches from './HighlightedSpeeches'
 const PresidentPage = () => {
   return (
     <>
-      <div className="h-full w-full bg-gradient-to-b from-gray-50 to-[#E5F0FF]">
+      <div className="h-full w-full pt-24 bg-gradient-to-b from-gray-50 to-[#E5F0FF]">
         <main className="container mx-auto px-4 pb-12 pt-16">
           <div className="rounded-xl bg-white p-8 shadow-lg">
             <h2 className="mb-10 text-center font-ptserif text-5xl font-semibold text-blue-950">
