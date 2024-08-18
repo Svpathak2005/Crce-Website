@@ -124,7 +124,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Examination',
-      href: '/academics/departments',
+      href: '/academics/grading-process',
       icon: <ClipboardCheck size={18} />,
     },
     {
@@ -176,7 +176,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Project Groups',
-      href: '/international/partnerships',
+      href: '/project_teams',
       icon: <FolderGit2 size={18} />,
     },
     {
@@ -196,7 +196,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Grievances',
-      href: '/students/grievance',
+      href: '/students/grievance-policy',
       icon: <MessageCircleWarning size={18} />,
     },
     {
@@ -208,7 +208,7 @@ const dropdownContent: DropdownContent = {
   Departments: [
     {
       name: 'Computer Engineering',
-      href: '/AboutDepartment/ComputerDepartment',
+      href: '/AboutDepartment',
       icon: <Cpu size={18} />,
     },
     {
@@ -235,7 +235,7 @@ const dropdownContent: DropdownContent = {
   Admission: [
     {
       name: 'Under Graduate',
-      href: '/admission/undergraduates',
+      href: '/undergrad',
       icon: <GraduationCap size={18} />,
     },
     {
