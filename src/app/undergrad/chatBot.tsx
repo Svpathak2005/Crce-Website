@@ -63,21 +63,33 @@ const categoryData = [
     ],
   },
   {
-    name: 'Shipping',
+    name: 'Placement and Internships',
     questions: [
       {
-        question: 'What shipping options do you offer?',
-        answer: 'We offer standard, expedited, and next-day shipping options.',
+        question: 'How are the campus placements?',
+        answer:
+          'Placements at FRCRCE is at par with other reputed colleges in Mumbai and Maharashtra state. FR. CRCE provides 100% placement. Around 20 to 25% students who wish to pursue higher study immediately after B.E. opt out of placement.',
       },
       {
-        question: 'Can I expedite my shipping?',
+        question: 'Which are the companies that come here for recruitment?',
         answer:
-          'Yes, expedited shipping options are available at checkout for an additional fee.',
+          'Companies from various sectors like development, R&D, FinTech and core visit campus for placements. Multinationals like JPMC, Morgan Stanley, GEP, Barclays, Hexaware, Infosys, IBM, ICICI securities, Johnson control, L & T, L & T infotech, Seclore, selec, Siemens, siemens, Reliance, Amazon, Accenture are regular recruiters. Students also get placement offers from Microsoft, Amazon etc. You can visit FR. CRCE website to see the placement statistics.',
       },
       {
-        question: 'Do you offer package tracking?',
+        question:
+          'What is the difference in placement policy between various branches?',
         answer:
-          'Yes, tracking information is provided via email once your order ships.',
+          'Placement policy is same for all branches. In most of the companies students from all branches are eligible to apply; except few depending on the job profile.',
+      },
+      {
+        question: 'We want know more about honors and minor degrees?',
+        answer:
+          'FRCRCE has introduced honors and minor B.E. degree program from academic year 2022 -23. Following is the list of programs Blockchain, Cyber security, Robotics, 3-D printing, Al and ML. Data science, IoT.',
+      },
+      {
+        question: 'What is the scope for industry interaction?',
+        answer:
+          'College is associated with many industries not only for placement but for training programs, lab development, curriculum delivery etc.',
       },
     ],
   },
@@ -85,54 +97,48 @@ const categoryData = [
     name: 'Returns',
     questions: [
       {
-        question: 'What is your return policy?',
-        answer:
-          'We accept returns within 30 days of purchase. Items must be unused and in original packaging.',
+        question: '',
+        answer: '',
       },
       {
-        question: 'How do I initiate a return?',
-        answer:
-          'To initiate a return, contact our customer support team for a return authorization number.',
+        question: '',
+        answer: '',
       },
       {
-        question: 'Do I have to pay for return shipping?',
-        answer:
-          'Return shipping costs are the responsibility of the customer unless the item is defective or incorrect.',
+        question: '',
+        answer: '',
       },
       {
-        question: 'How long does it take to process a return?',
-        answer:
-          'Returns are typically processed within 5-7 business days of receipt at our warehouse.',
+        question: '',
+        answer: '',
       },
       {
-        question: 'Can I exchange an item?',
-        answer:
-          'Exchanges are allowed for different sizes or colors of the same item. Contact customer support for assistance.',
+        question: '',
+        answer: '',
       },
       {
-        question: 'What if I receive a defective product?',
-        answer:
-          'If you receive a defective product, contact us within 48 hours for a replacement or refund.',
+        question: '',
+        answer: '',
       },
       {
-        question: 'Can I return an item purchased on sale?',
-        answer:
-          'Sale items are eligible for return unless marked as final sale.',
+        question: '',
+        answer: '',
       },
       {
-        question: 'How do I track my return status?',
-        answer:
-          'You can track your return status through your account or by contacting customer support.',
+        question: '',
+        answer: '',
       },
       {
-        question: 'Do you offer store credit for returns?',
-        answer:
-          'Yes, you can opt for store credit instead of a refund to your original payment method.',
+        question: '',
+        answer: '',
       },
       {
-        question: 'What if my return is lost in transit?',
-        answer:
-          'We recommend using a trackable shipping method. If your return is lost, contact customer support for assistance.',
+        question: '',
+        answer: '',
+      },
+      {
+        question: '',
+        answer: '',
       },
     ],
   },
@@ -182,34 +188,42 @@ const ChatBot: React.FC<{ onClose: () => void }> = ({ onClose }) => {
       case 'main':
         return (
           <div className="scrollable-section">
-            <h3 className="mb-2 font-bold">Select a Category:</h3>
-            {categoryData.map((category, index) => (
-              <button
-                key={index}
-                onClick={() => handleCategorySelect(category)}
-                className="mb-2 w-full rounded-lg bg-gray-100 p-2 text-left hover:bg-gray-200"
-              >
-                {category.name}
-              </button>
-            ))}
+            <h3 className="mb-2 text-lg font-bold sm:text-xl">
+              Select a Category:
+            </h3>
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+              {categoryData.map((category, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleCategorySelect(category)}
+                  className="rounded-lg bg-gray-100 p-2 text-left hover:bg-gray-200 sm:p-3"
+                >
+                  {category.name}
+                </button>
+              ))}
+            </div>
           </div>
         )
       case 'category':
         return (
           <div className="scrollable-section">
-            <h3 className="mb-2 font-bold">Select a Question:</h3>
-            {selectedCategory?.questions.map((question, index) => (
-              <button
-                key={index}
-                onClick={() => handleQuestionSelect(question)}
-                className="mb-2 w-full rounded-lg bg-gray-100 p-2 text-left hover:bg-gray-200"
-              >
-                {question.question}
-              </button>
-            ))}
+            <h3 className="mb-2 text-lg font-bold sm:text-xl">
+              Select a Question:
+            </h3>
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+              {selectedCategory?.questions.map((question, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleQuestionSelect(question)}
+                  className="rounded-lg bg-gray-100 p-2 text-left hover:bg-gray-200 sm:p-3"
+                >
+                  {question.question}
+                </button>
+              ))}
+            </div>
             <button
               onClick={handleBackToMain}
-              className="mt-4 w-full rounded-lg bg-blue-900 p-2 text-white hover:bg-blue-900"
+              className="mt-4 w-full rounded-lg bg-blue-900 p-2 text-white hover:bg-blue-900 sm:p-3"
             >
               Back
             </button>
@@ -219,30 +233,34 @@ const ChatBot: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         return (
           <button
             onClick={handleBackToCategory}
-            className="mt-4 w-full rounded-lg bg-blue-900 p-2 text-white hover:bg-blue-900"
+            className="mt-4 w-full rounded-lg bg-blue-900 p-2 text-white hover:bg-blue-900 sm:p-3"
           >
             Back
           </button>
         )
+      default:
+        return null
     }
   }
 
   return (
     <div className="flex h-full flex-col rounded-lg bg-white shadow-xl">
-      <div className="flex items-center justify-between rounded-t-lg bg-blue-900 p-4 text-white">
-        <h3 className="font-bold">Frequently Asked Questions</h3>
-        <button onClick={onClose} className="text-2xl">
+      <div className="flex items-center justify-between rounded-t-lg bg-blue-900 p-4 text-white sm:p-6">
+        <h3 className="text-lg font-bold sm:text-2xl">
+          Frequently Asked Questions
+        </h3>
+        <button onClick={onClose} className="text-2xl sm:text-3xl">
           &minus;
         </button>
       </div>
-      <div className="flex-1 space-y-4 overflow-y-auto p-4">
+      <div className="flex-1 space-y-4 overflow-y-auto p-4 sm:p-6">
         {messages.map((message, index) => (
           <div
             key={index}
             className={`flex ${message.isUser ? 'justify-end' : 'justify-start'}`}
           >
             <div
-              className={`max-w-xs rounded-lg p-3 ${
+              className={`max-w-xs rounded-lg p-3 sm:p-4 ${
                 message.isUser ? 'bg-blue-900 text-white' : 'bg-gray-200'
               }`}
             >
@@ -252,7 +270,7 @@ const ChatBot: React.FC<{ onClose: () => void }> = ({ onClose }) => {
         ))}
         <div ref={messagesEndRef} />
       </div>
-      <div className="border-t p-4">{renderOptions()}</div>
+      <div className="p-4 sm:p-6">{renderOptions()}</div>
     </div>
   )
 }

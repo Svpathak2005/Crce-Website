@@ -81,8 +81,8 @@ const dropdownContent: DropdownContent = {
       icon: <Target size={18} />,
     },
     {
-      name: 'Adminstration',
-      href: '/about/adminstration',
+      name: 'Administration',
+      href: '/about/administration',
       icon: <Building2 size={18} />,
     },
     {
@@ -109,7 +109,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Academic/Holiday Calender',
-      href: '/academics/departments',
+      href: '/academics/calendar',
       icon: <Calendar size={18} />,
     },
     {
@@ -124,7 +124,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Examination',
-      href: '/academics/departments',
+      href: '/academics/grading-process',
       icon: <ClipboardCheck size={18} />,
     },
     {
@@ -144,7 +144,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'IQAC-CRCE',
-      href: '/research/funding',
+      href: '/academics/IQAC',
       icon: <BadgeCheck size={18} />,
     },
     {
@@ -176,7 +176,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Project Groups',
-      href: '/international/partnerships',
+      href: '/project_teams',
       icon: <FolderGit2 size={18} />,
     },
     {
@@ -196,7 +196,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Grievances',
-      href: '/international/admissions',
+      href: '/students/grievance-policy',
       icon: <MessageCircleWarning size={18} />,
     },
     {
@@ -208,7 +208,7 @@ const dropdownContent: DropdownContent = {
   Departments: [
     {
       name: 'Computer Engineering',
-      href: 'https://frcrce.ac.in/index.php/academics/research-development/publications',
+      href: '/AboutDepartment',
       icon: <Cpu size={18} />,
     },
     {
@@ -235,7 +235,7 @@ const dropdownContent: DropdownContent = {
   Admission: [
     {
       name: 'Under Graduate',
-      href: 'https://frcrce.ac.in/index.php/about-us/vision-mission',
+      href: '/undergrad',
       icon: <GraduationCap size={18} />,
     },
     {
@@ -318,7 +318,7 @@ const Navbar: React.FC = () => {
     <>
       {/* Desktop Navigation */}
       <nav
-        className={`fixed top-0 z-50 hidden w-full bg-gray-900 bg-opacity-90 font-semibold text-white transition-transform duration-300 ease-in-out md:block ${
+        className={`fixed top-0 z-50 hidden w-full bg-[#131929] bg-opacity-90 font-semibold text-white transition-transform duration-300 ease-in-out md:block ${
           hasScrolled
             ? visible
               ? 'translate-y-0'
@@ -373,8 +373,8 @@ const Navbar: React.FC = () => {
               </Link>
             </div>
             <Link
-              href="/admissions"
-              className="group rounded-md bg-yellow-500 px-6 py-2 font-bold text-black transition duration-300 hover:bg-yellow-600"
+              href="/Admissions"
+              className="rounded-md bg-yellow-500 px-6 py-2 font-bold text-black transition duration-300 hover:bg-yellow-600"
             >
               <div className="flex flex-row items-center space-x-2">
                 <span>Admissions</span>
@@ -603,9 +603,6 @@ const Navbar: React.FC = () => {
             ))}
           </div>
         )}
-      </div>
-      <div className="md:mt-[150px] lg:mt-[165px]">
-        {/* Content that comes below the navbar */}
       </div>
     </>
   )

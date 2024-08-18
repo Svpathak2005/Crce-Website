@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <section className="hero body-font relative mt-[-160px] min-h-screen w-full text-gray-600">
+    <section className="hero body-font min-h-screen w-full text-gray-600">
       <div className="absolute inset-0">
         <video className="h-full w-full object-cover" autoPlay muted loop>
           <source src="vid.mp4" type="video/mp4" />

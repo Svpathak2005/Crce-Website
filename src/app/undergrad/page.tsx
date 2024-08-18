@@ -19,18 +19,18 @@ export default function Home() {
   const [isChatbotOpen, setIsChatbotOpen] = useState(false)
 
   return (
-    <main className="bg-white">
+    <main className="">
       {!isChatbotOpen && (
         <button
           onClick={() => setIsChatbotOpen(true)}
-          className="fixed bottom-4 right-4 z-50 rounded-full bg-blue-900 p-4 text-white shadow-lg"
+          className="fixed bottom-4 right-4 z-50 rounded-full border-none border-blue-800 bg-blue-900 p-4 font-semibold text-white shadow-lg"
         >
           FAQs
         </button>
       )}
 
       {isChatbotOpen && (
-        <div className="fixed bottom-4 right-4 z-50 h-[500px] w-[350px] rounded-lg bg-white shadow-xl">
+        <div className="fixed bottom-4 right-4 z-50 h-[500px] w-[350px] rounded-lg border-none border-blue-800 bg-white shadow-xl sm:h-[600px] sm:w-[550px]">
           <ChatBot onClose={() => setIsChatbotOpen(false)} />
         </div>
       )}

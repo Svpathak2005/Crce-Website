@@ -1,9 +1,10 @@
+import Footer from '@/components/footer'
 import React from 'react'
 
 const PDFViewerPage = () => {
   return (
-    <div className="flex min-h-screen flex-col bg-gray-100">
-      <header className="bg-gradient-to-br from-[#001f3f] to-[#003366] p-6 text-center text-white">
+    <div className="flex absolute top-0 h-fit w-full flex-col justify-center items-center bg-gray-100">
+      <header className="bg-gradient-to-br w-full pt-48 h-full from-[#001f3f] to-[#003366] p-6 text-center text-white">
         <h1 className="text-2xl font-bold">
           STUDENT GRIEVANCE REDRESSAL POLICY
         </h1>
@@ -38,6 +39,7 @@ const PDFViewerPage = () => {
           </div>
         </div>
       </main>
+      <Footer/>
     </div>
   )
 }

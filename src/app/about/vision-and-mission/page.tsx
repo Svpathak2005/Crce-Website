@@ -11,9 +11,9 @@ const zilla = Zilla_Slab({
 
 const VisionMissionPage = () => {
   return (
-    <div className="flex h-fit w-full flex-col bg-white text-gray-900">
-      <div className="flex h-full w-full flex-col justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] md:flex-row">
-        <div className="flex w-full flex-col items-center justify-center p-8 pt-40 text-white md:w-2/3 md:p-16 md:pt-16">
+    <div className="flex h-fit w-full flex-col bg-gradient-to-b from-gray-50 to-[#E5F0FF] text-gray-900">
+      <div className="flex h-full w-full pt-36 flex-col justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] md:flex-row">
+        <div className="flex w-full flex-col  items-center justify-center p-8 pt-40 text-white md:w-2/3 md:p-16 md:pt-16">
           <h1
             className={`${zilla.className} mb-6 text-4xl font-bold md:text-5xl lg:text-7xl`}
           >
@@ -25,14 +25,14 @@ const VisionMissionPage = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-16  w-full">
         <div className="mb-16">
           <h2
             className={`${zilla.className} mb-6 text-3xl font-bold text-[#001f3f] md:text-4xl`}
           >
             Our Vision
           </h2>
-          <div className="rounded-lg bg-gray-100 p-6 shadow-md">
+          <div className="rounded-lg bg-gray-100 p-6 shadow-lg">
             <p className="mb-4 text-xl font-semibold text-[#4a90e2]">
               "Moulding Engineers Who Can Build The Nation"
             </p>
@@ -62,7 +62,7 @@ const VisionMissionPage = () => {
             ].map((item, index) => (
               <li
                 key={index}
-                className="flex items-start rounded-lg bg-gray-100 p-4 shadow-md"
+                className="flex items-start rounded-lg bg-gray-100 p-4 shadow-lg"
               >
                 <span className="mr-4 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#4a90e2] text-white">
                   {index + 1}
