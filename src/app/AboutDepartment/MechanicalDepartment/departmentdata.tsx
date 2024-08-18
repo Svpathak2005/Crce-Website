@@ -1,8 +1,171 @@
-'use client'
-import React, { useState } from 'react'
-
-const ProgramInfo = () => {
-  const [activeTab, setActiveTab] = useState('Placements')
+export const FacultyTabData = [
+  {
+    id: '1',
+    name: 'Dr. A. K. Agarwal',
+    photoUrl: '/ssr3.png',
+    ctaText: 'View Profile',
+    designation: 'HOD',
+    description:
+      'Dr. A. K. Agarwal is the Head of Department of Mechanical Engineering at Fr.CRCE, Indore.',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/1'
+    },
+  },
+  {
+    id: '2',
+    name: 'Dr. S. S. Rathore',
+    photoUrl: '/ssr3.png',
+    ctaText: 'View Profile',
+    designation: 'Professor',
+    description:
+      'Dr. S. S. Rathore is a Professor of Mechanical Engineering at Fr.CRCE, Indore.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ea repellendus iure voluptates itaque dolorum pariatur aspernatur molestiae adipisci, quis eaque, sunt dolores ab earum. Laudantium dolor laborum deserunt expedita?  ',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/2'
+    },
+  },
+  {
+    id: '3',
+    name: 'Dr. A. K. Agarwal',
+    photoUrl: '/ssr3.png',
+    ctaText: 'View Profile',
+    designation: 'HOD',
+    description:
+      'Dr. A. K. Agarwal is the Head of Department of Mechanical Engineering at Fr.CRCE, Indore.',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/3'
+    },
+  },
+  {
+    id: '4',
+    name: 'Dr. S. S. Rathore',
+    photoUrl: '/ssr3.png',
+    ctaText: 'View Profile',
+    designation: 'Professor',
+    description:
+      ' Dr. S. S. Rathore is a Professor of Mechanical Engineering at Fr.CRCE, Indore.',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/4'
+    },
+  },
+  {
+    id: '5',
+    name: 'Dr. A. K. Agarwal',
+    photoUrl: '/ssr3.png',
+    ctaText: 'View Profile',
+    designation: 'HOD',
+    description:
+      'Dr. A. K. Agarwal is the Head of Department of Mechanical Engineering at Fr.CRCE, Indore.',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/5'
+    },
+  },
+  {
+    id: '6',
+    name: 'Dr. S. S. Rathore',
+    photoUrl: '/ssr3.png',
+    ctaText: 'View Profile',
+    designation: 'Professor',
+    description:
+      'Dr. S. S. Rathore is a Professor of Mechanical Engineering at Fr.CRCE, Indore.',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/6'
+    },
+  },
+  {
+    id: '7',
+    name: 'Dr. A. K. Agarwal',
+    photoUrl: '/ssr3.png',
+    ctaText: 'View Profile',
+    designation: 'HOD',
+    description:
+      'Dr. A. K. Agarwal is the Head of Department of Mechanical Engineering at Fr.CRCE, Indore.',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/7'
+    },
+  },
+  {
+    id: '8',
+    name: 'Dr. S. S. Rathore',
+    photoUrl: '/ssr3.png',
+    ctaText: 'View Profile',
+    designation: 'Professor',
+    description:
+      'Dr. S. S. Rathore is a Professor of Mechanical Engineering at Fr.CRCE, Indore.',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/8'
+    },
+  },
+]
+export const tabs = [
+  {
+    id: 'about',
+    title: 'About Mechanical Department',
+  },
+  {
+    id: 'visionandmission',
+    title: 'Vision and Mission',
+  },
+  {
+    id: 'peos,pos,psos',
+    title: 'PEOs,PSOs and POs',
+  },
+  {
+    id: 'Faculty',
+    title: 'Faculty',
+  },
+  {
+    id: 'infrastructure',
+    title: 'Infrastructure',
+  },
+  {
+    id: 'research',
+    title: 'Research',
+  },
+  {
+    id: 'Publications',
+    title: 'Publications',
+  },
+  {
+    id: 'pre-Incubation',
+    title: 'Pre-Incubation',
+  },
+]
+export const AboutmechDepartment = {
+  name: 'Mechanical Engineering Department',
+  description:
+    'The Department of Mechanical Engineering at Fr.CRCE is committed to providing quality education in the field of Mechanical engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Mechanical engineering principles and practices. Our faculty members are experts in their fields and are dedicated to providing students with a challenging and rewarding educational experience. The department has state-of-the-art labs and facilities that allow students to gain hands-on experience with the latest technologies and tools. We also offer a variety of research opportunities and industry collaborations that give students the chance to work on real-world problems and projects. Our graduates are highly sought after by employers and go on to successful careers in a variety of industries and fields.',
+  video:false,
+}
+export const Vision = {
+  name: 'Vision',
+  description:
+    'The Department of Mechanical Engineering at CRCE is committed to providing quality education in the field of Mechanical Engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Mechanical Engineering principles and practices. ',
+  video: false,
+}
+export const Mission = {
+  name: 'Mission',
+  description:
+    'The Department of Mechanical Engineering at CRCE is committed to providing quality education in the field of Mechanical Engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Mechanical Engineering principles and practices.',
+  video: false,
+}
+export const ProgramOutcomes = {
+  name: 'Program Outcomes',
+  description:
+    'The Department of Mechanical Engineering at CRCE is committed to providing quality education in the field of Mechanical Engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Mechanical Engineering principles and practices.',
+  video: false,
+}
+export const ProgramEducationalObjectives = {
+  name: 'Program Educational Objectives',
+  description:
+    'The Department of Mechanical Engineering at CRCE is committed to providing quality education in the field of Mechanical Engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Mechanical Engineering principles and practices.',
+  video: false,
+}
+export const ProgrammeSpecificOutcomes = {
+  name: 'Programme Specific Outcomes',
+  description:
+    'The Department of Mechanical Engineering at CRCE is committed to providing quality education in the field of Mechanical Engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Mechanical Engineering principles and practices.',
+  video: false,
+}
 
   const events = [
     {
@@ -26,7 +189,7 @@ const ProgramInfo = () => {
     },
   ]
 
-  const images = [
+  export const images = [
     'accectire.png',
     'colgate.jpg',
     'godrej.jpg',
@@ -37,7 +200,7 @@ const ProgramInfo = () => {
     'tcs.jpg',
   ]
 
-  const tabContents = {
+  export const tabContents = {
     Placements: (
       <div className="mx-auto p-6 font-roboto">
         <h2 className="mb-6 text-3xl font-semibold text-gray-900">
@@ -233,62 +396,3 @@ const ProgramInfo = () => {
     ),
   }
 
-  return (
-    <div className="container mx-auto p-4 font-sans">
-      <div className="flex flex-col bg-white shadow-lg md:flex-row">
-        <div className="p-6 md:w-2/3">
-          <div className="mb-4 flex border-b">
-            {['Placements', 'Recruiters', 'Eligibility'].map((tab) => (
-              <button
-                key={tab}
-                className={`px-4 py-2 font-bold ${
-                  activeTab === tab
-                    ? 'border-b-2 border-blue-600 text-blue-600'
-                    : 'text-gray-600'
-                }`}
-                onClick={() => setActiveTab(tab)}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
-          <div className="content text-sm">
-            {tabContents[activeTab as keyof typeof tabContents]}
-          </div>
-        </div>
-        <div className="mb-0 bg-gray-100 p-6 md:w-1/3">
-          <div className="mb-0 rounded bg-blue-50 p-4">
-            <h3 className="text-lg font-bold">Duration</h3>
-            <p className="text-2xl text-blue-600">4 Years</p>
-            <p className="text-xs text-gray-600">
-              Last Date To Apply : 26 July 2024
-            </p>
-          </div>
-          <div className="mb-4 rounded bg-blue-50 p-4">
-            <h3 className="text-lg font-bold">Programme Name</h3>
-            <p>B.Tech ComputerEngineering</p>
-          </div>
-          <div className="rounded bg-gray-800 p-4 text-white">
-            <p>Fee Per Year</p>
-            <h2 className="mb-2 text-2xl font-bold">Rs. 1,67,000</h2>
-            <button className="mb-4 w-full rounded bg-blue-500 px-4 py-2 text-white">
-              Apply Online Now
-            </button>
-            <div className="mb-4">
-              <a href="#" className="mb-2 block text-blue-400">
-                Brochure →
-              </a>
-              <a href="#" className="block text-blue-400">
-                Course Structure →
-              </a>
-            </div>
-            <p className="text-blue-200">Highest CTC</p>
-            <p className="text-lg">INR 17.75 LPA</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-export default ProgramInfo
