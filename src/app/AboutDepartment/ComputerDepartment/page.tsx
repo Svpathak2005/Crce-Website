@@ -20,6 +20,7 @@ import {
   PlacementTab,
 } from './components'
 import PreIncubationCenter from './PreincubationCentre'
+import Publications from './Publications'
 
 const ComputerEngineeringPage = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]?.id || 'overview')
@@ -47,6 +48,8 @@ const ComputerEngineeringPage = () => {
         return <FacultyGrid />
         case 'pre-Incubation':
         return <PreIncubationCenter />
+        case 'Publications':
+        return <Publications />
 
       default:
         return null

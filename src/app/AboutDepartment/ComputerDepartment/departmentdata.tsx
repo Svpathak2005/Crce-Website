@@ -122,6 +122,10 @@ export const tabs = [
     title: 'Research',
   },
   {
+    id: 'Publications',
+    title: 'Publications',
+  },
+  {
     id: 'pre-Incubation',
     title: 'Pre-Incubation',
   },
