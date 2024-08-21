@@ -13,8 +13,8 @@ const Sidebar: React.FC<SidebarTabsProps> = ({
   onTabChange,
 }) => {
   return (
-    <div className="flex w-fit pl-[5vw] pt-5">
-      <div className="w-64 bg-white">
+    <div className="flex w-fit pl-[5vw] pt-5 ">
+      <div className="w-fit bg-white  ">
         {tabs.map((tab) => (
           <button
             key={tab.id}

@@ -208,7 +208,7 @@ const dropdownContent: DropdownContent = {
   Departments: [
     {
       name: 'Computer Engineering',
-      href: '/AboutDepartment',
+      href: '/AboutDepartment/ComputerDepartment',
       icon: <Cpu size={18} />,
     },
     {
@@ -218,7 +218,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Mechanical Engineering',
-      href: '/research/funding',
+      href: '/AboutDepartment/MechanicalDepartment',
       icon: <Cog size={18} />,
     },
     {
