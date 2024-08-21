@@ -9,6 +9,9 @@ import Sidebar from '@/components/QuicklinksSidebar'
 import StrategicDevPlan from './strategic-dev-plan/StrategicDevPlan'
 import ServiceRules from './service-rules/ServiceRules'
 import StaffIncharge from './staff-incharge/StaffIncharge'
+import Trustees from './trustees/Trustees'
+import Governance from './governance/Governance'
+import CollegeDevelopmentCommittee from './college-dev-committee/CollegeDevCommittee'
 
 const zilla = Zilla_Slab({
   weight: ['400', '700'],
@@ -21,6 +24,12 @@ export default function Page() {
 
   const renderContent = () => {
     switch (activeTab) {
+      case 'trustees':
+        return <Trustees />
+        case 'governance':
+        return <Governance />
+        case 'collegedevelopmentcommittee':
+        return <CollegeDevelopmentCommittee />
       case 'strategicdevelopmentplan':
         return <StrategicDevPlan />
       case 'servicerules':

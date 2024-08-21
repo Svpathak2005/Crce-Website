@@ -2,9 +2,9 @@ import React from 'react'
 
 const StrategicDevPlan = () => {
   return (
-    <div className="flex min-h-screen w-full flex-col bg-gradient-to-b from-gray-50 to-[#E5F0FF]">
+    <div className="flex min-h-screen w-full flex-col">
       <main className="container mx-auto flex-grow p-4">
-        <div className=" rounded-lg bg-white p-6 shadow-lg">
+        <div className="rounded-lg bg-white p-6 shadow-lg">
           <h2 className="mb-4 text-2xl font-semibold">
             Strategic Development Plan
           </h2>
