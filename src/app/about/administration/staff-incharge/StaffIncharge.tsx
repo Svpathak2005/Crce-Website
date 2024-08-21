@@ -2,13 +2,9 @@ import React from 'react'
 
 const StaffIncharge = () => {
   return (
-    <div className="flex w-full min-h-screen flex-col bg-gradient-to-b from-gray-50 to-[#E5F0FF]">
-      <header className="bg-gradient-to-br pt-48 from-[#001f3f] to-[#003366] p-6 text-center text-white">
-        <h1 className="text-2xl font-bold">Staff Incharge</h1>
-      </header>
-
-      <main className="container mx-auto my-8 flex-grow p-4">
-        <div className="mb-8 rounded-lg bg-white p-6 shadow-lg">
+    <div className="flex min-h-screen w-full flex-col bg-gradient-to-b from-gray-50 to-[#E5F0FF]">
+      <main className="container mx-auto flex-grow p-4">
+        <div className=" rounded-lg bg-white p-6 shadow-lg">
           <h2 className="mb-4 text-2xl font-semibold">Staff Incharge</h2>
           <div className="h-[800px] w-full">
             {/* Adjust height as needed */}

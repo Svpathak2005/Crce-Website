@@ -1,11 +1,14 @@
 'use client'
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { Zilla_Slab } from 'next/font/google'
 import Image from 'next/image'
 import { BookOpenText } from 'lucide-react'
 import Link from 'next/link'
 import { tabs } from './data'
 import Sidebar from '@/components/QuicklinksSidebar'
+import StrategicDevPlan from './strategic-dev-plan/StrategicDevPlan'
+import ServiceRules from './service-rules/ServiceRules'
+import StaffIncharge from './staff-incharge/StaffIncharge'
 
 const zilla = Zilla_Slab({
   weight: ['400', '700'],
@@ -15,6 +18,21 @@ const zilla = Zilla_Slab({
 })
 export default function Page() {
   const [activeTab, setActiveTab] = useState(tabs[0]?.id || 'overview')
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'strategicdevelopmentplan':
+        return <StrategicDevPlan />
+      case 'servicerules':
+        return <ServiceRules />
+      case 'staffincharges':
+        return <StaffIncharge />
+
+      default:
+        return null
+    }
+  }
+
   return (
     <main className="flex h-fit w-full flex-col items-center justify-center">
       <div
@@ -25,24 +43,21 @@ export default function Page() {
           <h1
             className={`${zilla.className} mb-3 text-center text-4xl font-bold md:text-5xl lg:text-7xl`}
           >
-            Abdministration
+            Administration
           </h1>
         </div>
       </div>
-      <div className="flex h-fit w-full flex-col items-center justify-center bg-gradient-to-b from-gray-50 to-[#E5F0FF] pt-10">
-      <div className="m-2 flex">
-        <Sidebar
-          tabs={tabs}
-          activeTab={activeTab}
-          onTabChange={(tabId) => setActiveTab(tabId)}
-        />
-        <div className="invisible-scrollbar mx-2 max-h-screen flex-col overflow-x-hidden ">
-          <div id={activeTab} className="container">
-            hi
-          </div>
+      <div className="flex h-fit w-full flex-col justify-center bg-gradient-to-b from-gray-50 to-[#E5F0FF] py-4 md:flex-row">
+        <div className="mx-2 min-w-max">
+          <Sidebar
+            tabs={tabs}
+            activeTab={activeTab}
+            onTabChange={(tabId) => setActiveTab(tabId)}
+          />
         </div>
-      </div>
-
+        <div id={activeTab} className="container">
+          {renderContent()}
+        </div>
       </div>
     </main>
   )

@@ -13,13 +13,13 @@ const Sidebar: React.FC<SidebarTabsProps> = ({
   onTabChange,
 }) => {
   return (
-    <div className="flex w-fit pl-[5vw] pt-5 ">
+    <div className="flex w-fit pl-[3vw] pt-5 ">
       <div className="w-fit bg-white  ">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => onTabChange(tab.id)}
-            className={`flex w-full justify-start border-b border-gray-400 px-2 py-2 ${
+            className={`flex w-full justify-start border-b border-gray-400 p-2 ${
               activeTab === tab.id
                 ? 'bg-gray-50 text-blue-600'
                 : 'text-gray-600 hover:text-blue-400'
