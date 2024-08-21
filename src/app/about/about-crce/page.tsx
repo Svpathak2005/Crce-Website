@@ -2,6 +2,7 @@
 import React from 'react'
 import { Zilla_Slab } from 'next/font/google'
 import Image from 'next/image'
+import { BookOpenText, GraduationCap, School, UsersRound } from 'lucide-react'
 
 const zilla = Zilla_Slab({
   weight: ['400', '700'],
@@ -82,42 +83,54 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="flex w-full flex-col items-center justify-center bg-[#E5F0FF] px-8 py-16">
+      <div className="m flex w-full flex-col items-center justify-center bg-[#E5F0FF] px-8 py-16">
         {/* At a glance section */}
         <h2 className="mb-1 text-center font-ptserif text-5xl font-semibold text-blue-950">
           At A Glance
         </h2>
-        <h3 className="mb-10 font-ptserif text-xl font-semibold text-blue-950">
+        <h3 className="mb-8 font-ptserif text-xl font-semibold text-blue-950">
           The Number Of Students Gradutates & Under Graduates From Our College
         </h3>
-        <div className="flex gap-10">
-          <div className="flex cursor-default flex-col rounded-lg border-2 border-blue-950 p-4 duration-300 ease-in-out hover:scale-125">
-            <h2>
-              Gradutes <span className="rounded-full">icon</span>
+        <div className="mb-10 flex flex-col gap-10 md:flex-row">
+          <div className="flex cursor-default flex-col rounded-br-3xl rounded-tl-3xl border-4 border-white bg-blue-950 p-6 font-roboto text-white shadow-lg duration-300 ease-in-out hover:scale-125">
+            <h2 className="flex items-center justify-center gap-2 text-xl">
+              Gradutes <GraduationCap />
             </h2>
-            9000
+            <p className="text-center text-3xl">9000</p>
           </div>
-          <div className="flex cursor-default flex-col rounded-lg border-2 border-blue-950 p-4 duration-300 ease-in-out hover:scale-125">
-            <h2>
-              Programs <span className="rounded-full">icon</span>
+          <div className="flex cursor-default flex-col rounded-br-3xl rounded-tl-3xl border-4 border-white bg-blue-950 p-6 font-roboto text-white shadow-lg duration-300 ease-in-out hover:scale-125">
+            <h2 className="flex items-center justify-center gap-2 text-xl">
+              Programs <BookOpenText />
             </h2>
-            8
+            <p className="text-center text-3xl">8</p>
           </div>
-          <div className="flex cursor-default flex-col rounded-lg border-2 border-blue-950 p-4 duration-300 ease-in-out hover:scale-125">
-            <h2>
-              Class Rooms <span className="rounded-full">icon</span>
+          <div className="flex cursor-default flex-col rounded-br-3xl rounded-tl-3xl border-4 border-white bg-blue-950 p-6 font-roboto text-white shadow-lg duration-300 ease-in-out hover:scale-125">
+            <h2 className="flex items-center justify-center gap-2 text-xl">
+              Class Rooms <School />
             </h2>
-            23
+            <p className="text-center text-3xl">23</p>
           </div>
-          <div className="flex cursor-default flex-col rounded-lg border-2 border-blue-950 p-4 duration-300 ease-in-out hover:scale-125">
-            <h2>
-              Students <span className="rounded-full">icon</span>
+          <div className="flex cursor-default flex-col rounded-br-3xl rounded-tl-3xl border-4 border-white bg-blue-950 p-6 font-roboto text-white shadow-lg duration-300 ease-in-out hover:scale-125">
+            <h2 className="flex items-center justify-center gap-2 text-xl">
+              Students <UsersRound />
             </h2>
-            1200
+            <p className="text-center text-3xl">1200</p>
           </div>
         </div>
         {/* Take a tour section  */}
-        <div>take a tour </div>
+        <div>
+          <h2 className="mb-1 text-center font-ptserif text-5xl font-semibold text-blue-950">
+            Take A Tour
+          </h2>
+          <h2 className="mb-1 text-center font-ptserif text-2xl font-semibold text-blue-950">
+            OUR CAMPUSES ARE A LIVING LABORATORIES FOR SUSTAINABILITY
+          </h2>
+          <h3 className="mb-8 text-center font-ptserif text-xl font-semibold text-blue-950">
+            The college is located at Bandstand, Bandra, Mumbai in a picturesque
+            environment surrounded by the Arabian Sea
+          </h3>
+          
+        </div>
       </div>
     </main>
   )
