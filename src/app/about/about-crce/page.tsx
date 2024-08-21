@@ -2,6 +2,14 @@
 import React from 'react'
 import { Zilla_Slab } from 'next/font/google'
 import Image from 'next/image'
+import {
+  BookOpenText,
+  GraduationCap,
+  School,
+  UsersRound,
+  Youtube,
+} from 'lucide-react'
+import Link from 'next/link'
 
 const zilla = Zilla_Slab({
   weight: ['400', '700'],
@@ -13,10 +21,10 @@ export default function Page() {
   return (
     <main className="flex h-fit w-full flex-col items-center justify-center">
       <div
-        className="flex h-full w-full flex-col justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] pt-36 md:flex-row"
+        className="flex h-full w-full flex-col justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] md:flex-row md:pt-36"
         id="iqac"
       >
-        <div className="flex w-full flex-col items-center justify-center p-8 pt-40 text-white md:w-2/3 md:p-16 md:pt-16">
+        <div className="flex w-full flex-col items-center justify-center p-8 pt-36 text-white md:w-2/3 md:p-16 md:pt-16">
           <h1
             className={`${zilla.className} mb-3 text-center text-4xl font-bold md:text-5xl lg:text-7xl`}
           >
@@ -25,8 +33,8 @@ export default function Page() {
         </div>
       </div>
       <div className="flex h-fit w-full flex-col items-center justify-center bg-gradient-to-b from-gray-50 to-[#E5F0FF] pt-10">
-        <div className="container mx-auto mb-20 flex rounded-xl bg-white p-6 shadow-lg">
-          <p className="text-lg">
+        <div className="container max-w-[90%] mx-auto mb-20 flex rounded-xl bg-white p-6 shadow-lg">
+          <p className="text-lg text-wrap">
             Located in a picturesque environment in the heart of the Mumbai
             city, Fr.Conceicao Rodrigues College of Engineering (Fr.CRCE) is one
             of the renowned, premier and sought-after private Engineering
@@ -69,9 +77,9 @@ export default function Page() {
             programmes (Computer, Electronics and Production Engineering) of the
             institute have been accredited by the National Board of
             Accreditation (NBA-India) since 2017-2018. The college is also a
-            NAAC accredited with grade 'A
+            NAAC accredited with grade 'A'.
           </p>
-          <div className="float-end">
+          {/* <div className="float-end">
             <Image
               alt="college photo"
               src="/college.jpg"
@@ -79,45 +87,74 @@ export default function Page() {
               width={10000}
               className="max-h-[500px] rounded-lg"
             />
-          </div>
+          </div> */}
         </div>
       </div>
-      <div className="flex w-full flex-col items-center justify-center bg-[#E5F0FF] px-8 py-16">
+      <div className="m flex w-full flex-col items-center justify-center bg-[#E5F0FF] px-8 py-16">
         {/* At a glance section */}
         <h2 className="mb-1 text-center font-ptserif text-5xl font-semibold text-blue-950">
           At A Glance
         </h2>
-        <h3 className="mb-10 font-ptserif text-xl font-semibold text-blue-950">
+        <h3 className="mb-8 text-center font-ptserif text-xl font-semibold text-blue-950">
           The Number Of Students Gradutates & Under Graduates From Our College
         </h3>
-        <div className="flex gap-10">
-          <div className="flex cursor-default flex-col rounded-lg border-2 border-blue-950 p-4 duration-300 ease-in-out hover:scale-125">
-            <h2>
-              Gradutes <span className="rounded-full">icon</span>
+        <div className="mb-10 flex flex-col gap-10 md:flex-row">
+          <div className="flex cursor-default flex-col rounded-br-3xl rounded-tl-3xl border-4 border-white bg-blue-950 p-6 font-roboto text-white shadow-lg duration-300 ease-in-out hover:scale-125">
+            <h2 className="flex items-center justify-center gap-2 text-xl">
+              Gradutes <GraduationCap />
             </h2>
-            9000
+            <p className="text-center text-3xl">9000</p>
           </div>
-          <div className="flex cursor-default flex-col rounded-lg border-2 border-blue-950 p-4 duration-300 ease-in-out hover:scale-125">
-            <h2>
-              Programs <span className="rounded-full">icon</span>
+          <div className="flex cursor-default flex-col rounded-br-3xl rounded-tl-3xl border-4 border-white bg-blue-950 p-6 font-roboto text-white shadow-lg duration-300 ease-in-out hover:scale-125">
+            <h2 className="flex items-center justify-center gap-2 text-xl">
+              Programs <BookOpenText />
             </h2>
-            8
+            <p className="text-center text-3xl">8</p>
           </div>
-          <div className="flex cursor-default flex-col rounded-lg border-2 border-blue-950 p-4 duration-300 ease-in-out hover:scale-125">
-            <h2>
-              Class Rooms <span className="rounded-full">icon</span>
+          <div className="flex cursor-default flex-col rounded-br-3xl rounded-tl-3xl border-4 border-white bg-blue-950 p-6 font-roboto text-white shadow-lg duration-300 ease-in-out hover:scale-125">
+            <h2 className="flex items-center justify-center gap-2 text-xl">
+              Class Rooms <School />
             </h2>
-            23
+            <p className="text-center text-3xl">23</p>
           </div>
-          <div className="flex cursor-default flex-col rounded-lg border-2 border-blue-950 p-4 duration-300 ease-in-out hover:scale-125">
-            <h2>
-              Students <span className="rounded-full">icon</span>
+          <div className="flex cursor-default flex-col rounded-br-3xl rounded-tl-3xl border-4 border-white bg-blue-950 p-6 font-roboto text-white shadow-lg duration-300 ease-in-out hover:scale-125">
+            <h2 className="flex items-center justify-center gap-2 text-xl">
+              Students <UsersRound />
             </h2>
-            1200
+            <p className="text-center text-3xl">1200</p>
           </div>
         </div>
         {/* Take a tour section  */}
-        <div>take a tour </div>
+        <div>
+          <h2 className="mb-1 text-center font-ptserif text-5xl font-semibold text-blue-950">
+            Take A Tour
+          </h2>
+          <h2 className="mb-1 text-center font-ptserif text-2xl font-semibold text-blue-950">
+            OUR CAMPUSES ARE A LIVING LABORATORIES FOR SUSTAINABILITY
+          </h2>
+          <h3 className="mb-8 text-center font-ptserif text-xl font-semibold text-blue-950">
+            The college is located at Bandstand, Bandra, Mumbai in a picturesque
+            environment surrounded by the Arabian Sea
+          </h3>
+          <Link
+            href="https://youtu.be/ZMDlPfqqAsY?si=y2gZUALPeEHLMqN2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="mx-auto rounded-3xl bg-blue-950 p-20 md:p-36 border-4 border-white shadow-lg hover:shadow-2xl">
+              <h1 className="flex items-center justify-center text-white">
+                <Youtube
+                  size={200}
+                  className="duration-200 hidden md:block ease-in-out hover:scale-110"
+                />
+                <Youtube
+                  size={90}
+                  className="duration-200 md:hidden ease-in-out hover:scale-110"
+                />
+              </h1>
+            </div>
+          </Link>
+        </div>
       </div>
     </main>
   )
