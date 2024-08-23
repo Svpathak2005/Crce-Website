@@ -136,6 +136,13 @@ export const AboutcsDepartment = {
     'The Department of Computer Engineering at Fr.CRCE is committed to providing quality education in the field of computer engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in computer engineering principles and practices. Our faculty members are experts in their fields and are dedicated to providing students with a challenging and rewarding educational experience. The department has state-of-the-art labs and facilities that allow students to gain hands-on experience with the latest technologies and tools. We also offer a variety of research opportunities and industry collaborations that give students the chance to work on real-world problems and projects. Our graduates are highly sought after by employers and go on to successful careers in a variety of industries and fields.',
   video:true,
 }
+export const hodsDesk = {
+  name: 'Dr. Sujata Deshmukh',
+  bio: 'The Department of Computer Engineering at CRCE is committed to providing quality education in the field of computer science and engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in computer science and engineering principles and practices.',
+  imageUrl: '/computerdept/sujata.png',
+  content:
+    'I am pleased to extend a warm welcome to the incoming students of the Computer Engineering program at our esteemed institute. The Department of Computer Engineering is deeply committed to fostering your holistic development, paving the way for successful careers, and ultimately, shaping you into invaluable national assets. Our dedicated and experienced faculty, is instrumental in nurturing your overall growth, encompassing analytical skill and the ability for creative thinking to compete on a global scale. In addition to the traditional engineering curriculum, our department offers Honour courses that prepare you to meet the dynamic demands of the modern business landscape, cultivating a professional mind-set. We encourage collaborative teamwork, idea sharing, presentations, and the enhancing of communication skills among our students. Active participation in Professional Chapters and social clubs not only expands your network but also fosters leadership and team spirit, exposing you to a world beyond the confines of the curriculum. Our department boasts state-of-the-art computational tools and modern laboratories, including a dedicated Machine Learning Server. Additionally, we offer workshops and training to sharpen your interview and job-seeking skills. Over the past decade, we have maintained an impressive placement rate of more 85% for our qualified students, with many of our graduates holding prominent positions at leading organizations such as Apple, Google, Amazon, JP Morgan, TIAA, TCS, Wipro, and government agencies. Our departmental researchers are deeply involved in pivotal areas like AI & Machine Learning, Cloud Computing, and Block chain. Furthermore, our alumni actively support our students with their projects, internships, and career and placement opportunities. We have established fruitful collaborations with industries and esteemed institutions. In conclusion, I encourage you to embrace this unique educational journey with enthusiasm and dedication. Your time here will not only equip you with technical knowledge but also inculcate in you the qualities of leadership, teamwork, and innovation that are vital for success in today&apos;s world. Please keep yourself updated through our department&apos;s website and regular communications for information on curriculum enhancements, internship prospects, and upcoming events. We are deeply committed to your success and are here to assist you at every stage of your educational journey. If you have any questions or suggestions, please do not hesitate to reach out to us. Your feedback is valuable as we work together to ensure your academic and personal growth. ',
+}
 export const Vision = {
   name: 'Vision',
   description:
@@ -166,6 +173,65 @@ export const ProgrammeSpecificOutcomes = {
     'The Department of Computer Engineering at CRCE is committed to providing quality education in the field of computer science and engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in computer science and engineering principles and practices.',
   video: false,
 }
+export const programs = [
+  {
+    title: 'Bachelors of Technology',
+    description: 'Undergrad program in Computer Engineering',
+    icon: (
+      <svg
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        className="h-5 w-5"
+        viewBox="0 0 24 24"
+      >
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+      </svg>
+    ),
+    button: ['Syllabus', 'Curriculum', 'Co-Curriculars'],
+  },
+  {
+    title: 'Masters of Technology',
+    description: 'Postgrad program in Computer Engineering',
+    icon: (
+      <svg
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        className="h-5 w-5"
+        viewBox="0 0 24 24"
+      >
+        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+      </svg>
+    ),
+    button: ['Syllabus', 'Curriculum', 'Co-Curriculars'],
+  },
+  {
+    title: 'PhD Programs',
+    description: 'Doctoral programs in Computer Engineering',
+    icon: (
+      <svg
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        className="h-5 w-5"
+        viewBox="0 0 24 24"
+      >
+        <circle cx="6" cy="6" r="3"></circle>
+        <circle cx="6" cy="18" r="3"></circle>
+        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+      </svg>
+    ),
+    button: ['Syllabus', 'Curriculum', 'Co-Curriculars'],
+  },
+]
 
   const events = [
     {
