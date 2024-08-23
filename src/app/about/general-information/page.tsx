@@ -25,13 +25,13 @@ export default function Page() {
       case 'aicetsubsquent':
         return <AICETSub />
       case 'corevalues':
-        // return <CoreValues />
+      // return <CoreValues />
       case 'codeofconduct':
-        // return <CodeOfConduct />
+      // return <CodeOfConduct />
       case 'tetephonedirectory':
-        // return <TetephoneDirectory />
+      // return <TetephoneDirectory />
       case 'commoninfrastructure':
-        // return <CommonInfrastructure />
+      // return <CommonInfrastructure />
       default:
         return null
     }
