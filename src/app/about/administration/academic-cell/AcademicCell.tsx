@@ -1,77 +1,78 @@
 import React from 'react'
 
-const AcademicCell = () => {
+const GoverningCouncil = () => {
+  const councilMembers = [
+    { number: '1', name: 'Fr. Bento Rodrigues', designation: 'Chairman' },
+    { number: '2', name: 'Fr. Alarico Carvalho', designation: 'Vice Chairman' },
+    { number: '3', name: 'Fr. Peter D’Souza', designation: 'Treasurer' },
+    { number: '4', name: 'Fr. Valerian D’Souza', designation: 'Secretary' },
+    { number: '5', name: 'Fr. Agnelo Gomes', designation: 'Member' },
+  ]
+
   return (
     <div className="flex min-h-max w-full flex-col">
       <main className="container mx-auto flex-grow p-4">
         <div className="rounded-lg bg-white p-6 shadow-lg">
-          <h2 className="mb-6 text-2xl font-semibold">Academic Cell</h2>
-          <div className="mx-auto grid max-w-[60%] grid-cols-3 grid-rows-6 gap-x-0 gap-y-2 border-2 border-black p-4">
-            {/* Title */}
-            <div className="flex font-bold">
-              <h2>Sr. THIS IS DUMMY</h2>
+          <h2 className="mb-6 text-2xl font-semibold">Trustees</h2>
+          <section className="mb-10 mx-auto w-[50%]">
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse rounded-lg bg-white shadow-md">
+                <thead className="bg-[#001f3f] text-white">
+                  <tr>
+                    <th className="border border-gray-300 p-3">
+                     Sr.
+                    </th>
+                    <th className="border border-gray-300 p-3">
+                      Name
+                    </th>
+                    <th className="border border-gray-300 p-3">Designation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    [
+                      '1',
+                      'Fr. Bento Rodrigues',
+                      'Chairman',
+                    ],
+                    [
+                      '2',
+                      'Fr. Alarico Carvalho',
+                      'Vice Chairman',
+                    ],
+                    [
+                      '3',
+                      'Fr. Peter D’Souza',
+                      'Treasurer',
+                    ],
+                    [
+                      '4',
+                      'Fr. Valerian D’Souza',
+                      'Secretary',
+                    ],
+                    [
+                      '5',
+                      'Fr. Agnelo Gomes',
+                      'Member',
+                    ],
+                  ].map((row, index) => (
+                    <tr
+                      key={index}
+                      className={index % 2 === 0 ? 'bg-gray-100' : 'bg-white'}
+                    >
+                      <td className="border border-gray-300 p-3">{row[0]}</td>
+                      <td className="border border-gray-300 p-3">{row[1]}</td>
+                      <td className="border border-gray-300 p-3">{row[2]}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-            <div className="flex font-bold">
-              <h2>Name</h2>
-            </div>
-            <div className="flex font-bold">
-              <h2>Designation</h2>
-            </div>
-            {/* 1 */}
-            <div className="flex gap-4">
-              <h2>1.</h2>
-            </div>
-            <div className="flex gap-4">
-              <h2>Fr. Bento Rodrigues</h2>
-            </div>
-            <div className="flex gap-4">
-              <h2>Chairman</h2>
-            </div>
-            {/* 2 */}
-            <div className="flex gap-4">
-              <h2>2.</h2>
-            </div>
-            <div className="flex gap-4">
-              <h2>Fr. Alarico Carvalho</h2>
-            </div>
-            <div className="flex gap-4">
-              <h2>Vice Chairman</h2>
-            </div>
-            {/* 3 */}
-            <div className="flex gap-4">
-              <h2>3.</h2>
-            </div>
-            <div className="flex gap-4">
-              <h2>Fr. Peter D’Souza</h2>
-            </div>
-            <div className="flex gap-4">
-              <h2>Treasurer</h2>
-            </div>
-            {/* 4 */}
-            <div className="flex gap-4">
-              <h2>4.</h2>
-            </div>
-            <div className="flex gap-4">
-              <h2>Fr. Valerian D’Souza</h2>
-            </div>
-            <div className="flex gap-4">
-              <h2>Secretary</h2>
-            </div>
-            {/* 5 */}
-            <div className="flex gap-4">
-              <h2>5.</h2>
-            </div>
-            <div className="flex gap-4">
-              <h2> Fr. Agnelo Gomes</h2>
-            </div>
-            <div className="flex gap-4">
-              <h2>Member</h2>
-            </div>
-          </div>
+          </section>
         </div>
       </main>
     </div>
   )
 }
 
-export default AcademicCell
+export default GoverningCouncil

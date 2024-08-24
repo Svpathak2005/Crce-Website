@@ -8,6 +8,9 @@ import { tabs } from './data'
 import Sidebar from '@/components/QuicklinksSidebar'
 import AICETExt from './AICET-Ext/AICETExt'
 import AICETSub from './AICET-Sub/AICETSub'
+import CodeOfConduct from './code-of-conduct/CodeOfConduct'
+import CoreValues from './core-values/CoreValues'
+import CommonInfrastructure from './common-infrastructure/CommonInfrastructure'
 
 const zilla = Zilla_Slab({
   weight: ['400', '700'],
@@ -25,13 +28,13 @@ export default function Page() {
       case 'aicetsubsquent':
         return <AICETSub />
       case 'corevalues':
-      // return <CoreValues />
+      return <CoreValues />
       case 'codeofconduct':
-      // return <CodeOfConduct />
+      return <CodeOfConduct/>
       case 'tetephonedirectory':
       // return <TetephoneDirectory />
       case 'commoninfrastructure':
-      // return <CommonInfrastructure />
+      return <CommonInfrastructure />
       default:
         return null
     }
