@@ -93,7 +93,6 @@ const ComputerEngineeringPage = () => {
               </h1>
             </div>
           </div>
-
           <div className="absolute bottom-0 left-0 h-16 w-full origin-bottom-right -skew-y-3 transform bg-white"></div>
         </section>
       </div>
@@ -124,7 +123,7 @@ const ComputerEngineeringPage = () => {
               Programs Offered
             </h1>
           </div>
-          <div className="-m-4 flex flex-wrap">
+          <div className="flex flex-col md:flex-row lg:flex-row">
             {programs.map((program, index) => (
               <Program key={index} {...program} />
             ))}

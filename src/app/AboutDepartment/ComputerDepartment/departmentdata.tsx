@@ -176,7 +176,7 @@ export const ProgrammeSpecificOutcomes = {
 export const programs = [
   {
     title: 'Bachelors of Technology',
-    description: 'Undergrad program in Computer Engineering',
+    description: ['Undergrad program in Computer Engineering.','Duration: 4 years ','Intake: 120 students ','Eligibility: 10+2 with PCM'],
     icon: (
       <svg
         fill="none"
@@ -190,11 +190,14 @@ export const programs = [
         <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
       </svg>
     ),
-    button: ['Syllabus', 'Curriculum', 'Co-Curriculars'],
+   button:[
+          { label: "Syllabus", onClick: () => console.log("Button 1 clicked") },
+          { label: "Co-Curricular", onClick: () => console.log("Button 2 clicked") },
+        ],
   },
   {
     title: 'Masters of Technology',
-    description: 'Postgrad program in Computer Engineering',
+    description: ['Postgrad program in Computer Engineering','Duration: 2 years','Intake: 60 students','Eligibility: B.Tech in Computer Engineering'],
     icon: (
       <svg
         fill="none"
@@ -209,11 +212,14 @@ export const programs = [
         <circle cx="12" cy="7" r="4"></circle>
       </svg>
     ),
-    button: ['Syllabus', 'Curriculum', 'Co-Curriculars'],
+    button:[
+          { label: "Syllabus", onClick: () => console.log("Button 1 clicked") },
+          { label: "Co-Curricular", onClick: () => console.log("Button 2 clicked") },
+        ],
   },
   {
     title: 'PhD Programs',
-    description: 'Doctoral programs in Computer Engineering',
+    description: ['Doctoral programs in Computer Engineering','Duration : 3 years','Intake: 10 students','Eligibility: M.Tech in Computer Engineering'],
     icon: (
       <svg
         fill="none"
@@ -229,7 +235,10 @@ export const programs = [
         <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
       </svg>
     ),
-    button: ['Syllabus', 'Curriculum', 'Co-Curriculars'],
+    button:[
+         { label: "Syllabus", onClick: () => console.log("Button 1 clicked") },
+         { label: "Co-Curricular", onClick: () => console.log("Button 2 clicked") },
+],
   },
 ]
 

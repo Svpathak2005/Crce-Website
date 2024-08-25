@@ -48,9 +48,9 @@ interface FacultyGridProps {
 }
 interface ProgramProps {
   title: string
-  description: string
+  description: string[]
   icon: React.ReactNode
-  buttons?: { label: string; onClick: () => void }[]
+  button?: { label: string; onClick: () => void }[]
 }
 
 // all the components are defined here
@@ -207,7 +207,7 @@ const HODsDesk: React.FC<HODsDeskProps> = ({ name, bio, imageUrl , content }) =>
               </div>
             </div>
             <div className="invisible-scrollbar mt-4 h-[100vh] overflow-y-scroll border-t border-gray-200 pt-4 text-center sm:mt-0 sm:w-2/3 sm:border-l sm:border-t-0 sm:py-8 sm:pl-8 sm:text-left">
-              <p className="mb-4 text-lg leading-relaxed sm:mb-1 sm:text-xs md:text-xl">
+              <p className="mb-4 text-md leading-relaxed sm:mb-1 sm:text-xs md:text-xl">
                 {content}
               </p>
             </div>
@@ -322,80 +322,72 @@ const PlacementTab = () => {
   )
 }
 
-const Program: React.FC<ProgramProps> = ({
-  title,
-  description,
-  icon,
-  buttons = [],
-}) => {
-  const [isFlipped, setIsFlipped] = useState(false)
+
+const Program: React.FC<ProgramProps> = ({ title, description, icon, button }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
 
   const handleClick = () => {
-    setIsFlipped((prevState) => !prevState)
-  }
+    setIsFlipped((prevState) => !prevState);
+  };
 
   return (
-    <div className={`p-4 md:w-1/3 ${isFlipped ? 'flip-card' : ''}`}>
-      <div
-        className={`flip-card-inner rounded-lg ${isFlipped ? 'is-flipped' : ''}`}
-      >
+    <div className={`program-card ${isFlipped ? 'is-flipped' : ''}`}>
+      <div className="program-card-inner">
         {/* Front side */}
-        <div className="flip-card-front flex flex-col rounded-lg bg-gray-100 p-8">
-          <div className="mb-3 flex items-center">
-            <div className="mr-3 inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-indigo-800 text-white">
-              {icon}
-            </div>
-            <h2 className="text-lg font-medium text-gray-900">{title}</h2>
+        <div className="program-card-front">
+          <div className="program-card-header">
+            <div className="program-icon">{icon}</div>
+            <h2 className="program-title">{title}</h2>
           </div>
-          <div className="flex-grow">
-            <p className="text-base leading-relaxed">{description}</p>
-            <a
-              className="mt-3 inline-flex items-center text-indigo-800"
-              onClick={handleClick}
-            >
-              Learn More
+          {description.map((desc, index) => (
+            <li className="program-description" key={index}>
+              {desc}
+            </li>
+          ))}
+          <div className="flex justify-center">
+            <button className="learn-more-btn" onClick={handleClick}>
+              Know More
               <svg
                 fill="none"
                 stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                className="ml-2 h-4 w-4"
+                className="learn-more-icon"
                 viewBox="0 0 24 24"
               >
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
 
         {/* Back side */}
-        <div className="flip-card-back flex flex-col rounded-lg bg-indigo-800 p-8 text-white">
-          <div className="mb-3 flex items-center">
-            <div className="mr-3 inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white text-indigo-800">
-              {icon}
-            </div>
-            <h2 className="text-lg font-medium text-white">{title}</h2>
+        <div className="program-card-back" onClick={handleClick}>
+          <div className="program-card-header">
+            <div className="program-icon">{icon}</div>
+            <h2 className="program-title">{title}</h2>
           </div>
-          <div className="flex-grow">
-            <p className="text-base leading-relaxed">{description}</p>
-            <div className="mt-3 flex justify-center">
-              {buttons.map((button, index) => (
-                <button
-                  key={index}
-                  className="mx-2 rounded-md bg-white px-4 py-2 text-indigo-800 hover:bg-gray-200"
-                  onClick={button.onClick}
-                >
-                  {button.label}
-                </button>
-              ))}
-            </div>
+
+          <div className="program-buttons">
+            {button?.map((button, index) => (
+              <button
+                key={index}
+                className="m-4 mr-2 rounded-md bg-slate-200 px-4 py-2 text-blue-950 outline-none"
+                onClick={button.onClick}
+              >
+                {button.label}
+              </button>
+            ))}
           </div>
+          {/* <button className="flip-back-btn" onClick={handleClick}>
+            Flip Back
+          </button> */}
         </div>
       </div>
     </div>
   )
-}
+};
 
 export {
   Sidebar,
@@ -405,4 +397,4 @@ export {
   FacultyGrid,
   PlacementTab,
   Program,
-}
+};
