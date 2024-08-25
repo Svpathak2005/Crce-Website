@@ -24,7 +24,13 @@ import {
 } from './components'
 import PreIncubationCenter from './PreincubationCentre'
 import Publications from './Publications'
-
+import { Zilla_Slab } from 'next/font/google'
+const zilla = Zilla_Slab({
+  weight: ['300', '500', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 const ComputerEngineeringPage = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]?.id || 'overview')
 
@@ -119,7 +125,7 @@ const ComputerEngineeringPage = () => {
       <div className="text-gray-600">
         <div className="container mx-auto px-5 py-14">
           <div className="mb-10 flex w-full flex-col text-center">
-            <h1 className="text-2xl font-medium text-gray-900 sm:text-3xl">
+            <h1 className={`${zilla.className} text-3xl font-bold text-indigo-900 sm:text-xl lg:text-4xl`}>
               Programs Offered
             </h1>
           </div>
