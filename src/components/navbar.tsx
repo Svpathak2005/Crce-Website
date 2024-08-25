@@ -374,7 +374,7 @@ const Navbar: React.FC = () => {
             </div>
             <Link
               href="/Admissions"
-              className="rounded-md bg-yellow-500 px-6 py-2 font-bold text-black transition duration-300 hover:bg-yellow-600"
+              className="scale-75 rounded-md bg-yellow-500 px-6 py-2 font-bold text-black transition duration-300 hover:bg-yellow-600 lg:scale-100"
             >
               <div className="flex flex-row items-center space-x-2">
                 <span>Admissions</span>
