@@ -103,29 +103,30 @@ const ComputerEngineeringPage = () => {
         </section>
       </div>
       {/* Quicklinks and tabs about the department  */}
-      <div className="m-2 flex">
+
+      <div className="flex">
         <Sidebar
           tabs={tabs}
           activeTab={activeTab}
           onTabChange={(tabId) => setActiveTab(tabId)}
           AccordionContent={renderContent()}
         />
-        <div className="hidden md:block">
-          <div className="invisible-scrollbar mx-2 flex-col overflow-x-hidden overflow-y-scroll">
-            <div id={activeTab} className="container">
-              {renderContent()}
-            </div>
+        <div className="mx-2 flex-1 flex-col overflow-x-hidden overflow-y-scroll">
+          <div id={activeTab} className="container mx-auto">
+            {renderContent()}
           </div>
         </div>
       </div>
 
       {/* HOD's Desk */}
-      <HODsDesk {...hodsDesk}/>
+      <HODsDesk {...hodsDesk} />
       {/* Program Highlights */}
       <div className="text-gray-600">
         <div className="container mx-auto px-5 py-14">
           <div className="mb-10 flex w-full flex-col text-center">
-            <h1 className={`${zilla.className} text-3xl font-bold text-indigo-900 sm:text-xl lg:text-4xl`}>
+            <h1
+              className={`${zilla.className} text-3xl font-bold text-indigo-900 sm:text-xl lg:text-4xl`}
+            >
               Programs Offered
             </h1>
           </div>

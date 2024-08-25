@@ -21,7 +21,7 @@ interface TabData {
 interface SidebarTabsProps {
   tabs: TabData[]
   activeTab: string
-  AccordionContent:React.ReactNode 
+  AccordionContent: React.ReactNode
   onTabChange: (tabId: string) => void
 }
 interface AboutDepartmentContainerProps {
@@ -61,7 +61,9 @@ const Sidebar: React.FC<SidebarTabsProps> = ({
   AccordionContent,
   onTabChange,
 }) => {
-  const [openAccordion, setOpenAccordion] = useState<string | null>((tabs[0] && tabs[0].id) || null)
+  const [openAccordion, setOpenAccordion] = useState<string | null>(
+    (tabs[0] && tabs[0].id) || null
+  )
 
   const toggleAccordion = (tabId: string) => {
     setOpenAccordion(openAccordion === tabId ? null : tabId)
@@ -88,7 +90,7 @@ const Sidebar: React.FC<SidebarTabsProps> = ({
       </div>
 
       {/* Mobile Accordion */}
-      <div className="md:hidden w-full">
+      <div className="w-full md:hidden">
         {tabs.map((tab) => (
           <div key={tab.id} className="border-b border-gray-400">
             <button
@@ -116,25 +118,23 @@ const Sidebar: React.FC<SidebarTabsProps> = ({
   )
 }
 
-
-
 const AboutDepartmentContainer: FC<AboutDepartmentContainerProps> = ({
   name,
   description,
   video,
 }): ReactElement => {
   return (
-    <div className="mx-10 rounded-lg bg-white">
+    <div className="mx-auto flex w-full max-w-screen-lg flex-col items-center justify-center bg-white p-8">
       <h2
-        className={`${zilla.className} mb-4 text-3xl font-bold text-blue-950 md:text-4xl lg:text-6xl`}
+        className={`${zilla.className} mb-8 text-center text-4xl font-bold text-blue-950 md:text-5xl lg:text-7xl`}
       >
         {name}
       </h2>
       {video && (
-        <div className="flex w-full">
-          <div className="relative mx-auto mb-10 min-w-11 max-w-5xl overflow-hidden rounded-lg">
+        <div className="mb-10 flex w-full justify-center">
+          <div className="relative w-full max-w-6xl overflow-hidden rounded-lg shadow-lg">
             <iframe
-              className="video-container"
+              className="h-[400px] w-full md:h-[500px] lg:h-[600px]"
               src="/compsdepttour.mp4"
               allowFullScreen
               title="Embedded Video"
@@ -142,15 +142,19 @@ const AboutDepartmentContainer: FC<AboutDepartmentContainerProps> = ({
           </div>
         </div>
       )}
-      <p className="mb-6 text-gray-700">{description}</p>
+      <p className="w-full text-center text-gray-700 md:text-lg">
+        {description}
+      </p>
     </div>
   )
 }
 
-
-
-
-const HODsDesk: React.FC<HODsDeskProps> = ({ name, bio, imageUrl , content }) => {
+const HODsDesk: React.FC<HODsDeskProps> = ({
+  name,
+  bio,
+  imageUrl,
+  content,
+}) => {
   return (
     <section className="body-font text-gray-600">
       <div className="mx-auto flex w-full flex-col px-1 py-12">
@@ -160,7 +164,7 @@ const HODsDesk: React.FC<HODsDeskProps> = ({ name, bio, imageUrl , content }) =>
           >
             From HOD's Desk
           </p>
-          <div className="mt-10  flex flex-col rounded-lg border-[1px] px-2 sm:flex-row">
+          <div className="mt-10 flex flex-col rounded-lg border-[1px] px-2 sm:flex-row">
             <div className="text-center sm:w-1/3 sm:py-8 sm:pr-8">
               <div className="inline-flex h-40 w-40 items-center justify-center rounded-full bg-gray-200 text-gray-400">
                 {/* <svg
@@ -207,7 +211,7 @@ const HODsDesk: React.FC<HODsDeskProps> = ({ name, bio, imageUrl , content }) =>
               </div>
             </div>
             <div className="invisible-scrollbar mt-4 h-[100vh] overflow-y-scroll border-t border-gray-200 pt-4 text-center sm:mt-0 sm:w-2/3 sm:border-l sm:border-t-0 sm:py-8 sm:pl-8 sm:text-left">
-              <p className="mb-4 text-md leading-relaxed sm:mb-1 sm:text-xs md:text-xl">
+              <p className="text-md mb-4 leading-relaxed sm:mb-1 sm:text-xs md:text-xl">
                 {content}
               </p>
             </div>
@@ -217,8 +221,6 @@ const HODsDesk: React.FC<HODsDeskProps> = ({ name, bio, imageUrl , content }) =>
     </section>
   )
 }
-
- 
 
 const FacultyTab: React.FC<FacultyTabProps> = ({
   name,
@@ -322,13 +324,17 @@ const PlacementTab = () => {
   )
 }
 
-
-const Program: React.FC<ProgramProps> = ({ title, description, icon, button }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
+const Program: React.FC<ProgramProps> = ({
+  title,
+  description,
+  icon,
+  button,
+}) => {
+  const [isFlipped, setIsFlipped] = useState(false)
 
   const handleClick = () => {
-    setIsFlipped((prevState) => !prevState);
-  };
+    setIsFlipped((prevState) => !prevState)
+  }
 
   return (
     <div className={`program-card ${isFlipped ? 'is-flipped' : ''}`}>
@@ -387,7 +393,7 @@ const Program: React.FC<ProgramProps> = ({ title, description, icon, button }) =
       </div>
     </div>
   )
-};
+}
 
 export {
   Sidebar,
@@ -397,4 +403,4 @@ export {
   FacultyGrid,
   PlacementTab,
   Program,
-};
+}
