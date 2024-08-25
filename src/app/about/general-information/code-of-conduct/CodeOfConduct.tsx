@@ -150,7 +150,7 @@ const CodeOfConduct = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div>  
       </main>
     </div>
   )
