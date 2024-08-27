@@ -176,7 +176,7 @@ export const ProgrammeSpecificOutcomes = {
 export const programs = [
   {
     title: 'Bachelors of Technology',
-    description: ['Undergrad program in Computer Engineering.','Duration: 4 years ','Intake: 120 students ','Eligibility: 10+2 with PCM'],
+    description: ['Undergrad program in Computer Engineering.','Duration: 4 years ','Intake: 180 students ','Eligibility: 10+2 with PCM'],
     icon: (
       <svg
         fill="none"
@@ -295,9 +295,9 @@ export const programs = [
           enduring trust that industry leaders place in our graduates.
         </p>
 
-        <div className="container mx-auto p-6">
-          <h2 className="mb-6 text-3xl font-semibold text-gray-900">
-            Placement Highest and Lowest Package
+        <div className="container mx-auto pr-6 pt-6">
+          <h2 className="mb-6 text-3xl font-semibold text-gray-900 text-center">
+            Highest and Lowest Packages
           </h2>
           <div className="overflow-x-auto">
             <table className="min-w-full border border-gray-300 bg-white">

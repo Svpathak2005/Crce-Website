@@ -10,7 +10,7 @@ const zilla = Zilla_Slab({
 
 const LessonPlanPage = () => {
   return (
-    <div className="flex min-h-screen w-full flex-col bg-gradient-to-b from-gray-50 to-[#E5F0FF] pt-36 text-gray-900">
+    <div className="flex min-h-screen w-full flex-col bg-gradient-to-b from-white to-[#E5F0FF] pt-36 text-gray-900">
       <div className="container mx-auto px-4 py-16">
         <div className="rounded-lg bg-white p-8 shadow-lg">
           <h1

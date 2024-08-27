@@ -221,7 +221,7 @@ export const ProgrammeSpecificOutcomes = {
           enduring trust that industry leaders place in our graduates.
         </p>
 
-        <div className="container mx-auto p-6">
+        <div className="container mx-auto pr-6 pt-6">
           <h2 className="mb-6 text-3xl font-semibold text-gray-900">
             Placement Highest and Lowest Package
           </h2>

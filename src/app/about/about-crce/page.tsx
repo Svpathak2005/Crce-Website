@@ -32,7 +32,7 @@ export default function Page() {
           </h1>
         </div>
       </div>
-      <div className="flex h-fit w-full flex-col items-center justify-center bg-gradient-to-b from-gray-50 to-[#E5F0FF] pt-10">
+      <div className="flex h-fit w-full flex-col items-center justify-center bg-gradient-to-b from-white to-[#E5F0FF] pt-10">
         <div className="container mx-auto mb-20 flex max-w-[90%] flex-col gap-10 rounded-xl bg-white p-10 shadow-lg md:flex-row-reverse">
         <Image
             alt="college photo"
