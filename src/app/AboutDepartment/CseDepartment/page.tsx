@@ -5,12 +5,13 @@ import '../style.css'
 import { useState } from 'react'
 import {
   tabs,
-  AboutmechDepartment,
+  AboutcseDepartment,
   Vision,
   Mission,
   ProgramEducationalObjectives,
   ProgramOutcomes,
   ProgrammeSpecificOutcomes,
+  hodsDesk,
   tabContents,
 } from './data'
 import {
@@ -28,14 +29,14 @@ const zilla = Zilla_Slab({
   subsets: ['latin'],
   display: 'swap',
 })
-const ComputerEngineeringPage = () => {
+const CSEPage = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]?.id || 'overview')
   const Tabs = ['Placements', 'Recruiters', 'Eligibility']
 
   const renderContent = () => {
     switch (activeTab) {
       case 'about':
-        return <AboutDepartmentContainer {...AboutmechDepartment} />
+        return <AboutDepartmentContainer {...AboutcseDepartment} />
       case 'visionandmission':
         return (
           <>
@@ -55,6 +56,8 @@ const ComputerEngineeringPage = () => {
         return <FacultyGrid />
 
       case 'infrastructure':
+        return null
+      case 'Publications':
         return null
       default:
         return null
@@ -79,7 +82,7 @@ const ComputerEngineeringPage = () => {
           <div className="container relative z-10 mx-auto flex h-full flex-col justify-center px-4 py-20">
             <div className="max-w-4xl md:max-w-6xl lg:max-w-7xl">
               <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl lg:text-7xl">
-                COMPUTER SCIENCE AND ENGINEERING 
+                COMPUTER SCIENCE AND ENGINEERING
               </h1>
             </div>
           </div>
@@ -88,23 +91,23 @@ const ComputerEngineeringPage = () => {
       </div>
       {/* Quicklinks and tabs about the department  */}
 
-      <section className='w-full bg-gradient-to-b from-white to-[#E5F0FF]'>
-      <div className="flex md:pl-10 md:pt-10">
-        <Sidebar
-          tabs={tabs}
-          activeTab={activeTab}
-          onTabChange={(tabId) => setActiveTab(tabId)}
-          AccordionContent={renderContent()}
-        />
-        <div className="mx-2 flex-1 flex-col overflow-x-hidden overflow-y-scroll">
-          <div id={activeTab} className="container mx-auto">
-            {renderContent()}
+      <section className="w-full bg-gradient-to-b from-white to-[#E5F0FF]">
+        <div className="flex md:pl-10 md:pt-10">
+          <Sidebar
+            tabs={tabs}
+            activeTab={activeTab}
+            onTabChange={(tabId) => setActiveTab(tabId)}
+            AccordionContent={renderContent()}
+          />
+          <div className="mx-2 flex-1 flex-col overflow-x-hidden overflow-y-scroll">
+            <div id={activeTab} className="container mx-auto">
+              {renderContent()}
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* Program Highlights */}
-      {/* <div className="text-gray-600">
+        <HODsDesk {...hodsDesk} />
+        {/* Program Highlights */}
+        {/* <div className="text-gray-600">
         <div className="container mx-auto px-5 ">
           <div className="mb-10 flex w-full flex-col text-center">
             <h1
@@ -121,24 +124,24 @@ const ComputerEngineeringPage = () => {
         </div>
       </div> */}
 
-      {/*placement data*/}
-      <div>
-        <PlacementTab
-          tabs={Tabs}
-          tabContents={tabContents}
-          duration="4 Years"
-          lastDateToApply="26 July 2024"
-          programmeName="B.Tech Mechanical Engineering"
-          feePerYear="Rs. 1,67,000"
-          highestCTC="INR 17.75 LPA"
-          onApplyClick="#"
-          brochureLink="#"
-          courseStructureLink="#"
-        />
-      </div>
+        {/*placement data*/}
+        <div>
+          <PlacementTab
+            tabs={Tabs}
+            tabContents={tabContents}
+            duration="4 Years"
+            lastDateToApply="26 July 2024"
+            programmeName="B.Tech Mechanical Engineering"
+            feePerYear="Rs. 1,67,000"
+            highestCTC="INR 17.75 LPA"
+            onApplyClick="#"
+            brochureLink="#"
+            courseStructureLink="#"
+          />
+        </div>
       </section>
     </div>
   )
 }
 
-export default ComputerEngineeringPage
+export default CSEPage

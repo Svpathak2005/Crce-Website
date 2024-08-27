@@ -99,7 +99,7 @@ export const FacultyTabData = [
   export const tabs = [
     {
       id: 'about',
-      title: 'About Mechanical Department',
+      title: 'About Computer Science And Engineering Department',
     },
     {
       id: 'visionandmission',
@@ -130,11 +130,10 @@ export const FacultyTabData = [
       title: 'Pre-Incubation',
     },
   ]
-  export const AboutmechDepartment = {
-    name: 'Mechanical Engineering Department',
-    description:
-      'The Department of Mechanical Engineering at Fr.CRCE is committed to providing quality education in the field of Mechanical engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Mechanical engineering principles and practices. Our faculty members are experts in their fields and are dedicated to providing students with a challenging and rewarding educational experience. The department has state-of-the-art labs and facilities that allow students to gain hands-on experience with the latest technologies and tools. We also offer a variety of research opportunities and industry collaborations that give students the chance to work on real-world problems and projects. Our graduates are highly sought after by employers and go on to successful careers in a variety of industries and fields.',
-    video:false,
+  export const AboutcseDepartment = {
+    name: 'Computer Science and Engineering Department',
+    description:'The department was established in 1987 with B.E. in Electronics Engineering. From the academic year 2019-20,the course is renamed to Electronics and Computer Science to cope up with 4th Industrial revolution. Fourth Industrial Revolution technologies such as Artificial Intelligence, Genome Editing, Augmented Reality, Robotics, Internet Of Things and 3-D printing are rapidly changing the way humans create, exchange and distribute resources. As in the case of previous revolutions, this will profoundly transform institutions, industries, and individuals. The Fourth Industrial Revolution can make exponential changes to the way we live, work and relate to one another due to the adoption of cyber-physical systems, Internet of Things and Internet of Systems. As we implement smart technologies in our factories and workplaces, connected machines will interact, visualize the entire production chain and make decisions autonomously. This revolution is expected to impact all disciplines, industries, and economies. Fourth Industrial Revolution could create a job market that&aposs segregated into &aposlow-skill/low-pay&apos and &aposhigh-skill/high-pay&apos segments. Over the years, strict adherence to quality norms in teaching-learning and evaluation has always been the strength of the department. After a comprehensive study of the industry requirements as well as technological trends, the syllabus for the course Electronics and Computer Science has been framed to include courses that build a conceptual understanding of basics of Electronics as well as Computer Science. Additionally, advanced courses have beenadded to cover niche areas like Artificial intelligence and Machine Learning, Data Sciences, Mobilecommunication, VLSI, IoT, etc. A practical-oriented approach is being followed to make students proficient inthe competitive industry environment as well as prepare them for higher education.',
+    video:false ,
   }
   
   export const Vision = {
@@ -167,7 +166,14 @@ export const FacultyTabData = [
       'The Department of Mechanical Engineering at CRCE is committed to providing quality education in the field of Mechanical Engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Mechanical Engineering principles and practices.',
     video: false,
   }
-  
+  export const hodsDesk = {
+    name: 'Dr. Sujata Deshmukh',
+    bio: 'The Department of Computer Engineering at CRCE is committed to providing quality education in the field of computer science and engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in computer science and engineering principles and practices.',
+    imageUrl: '/computerdept/sujata.png',
+    content:
+      'The Department of Electronics and Computer Science Engineering offers an academic programme which has an optimum mix of Electronics, Communication and Computer Engineering with an emphasis on VLSI, Embedded systems, Instrumentation, Automation and Robotics, and allied subjects. Our strict adherence to quality norms in teaching-learning and evaluation has always been the strength of the department. Students are moulded to be technically skilled and socially conscious so as to contribute to finding solutions to real-life problems. They are provided with avenues to develop inter-disciplinary projects and to acquire organization, presentation and leadership skills. The department works with the commitment and resolves to keep the laboratories updated with the latest technologies, to adopt innovative teaching methodologies and thus to impart quality education in Electronics Engineering. We focus on Research in key areas such as Communication, Instrumentation, VLSI and Processor Architecture. The department has a good Industry interaction in terms of project design, consultancy, internships, and industry visits. Our Alumni occupy prestigious positions in reputed organizations in India and abroad. Always striving to provide the best facilities to our students, the department is constantly on the move by organizing workshops, seminars, hands-on sessions to improve the practical aspects of a student’s learning process. An excellent academic ambiance with highly motivated faculty complemented with a wide variety of co-curricular and extra-curricular activities provide a holistic approach to the development of students.',
+  }
+
     const events = [
       {
         imageUrl: '/godrej.png',

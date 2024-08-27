@@ -6,7 +6,7 @@ export const FacultyTabData = [
       ctaText: 'View Profile',
       designation: 'HOD',
       description:
-        'Dr. A. K. Agarwal is the Head of Department of Mechanical Engineering at Fr.CRCE, Indore.',
+        'Dr. A. K. Agarwal is the Head of Department of Electronics and Computer Science at Fr.CRCE, Indore.',
       ctaOnClick: () => {
         window.location.href = '/faculty/1'
       },
@@ -18,7 +18,7 @@ export const FacultyTabData = [
       ctaText: 'View Profile',
       designation: 'Professor',
       description:
-        'Dr. S. S. Rathore is a Professor of Mechanical Engineering at Fr.CRCE, Indore.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ea repellendus iure voluptates itaque dolorum pariatur aspernatur molestiae adipisci, quis eaque, sunt dolores ab earum. Laudantium dolor laborum deserunt expedita?  ',
+        'Dr. S. S. Rathore is a Professor of Electronics and Computer Science at Fr.CRCE, Indore.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ea repellendus iure voluptates itaque dolorum pariatur aspernatur molestiae adipisci, quis eaque, sunt dolores ab earum. Laudantium dolor laborum deserunt expedita?  ',
       ctaOnClick: () => {
         window.location.href = '/faculty/2'
       },
@@ -30,7 +30,7 @@ export const FacultyTabData = [
       ctaText: 'View Profile',
       designation: 'HOD',
       description:
-        'Dr. A. K. Agarwal is the Head of Department of Mechanical Engineering at Fr.CRCE, Indore.',
+        'Dr. A. K. Agarwal is the Head of Department of Electronics and Computer Science at Fr.CRCE, Indore.',
       ctaOnClick: () => {
         window.location.href = '/faculty/3'
       },
@@ -42,7 +42,7 @@ export const FacultyTabData = [
       ctaText: 'View Profile',
       designation: 'Professor',
       description:
-        ' Dr. S. S. Rathore is a Professor of Mechanical Engineering at Fr.CRCE, Indore.',
+        ' Dr. S. S. Rathore is a Professor of Electronics and Computer Science at Fr.CRCE, Indore.',
       ctaOnClick: () => {
         window.location.href = '/faculty/4'
       },
@@ -54,7 +54,7 @@ export const FacultyTabData = [
       ctaText: 'View Profile',
       designation: 'HOD',
       description:
-        'Dr. A. K. Agarwal is the Head of Department of Mechanical Engineering at Fr.CRCE, Indore.',
+        'Dr. A. K. Agarwal is the Head of Department of Electronics and Computer Science at Fr.CRCE, Indore.',
       ctaOnClick: () => {
         window.location.href = '/faculty/5'
       },
@@ -66,7 +66,7 @@ export const FacultyTabData = [
       ctaText: 'View Profile',
       designation: 'Professor',
       description:
-        'Dr. S. S. Rathore is a Professor of Mechanical Engineering at Fr.CRCE, Indore.',
+        'Dr. S. S. Rathore is a Professor of Electronics and Computer Science at Fr.CRCE, Indore.',
       ctaOnClick: () => {
         window.location.href = '/faculty/6'
       },
@@ -78,7 +78,7 @@ export const FacultyTabData = [
       ctaText: 'View Profile',
       designation: 'HOD',
       description:
-        'Dr. A. K. Agarwal is the Head of Department of Mechanical Engineering at Fr.CRCE, Indore.',
+        'Dr. A. K. Agarwal is the Head of Department of Electronics and Computer Science at Fr.CRCE, Indore.',
       ctaOnClick: () => {
         window.location.href = '/faculty/7'
       },
@@ -90,7 +90,7 @@ export const FacultyTabData = [
       ctaText: 'View Profile',
       designation: 'Professor',
       description:
-        'Dr. S. S. Rathore is a Professor of Mechanical Engineering at Fr.CRCE, Indore.',
+        'Dr. S. S. Rathore is a Professor of Electronics and Computer Science at Fr.CRCE, Indore.',
       ctaOnClick: () => {
         window.location.href = '/faculty/8'
       },
@@ -130,41 +130,41 @@ export const FacultyTabData = [
       title: 'Pre-Incubation',
     },
   ]
-  export const AboutmechDepartment = {
-    name: 'Mechanical Engineering Department',
+  export const AboutecsDepartment = {
+    name: 'Electronics and Computer Science Department',
     description:
-      'The Department of Mechanical Engineering at Fr.CRCE is committed to providing quality education in the field of Mechanical engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Mechanical engineering principles and practices. Our faculty members are experts in their fields and are dedicated to providing students with a challenging and rewarding educational experience. The department has state-of-the-art labs and facilities that allow students to gain hands-on experience with the latest technologies and tools. We also offer a variety of research opportunities and industry collaborations that give students the chance to work on real-world problems and projects. Our graduates are highly sought after by employers and go on to successful careers in a variety of industries and fields.',
+      'The Department of Electronics and Computer Science at Fr.CRCE is committed to providing quality education in the field of Electronics and Computer Science.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Electronics and Computer Science principles and practices. Our faculty members are experts in their fields and are dedicated to providing students with a challenging and rewarding educational experience. The department has state-of-the-art labs and facilities that allow students to gain hands-on experience with the latest technologies and tools. We also offer a variety of research opportunities and industry collaborations that give students the chance to work on real-world problems and projects. Our graduates are highly sought after by employers and go on to successful careers in a variety of industries and fields.',
     video:false,
   }
   
   export const Vision = {
     name: 'Vision',
     description:
-      'The Department of Mechanical Engineering at CRCE is committed to providing quality education in the field of Mechanical Engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Mechanical Engineering principles and practices. ',
+      ' Creating globally competent engineers with strong fundamentals and good learning ability to empower Digitalization and Innovation.',
     video: false,
   }
   export const Mission = {
     name: 'Mission',
     description:
-      'The Department of Mechanical Engineering at CRCE is committed to providing quality education in the field of Mechanical Engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Mechanical Engineering principles and practices.',
+      'To enrich the competence in Electronics and Computer Science through knowledge, skills, and commitment to lifelong learning. To nurture effective solution providers having a practical knowledge base equipped with a multi-disciplinary approach. To cultivate an ambience to encourage innovation, research and entrepreneurship skills To improve employability by creating competitive engineers, with an ethical and professional attitude.',
     video: false,
   }
   export const ProgramOutcomes = {
     name: 'Program Outcomes',
     description:
-      'The Department of Mechanical Engineering at CRCE is committed to providing quality education in the field of Mechanical Engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Mechanical Engineering principles and practices.',
+      'The Department of Electronics and Computer Science at CRCE is committed to providing quality education in the field of Electronics and Computer Science.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Electronics and Computer Science principles and practices.',
     video: false,
   }
   export const ProgramEducationalObjectives = {
     name: 'Program Educational Objectives',
     description:
-      'The Department of Mechanical Engineering at CRCE is committed to providing quality education in the field of Mechanical Engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Mechanical Engineering principles and practices.',
+      'The Department of Electronics and Computer Science at CRCE is committed to providing quality education in the field of Electronics and Computer Science.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Electronics and Computer Science principles and practices.',
     video: false,
   }
   export const ProgrammeSpecificOutcomes = {
     name: 'Programme Specific Outcomes',
     description:
-      'The Department of Mechanical Engineering at CRCE is committed to providing quality education in the field of Mechanical Engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Mechanical Engineering principles and practices.',
+      'The Department of Electronics and Computer Science at CRCE is committed to providing quality education in the field of Electronics and Computer Science.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Electronics and Computer Science principles and practices.',
     video: false,
   }
   
