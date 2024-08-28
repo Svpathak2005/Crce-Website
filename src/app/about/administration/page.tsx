@@ -65,7 +65,7 @@ export default function Page() {
           </h1>
         </div>
       </div>
-      <div className="flex h-fit w-full flex-col justify-center bg-gradient-to-b from-gray-50 to-[#E5F0FF] py-4 md:flex-row">
+      <div className="flex h-fit w-full flex-col justify-center bg-gradient-to-b from-white to-[#E5F0FF] py-4 md:flex-row">
         <div className="mx-2 min-w-max">
           <Sidebar
             tabs={tabs}

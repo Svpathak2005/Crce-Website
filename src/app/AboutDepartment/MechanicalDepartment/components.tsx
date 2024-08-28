@@ -1,6 +1,6 @@
 import React, { FC, ReactElement, useState } from 'react'
 import Image from 'next/image'
-import { FacultyTabData, tabContents } from './departmentdata'
+import { FacultyTabData, tabContents } from './data'
 import { Zilla_Slab } from 'next/font/google'
 //the font for main headings
 const zilla = Zilla_Slab({
@@ -53,7 +53,7 @@ const Sidebar: React.FC<SidebarTabsProps> = ({
           <button
             key={tab.id}
             onClick={() => onTabChange(tab.id)}
-            className={`flex border-b border-gray-400 w-full justify-start px-2 py-2 ${
+            className={`flex w-full justify-start border-b border-gray-400 px-2 py-2 ${
               activeTab === tab.id
                 ? 'bg-gray-50 text-blue-600'
                 : 'text-gray-600 hover:text-blue-400'
@@ -80,8 +80,8 @@ const AboutDepartmentContainer: FC<AboutDepartmentContainerProps> = ({
         {name}
       </h2>
       {video && (
-        <div className='flex w-full'>
-          <div className="relative mb-10 max-w-5xl min-w-11 mx-auto overflow-hidden  rounded-lg">
+        <div className="flex w-full">
+          <div className="relative mx-auto mb-10 min-w-11 max-w-5xl overflow-hidden rounded-lg">
             <iframe
               className="video-container"
               src="/compsdepttour.mp4"

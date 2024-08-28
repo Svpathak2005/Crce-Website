@@ -3,7 +3,7 @@ import React from 'react'
 
 const PDFViewerPage = () => {
   return (
-    <div className="flex absolute top-0 h-fit w-full flex-col justify-center items-center bg-gray-100">
+    <div className="flex absolute top-0 h-fit w-full flex-col justify-center items-center bg-gradient-to-b from-white to-[#E5F0FF]">
       <header className="bg-gradient-to-br w-full pt-48 h-full from-[#001f3f] to-[#003366] p-6 text-center text-white">
         <h1 className="text-2xl font-bold">
           STUDENT GRIEVANCE REDRESSAL POLICY

@@ -5,7 +5,7 @@ import '../style.css'
 import { useState } from 'react'
 import {
   tabs,
-  AboutmechDepartment,
+  AboutecsDepartment,
   Vision,
   Mission,
   ProgramEducationalObjectives,
@@ -35,7 +35,7 @@ const ComputerEngineeringPage = () => {
   const renderContent = () => {
     switch (activeTab) {
       case 'about':
-        return <AboutDepartmentContainer {...AboutmechDepartment} />
+        return <AboutDepartmentContainer {...AboutecsDepartment} />
       case 'visionandmission':
         return (
           <>
@@ -79,7 +79,7 @@ const ComputerEngineeringPage = () => {
           <div className="container relative z-10 mx-auto flex h-full flex-col justify-center px-4 py-20">
             <div className="max-w-4xl md:max-w-6xl lg:max-w-7xl">
               <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl lg:text-7xl">
-                MECHANICAL ENGINEERING 
+                ELECTRONICS AND COMPUTER SCIENCE 
               </h1>
             </div>
           </div>

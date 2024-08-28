@@ -1,8 +1,9 @@
-import React, { FC, ReactElement, useState } from 'react'
+import React, { FC, ReactElement, ReactNode, useState } from 'react'
 import Image from 'next/image'
-import { FacultyTabData, tabContents } from './departmentdata'
+import { FacultyTabData, tabContents } from './ComputerDepartment/data'
 import './style.css'
 import { Zilla_Slab } from 'next/font/google'
+import Link from 'next/link'
 //the font for main headings
 const zilla = Zilla_Slab({
   weight: ['300', '500', '700'],
@@ -51,6 +52,19 @@ interface ProgramProps {
   description: string[]
   icon: React.ReactNode
   button?: { label: string; onClick: () => void }[]
+}
+
+interface PlacementTabProps {
+  tabs: string[]
+  tabContents: { [key: string]: ReactNode }
+  duration: string
+  lastDateToApply: string
+  programmeName: string
+  feePerYear: string
+  highestCTC: string
+  onApplyClick: string
+  brochureLink: string
+  courseStructureLink: string
 }
 
 // all the components are defined here
@@ -124,17 +138,17 @@ const AboutDepartmentContainer: FC<AboutDepartmentContainerProps> = ({
   video,
 }): ReactElement => {
   return (
-    <div className="mx-auto flex w-full max-w-screen-lg flex-col items-center justify-center bg-white p-8">
+    <div className="mx-auto flex w-fit flex-col items-center justify-center p-8">
       <h2
         className={`${zilla.className} mb-8 text-center text-4xl font-bold text-blue-950 md:text-5xl lg:text-7xl`}
       >
         {name}
       </h2>
       {video && (
-        <div className="mb-10 flex w-full justify-center">
-          <div className="relative w-full max-w-6xl overflow-hidden rounded-lg shadow-lg">
+        <div className="mb-10 flex h-fit w-full justify-center">
+          <div className="max-h-max w-full max-w-6xl">
             <iframe
-              className="h-[400px] w-full md:h-[500px] lg:h-[600px]"
+              className="h-[150px] w-full rounded-lg shadow-lg md:h-[248px] lg:h-[544px]"
               src="/compsdepttour.mp4"
               allowFullScreen
               title="Embedded Video"
@@ -156,7 +170,7 @@ const HODsDesk: React.FC<HODsDeskProps> = ({
   content,
 }) => {
   return (
-    <section className="body-font text-gray-600">
+    <section className="body-font  text-gray-600">
       <div className="mx-auto flex w-full flex-col px-1 py-12">
         <div className="mx-auto justify-center lg:w-11/12">
           <p
@@ -164,9 +178,9 @@ const HODsDesk: React.FC<HODsDeskProps> = ({
           >
             From HOD's Desk
           </p>
-          <div className="mt-10 flex flex-col rounded-lg border-[1px] px-2 sm:flex-row">
-            <div className="text-center sm:w-1/3 sm:py-8 sm:pr-8">
-              <div className="inline-flex h-40 w-40 items-center justify-center rounded-full bg-gray-200 text-gray-400">
+          <div className="mt-10 flex flex-col rounded-lg shadow-lg border-[1px] px-2 sm:flex-row bg-white">
+            <div className="text-center sm:w-1/3 sm:py-8 sm:pr-8 sm:pl-6">
+              <div className="inline-flex h-fit w-40 items-center justify-center rounded-full bg-gray-200 text-gray-400">
                 {/* <svg
                   fill="none"
                   stroke="currentColor"
@@ -193,7 +207,7 @@ const HODsDesk: React.FC<HODsDeskProps> = ({
                 </h2>
                 <div className="mb-4 mt-2 h-1 w-12 rounded bg-indigo-900"></div>
                 <p className="text-base">HOD and Professor</p>
-                <h3>{bio}</h3>
+                <h3 >{bio}</h3>
                 <a className="inline-flex items-center text-indigo-800">
                   Know more
                   <svg
@@ -210,8 +224,8 @@ const HODsDesk: React.FC<HODsDeskProps> = ({
                 </a>
               </div>
             </div>
-            <div className="invisible-scrollbar mt-4 h-[100vh] overflow-y-scroll border-t border-gray-200 pt-4 text-center sm:mt-0 sm:w-2/3 sm:border-l sm:border-t-0 sm:py-8 sm:pl-8 sm:text-left">
-              <p className="text-md mb-4 leading-relaxed sm:mb-1 sm:text-xs md:text-xl">
+            <div className="invisible-scrollbar mt-4 h-fit overflow-y-scroll border-t border-gray-200 pt-4 text-center sm:mt-0 sm:w-2/3 sm:border-l sm:border-t-0 sm:py-8 sm:pl-8 sm:text-left">
+              <p className="text-md  leading-relaxed  sm:text-xs md:text-xl">
                 {content}
               </p>
             </div>
@@ -231,7 +245,7 @@ const FacultyTab: React.FC<FacultyTabProps> = ({
   ctaOnClick,
 }) => {
   return (
-    <div className="flex flex-col items-center justify-center rounded-xl bg-white p-4 shadow-md">
+    <div className="mb-10 flex flex-col items-center justify-center rounded-xl bg-white p-4 shadow-md">
       <div className="mb-4 flex items-center justify-center">
         <Image
           src={photoUrl}
@@ -263,15 +277,27 @@ const FacultyGrid: React.FC<FacultyGridProps> = () => {
     </div>
   )
 }
-const PlacementTab = () => {
-  const [activeTab, setActiveTab] = useState('Placements')
+
+const PlacementTab: React.FC<PlacementTabProps> = ({
+  tabs,
+  tabContents,
+  duration,
+  lastDateToApply,
+  programmeName,
+  feePerYear,
+  highestCTC,
+  onApplyClick,
+  brochureLink,
+  courseStructureLink,
+}) => {
+  const [activeTab, setActiveTab]: any = useState(tabs[0])
 
   return (
-    <div className="container mx-auto p-4 font-sans">
-      <div className="flex flex-col bg-white shadow-sm md:flex-row">
-        <div className="p-6 md:w-2/3">
+    <div className="container mx-auto font-sans  rounded-lg py-20 ">
+      <div className="flex flex-col bg-white shadow-lg  rounded-lg md:flex-row">
+        <div className="overflow-scroll p-6 md:w-2/3">
           <div className="mb-4 flex border-b">
-            {['Placements', 'Recruiters', 'Eligibility'].map((tab) => (
+            {tabs.map((tab) => (
               <button
                 key={tab}
                 className={`px-4 py-2 font-bold ${
@@ -285,45 +311,48 @@ const PlacementTab = () => {
               </button>
             ))}
           </div>
-          <div className="content text-sm">
-            {tabContents[activeTab as keyof typeof tabContents]}
-          </div>
+          <div className="content text-sm">{tabContents[activeTab]}</div>
         </div>
-        <div className="mb-0 bg-gray-100 p-6 md:w-1/3">
-          <div className="mb-0 rounded bg-blue-50 p-4">
-            <h3 className="text-lg font-bold">Duration</h3>
-            <p className="text-2xl text-blue-600">4 Years</p>
-            <p className="text-xs text-gray-600">
-              Last Date To Apply : 26 July 2024
-            </p>
-          </div>
-          <div className="mb-4 rounded bg-blue-50 p-4">
-            <h3 className="text-lg font-bold">Programme Name</h3>
-            <p>B.Tech ComputerEngineering</p>
-          </div>
-          <div className="rounded bg-gray-800 p-4 text-white">
-            <p>Fee Per Year</p>
-            <h2 className="mb-2 text-2xl font-bold">Rs. 1,67,000</h2>
-            <button className="mb-4 w-full rounded bg-blue-500 px-4 py-2 text-white">
-              Apply Online Now
-            </button>
-            <div className="mb-4">
-              <a href="#" className="mb-2 block text-blue-400">
-                Brochure →
-              </a>
-              <a href="#" className="block text-blue-400">
-                Course Structure →
-              </a>
+        <div className="my-4 flex items-center justify-center px-6 md:w-1/3">
+          <div className="w-full">
+            <div className="mb-4 overflow-hidden rounded-lg">
+              <div className="bg-blue-50 p-4">
+                <h3 className="text-lg font-bold">Duration</h3>
+                <p className="text-2xl text-blue-600">{duration}</p>
+                <p className="text-xs text-gray-600">
+                  Last Date To Apply: {lastDateToApply}
+                </p>
+              </div>
+              <div className="bg-blue-50 p-4">
+                <h3 className="text-lg font-bold">Programme Name</h3>
+                <p>{programmeName}</p>
+              </div>
             </div>
-            <p className="text-blue-200">Highest CTC</p>
-            <p className="text-lg">INR 17.75 LPA</p>
+            <div className="rounded-lg bg-gray-800 p-4 text-white">
+              <p>Fee Per Year</p>
+              <h2 className="mb-2 text-2xl font-bold">{feePerYear}</h2>
+              <a href={onApplyClick}>
+                <button className="mb-4 w-full rounded bg-blue-500 px-4 py-2 text-white">
+                  Apply Online Now
+                </button>
+              </a>
+              <div className="mb-4">
+                <a href={brochureLink} className="mb-2 block text-blue-400">
+                  Brochure →
+                </a>
+                <a href={courseStructureLink} className="block text-blue-400">
+                  Course Structure →
+                </a>
+              </div>
+              <p className="text-blue-200">Highest CTC</p>
+              <p className="text-lg">{highestCTC}</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   )
 }
-
 const Program: React.FC<ProgramProps> = ({
   title,
   description,
@@ -337,8 +366,8 @@ const Program: React.FC<ProgramProps> = ({
   }
 
   return (
-    <div className={`program-card ${isFlipped ? 'is-flipped' : ''}`}>
-      <div className="program-card-inner">
+    <div className={`program-card ${isFlipped ? 'is-flipped' : ''} `}>
+      <div className="program-card-inner shadow-lg rounded-lg">
         {/* Front side */}
         <div className="program-card-front">
           <div className="program-card-header">
@@ -369,7 +398,7 @@ const Program: React.FC<ProgramProps> = ({
         </div>
 
         {/* Back side */}
-        <div className="program-card-back" onClick={handleClick}>
+        <div className="program-card-back shadow-lg rounded-lg" onClick={handleClick}>
           <div className="program-card-header">
             <div className="program-icon">{icon}</div>
             <h2 className="program-title">{title}</h2>
@@ -379,7 +408,7 @@ const Program: React.FC<ProgramProps> = ({
             {button?.map((button, index) => (
               <button
                 key={index}
-                className="m-4 mr-2 rounded-md bg-slate-200 px-4 py-2 text-blue-950 outline-none"
+                className="m-4 mr-2 rounded-md bg-white px-4 py-2 text-blue-950 outline-none"
                 onClick={button.onClick}
               >
                 {button.label}

@@ -213,7 +213,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Electronics and Computer Science',
-      href: '/research/publications',
+      href: '/AboutDepartment/EcsDepartment',
       icon: <CircuitBoard size={18} />,
     },
     {
@@ -222,14 +222,14 @@ const dropdownContent: DropdownContent = {
       icon: <Cog size={18} />,
     },
     {
-      name: 'Science and Humanities',
-      href: '/research/funding',
-      icon: <Atom size={18} />,
+      name: 'Computer Science and Engineering',
+      href: '/AboutDepartment/CseDepartment',
+      icon: <Code2 size={18} />,
     },
     {
-      name: 'Computer Science and Engineering',
-      href: '/research/funding',
-      icon: <Code2 size={18} />,
+      name: 'Science and Humanities',
+      href: '/AboutDepartment/ScienceAndHumanities',
+      icon: <Atom size={18} />,
     },
   ],
   Admission: [
