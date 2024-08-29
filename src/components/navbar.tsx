@@ -91,6 +91,11 @@ const dropdownContent: DropdownContent = {
       icon: <FileText size={18} />,
     },
     {
+      name: "List of MOU's",
+      href: '/about/mou',
+      icon: <FileSignature size={18} />,
+    },
+    {
       name: 'Mandatory Disclosure',
       href: '/about/mandatory-disclosure',
       icon: <FileCheck2 size={18} />,
@@ -117,11 +122,7 @@ const dropdownContent: DropdownContent = {
       href: '/academics/online-courses',
       icon: <Users size={18} />,
     },
-    {
-      name: "List of MOU's",
-      href: '/academics/programs',
-      icon: <FileSignature size={18} />,
-    },
+
     {
       name: 'Examination',
       href: '/academics/grading-process',
@@ -171,7 +172,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Alumni',
-      href: '/international/programs',
+      href: 'https://alumni.frcrce.ac.in',
       icon: <UserCheck size={18} />,
     },
     {
@@ -181,7 +182,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Notices',
-      href: '/international/admissions',
+      href: '/academics/notices',
       icon: <Bell size={18} />,
     },
     {
@@ -235,24 +236,24 @@ const dropdownContent: DropdownContent = {
   Admission: [
     {
       name: 'Under Graduate',
-      href: '/undergrad',
+      href: '/admission/undergraduates',
       icon: <GraduationCap size={18} />,
     },
     {
       name: 'Post Graduate',
-      href: '/meet-princeton/facts',
+      href: '/admission/postgraduate',
       icon: <School size={18} />,
     },
     {
       name: 'Ph.D',
-      href: '/meet-princeton/history',
+      href: '/admission/phd',
       icon: <Award size={18} />,
     },
   ],
   Online: [
     {
       name: 'Make Online Payment',
-      href: 'https://frcrce.ac.in/index.php/about-us/vision-mission',
+      href: 'https://pay.fragnel.edu.in/CRCE/initPay.php',
       icon: <CreditCard size={18} />,
     },
   ],

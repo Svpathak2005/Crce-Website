@@ -1,12 +1,9 @@
 'use client'
 
 import Image from 'next/image'
-import Industry from '@/components/industry'
-import HeroSection from '@/components/hero-section'
-import Newsandupcoming from '@/components/newsandupcoming'
 import { Zilla_Slab } from 'next/font/google'
-import ChatBot from './chatBot'
 import { useState } from 'react'
+import ChatBot from './chatBot'
 
 const zilla = Zilla_Slab({
   weight: ['400', '700'],
@@ -15,27 +12,75 @@ const zilla = Zilla_Slab({
   display: 'swap',
 })
 
+const quickLinks = [
+  { name: 'FE Admission Process', url: '/admission-process' },
+  { name: 'Education Loan', url: '/education-loan' },
+  { name: 'Prospectus 23-24', url: '/prospectus' },
+  { name: 'Medical Certificate', url: '/medical-certificate' },
+  { name: 'Listen to Leadership team', url: '/leadership-team' },
+]
+
+const feAdmissionData = [
+  {
+    title: 'FE CAP Reporting Form',
+    description: 'Fill out the First Year Engineering CAP reporting form.',
+    link: 'http://granth.fragnel.edu.in:5186/pinfo/feadm/FEMnu.php',
+    buttonText: 'Go to Form',
+  },
+  {
+    title: 'FE Admission Notice 24-25',
+    description: 'View the admission notice for FE 2024-25.',
+    link: '/admission/fe-admission-notice-24-25.pdf',
+    buttonText: 'View PDF',
+  },
+  {
+    title: 'FE CAP Reporting Documents',
+    description: 'Download the required documents for FE CAP reporting.',
+    link: '/admission/fe-cap-reporting-documents.pdf',
+    buttonText: 'Download PDF',
+  },
+]
+
+const dseAdmissionData = [
+  {
+    title: 'DSE CAP Reporting Form',
+    description:
+      'Fill out the Direct Second Year Engineering CAP reporting form.',
+    link: 'http://granth.fragnel.edu.in:5186/pinfo/seadm/SEMnu.php',
+    buttonText: 'Go to Form',
+  },
+  {
+    title: 'DSE CAP Reporting Documents',
+    description: 'Download the required documents for DSE CAP reporting.',
+    link: '/admission/dse-cap-reporting-documents.pdf',
+    buttonText: 'Download PDF',
+  },
+]
+
 export default function Home() {
   const [isChatbotOpen, setIsChatbotOpen] = useState(false)
 
   return (
-    <main className="">
+    <main className="min-h-screen bg-gray-100">
+      {/* ChatBot Toggle Button */}
       {!isChatbotOpen && (
         <button
           onClick={() => setIsChatbotOpen(true)}
-          className="fixed bottom-4 right-4 z-50 rounded-full border-none border-blue-800 bg-blue-900 p-4 font-semibold text-white shadow-lg"
+          className="fixed bottom-4 right-4 z-50 rounded-full bg-blue-600 p-4 font-semibold text-white shadow-lg transition-all hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
         >
           FAQs
         </button>
       )}
 
+      {/* ChatBot Component */}
       {isChatbotOpen && (
-        <div className="fixed bottom-4 right-4 z-50 h-[500px] w-[350px] rounded-lg border-none border-blue-800 bg-white shadow-xl sm:h-[600px] sm:w-[550px]">
+        <div className="fixed bottom-4 right-4 z-50 h-[500px] w-[350px] rounded-lg bg-white shadow-xl sm:h-[600px] sm:w-[550px]">
           <ChatBot onClose={() => setIsChatbotOpen(false)} />
         </div>
       )}
 
-      <section className="hero relative mt-[157px] overflow-hidden text-white">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden pt-40">
         <div className="absolute inset-0 z-0">
           <Image
             src="/college2.avif"
@@ -44,131 +89,105 @@ export default function Home() {
             objectFit="cover"
             quality={100}
           />
-          <div className="absolute inset-0 bg-blue-950 bg-opacity-70"></div>
+          <div className="absolute inset-0 bg-blue-900 bg-opacity-70"></div>
         </div>
 
-        <div className="container relative z-10 mx-auto flex h-full flex-col justify-center px-4 py-20">
-          <div className="max-w-2xl">
-            <h1 className="mb-6 text-4xl font-bold leading-tight md:text-6xl">
-              MOULDING,
-              <br />
-              ENGINEERS WHO CAN
-              <br />
-              BUILD THE NATION.
+        <div className="container relative z-10 mx-auto px-4 py-20 text-white">
+          <div className="max-w-3xl">
+            <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">
+              MOULDING ENGINEERS WHO CAN BUILD THE NATION
             </h1>
             <p className="mb-8 text-xl text-blue-100 md:text-2xl">
               Join a community of innovative thinkers and future leaders at
               FR.CRCE
             </p>
+            <a
+              href="#admissions"
+              className="inline-block rounded-full bg-white px-8 py-3 font-semibold text-blue-900 transition-colors hover:bg-blue-100"
+            >
+              Explore Admissions
+            </a>
           </div>
         </div>
 
         <div className="absolute bottom-0 left-0 h-16 w-full origin-bottom-right -skew-y-3 transform bg-white"></div>
       </section>
-      <section className="flex min-h-screen items-center p-4 md:p-8">
-        <div className="w-full">
-          <div className="flex flex-col gap-8 md:flex-row">
-            <div className="w-full rounded-lg bg-white p-8 shadow-lg md:w-1/3">
-              <h2
-                className={`${zilla.className} mb-6 text-2xl font-bold text-blue-900`}
+
+      {/* Quick Links Section */}
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-4">
+          <h2
+            className={`${zilla.className} mb-8 text-3xl font-bold text-blue-900`}
+          >
+            Quick Links
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+            {quickLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                className="rounded-lg bg-gray-100 p-4 text-center font-semibold text-blue-800 shadow transition-all hover:bg-blue-100 hover:shadow-md"
               >
-                Quick Links
-              </h2>
-              <ul className="space-y-4 text-gray-700">
-                {[
-                  ['FE Admission Process', '/admission-process'],
-                  ['Education Loan', '/education-loan'],
-                  ['Prospectus 23-24', '/prospectus'],
-                  ['Medical Certificate', '/medical-certificate'],
-                  ['Listen to Leadership team', '/leadership-team'],
-                ].map(([term, url], index) => (
-                  <li
-                    key={index}
-                    className="flex items-center justify-between border-b pb-2"
-                  >
-                    <a href={url} className="font-semibold">
-                      {term}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+                {link.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Admissions Section */}
+      <section id="admissions" className="bg-gray-100 py-16">
+        <div className="container mx-auto px-4">
+          <h2
+            className={`${zilla.className} mb-12 text-center text-4xl font-bold text-blue-900`}
+          >
+            Admissions
+          </h2>
+
+          {/* FE Admissions */}
+          <div className="mb-16">
+            <h3
+              className={`${zilla.className} mb-8 text-2xl font-bold text-blue-800`}
+            >
+              First Year Engineering (FE) Admissions through CAP
+            </h3>
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {feAdmissionData.map((item, index) => (
+                <AdmissionCard key={index} {...item} />
+              ))}
             </div>
-            <section className="flex min-h-screen items-start bg-gray-50 p-4 md:p-8">
-              <div className="w-full md:w-full">
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                  {[
-                    {
-                      title: 'Institute Level Admission Application Form',
-                      description:
-                        'Apply for admission at the institute level.',
-                      image: '/college.png', // add appropriate image paths
-                      link: '/admission-form',
-                    },
-                    {
-                      title: 'Video Meeting',
-                      description:
-                        'Join us for the video meeting (Mon-Fri 1:30 PM TO 2:30 PM',
-                      image: '/college2.avif', // add appropriate image paths
-                      link: '/fe-admissions',
-                    },
-                    {
-                      title: 'FE Admission Enquiry',
-                      description:
-                        'Get your queries about FE admissions answered.',
-                      image: '/college.png', // add appropriate image paths
-                      link: '/fe-enquiry',
-                    },
-                    {
-                      title: 'Prospectus',
-                      description:
-                        'View the prospectus for the academic year 23-24.',
-                      image: '/college2.avif', // add appropriate image paths
-                      link: '/prospectus',
-                    },
-                    {
-                      title: 'Autonomous Curriculum - Rules and Policies',
-                      description:
-                        'Learn about the rules and policies of the autonomous curriculum.',
-                      image: '/college.png', // add appropriate image paths
-                      link: '/curriculum-rules',
-                    },
-                    {
-                      title: 'Autonomous Curriculum Syllabus',
-                      description:
-                        'Explore the syllabus of the autonomous curriculum.',
-                      image: '/college2.avif', // add appropriate image paths
-                      link: '/curriculum-syllabus',
-                    },
-                  ].map((item, index) => (
-                    <a
-                      key={index}
-                      href={item.link}
-                      className="block overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 hover:shadow-xl"
-                    >
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        width={600}
-                        height={400}
-                        className="h-48 w-full object-cover"
-                      />
-                      <div className="p-6">
-                        <h2 className="mb-2 text-xl font-bold text-blue-900">
-                          {item.title}
-                        </h2>
-                        <p className="mb-8 text-gray-600">{item.description}</p>
-                        <div className="bg-blue-900 px-4 py-2 text-center text-white transition-colors duration-300 hover:bg-blue-800">
-                          Learn More
-                        </div>
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </section>
+          </div>
+
+          {/* DSE Admissions */}
+          <div>
+            <h3
+              className={`${zilla.className} mb-8 text-2xl font-bold text-blue-800`}
+            >
+              Direct Second Year (DSE) Admissions through CAP
+            </h3>
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {dseAdmissionData.map((item, index) => (
+                <AdmissionCard key={index} {...item} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
     </main>
   )
 }
+
+const AdmissionCard = ({ title, description, link, buttonText }) => (
+  <div className="flex flex-col rounded-lg bg-white p-6 shadow-md transition-all hover:shadow-lg">
+    <h4 className="mb-2 text-xl font-bold text-blue-900">{title}</h4>
+    <p className="mb-4 flex-grow text-gray-600">{description}</p>
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-auto inline-block rounded-full bg-blue-600 px-6 py-2 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+    >
+      {buttonText}
+    </a>
+  </div>
+)

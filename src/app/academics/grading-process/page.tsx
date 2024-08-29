@@ -2,7 +2,7 @@ import React from 'react'
 
 const CreditBasedEvaluationSystem = () => {
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
+    <div className="min-h-screen bg-gray-100 p-8 pt-48">
       <div className="mx-auto max-w-4xl overflow-hidden rounded-lg bg-white shadow-lg">
         <header className="bg-blue-900 p-6 text-white">
           <h2 className="text-3xl font-bold">Credit Based Evaluation System</h2>
