@@ -236,7 +236,7 @@ const dropdownContent: DropdownContent = {
   Admission: [
     {
       name: 'Under Graduate',
-      href: '/admission/undergraduates',
+      href: '/admission/undergrad',
       icon: <GraduationCap size={18} />,
     },
     {

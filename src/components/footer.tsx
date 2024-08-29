@@ -11,7 +11,19 @@ const Footer: React.FC = () => {
   return (
     <footer className="w-full border-t border-gray-200 bg-white pb-8 pt-14 text-gray-600">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
+          <div>
+            <h3 className="mb-4 text-lg font-semibold text-blue-900">
+              Contact Information
+            </h3>
+            <ul className="space-y-2">
+              <li>Fr. Agnel Ashram, Bandstand, Bandra (W),</li>
+              <li>Mumbai 400050, MH, IN</li>
+              <li>Phone: +91 22-6711 4000</li>
+              <li>Fax: +91 22-6711 4100</li>
+              <li>Email: crce@frcrce.ac.in</li>
+            </ul>
+          </div>
           <div>
             <h3 className="mb-4 text-lg font-semibold text-blue-900">
               STAFF SERVICES
@@ -152,15 +164,7 @@ const Footer: React.FC = () => {
                   IPR cell
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="#"
-                  target="_blank"
-                  className="text-sm hover:text-blue-600"
-                >
-                  Green Practices
-                </Link>
-              </li>
+
               <li>
                 <Link
                   href="https://ldap.fragnel.edu.in/manage/login.php"
@@ -172,7 +176,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/news2024.pdf"
                   target="_blank"
                   className="text-sm hover:text-blue-600"
                 >
@@ -184,7 +188,7 @@ const Footer: React.FC = () => {
               Can't find something?
             </h4>
             <Link
-              href="#"
+              href="/students/grievance"
               target="_blank"
               className="text-blue-600 hover:underline"
             >
