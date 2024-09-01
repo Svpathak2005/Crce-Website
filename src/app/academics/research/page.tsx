@@ -1,7 +1,14 @@
-import React from 'react'
+'use client'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Zilla_Slab } from 'next/font/google'
 import Navigation from '@/components/navigation'
+import Publications from './computerpublications'
+import AidsPublications from './aidspublications'
+import ECSPublications from './ecspublications'
+import MechPublications from './mechpublications'
+import FundedPublications from './funded'
+import PatentsPublications from './patents'
 
 const zilla = Zilla_Slab({
   weight: ['400', '700'],
@@ -10,33 +17,44 @@ const zilla = Zilla_Slab({
   display: 'swap',
 })
 
-const Research = () => {
+const MenuItem = ({ label, isActive, onClick }) => (
+  <button
+    className={`w-full border-b border-gray-300 px-4 py-2 text-left ${
+      isActive
+        ? 'font-semibold text-blue-500'
+        : 'text-gray-700 hover:bg-gray-100'
+    }`}
+    onClick={onClick}
+  >
+    {label}
+  </button>
+)
+
+const ContentSection = ({ title, content }) => (
+  <div className="p-8">
+    <h2 className={`${zilla.className} mb-4 text-3xl font-bold`}>{title}</h2>
+    <div className="prose max-w-none">{content}</div>
+  </div>
+)
+
+const ResearchMenu = () => {
+  const [activeItem, setActiveItem] = useState('Overview')
+
+  // Use useEffect to ensure the Overview is set as active on initial render
+  useEffect(() => {
+    setActiveItem('Overview')
+  }, [])
+
   const navigationItems = [
     { label: 'Academics', url: '/academics' },
     { label: 'Research & Development', url: '/academics/Research&Development' },
   ]
 
-  return (
-    <div
-      className={`${zilla.className} flex h-fit w-full flex-col bg-gradient-to-b from-white to-[#E5F0FF] text-gray-900`}
-    >
-      <div
-        className="flex h-full w-full flex-col justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] pt-36 md:flex-row"
-        id="iqac"
-      >
-        <div className="flex w-full flex-col items-center justify-center p-8 pt-40 text-white md:w-2/3 md:p-16 md:pt-16">
-          <h1 className="mb-6 text-center text-4xl font-bold md:text-5xl lg:text-7xl">
-            Code of Ethics for Authors and Publishing your work
-          </h1>
-          <Navigation items={navigationItems} />
-        </div>
-      </div>
-
-      <div className="mx-auto mb-8 mt-8 max-w-4xl rounded-lg bg-white p-8 shadow-lg">
-        <section className="mb-12">
-          <h2 className="mb-6 text-3xl font-bold text-[#000000]">
-            Overview - Research & Development
-          </h2>
+  const menuItems = [
+    {
+      label: 'Overview',
+      content: (
+        <>
           <p className="mb-6 leading-relaxed">
             Fr. Conceicao Rodrigues College of Engineering encourages
             multidisciplinary quality research related to science, engineering
@@ -48,18 +66,12 @@ const Research = () => {
             strives to create a vibrant research environment for faculty and
             students engaged in emerging area research.
           </p>
-        </section>
-
-        <section className="mb-12">
-          <h3 className="mb-4 text-2xl font-bold text-[#000000]">Vision</h3>
+          <h3 className="mb-4 text-2xl font-bold">Vision</h3>
           <p className="mb-6 leading-relaxed">
             To foster an environment conducive to multi-disciplinary research in
             engineering and technology
           </p>
-        </section>
-
-        <section className="mb-12">
-          <h3 className="mb-4 text-2xl font-bold text-[#000000]">Mission</h3>
+          <h3 className="mb-4 text-2xl font-bold">Mission</h3>
           <ol className="mb-6 list-decimal space-y-2 pl-6">
             <li>
               To promote inventiveness and moral research among faculty,
@@ -70,10 +82,7 @@ const Research = () => {
               benefits various facets of society and industry.
             </li>
           </ol>
-        </section>
-
-        <section className="mb-12">
-          <h3 className="mb-4 text-2xl font-bold text-[#000000]">Objective</h3>
+          <h3 className="mb-4 text-2xl font-bold">Objective</h3>
           <ul className="mb-6 list-disc space-y-2 pl-6">
             <li>
               To inspire faculty and students to realize their research
@@ -88,10 +97,7 @@ const Research = () => {
               protect, and leverage Intellectual Property Rights.
             </li>
           </ul>
-        </section>
-
-        <section className="mb-12">
-          <h3 className="mb-4 text-2xl font-bold text-[#000000]">
+          <h3 className="mb-4 text-2xl font-bold">
             Research & Development Committee (2022-23)
           </h3>
           <ol className="mb-6 list-decimal columns-2 space-y-2 pl-6">
@@ -109,12 +115,7 @@ const Research = () => {
             <li>Divya Fernandes(TE AI & DS)</li>
             <li>Snow Doritto (TE AI & DS)</li>
           </ol>
-        </section>
-
-        <section className="mb-12">
-          <h3 className="mb-4 text-2xl font-bold text-[#000000]">
-            Research Promotion Policy
-          </h3>
+          <h3 className="mb-4 text-2xl font-bold">Research Promotion Policy</h3>
           <p className="mb-6 leading-relaxed">
             A research and development committee has been formed at Fr. CRCE to
             strengthen the institute's presence in the field of research by
@@ -127,13 +128,14 @@ const Research = () => {
           >
             Research Promotion Policy.pdf
           </Link>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="mb-6 text-3xl font-bold text-[#000000]">
-            Code of Ethics for Authors and Publishing your work
-          </h2>
-          <h3 className="mb-4 text-2xl font-bold text-[#000000]">Preamble</h3>
+        </>
+      ),
+    },
+    {
+      label: 'Code of Ethics',
+      content: (
+        <>
+          <h3 className="mb-4 text-2xl font-bold">Preamble</h3>
           <p className="mb-6 leading-relaxed">
             University Of Mumbai adopted notification regarding Promotion of
             Academic Integrity and Prevention of Plagiarism by UGC vide circular
@@ -149,10 +151,7 @@ const Research = () => {
             the document has been prepared by him or her and that the document
             is his/her original work.
           </p>
-        </section>
-
-        <section className="mb-12">
-          <h3 className="mb-4 text-2xl font-bold text-[#000000]">
+          <h3 className="mb-4 text-2xl font-bold">
             Code of Ethics and Publishing your Work
           </h3>
           <ul className="mb-6 list-disc space-y-2 pl-6">
@@ -210,10 +209,196 @@ const Research = () => {
           >
             Research Ethics Policy.pdf
           </Link>
-        </section>
+        </>
+      ),
+    },
+
+    {
+      label: 'Research Centre Details',
+      content: (
+        <div className="bg-gray-50 p-6">
+          <h2 className="mb-4 text-2xl font-semibold">
+            Research Centre Details
+          </h2>
+          <h3 className="mb-6 text-xl font-medium">
+            Research Centre Statistics
+          </h3>
+          <div className="overflow-x-auto">
+            <table className="min-w-full border border-gray-300 bg-white text-center">
+              <thead>
+                <tr className="border-b">
+                  <th className="border-r border-gray-300 p-4">
+                    Research Centre
+                  </th>
+                  <th className="border-r border-gray-300 p-4">
+                    Electronics Engineering
+                  </th>
+                  <th className="border-r border-gray-300 p-4">
+                    Mechanical Engineering
+                  </th>
+                  <th className="p-4">Computer Engineering</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b">
+                  <td className="border-r border-gray-300 p-4">
+                    Year of Introduction
+                  </td>
+                  <td className="border-r border-gray-300 p-4">2014</td>
+                  <td className="border-r border-gray-300 p-4">2015</td>
+                  <td className="p-4">2023</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="border-r border-gray-300 p-4">
+                    Sanctioned Intake
+                  </td>
+                  <td className="border-r border-gray-300 p-4">14</td>
+                  <td className="border-r border-gray-300 p-4">10</td>
+                  <td className="p-4">10</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="border-r border-gray-300 p-4">
+                    No. of Candidates pursuing Ph.D.
+                  </td>
+                  <td className="border-r border-gray-300 p-4">7</td>
+                  <td className="border-r border-gray-300 p-4">8</td>
+                  <td className="p-4">6</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="border-r border-gray-300 p-4">
+                    No. of Candidates Registered
+                  </td>
+                  <td className="border-r border-gray-300 p-4">5</td>
+                  <td className="border-r border-gray-300 p-4">5</td>
+                  <td className="p-4">6</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="border-r border-gray-300 p-4">
+                    No. of Candidates with Thesis Submitted
+                  </td>
+                  <td className="border-r border-gray-300 p-4">1</td>
+                  <td className="border-r border-gray-300 p-4">1</td>
+                  <td className="p-4">-</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="border-r border-gray-300 p-4">
+                    No. of Candidates with Ph.D. Awarded
+                  </td>
+                  <td className="border-r border-gray-300 p-4">7</td>
+                  <td className="border-r border-gray-300 p-4">1</td>
+                  <td className="p-4">-</td>
+                </tr>
+                <tr>
+                  <td className="border-r border-gray-300 p-4">
+                    Total Vacancies
+                  </td>
+                  <td className="border-r border-gray-300 p-4">7</td>
+                  <td className="border-r border-gray-300 p-4">2</td>
+                  <td className="p-4">4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ),
+    },
+
+    {
+      label: 'Computer Engineering Research Publications',
+      content: (
+        <div>
+          <Publications />
+        </div>
+      ),
+    },
+    {
+      label: 'Electronics and Computer Science Research Publications',
+      content: (
+        <div>
+          <ECSPublications />
+        </div>
+      ),
+    },
+    {
+      label: 'Artificial Intelligence & Data Science Research Publications',
+      content: (
+        <div>
+          <AidsPublications />
+        </div>
+      ),
+    },
+    {
+      label: 'Mechanical Engineering Research Publications',
+      content: (
+        <div>
+          <MechPublications />
+        </div>
+      ),
+    },
+    {
+      label: 'Patents',
+      content: (
+        <div>
+          <PatentsPublications />
+        </div>
+      ),
+    },
+    {
+      label: 'Funded Research Projects',
+      content: (
+        <div>
+          <PatentsPublications />
+        </div>
+      ),
+    },
+  ]
+
+  const handleItemClick = (item) => {
+    setActiveItem(item)
+  }
+
+  return (
+    <div
+      className={`${zilla.className} flex h-fit w-full flex-col bg-gradient-to-b from-white to-[#E5F0FF] text-gray-900`}
+    >
+      <div
+        className="flex h-full w-full flex-col justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] pt-36 md:flex-row"
+        id="research"
+      >
+        <div className="flex w-full flex-col items-center justify-center p-8 pt-40 text-white md:w-2/3 md:p-16 md:pt-16">
+          <h1 className="mb-6 text-center text-4xl font-bold md:text-5xl lg:text-7xl">
+            Research & Development
+          </h1>
+          <Navigation items={navigationItems} />
+        </div>
+      </div>
+
+      <div className="mx-auto w-full max-w-7xl py-8">
+        <div className="flex flex-col md:flex-row">
+          <div className="mb-4 w-full md:mb-0 md:w-1/4">
+            <div className="sticky top-20 bg-white shadow-md">
+              {menuItems.map((item, index) => (
+                <MenuItem
+                  key={index}
+                  label={item.label}
+                  isActive={activeItem === item.label}
+                  onClick={() => handleItemClick(item.label)}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="flex-1 rounded-lg bg-white p-8 shadow-lg md:ml-8">
+            <ContentSection
+              title={activeItem}
+              content={
+                menuItems.find((item) => item.label === activeItem)?.content
+              }
+            />
+          </div>
+        </div>
       </div>
     </div>
   )
 }
 
-export default Research
+export default ResearchMenu
