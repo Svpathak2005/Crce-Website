@@ -123,7 +123,7 @@ const ResearchMenu = () => {
             activities.
           </p>
           <Link
-            href="#"
+            href="https://frcrce.ac.in/attachments/article/173/Research%20Promotion%20Policy.pdf"
             className="inline-block rounded bg-[#001f3f] px-6 py-2 text-white transition-colors hover:bg-[#003366]"
           >
             Research Promotion Policy.pdf
@@ -203,12 +203,6 @@ const ResearchMenu = () => {
               involved.
             </li>
           </ul>
-          <Link
-            href="#"
-            className="inline-block rounded bg-[#001f3f] px-6 py-2 text-white transition-colors hover:bg-[#003366]"
-          >
-            Research Ethics Policy.pdf
-          </Link>
         </>
       ),
     },
@@ -347,7 +341,7 @@ const ResearchMenu = () => {
       label: 'Funded Research Projects',
       content: (
         <div>
-          <PatentsPublications />
+          <FundedPublications />
         </div>
       ),
     },
