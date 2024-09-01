@@ -46,6 +46,7 @@ import {
   Code2,
   CreditCard,
   Images,
+  ScrollText,
 } from 'lucide-react'
 
 interface DropdownItem {
@@ -109,20 +110,19 @@ const dropdownContent: DropdownContent = {
   Academics: [
     {
       name: 'Autonomous Curriculum',
-      href: '/academics/programs',
+      href: '/academics/autonomous/syllabus',
       icon: <BookOpen size={18} />,
+    },
+    {
+      name: 'Autonomous Rules',
+      href: '/academics/autonomous/rules-and-policies',
+      icon: <ScrollText size={18} />,
     },
     {
       name: 'Academic/Holiday Calender',
       href: '/academics/calendar',
       icon: <Calendar size={18} />,
     },
-    {
-      name: 'Outreach Programmes',
-      href: '/academics/online-courses',
-      icon: <Users size={18} />,
-    },
-
     {
       name: 'Examination',
       href: '/academics/grading-process',
@@ -150,7 +150,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Library',
-      href: '/research/funding',
+      href: '/academics/library',
       icon: <Library size={18} />,
     },
   ],
@@ -199,11 +199,6 @@ const dropdownContent: DropdownContent = {
       name: 'Grievances',
       href: '/students/grievance-policy',
       icon: <MessageCircleWarning size={18} />,
-    },
-    {
-      name: 'Image Gallery',
-      href: '/international/admissions',
-      icon: <Images size={18} />,
     },
   ],
   Departments: [
