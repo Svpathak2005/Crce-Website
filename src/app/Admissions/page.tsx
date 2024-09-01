@@ -11,11 +11,16 @@ const zilla = Zilla_Slab({
 })
 
 const Page = () => {
-  const navigationItems = [{ label: 'Admission', url: '/admissions' }]
+  const navigationItems = [
+    { label: 'PhD Admission', url: '/admission/phd' },
+    { label: 'Postgraduate Admission', url: '/admission/postgraduate' },
+    { label: 'Undergraduate Admission', url: '/admission/undergrad' },
+  ]
+
   return (
     <div className="flex h-fit w-full flex-col bg-gradient-to-b from-gray-50 to-[#E5F0FF] text-gray-900">
       <div
-        className="flex h-full w-full pt-36 flex-col bg-gradient-to-br from-[#001f3f] to-[#003366] md:flex-row"
+        className="flex h-full w-full flex-col bg-gradient-to-br from-[#001f3f] to-[#003366] pt-36 md:flex-row"
         id="admission"
       >
         <div className="flex w-full flex-col items-center justify-center p-8 pt-40 text-white md:w-2/3 md:p-16 md:pt-16">
@@ -35,7 +40,7 @@ const Page = () => {
             </h2>
           </div>
           <p className="mt-4 text-center text-gray-600">
-            We&apos;re here to help you with your admissions journey
+            We're here to help you with your admissions journey
           </p>
           <Link
             href="/"
@@ -67,76 +72,68 @@ const Page = () => {
           </h2>
           <nav className="flex flex-col">
             <Link
-              href="/academics"
+              href="/about/about-crce"
               className="border-b border-gray-200 py-2 text-sm text-gray-600 hover:text-[#001f3f] lg:text-base"
             >
-              Academics
+              About CRCE
             </Link>
             <Link
-              href="/schools-divisions"
+              href="/about/administration"
               className="border-b border-gray-200 py-2 text-sm text-gray-600 hover:text-[#001f3f] lg:text-base"
             >
-              Schools & Divisions
+              Administration
             </Link>
             <Link
-              href="/admissions-aid"
+              href="/about/from-directors"
+              className="border-b border-gray-200 py-2 text-sm text-gray-600 hover:text-[#001f3f] lg:text-base"
+            >
+              From Director's Desk
+            </Link>
+            <Link
+              href="/about/general-information"
+              className="border-b border-gray-200 py-2 text-sm text-gray-600 hover:text-[#001f3f] lg:text-base"
+            >
+              General Information
+            </Link>
+            <Link
+              href="/about/contact-us"
+              className="border-b border-gray-200 py-2 text-sm text-gray-600 hover:text-[#001f3f] lg:text-base"
+            >
+              Contact Us
+            </Link>
+            <Link
+              href="/admission/phd"
               className="border-b border-gray-200 py-2 text-sm font-bold text-[#001f3f] lg:text-base"
             >
-              Admissions & Aid
-            </Link>
-            <div className="ml-4 flex flex-col border-l border-gray-200 pl-2">
-              <Link
-                href="/undergraduate-admissions"
-                className="py-1 text-xs text-gray-600 hover:text-[#001f3f] lg:text-sm"
-              >
-                Undergraduate Admissions
-              </Link>
-              <Link
-                href="/graduate-admissions"
-                className="py-1 text-xs text-gray-600 hover:text-[#001f3f] lg:text-sm"
-              >
-                Graduate Admissions
-              </Link>
-              <Link
-                href="/plan-visit"
-                className="py-1 text-xs text-gray-600 hover:text-[#001f3f] lg:text-sm"
-              >
-                Plan a Visit
-              </Link>
-              <Link
-                href="/tuition-costs"
-                className="py-1 text-xs text-gray-600 hover:text-[#001f3f] lg:text-sm"
-              >
-                Tuition & Costs
-              </Link>
-              <Link
-                href="/financial-aid"
-                className="py-1 text-xs text-gray-600 hover:text-[#001f3f] lg:text-sm"
-              >
-                Financial Aid
-              </Link>
-            </div>
-            <Link
-              href="/research-faculty"
-              className="border-b border-gray-200 py-2 text-sm text-gray-600 hover:text-[#001f3f] lg:text-base"
-            >
-              Research & Faculty
+              PhD Admission
             </Link>
             <Link
-              href="/campus-life"
-              className="py-2 text-sm text-gray-600 hover:text-[#001f3f] lg:text-base"
+              href="/admission/postgraduate"
+              className="border-b border-gray-200 py-2 text-sm font-bold text-[#001f3f] lg:text-base"
             >
-              Campus Life
+              Postgraduate Admission
+            </Link>
+            <Link
+              href="/admission/undergrad"
+              className="py-2 text-sm font-bold text-[#001f3f] lg:text-base"
+            >
+              Undergraduate Admission
             </Link>
           </nav>
         </div>
         <div className="flex-grow p-6 text-[#534a43] md:p-8 lg:p-12">
           <div className="mx-auto max-w-3xl">
             {[
-              'Undergraduate Admissions',
-              'Graduate Admissions',
-              'Scholarships and Loans',
-            ].map((title, index) => (
+              {
+                title: 'Undergraduate Admission',
+                link: '/admission/undergrad',
+              },
+              {
+                title: 'Postgraduate Admission',
+                link: '/admission/postgraduate',
+              },
+              { title: 'PhD Admission', link: '/admission/phd' },
+            ].map(({ title, link }, index) => (
               <div key={index} className="mb-12">
                 <h2
                   className={`${zilla.className} mb-4 text-3xl font-bold text-[#001f3f] md:text-4xl lg:text-5xl`}
@@ -145,14 +142,17 @@ const Page = () => {
                 </h2>
                 <p className="mb-6 text-base leading-relaxed md:text-lg">
                   {index === 0
-                    ? 'We accept applications for the fall semester from August through January (through March for transfer applicants) for undergraduate admission to our School of Arts and Sciences and/or our School of Engineering.'
+                    ? 'We offer top-tier engineering programs for undergraduate students. Our admission process is based on CET/JEE Main scores, followed by counseling through the centralized admission process. Join us to build a strong foundation in engineering and technology.'
                     : index === 1
-                      ? "Our faculty and students study, teach, and learn in and across more than 180 programs regularly recognized as being among the nation's best. All nine of our academic divisions offer full-time graduate programs."
-                      : 'We aim to bring the best students to campus. In order to do that, we are committed to making their education affordable. We expect the best from our students, and they can expect the same from us.'}
+                      ? 'Our postgraduate programs are designed for those looking to specialize in their field of engineering. Admission is based on GATE scores and academic performance. Our faculty comprises experienced professionals and researchers, ensuring a high-quality education.'
+                      : 'Our PhD programs are for those passionate about research and innovation in engineering. We offer full-time and part-time PhD options across various engineering disciplines. Admission is based on entrance tests, interviews, and research proposals.'}
                 </p>
-                <button className="rounded-full bg-gradient-to-r from-[#4a90e2] to-[#357abd] px-6 py-3 text-sm font-semibold text-white transition-all hover:from-[#357abd] hover:to-[#4a90e2] hover:shadow-lg md:text-base">
+                <Link
+                  href={link}
+                  className="rounded-full bg-gradient-to-r from-[#4a90e2] to-[#357abd] px-6 py-3 text-sm font-semibold text-white transition-all hover:from-[#357abd] hover:to-[#4a90e2] hover:shadow-lg md:text-base"
+                >
                   MORE ABOUT {title.toUpperCase()}
-                </button>
+                </Link>
               </div>
             ))}
           </div>

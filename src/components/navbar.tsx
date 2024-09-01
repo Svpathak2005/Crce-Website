@@ -135,7 +135,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'NAAC',
-      href: 'https://frcrce.ac.in/index.php/academics/research-development/publications',
+      href: '/academics/naac',
       icon: <Award size={18} />,
     },
     {
