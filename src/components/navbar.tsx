@@ -130,7 +130,7 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Teaching Learning Process',
-      href: '/academics/online-courses',
+      href: '/academics/teaching',
       icon: <GraduationCap size={18} />,
     },
     {
@@ -140,8 +140,13 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Research & Development',
-      href: '/research/publications',
+      href: '/academics/research',
       icon: <FlaskConical size={18} />,
+    },
+    {
+      name: 'Lesson Plan',
+      href: '/academics/lesson',
+      icon: <BookOpen size={18} />,
     },
     {
       name: 'IQAC-CRCE',
