@@ -276,10 +276,14 @@ const FacultyTab: React.FC<FacultyTabProps> = ({
   )
 }
 
-const FacultyGrid: React.FC<FacultyGridProps> = () => {
+interface FacultyGridProps {
+  facultyData: typeof FacultyTabData
+}
+
+const FacultyGrid: React.FC<FacultyGridProps> = ({ facultyData }) => {
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {FacultyTabData.map((faculty) => (
+      {facultyData.map((faculty) => (
         <FacultyTab key={faculty.id} {...faculty} />
       ))}
     </div>
