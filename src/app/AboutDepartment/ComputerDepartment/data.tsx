@@ -1,101 +1,305 @@
 export const FacultyTabData = [
   {
     id: '1',
-    name: 'Dr. A. K. Agarwal',
-    photoUrl: '/ssr3.png',
+    name: 'DR. SUJATA DESHMUKH',
+    photoUrl: '/facultyimg/sujata.png',
     ctaText: 'View Profile',
-    designation: 'HOD',
-    description:
-      'Dr. A. K. Agarwal is the Head of Department of Computer Science and Engineering at Fr.CRCE, Indore.',
+    designation: 'Professor & HOD',
+    qualification: 'Ph.D.(Tech.) in Info.Tech',
+    areasOfInterest: 'Data Mining, Machine Learning, Blockchain',
     ctaOnClick: () => {
       window.location.href = '/faculty/1'
     },
   },
   {
     id: '2',
-    name: 'Dr. S. S. Rathore',
-    photoUrl: '/ssr3.png',
+    name: 'DR. SUNIL SURVE',
+    photoUrl: '/facultyimg/surve.png',
     ctaText: 'View Profile',
     designation: 'Professor',
-    description:
-      'Dr. S. S. Rathore is a Professor of Computer Science and Engineering at Fr.CRCE, Indore.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ea repellendus iure voluptates itaque dolorum pariatur aspernatur molestiae adipisci, quis eaque, sunt dolores ab earum. Laudantium dolor laborum deserunt expedita?  ',
+    qualification: 'Ph.D.(Electronics Engineering)',
+    areasOfInterest:
+      'Artificial Intelligence, Machine Learning, Robotics, Cyber Security',
     ctaOnClick: () => {
       window.location.href = '/faculty/2'
     },
   },
   {
     id: '3',
-    name: 'Dr. A. K. Agarwal',
-    photoUrl: '/ssr3.png',
+    name: 'DR. BRIJMOHAN DAGA',
+    photoUrl: '/facultyimg/daga.png',
     ctaText: 'View Profile',
-    designation: 'HOD',
-    description:
-      'Dr. A. K. Agarwal is the Head of Department of Computer Science and Engineering at Fr.CRCE, Indore.',
+    designation: 'Associate Professor',
+    qualification: 'Ph.D.(Computer Science and Engineering)',
+    areasOfInterest: 'Software Engineering, Artificial Intelligence',
     ctaOnClick: () => {
       window.location.href = '/faculty/3'
     },
   },
   {
     id: '4',
-    name: 'Dr. S. S. Rathore',
-    photoUrl: '/ssr3.png',
+    name: 'MS. MERLY THOMAS',
+    photoUrl: '/facultyimg/merly.png',
     ctaText: 'View Profile',
-    designation: 'Professor',
-    description:
-      ' Dr. S. S. Rathore is a Professor of Computer Science and Engineering at Fr.CRCE, Indore.',
+    designation: 'Associate Professor',
+    qualification: 'Ph.D.(Computer Engg.) (Pursuing)',
+    areasOfInterest: 'Computer Networks, Security & Distributed Computing',
     ctaOnClick: () => {
       window.location.href = '/faculty/4'
     },
   },
   {
     id: '5',
-    name: 'Dr. A. K. Agarwal',
-    photoUrl: '/ssr3.png',
+    name: 'DR. ASHOK M. KANTHE',
+    photoUrl: '/facultyimg/kanthe.png',
     ctaText: 'View Profile',
-    designation: 'HOD',
-    description:
-      'Dr. A. K. Agarwal is the Head of Department of Computer Science and Engineering at Fr.CRCE, Indore.',
+    designation: 'Associate Professor',
+    qualification: 'Ph.D.(Computer Technology)',
+    areasOfInterest:
+      'Wireless Network Security, Cyber Security, Machine Learning',
     ctaOnClick: () => {
       window.location.href = '/faculty/5'
     },
   },
   {
     id: '6',
-    name: 'Dr. S. S. Rathore',
-    photoUrl: '/ssr3.png',
+    name: 'MRS. MONICA KHANORE',
+    photoUrl: '/facultyimg/monica.png',
     ctaText: 'View Profile',
-    designation: 'Professor',
-    description:
-      'Dr. S. S. Rathore is a Professor of Computer Science and Engineering at Fr.CRCE, Indore.',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Electronics Engineering)',
+    areasOfInterest:
+      'Telecommunications, Blockchain Technology, Computer Networks',
     ctaOnClick: () => {
       window.location.href = '/faculty/6'
     },
   },
   {
     id: '7',
-    name: 'Dr. A. K. Agarwal',
-    photoUrl: '/ssr3.png',
+    name: 'MS. KALPANA DEORUKHKAR',
+    photoUrl: '/facultyimg/kalpana.png',
     ctaText: 'View Profile',
-    designation: 'HOD',
-    description:
-      'Dr. A. K. Agarwal is the Head of Department of Computer Science and Engineering at Fr.CRCE, Indore.',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Computer Engineering) (Pursuing)',
+    areasOfInterest:
+      'Natural Language Processing, Data Structures, Advance Algorithm',
     ctaOnClick: () => {
       window.location.href = '/faculty/7'
     },
   },
   {
     id: '8',
-    name: 'Dr. S. S. Rathore',
-    photoUrl: '/ssr3.png',
+    name: 'MS. ROSHNI PADATE',
+    photoUrl: '/facultyimg/roshni.png',
     ctaText: 'View Profile',
-    designation: 'Professor',
-    description:
-      'Dr. S. S. Rathore is a Professor of Computer Science and Engineering at Fr.CRCE, Indore.',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Computer Engineering) (Pursuing)',
+    areasOfInterest:
+      'Image Processing, Data Warehouse and Mining, Machine Learning, Deep Learning, Artificial Intelligence',
     ctaOnClick: () => {
       window.location.href = '/faculty/8'
     },
   },
+  {
+    id: '9',
+    name: 'MS. KRANTI WAGLE',
+    photoUrl: '/facultyimg/karntiW.jpg',
+    ctaText: 'Profile',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
+    areasOfInterest:
+      'Computer Organization, Embedded Systems, Real Time Operating System, Internet of Things',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/9'
+    },
+  },
+  {
+    id: '10',
+    name: 'MS. JAGRUTI NAGAONKAR',
+    photoUrl: '/facultyimg/jagrutin.jpg',
+    ctaText: 'Profile',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
+    areasOfInterest:
+      'Computer Networks, Database Management Systems, Digital Signal Processing',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/10'
+    },
+  },
+  {
+    id: '11',
+    name: 'MS. ASHWINI PANSARE',
+    photoUrl: '/facultyimg/ashwini.jpg',
+    ctaText: 'Profile',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
+    areasOfInterest: 'Artificial Intelligence, Machine Learning, Deep Learning',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/11'
+    },
+  },
+  {
+    id: '12',
+    name: 'DR. SUPRIYA KAMOJI',
+    photoUrl: '/facultyimg/supriya.jpg',
+    ctaText: 'Profile',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Computer Engineering)',
+    areasOfInterest: 'Artificial Intelligence, Machine Learning, Deep Learning',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/12'
+    },
+  },
+  {
+    id: '13',
+    name: 'MS. SUSHAMA NAGDEOTE',
+    photoUrl: '/facultyimg/sushma.jpg',
+    ctaText: 'Profile',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Electronics Engineering)(Pursuing)',
+    areasOfInterest:
+      'Image processing, Machine Learning, Deep Learning, Signal Processing',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/13'
+    },
+  },
+  {
+    id: '14',
+    name: 'MS. MONALI SHETTY',
+    photoUrl: '/facultyimg/monali.jpg',
+    ctaText: 'Profile',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
+    areasOfInterest:
+      'Computer Networks, System Security, Blockchain Technology',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/14'
+    },
+  },
+  {
+    id: '15',
+    name: 'MS. PRACHI PATIL',
+    photoUrl: '/facultyimg/prachi.jpg',
+    ctaText: 'Profile',
+    designation: 'Assistant Professor',
+    qualification: 'M.E.(Computer Engineering)',
+    areasOfInterest: 'Programming Languages, Machine Learning',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/15'
+    },
+  },
+  {
+    id: '16',
+    name: 'MS. PARSHVI SHAH',
+    photoUrl: '/facultyimg/parshvi.jpg',
+    ctaText: 'Profile',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Pursuing)',
+    areasOfInterest:
+      'Programming Languages, Computer Architecture, Machine Learning',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/16'
+    },
+  },
+  {
+    id: '17',
+    name: 'MS. SANGEETA PARSHIONIKAR',
+    photoUrl: '/facultyimg/Sangeeta_Photo.jpg',
+    ctaText: 'Profile',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
+    areasOfInterest: 'Digital Logic, Computer Organization, IoT, Deep Learning',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/17'
+    },
+  },
+  {
+    id: '18',
+    name: 'MS. HEENA PENDHARI',
+    photoUrl: '/facultyimg/heena.jpg',
+    ctaText: 'Profile',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
+    areasOfInterest: 'Embedded systems, Internet of Things',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/18'
+    },
+  },
+  {
+    id: '19',
+    name: 'MS. PRAJAKTA DHAMNASKAR',
+    photoUrl: '/facultyimg/PrajaktaD.jpg',
+    ctaText: 'Profile',
+    designation: 'Assistant Professor',
+    qualification: 'PhD (Computer Engineering)(Pursuing)',
+    areasOfInterest:
+      'Data structure and Algorithms, Data mining, Machine Learning',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/19'
+    },
+  },
+  {
+    id: '20',
+    name: 'MR. UNIK LOKHANDE',
+    photoUrl: '/facultyimg/uniklokhande.jpg',
+    ctaText: 'Profile',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
+    areasOfInterest: 'Cloud Computing, System / Information Security',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/20'
+    },
+  },
+  {
+    id: '21',
+    name: 'DR. VIJAY SHELAKE',
+    photoUrl: '/facultyimg/vijay.jpg',
+    ctaText: 'Profile',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Tech.)(COMP.)',
+    areasOfInterest: 'Database Systems, Data Privacy and Security',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/21'
+    },
+  },
+  {
+    id: '22',
+    name: 'MS. ANKITA AMBURLE',
+    photoUrl: '/facultyimg/anika.jpg',
+    ctaText: 'Profile',
+    designation: 'Assistant Professor',
+    qualification: 'M.Tech(Computer Engineering)',
+    areasOfInterest: 'Machine Learning, Software engineering',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/22'
+    },
+  },
+  {
+    id: '23',
+    name: 'MR. JOSHUA MICHAEL',
+    photoUrl: '/facultyimg/joshua_photo.jpg',
+    ctaText: 'Profile',
+    designation: 'Assistant Professor',
+    qualification: 'M.Tech(Computer Engineering)',
+    areasOfInterest: 'Generative AI, Machine Learning',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/23'
+    },
+  },
+  {
+    id: '24',
+    name: 'MS. NAYNA VAIDYA',
+    photoUrl: '/facultyimg/nayana_photo.jpg',
+    ctaText: 'Profile',
+    designation: 'Assistant Professor',
+    qualification: 'M.E.(Information Technology)',
+    areasOfInterest: 'Software testing, Data Science',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/24'
+    },
+  },
 ]
+
 export const tabs = [
   {
     id: 'about',

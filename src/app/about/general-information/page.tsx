@@ -11,6 +11,7 @@ import AICETSub from './AICET-Sub/AICETSub'
 import CodeOfConduct from './code-of-conduct/CodeOfConduct'
 import CoreValues from './core-values/CoreValues'
 import CommonInfrastructure from './common-infrastructure/CommonInfrastructure'
+import TelephoneDirectory from './telephone-directory/TelephoneDirectory'
 
 const zilla = Zilla_Slab({
   weight: ['400', '700'],
@@ -28,13 +29,13 @@ export default function Page() {
       case 'aicetsubsquent':
         return <AICETSub />
       case 'corevalues':
-      return <CoreValues />
+        return <CoreValues />
       case 'codeofconduct':
-      return <CodeOfConduct/>
-      case 'tetephonedirectory':
-      // return <TetephoneDirectory />
+        return <CodeOfConduct />
+      case 'telephonedirectory':
+        return <TelephoneDirectory />
       case 'commoninfrastructure':
-      return <CommonInfrastructure />
+        return <CommonInfrastructure />
       default:
         return null
     }

@@ -90,9 +90,65 @@ export const FacultyTabData = [
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
     description:
-      'Dr. S. S. Rathore is a Professor of Mechanical Engineering at Fr.CRCE, Indore.',
+      'MIRYALA VEERABHADRARAO D.N is a faculty member with an M.E. degree.',
+    qualification: '',
+    areasOfInterest: '',
     ctaOnClick: () => {
       window.location.href = '/faculty/8'
+    },
+  },
+  {
+    id: '9',
+    name: 'DR. DIPALI BHISE',
+    photoUrl: '/facultymech/Dipali-Bhise.jpg',
+    ctaText: 'Profile',
+    designation: 'Ph.D.',
+    description: 'DR. DIPALI BHISE is a faculty member with a Ph.D. degree.',
+    qualification: '',
+    areasOfInterest: '',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/9'
+    },
+  },
+  {
+    id: '10',
+    name: 'DR. C RAMULU JATAVALLU',
+    photoUrl: '/facultymech/cj_photo.jpg',
+    ctaText: 'Profile',
+    designation: 'M.Tech., Ph.D.',
+    description:
+      'DR. C RAMULU JATAVALLU is a faculty member with M.Tech. and Ph.D. degrees.',
+    qualification: '',
+    areasOfInterest: '',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/10'
+    },
+  },
+  {
+    id: '11',
+    name: 'ASEEM SUDHIR NEYREKAR',
+    photoUrl: '/facultymech/an_photo.jpg',
+    ctaText: 'Profile',
+    designation: 'M.E.',
+    description:
+      'ASEEM SUDHIR NEYREKAR is a faculty member with an M.E. degree.',
+    qualification: '',
+    areasOfInterest: '',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/11'
+    },
+  },
+  {
+    id: '12',
+    name: 'ONKAR PODDAR',
+    photoUrl: '/facultymech/onkar-potadar_photo.jpg',
+    ctaText: 'Profile',
+    designation: 'M.E.',
+    description: 'ONKAR PODDAR is a faculty member with an M.E. degree.',
+    qualification: '',
+    areasOfInterest: '',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/12'
     },
   },
 ]

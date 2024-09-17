@@ -14,6 +14,7 @@ import {
   ProgrammeSpecificOutcomes,
   programs,
   tabContents,
+  FacultyTabData,
 } from './data'
 import {
   Sidebar,
@@ -56,7 +57,7 @@ const ComputerEngineeringPage = () => {
           </>
         )
       case 'Faculty':
-        return <FacultyGrid />
+        return <FacultyGrid facultyData={FacultyTabData} />
       case 'pre-Incubation':
         return <PreIncubationCenter />
       case 'Publications':

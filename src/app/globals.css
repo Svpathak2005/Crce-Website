@@ -17,8 +17,7 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  /* color: black; */
+  color: 'black';
   background: linear-gradient(
       to bottom,
       transparent,
@@ -36,4 +35,3 @@ body {
 .hero {
   height: calc(100vh - 157px);
 }
-

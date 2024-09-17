@@ -12,6 +12,7 @@ import {
   ProgramOutcomes,
   ProgrammeSpecificOutcomes,
   tabContents,
+  FacultyTabData,
 } from './data'
 import {
   Sidebar,
@@ -22,13 +23,15 @@ import {
   Program,
 } from '../components'
 import { Zilla_Slab } from 'next/font/google'
+import infras from './infra'
+import Infras from './infra'
 const zilla = Zilla_Slab({
   weight: ['300', '500', '700'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
   display: 'swap',
 })
-const ComputerEngineeringPage = () => {
+const ElectronicsComputerEngineeringPage = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]?.id || 'overview')
   const Tabs = ['Placements', 'Recruiters', 'Eligibility']
 
@@ -52,10 +55,17 @@ const ComputerEngineeringPage = () => {
           </>
         )
       case 'Faculty':
-        return <FacultyGrid />
+        return <FacultyGrid facultyData={FacultyTabData} />
 
       case 'infrastructure':
-        return null
+        return (
+          <Infras
+            title="Infrastructure Details"
+            description="This is a description of the infrastructure."
+            imageUrl="https://example.com/infrastructure.jpg"
+          />
+        )
+
       default:
         return null
     }
@@ -128,7 +138,7 @@ const ComputerEngineeringPage = () => {
             tabContents={tabContents}
             duration="4 Years"
             lastDateToApply="26 July 2024"
-            programmeName="B.Tech Mechanical Engineering"
+            programmeName="B.Tech Electronics and Computer Science Engineering"
             feePerYear="Rs. 1,67,000"
             highestCTC="INR 17.75 LPA"
             onApplyClick="#"
@@ -141,4 +151,4 @@ const ComputerEngineeringPage = () => {
   )
 }
 
-export default ComputerEngineeringPage
+export default ElectronicsComputerEngineeringPage

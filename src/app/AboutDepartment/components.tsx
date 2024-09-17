@@ -37,13 +37,16 @@ interface HODsDeskProps {
   content: string
 }
 interface FacultyTabProps {
+  id: string
   name: string
   photoUrl: string
   ctaText: string
   designation: string
-  description: string
+  qualification: string
+  areasOfInterest: string
   ctaOnClick: () => void
 }
+
 interface FacultyGridProps {
   //     faculty: FacultyTabProps[]
 }
@@ -170,7 +173,7 @@ const HODsDesk: React.FC<HODsDeskProps> = ({
   content,
 }) => {
   return (
-    <section className="body-font  text-gray-600">
+    <section className="body-font text-gray-600">
       <div className="mx-auto flex w-full flex-col px-1 py-12">
         <div className="mx-auto justify-center lg:w-11/12">
           <p
@@ -178,8 +181,8 @@ const HODsDesk: React.FC<HODsDeskProps> = ({
           >
             From HOD's Desk
           </p>
-          <div className="mt-10 flex flex-col rounded-lg shadow-lg border-[1px] px-2 sm:flex-row bg-white">
-            <div className="text-center sm:w-1/3 sm:py-8 sm:pr-8 sm:pl-6">
+          <div className="mt-10 flex flex-col rounded-lg border-[1px] bg-white px-2 shadow-lg sm:flex-row">
+            <div className="text-center sm:w-1/3 sm:py-8 sm:pl-6 sm:pr-8">
               <div className="inline-flex h-fit w-40 items-center justify-center rounded-full bg-gray-200 text-gray-400">
                 {/* <svg
                   fill="none"
@@ -207,7 +210,7 @@ const HODsDesk: React.FC<HODsDeskProps> = ({
                 </h2>
                 <div className="mb-4 mt-2 h-1 w-12 rounded bg-indigo-900"></div>
                 <p className="text-base">HOD and Professor</p>
-                <h3 >{bio}</h3>
+                <h3>{bio}</h3>
                 <a className="inline-flex items-center text-indigo-800">
                   Know more
                   <svg
@@ -225,7 +228,7 @@ const HODsDesk: React.FC<HODsDeskProps> = ({
               </div>
             </div>
             <div className="invisible-scrollbar mt-4 h-fit overflow-y-scroll border-t border-gray-200 pt-4 text-center sm:mt-0 sm:w-2/3 sm:border-l sm:border-t-0 sm:py-8 sm:pl-8 sm:text-left">
-              <p className="text-md  leading-relaxed  sm:text-xs md:text-xl">
+              <p className="text-md leading-relaxed sm:text-xs md:text-xl">
                 {content}
               </p>
             </div>
@@ -241,7 +244,8 @@ const FacultyTab: React.FC<FacultyTabProps> = ({
   photoUrl,
   ctaText,
   designation,
-  description,
+  qualification,
+  areasOfInterest,
   ctaOnClick,
 }) => {
   return (
@@ -257,7 +261,11 @@ const FacultyTab: React.FC<FacultyTabProps> = ({
       </div>
       <h2 className="text-lg font-medium">{name}</h2>
       <p className="mb-4 font-semibold text-gray-700">{designation}</p>
-      <p className="mb-4 text-gray-900">{description}</p>
+      <p className="text-gray-900">{qualification}</p>
+      <p className="mb-4 text-center text-gray-900">
+        {' '}
+        Area of Interest: {areasOfInterest}
+      </p>
       <button
         className="rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-900"
         onClick={ctaOnClick}
@@ -268,10 +276,14 @@ const FacultyTab: React.FC<FacultyTabProps> = ({
   )
 }
 
-const FacultyGrid: React.FC<FacultyGridProps> = () => {
+interface FacultyGridProps {
+  facultyData: typeof FacultyTabData
+}
+
+const FacultyGrid: React.FC<FacultyGridProps> = ({ facultyData }) => {
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {FacultyTabData.map((faculty) => (
+      {facultyData.map((faculty) => (
         <FacultyTab key={faculty.id} {...faculty} />
       ))}
     </div>
@@ -293,8 +305,8 @@ const PlacementTab: React.FC<PlacementTabProps> = ({
   const [activeTab, setActiveTab]: any = useState(tabs[0])
 
   return (
-    <div className="container mx-auto font-sans  rounded-lg py-20 ">
-      <div className="flex flex-col bg-white shadow-lg  rounded-lg md:flex-row">
+    <div className="container mx-auto rounded-lg py-20 font-sans">
+      <div className="flex flex-col rounded-lg bg-white shadow-lg md:flex-row">
         <div className="overflow-scroll p-6 md:w-2/3">
           <div className="mb-4 flex border-b">
             {tabs.map((tab) => (
@@ -367,7 +379,7 @@ const Program: React.FC<ProgramProps> = ({
 
   return (
     <div className={`program-card ${isFlipped ? 'is-flipped' : ''} `}>
-      <div className="program-card-inner shadow-lg rounded-lg">
+      <div className="program-card-inner rounded-lg shadow-lg">
         {/* Front side */}
         <div className="program-card-front">
           <div className="program-card-header">
@@ -398,7 +410,10 @@ const Program: React.FC<ProgramProps> = ({
         </div>
 
         {/* Back side */}
-        <div className="program-card-back shadow-lg rounded-lg" onClick={handleClick}>
+        <div
+          className="program-card-back rounded-lg shadow-lg"
+          onClick={handleClick}
+        >
           <div className="program-card-header">
             <div className="program-icon">{icon}</div>
             <h2 className="program-title">{title}</h2>

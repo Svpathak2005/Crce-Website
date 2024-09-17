@@ -52,31 +52,36 @@ export default function Page() {
   }
 
   return (
-    <main className="flex h-fit w-full flex-col items-center justify-center">
-      <div
-        className="flex h-full w-full flex-col justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] md:flex-row md:pt-36"
-        id="iqac"
-      >
-        <div className="flex w-full flex-col items-center justify-center p-8 pt-36 text-white md:w-2/3 md:p-16 md:pt-16">
-          <h1
-            className={`${zilla.className} mb-3 text-center text-4xl font-bold md:text-5xl lg:text-7xl`}
-          >
-            Administration
-          </h1>
+    <div className="flex-row">
+      <main className="flex h-fit w-full flex-col items-center justify-center">
+        <div
+          className="flex h-full w-full flex-col justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] md:flex-row md:pt-36"
+          id="iqac"
+        >
+          <div className="flex w-full flex-col items-center justify-center p-8 pt-36 text-white md:w-2/3 md:p-16 md:pt-16">
+            <h1
+              className={`${zilla.className} mb-3 text-center text-4xl font-bold md:text-5xl lg:text-7xl`}
+            >
+              Administration
+            </h1>
+          </div>
         </div>
-      </div>
-      <div className="flex h-fit w-full flex-col justify-center bg-gradient-to-b from-white to-[#E5F0FF] py-4 md:flex-row">
-        <div className="mx-2 min-w-max">
-          <Sidebar
-            tabs={tabs}
-            activeTab={activeTab}
-            onTabChange={(tabId) => setActiveTab(tabId)}
-          />
+        <div className="flex h-fit w-full flex-col justify-center bg-gradient-to-b from-white to-[#E5F0FF] py-4 md:flex-row">
+          <div className="mx-2 flex min-w-max md:pl-10 md:pt-10">
+            <Sidebar
+              tabs={tabs}
+              activeTab={activeTab}
+              onTabChange={(tabId) => setActiveTab(tabId)}
+              AccordionContent={renderContent()}
+            />
+          </div>
+          <div className="mx-2 flex-1 flex-col overflow-x-hidden overflow-y-scroll">
+            <div id={activeTab} className="container mx-auto">
+              {renderContent()}
+            </div>
+          </div>
         </div>
-        <div id={activeTab} className="container">
-          {renderContent()}
-        </div>
-      </div>
-    </main>
+      </main>
+    </div>
   )
 }
