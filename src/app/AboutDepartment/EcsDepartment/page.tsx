@@ -63,11 +63,7 @@ const ElectronicsComputerEngineeringPage = () => {
 
       case 'infrastructure':
         return (
-          <Infras
-            title="Infrastructure Details"
-            description="This is a description of the infrastructure."
-            imageUrl="https://example.com/infrastructure.jpg"
-          />
+          <Infras/>
         )
 
       default:
