@@ -76,7 +76,7 @@ export default function Page() {
             />
           </div>
           <div className="mx-2 flex-1 flex-col overflow-x-hidden overflow-y-scroll">
-            <div id={activeTab} className="container mx-auto">
+            <div id={activeTab} className="container mx-auto hidden md:flex">
               {renderContent()}
             </div>
           </div>
