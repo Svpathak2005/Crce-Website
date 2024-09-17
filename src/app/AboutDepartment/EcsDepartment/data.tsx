@@ -166,15 +166,7 @@ export const tabs = [
   },
   {
     id: 'research',
-    title: 'Research',
-  },
-  {
-    id: 'Publications',
-    title: 'Publications',
-  },
-  {
-    id: 'pre-Incubation',
-    title: 'Pre-Incubation',
+    title: 'Research and Publications',
   },
 ]
 export const AboutecsDepartment = {
