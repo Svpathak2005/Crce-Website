@@ -10,11 +10,8 @@ import {
   Mission,
   ProgramEducationalObjectives,
   ProgrammeSpecificOutcomes,
-  ProgramOutcomes,
-  hodsDesk,
   tabContents,
   FacultyTabData,
-  programs, 
 } from './data'
 import {
   Sidebar,
@@ -63,9 +60,7 @@ const CSEPage = () => {
         return <AidsPublications />
 
       case 'infrastructure':
-        return (
-          <Infrastructure/>
-        )
+        return <Infrastructure />
       default:
         return null
     }
