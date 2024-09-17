@@ -1,7 +1,7 @@
 import React, { FC, ReactElement, ReactNode, useState } from 'react'
 import Image from 'next/image'
-import { FacultyTabData, tabContents } from './data'
-import { year2223, year2021 } from './Publications'
+import { FacultyTabData, publications_22 } from './data'
+
 import '../style.css'
 import { Zilla_Slab } from 'next/font/google'
 import Link from 'next/link'
@@ -516,85 +516,51 @@ const AlternatingCardLayout = ({
 
 export const Publications: React.FC = () => {
   return (
-    <div itemProp="articleBody" className="p-4 text-black">
-      <thead className="flex justify-center">
-        <tr>
-          <th className="w-4"></th>
-          <th className="text-center text-lg font-bold">
-            Publications for the year 2022-23
-          </th>
-        </tr>
-      </thead>
-      <table id="tablePreview" className="w-full table-auto border-collapse">
-        <tbody>
-          {year2223.map((publication, index) => (
-            <tr key={publication.year}>
-              {/* <td className="w-4 text-center">{publication.i}</td> */}
-
-              <td className="p-2 text-justify">
-                <p>
-                  {1 + index}. {publication.authors}, {publication.title}{' '}
-                  {publication.journal}{' '}
-                  {publication.volume && (
-                    <>
-                      {publication.volume} ({publication.issue}),{' '}
-                    </>
-                  )}
-                  {publication.pages && <>pp. {publication.pages}, </>}
-                  {publication.doi && (
-                    <>
-                      {' '}
-                      DOI:{' '}
-                      <a
-                        href={`https://doi.org/${publication.doi}`}
-                        className="text-blue-500 underline"
-                      >
-                        {publication.doi}
-                      </a>
-                    </>
-                  )}
+    <div className="container mx-auto px-4">
+      <div className="flex flex-col items-center justify-center">
+        <h1 className="text-3xl font-bold text-indigo-900 md:text-4xl lg:text-5xl">
+          Publications
+        </h1>
+        <div className="flex w-full flex-col items-center justify-center">
+          <h2 className="text-2xl font-bold text-indigo-900 md:text-3xl lg:text-4xl">
+            2022-23
+          </h2>
+          <div className="flex w-full flex-col items-center justify-center">
+            {publications_22.map((publication, index) => (
+              <div
+                key={index}
+                className="my-2 flex w-full flex-col items-center justify-center rounded-xl border border-slate-800 p-2 md:p-4 lg:p-6"
+              >
+                <p className="text-center text-sm md:text-base lg:text-lg">
+                  {publication.title}
                 </p>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <div>
-        <div className="text-center text-lg font-bold">
-          Publications for the year 2020-21
-        </div>
-        {year2021.map((publication) => (
-          <div key={publication.year} className="flex flex-col">
-            <div>
-              {year2021.map((publication, index) => (
-                <div key={publication.year} className="mt-3 flex flex-col">
-                  <div>
-                    {index + 1}. {publication.authors}, {publication.title}{' '}
-                    {publication.journal}{' '}
-                    {publication.volume && (
-                      <>
-                        {publication.volume} ({publication.issue}),{' '}
-                      </>
-                    )}
-                    {publication.pages && <>pp. {publication.pages}, </>}
-                    {publication.doi && (
-                      <>
-                        {' '}
-                        DOI:{' '}
-                        <a
-                          href={`https://doi.org/${publication.doi}`}
-                          className="text-blue-500 underline"
-                        >
-                          {publication.doi}
-                        </a>
-                      </>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
+                <p className="text-center text-xs md:text-sm lg:text-base">
+                  {publication.details}
+                </p>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+        <div className="flex w-full flex-col items-center justify-center">
+          <h2 className="text-2xl font-bold text-indigo-900 md:text-3xl lg:text-4xl">
+            2021
+          </h2>
+          <div className="flex w-full flex-col items-center justify-center">
+            {publications_22.map((publication, index) => (
+              <div
+                key={index}
+                className="my-2 flex w-full flex-col items-center justify-center rounded-xl border border-slate-800 p-2 md:p-4 lg:p-6"
+              >
+                <p className="text-center text-sm md:text-base lg:text-lg">
+                  {publication.title}
+                </p>
+                <p className="text-center text-xs md:text-sm lg:text-base">
+                  {publication.details}
+                </p>
+                </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   )

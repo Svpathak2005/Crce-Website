@@ -29,7 +29,6 @@ import {
 } from './components'
 import { Zilla_Slab } from 'next/font/google'
 import Infrastructure from './infra'
-import MechPublications from '@/app/academics/research/mechpublications'
 
 const zilla = Zilla_Slab({
   weight: ['300', '500', '700'],
@@ -63,10 +62,6 @@ const MechanicalEngineeringPage = () => {
 
       case 'Faculty':
         return <FacultyGrid />
-
-      case 'research':
-        return <MechPublications />
-
       case 'infrastructure':
         return <Infrastructure />
       case 'Publications':
