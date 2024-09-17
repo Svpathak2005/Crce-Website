@@ -34,7 +34,7 @@ export default function Page() {
       </div>
       <div className="flex h-fit w-full flex-col items-center justify-center bg-gradient-to-b from-white to-[#E5F0FF] pt-10">
         <div className="container mx-auto mb-20 flex max-w-[90%] flex-col gap-10 rounded-xl bg-white p-10 shadow-lg md:flex-row-reverse">
-        <Image
+          <Image
             alt="college photo"
             src="/college.jpg"
             height={10000}
@@ -61,8 +61,6 @@ export default function Page() {
             grade 'A'. Fr.CRCE has also been recognized in the NIRF rankings in
             2017 and 2020.
           </p>
-
-          
         </div>
       </div>
       <div className="m flex w-full flex-col items-center justify-center bg-[#E5F0FF] px-8 py-16">

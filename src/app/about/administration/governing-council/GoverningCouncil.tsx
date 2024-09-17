@@ -14,47 +14,23 @@ const GoverningCouncil = () => {
       <main className="container mx-auto flex-grow p-4">
         <div className="rounded-lg bg-white p-6 shadow-lg">
           <h2 className="mb-6 text-2xl font-semibold">Governing Council</h2>
-          <section className="mb-10 mx-auto w-[50%]">
+          <section className="mx-auto mb-10 w-[50%]">
             <div className="overflow-x-auto">
               <table className="w-full border-collapse rounded-lg bg-white shadow-md">
                 <thead className="bg-[#001f3f] text-white">
                   <tr>
-                    <th className="border border-gray-300 p-3">
-                     Sr.
-                    </th>
-                    <th className="border border-gray-300 p-3">
-                      Name
-                    </th>
+                    <th className="border border-gray-300 p-3">Sr.</th>
+                    <th className="border border-gray-300 p-3">Name</th>
                     <th className="border border-gray-300 p-3">Designation</th>
                   </tr>
                 </thead>
                 <tbody>
                   {[
-                    [
-                      '1',
-                      'Fr. Bento Rodrigues',
-                      'Chairman',
-                    ],
-                    [
-                      '2',
-                      'Fr. Alarico Carvalho',
-                      'Vice Chairman',
-                    ],
-                    [
-                      '3',
-                      'Fr. Peter D’Souza',
-                      'Treasurer',
-                    ],
-                    [
-                      '4',
-                      'Fr. Valerian D’Souza',
-                      'Secretary',
-                    ],
-                    [
-                      '5',
-                      'Fr. Agnelo Gomes',
-                      'Member',
-                    ],
+                    ['1', 'Fr. Bento Rodrigues', 'Chairman'],
+                    ['2', 'Fr. Alarico Carvalho', 'Vice Chairman'],
+                    ['3', 'Fr. Peter D’Souza', 'Treasurer'],
+                    ['4', 'Fr. Valerian D’Souza', 'Secretary'],
+                    ['5', 'Fr. Agnelo Gomes', 'Member'],
                   ].map((row, index) => (
                     <tr
                       key={index}

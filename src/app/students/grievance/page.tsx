@@ -88,8 +88,8 @@ const GrievanceForm: React.FC = () => {
   )
 
   return (
-    <div className="flex h-fit  w-full flex-col bg-gradient-to-b from-white to-[#E5F0FF] text-gray-900">
-      <div className="flex md:pt-40 pt-10 h-fit w-full flex-col items-center justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] ">
+    <div className="flex h-fit w-full flex-col bg-gradient-to-b from-white to-[#E5F0FF] text-gray-900">
+      <div className="flex h-fit w-full flex-col items-center justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] pt-10 md:pt-40">
         <div className="flex w-full flex-col items-center justify-center p-8 pt-40 text-white md:w-2/3 md:p-16 md:pt-16">
           <h1
             className={`${zilla.className} mb-6 text-4xl font-bold md:text-5xl lg:text-7xl`}
@@ -102,7 +102,7 @@ const GrievanceForm: React.FC = () => {
         </div>
       </div>
 
-      <div className="container  mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-16">
         <form
           onSubmit={handleSubmit}
           className="rounded-lg bg-white p-8 shadow-lg"
