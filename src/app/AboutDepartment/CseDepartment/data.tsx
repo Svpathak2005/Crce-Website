@@ -14,7 +14,7 @@ export const FacultyTabData = [
   },
   {
     id: '2',
-    name: 'MS. SWAPNALI MAKEDEV',
+    name: 'DR. SWAPNALI MAKEDEY',
     photoUrl: '/facultycse/swapnalim.jpg',
     ctaText: 'View Profile',
     designation: 'Asst. Professor',
@@ -130,7 +130,7 @@ export const FacultyTabData = [
   {
     id: '11',
     name: 'MR. SUMEET SHINGI',
-    photoUrl: '/facultycse/sumeetshingi1.jpeg',
+    photoUrl: '/facultycse/sumeetshingi.jpeg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
     qualification: 'Ph.D.(Pursuing)',
@@ -162,6 +162,18 @@ export const tabs = [
     id: 'infrastructure',
     title: 'Infrastructure',
   },
+  // {
+  //   id: 'research',
+  //   title: 'Research',
+  // },
+  // {
+  //   id: 'Publications',
+  //   title: 'Publications',
+  // },
+  // {
+  //   id: 'pre-Incubation',
+  //   title: 'Pre-Incubation',
+  // },
   {
     id: 'research',
     title: 'Research and Publications',
