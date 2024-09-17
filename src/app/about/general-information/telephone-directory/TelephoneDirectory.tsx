@@ -3,13 +3,14 @@ import { useState } from 'react'
 
 type DirectoryEntry = {
   srNo: number
-  extNo: number
+  extNo: number | string
   telephoneNo: string
   department: string
 }
 
 type TelephoneDirectoryData = {
   college: DirectoryEntry[]
+  asharm: DirectoryEntry[]
   polytechnic: DirectoryEntry[]
   iti: DirectoryEntry[]
   school: DirectoryEntry[]
@@ -51,7 +52,7 @@ const telephoneDirectoryData: TelephoneDirectoryData = {
       srNo: 6,
       extNo: 307,
       telephoneNo: '67114107',
-      department: 'H & S Staff Room - Mr. Dileep CC',
+      department: 'H & S Sta Room - Mr. Dileep CC',
     },
     {
       srNo: 7,
@@ -142,7 +143,7 @@ const telephoneDirectoryData: TelephoneDirectoryData = {
       srNo: 22,
       extNo: 326,
       telephoneNo: '67114126',
-      department: 'Chemistry Lab - Mrs Jyoti',
+      department: 'Chemistry Lab - Mrs. Jyoti',
     },
     {
       srNo: 23,
@@ -198,7 +199,7 @@ const telephoneDirectoryData: TelephoneDirectoryData = {
       srNo: 33,
       extNo: 337,
       telephoneNo: '67114137',
-      department: 'Staff Room AI & DS',
+      department: 'Sta Room AI & DS',
     },
     {
       srNo: 34,
@@ -358,19 +359,85 @@ const telephoneDirectoryData: TelephoneDirectoryData = {
     },
   ],
 
+  asharm: [
+    { srNo: 1, extNo: 'FAX', telephoneNo: '67114100', department: 'Telephone Operator' },
+    { srNo: 2, extNo: '9/200', telephoneNo: '67114000', department: 'Telephone Operator' },
+    { srNo: 3, extNo: 201, telephoneNo: '67114001', department: 'Telephone Operator' },
+    { srNo: 4, extNo: 202, telephoneNo: '67114002', department: 'Telephone Operator' },
+    { srNo: 5, extNo: 203, telephoneNo: '67114003', department: 'Chief Financial Officer' },
+    { srNo: 6, extNo: 204, telephoneNo: '67114004', department: 'Mrs. Jennifer' },
+    { srNo: 7, extNo: 227, telephoneNo: '67114027', department: 'Mrs. Vidya' },
+    { srNo: 8, extNo: 205, telephoneNo: '67114005', department: 'Mr. Rodrigues / Mr. Santosh' },
+    { srNo: 9, extNo: 206, telephoneNo: '67114006', department: 'Mr. Joseph' },
+    { srNo: 10, extNo: 207, telephoneNo: '67114007', department: 'Fr. Dilip Office' },
+    { srNo: 11, extNo: 209, telephoneNo: '67114009', department: 'Chairman\'s Office (RS)' },
+    { srNo: 12, extNo: 210, telephoneNo: '67114010', department: 'Internal Audit' },
+    { srNo: 13, extNo: 211, telephoneNo: '67114011', department: 'Ashram T.V. Room' },
+    { srNo: 14, extNo: 212, telephoneNo: '67114012', department: 'Balbhavan Office' },
+    { srNo: 15, extNo: 213, telephoneNo: '67114013', department: 'Fr. Valerian Office' },
+    { srNo: 16, extNo: 215, telephoneNo: '67114015', department: 'Fr. Dilip Residence' },
+    { srNo: 17, extNo: 216, telephoneNo: '67114016', department: 'Sacristy' },
+    { srNo: 18, extNo: 217, telephoneNo: '67114017', department: 'Fr. Peter Residence' },
+    { srNo: 19, extNo: 388, telephoneNo: '67114188', department: 'Guest Room' },
+    { srNo: 20, extNo: 228, telephoneNo: '97114028', department: 'Ashram Office' },
+    { srNo: 21, extNo: 229, telephoneNo: '67114029', department: 'Ashram Office - Father In Charge' },
+    { srNo: 22, extNo: 230, telephoneNo: '67114030', department: '' },
+    { srNo: 23, extNo: 231, telephoneNo: '67114031', department: 'Richard - Assist F.C.' }
+  ],
+
   iti: [
-    {
-      srNo: 1,
-      extNo: 350,
-      telephoneNo: '67114150',
-      department: 'Principal - Mr. Aranjo',
-    },
-    { srNo: 2, extNo: 353, telephoneNo: '67114153', department: 'Mr. Hemant' },
-    { srNo: 3, extNo: 354, telephoneNo: '67114154', department: 'Mr. Vicky' },
+    { srNo: 1, extNo: 252, telephoneNo: '67114052', department: 'Purchase - Mr. Richard' },
+    { srNo: 2, extNo: 268, telephoneNo: '67114068', department: 'Purchase - Anthony' },
+    { srNo: 3, extNo: 271, telephoneNo: '67114071', department: 'Purchase - Sabina' },
+    { srNo: 4, extNo: 253, telephoneNo: '67114053', department: 'Civil Office' },
+    { srNo: 5, extNo: 259, telephoneNo: '67114059', department: 'Civil - Mr. Rajan' },
+    { srNo: 6, extNo: 260, telephoneNo: '67114060', department: 'ITC - Mr. Mustaq' },
+    { srNo: 7, extNo: 261, telephoneNo: '67114061', department: 'CDTP - Mr. Raut' },
+    { srNo: 8, extNo: 266, telephoneNo: '64114066', department: 'CDTP' },
+    { srNo: 9, extNo: 273, telephoneNo: '67114073', department: 'CDTP - Ruchita' },
+    { srNo: 10, extNo: 264, telephoneNo: '67114064', department: 'Civil - Plumber' },
+    { srNo: 11, extNo: 403, telephoneNo: '67114203', department: 'ITC - Draughtsman' },
+    { srNo: 12, extNo: 279, telephoneNo: '67114079', department: 'ITC - Draughtsman' },
+    { srNo: 13, extNo: 269, telephoneNo: '67114069', department: 'Fitting - Mr. Xavier' },
+    { srNo: 14, extNo: 270, telephoneNo: '67114070', department: 'ITC - Mr. Rakesh' },
+    { srNo: 15, extNo: 272, telephoneNo: '67114072', department: 'Computer H/W - Ali' },
+    { srNo: 16, extNo: 276, telephoneNo: '67114076', department: 'ITC - CAD Centre' },
+    { srNo: 17, extNo: 278, telephoneNo: '67114078', department: 'ITC - Staff - Vandana' },
+    { srNo: 18, extNo: 288, telephoneNo: '67114088', department: 'Lift Machanic Lab' },
+    { srNo: 19, extNo: 289, telephoneNo: '67114089', department: 'Lift Machanic Lab' },
+    { srNo: 20, extNo: 310, telephoneNo: '67114110', department: 'M.M.V. ITC' },
+    { srNo: 21, extNo: 339, telephoneNo: '67114139', department: 'Electrical Lab ITC' },
+    { srNo: 22, extNo: 351, telephoneNo: '67114151', department: 'Security Manager - Mr. Kamath' },
+    { srNo: 23, extNo: 352, telephoneNo: '67114152', department: 'Security Barrier Gate' },
+    { srNo: 24, extNo: 354, telephoneNo: '67114154', department: 'Placement - Mr. Rane' },
+    { srNo: 25, extNo: 355, telephoneNo: '67114155', department: 'Trade Test - Anita' },
+    { srNo: 26, extNo: 356, telephoneNo: '67114156', department: 'Placement' },
+    { srNo: 27, extNo: 357, telephoneNo: '67114157', department: 'Welding - Shinde' },
+    { srNo: 28, extNo: 359, telephoneNo: '67114159', department: 'Meter Testing - Patil' },
+    { srNo: 29, extNo: 360, telephoneNo: '67114160', department: 'Civil Trade Test' },
+    { srNo: 30, extNo: 361, telephoneNo: '67114161', department: 'A.C. - Mr. Shaikh' },
+    { srNo: 31, extNo: 363, telephoneNo: '67114163', department: 'Electrical Maintenance' },
+    { srNo: 32, extNo: 364, telephoneNo: '67114164', department: 'Carpentry - Mr. Almeida' },
+    { srNo: 33, extNo: 365, telephoneNo: '67114165', department: 'Ashram Biometric Cabin' },
+    { srNo: 34, extNo: 369, telephoneNo: '67114166', department: 'Security - School Gate' },
+    { srNo: 35, extNo: 404, telephoneNo: '67114204', department: 'Canteen' },
+    { srNo: 36, extNo: 208, telephoneNo: '67114008', department: 'Placement - Kavita' },
+    { srNo: 37, extNo: 214, telephoneNo: '67114014', department: 'Placement - Prashant' },
+    { srNo: 38, extNo: 'FAX', telephoneNo: '67114200', department: 'Placement' }
   ],
 
   school: [
-    { srNo: 1, extNo: 272, telephoneNo: '67114072', department: 'Principal' },
+    { srNo: 1, extNo: 401, telephoneNo: '67114201', department: 'Principal - Mr. M. C. Thomas' },
+    { srNo: 2, extNo: 402, telephoneNo: '67114202', department: 'Secondary Office - Mrs. Chitra' },
+    { srNo: 3, extNo: 405, telephoneNo: '67114205', department: 'H.T. Primary - Mrs. Linda' },
+    { srNo: 4, extNo: 218, telephoneNo: '67114018', department: '' },
+    { srNo: 5, extNo: 219, telephoneNo: '67114019', department: 'Clerk - Primary - Mr. Silvester' },
+    { srNo: 6, extNo: 220, telephoneNo: '67114020', department: 'Store - Mrs. Sunita' },
+    { srNo: 7, extNo: 222, telephoneNo: '67114022', department: 'Stationery Store' },
+    { srNo: 8, extNo: 224, telephoneNo: '67114024', department: 'Manager Office - Fr.' },
+    { srNo: 9, extNo: 225, telephoneNo: '67114025', department: 'Jr. College - Mrs. Seema' },
+    { srNo: 10, extNo: 226, telephoneNo: '67114026', department: 'Co-ordinator K. G. Section' },
+    { srNo: 11, extNo: 362, telephoneNo: '67114162', department: 'Clerk K.G. Section' }
   ],
 }
 
@@ -405,6 +472,12 @@ const TelephoneDirectory = () => {
           active={activeLocation === 'college'}
         >
           College
+        </CarouselButton>
+        <CarouselButton
+          onClick={() => handleLocationChange('asharm')}
+          active={activeLocation === 'asharm'}
+        >
+          Asharm
         </CarouselButton>
         <CarouselButton
           onClick={() => handleLocationChange('polytechnic')}
