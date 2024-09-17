@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import Infras from './infra'
+
 import '../style.css'
 import { useState } from 'react'
 import {
@@ -15,7 +15,6 @@ import {
   tabContents,
   FacultyTabData,
   programs,
-  Infrastructure,
   hodsDesk,
 } from './data'
 import {
@@ -26,9 +25,10 @@ import {
   PlacementTab,
   Program,
   AlternatingCardLayout,
-  Publications, 
+  Publications,
 } from './components'
 import { Zilla_Slab } from 'next/font/google'
+import Infrastructure from './infra'
 
 const zilla = Zilla_Slab({
   weight: ['300', '500', '700'],
@@ -64,9 +64,9 @@ const MechanicalEngineeringPage = () => {
         return <FacultyGrid />
 
       case 'infrastructure':
-        return (<AlternatingCardLayout cards={Infrastructure} />)
+        return <Infrastructure />
       case 'Publications':
-        return <Publications/>
+        return <Publications />
       default:
         return null
     }

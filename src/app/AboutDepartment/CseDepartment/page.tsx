@@ -9,10 +9,10 @@ import {
   Vision,
   Mission,
   ProgramEducationalObjectives,
-  ProgramOutcomes,
   ProgrammeSpecificOutcomes,
   hodsDesk,
   tabContents,
+  FacultyTabData,
 } from './data'
 import {
   Sidebar,
@@ -23,6 +23,7 @@ import {
   Program,
 } from '../components'
 import { Zilla_Slab } from 'next/font/google'
+import Infrastructure from './infra'
 const zilla = Zilla_Slab({
   weight: ['300', '500', '700'],
   style: ['normal', 'italic'],
@@ -53,10 +54,17 @@ const CSEPage = () => {
           </>
         )
       case 'Faculty':
-        return <FacultyGrid />
+        return <FacultyGrid facultyData={FacultyTabData} />
 
       case 'infrastructure':
-        return null
+        return (
+          <Infrastructure
+            title="Infrastructure Details"
+            description="This is a description of the infrastructure."
+            imageUrl="https://example.com/infrastructure.jpg"
+          />
+        )
+
       case 'Publications':
         return null
       default:

@@ -95,11 +95,10 @@ const Sidebar: React.FC<SidebarTabsProps> = ({
           <button
             key={tab.id}
             onClick={() => onTabChange(tab.id)}
-            className={`flex w-full justify-start border-b border-gray-400 px-2 py-2 ${
-              activeTab === tab.id
+            className={`flex w-full justify-start border-b border-gray-400 px-2 py-2 ${activeTab === tab.id
                 ? 'bg-gray-50 text-blue-600'
                 : 'text-gray-600 hover:text-blue-400'
-            }`}
+              }`}
           >
             {tab.title}
           </button>
@@ -112,11 +111,10 @@ const Sidebar: React.FC<SidebarTabsProps> = ({
           <div key={tab.id} className="border-b border-gray-400">
             <button
               onClick={() => toggleAccordion(tab.id)}
-              className={`flex w-full items-center justify-between px-2 py-2 ${
-                activeTab === tab.id
+              className={`flex w-full items-center justify-between px-2 py-2 ${activeTab === tab.id
                   ? 'bg-gray-50 text-blue-600'
                   : 'text-gray-600 hover:text-blue-400'
-              }`}
+                }`}
             >
               {tab.title}
               <span className="transform transition-transform duration-200 ease-in-out">
@@ -312,11 +310,10 @@ const PlacementTab: React.FC<PlacementTabProps> = ({
             {tabs.map((tab) => (
               <button
                 key={tab}
-                className={`px-4 py-2 font-bold ${
-                  activeTab === tab
+                className={`px-4 py-2 font-bold ${activeTab === tab
                     ? 'border-b-2 border-blue-600 text-blue-600'
                     : 'text-gray-600'
-                }`}
+                  }`}
                 onClick={() => setActiveTab(tab)}
               >
                 {tab}
