@@ -99,7 +99,7 @@ const CSEPage = () => {
             onTabChange={(tabId) => setActiveTab(tabId)}
             AccordionContent={renderContent()}
           />
-          <div className="mx-2 flex-1 flex-col overflow-x-hidden overflow-y-scroll">
+          <div className="invisible-scrollbar mx-2 max-h-screen flex-1 flex-col overflow-x-hidden">
             <div id={activeTab} className="container mx-auto">
               {renderContent()}
             </div>

@@ -43,7 +43,56 @@ export const year2223 = [
     "conference": "MCT RGIT's International Conference on Embracing 4.0 Technologies for Sustainable Growth (ICEI 4.0)"
   }
 ]
-
+/*export const year2223 = [
+  {
+    authors:
+      'Miriyala, V., Patil, B. T., Shaikh, V. A., Sudhakar, D. S. S., and Deshmukh, S.',
+    year: 2023,
+    title:
+      'Investigations of Surface Roughness and Temperatures in Vegetable Oil-based n-MQL Turning of AISI 4340 Steel',
+    journal: 'Journal of Engineering, Project, and Production Management',
+    volume: 14,
+    issue: 1,
+    pages: '0003',
+    doi: '10.32738/JEPPM-2024-0003',
+  },
+  {
+    authors: 'Bhise, D. K., Patil, B. T., Shaikh, V. A., and Deshmukh, S. P.',
+    year: 2023,
+    title:
+      'Comparative Economic Analysis and Investigation of Micro Lubrication Over Conventional Cooling in Manufacturing',
+    journal: 'Journal of Engineering, Project, and Production Management',
+    volume: 14,
+    issue: 1,
+    pages: '0004',
+    doi: '10.32738/JEPPM-2024-0004',
+  },
+  {
+    authors: 'Dohale, V., Ambilkar, P., Gunasekaran, A., & Bilolikar, V.',
+    year: 2022,
+    title:
+      'Examining the barriers to operationalization of humanitarian supply chains: lessons learned from COVID-19 crisis',
+    journal: 'Annals of Operations Research',
+    pages: '1-40',
+    doi: '1007/s10479-022-04752-x',
+  },
+  {
+    authors: 'Deshmukh Sujata, Patil Bhushan, Joshi Ketaki et al.',
+    year: 2022,
+    title: 'A novel method for IOT based smart traffic system',
+    journal: 'Industrial Engineering Journal',
+    volume: 15,
+    issue: 6,
+    pages: '11-16',
+  },
+  {
+    authors: 'Korgaonkar Saurabh',
+    year: 2022,
+    title: 'Literature Review on Virtual Construct of Digital Twin',
+    conference:
+      "MCT RGIT's International Conference on Embracing 4.0 Technologies for Sustainable Growth (ICEI 4.0)",
+  },
+]*/
 export const year2021 = 
   [
     {
@@ -337,8 +386,7 @@ export const year2021 =
       indexing: 'Scopus Indexed',
     },
   ]
-
-{
+export const articles={
   "articles": [
     {
       "authors": "Joshi K. N., Patil B. T.",
@@ -516,6 +564,6 @@ export const year2021 =
       "year": 2018,
       "title": "Advances in Cyberphysical production system in Industry 4.0",
       "conference": "International Conference on Role of Industrial Engineering in Industry 4.0 Paradigm"
-    }
+    },
   ]
 }
