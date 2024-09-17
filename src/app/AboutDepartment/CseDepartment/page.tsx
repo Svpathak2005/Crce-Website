@@ -50,7 +50,7 @@ const CSEPage = () => {
         return (
           <>
             <AboutDepartmentContainer {...ProgramEducationalObjectives} />
-            <AboutDepartmentContainer {...ProgramOutcomes} />
+
             <AboutDepartmentContainer {...ProgrammeSpecificOutcomes} />
           </>
         )
