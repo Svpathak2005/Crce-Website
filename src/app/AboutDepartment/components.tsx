@@ -250,11 +250,11 @@ const FacultyTab: React.FC<FacultyTabProps> = ({
 }) => {
   return (
     <div className="mb-10 flex flex-col items-center justify-center rounded-xl bg-white p-4 shadow-md">
-      <div className="mb-4 flex items-center justify-center">
+      <div className="mb-4 flex items-center justify-center w-full">
         <Image
           src={photoUrl}
           alt={name}
-          className="h-[25vh] w-[13vw] rounded-full"
+          className="h-40 w-40 rounded-full"
           width={200}
           height={200}
         />
