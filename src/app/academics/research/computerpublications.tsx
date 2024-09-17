@@ -722,7 +722,7 @@ const publications_14 = [
   },
 ]
 
-const Publications = () => {
+const Publicationss = () => {
   return (
     <>
       <div className="bg-gray-50 p-4">
@@ -954,4 +954,4 @@ const Publications = () => {
   )
 }
 
-export default Publications
+export default Publicationss

@@ -127,7 +127,7 @@ const ComputerEngineeringPage = () => {
             tabContents={tabContents}
             duration="4 Years"
             lastDateToApply="26 July 2024"
-            programmeName="B.Tech Mechanical Engineering"
+            programmeName="B.Tech"
             feePerYear="Rs. 1,67,000"
             highestCTC="INR 17.75 LPA"
             onApplyClick="#"

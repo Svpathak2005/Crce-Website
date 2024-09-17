@@ -131,18 +131,6 @@ export const tabs = [
     id: 'infrastructure',
     title: 'Infrastructure',
   },
-  {
-    id: 'research',
-    title: 'Research',
-  },
-  {
-    id: 'Publications',
-    title: 'Publications',
-  },
-  {
-    id: 'pre-Incubation',
-    title: 'Pre-Incubation',
-  },
 ]
 export const AboutmechDepartment = {
   name: 'Science & Humanities Department',

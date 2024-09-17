@@ -173,12 +173,16 @@ export const tabs = [
     id: 'infrastructure',
     title: 'Infrastructure',
   },
-  
+
   {
     id: 'Publications',
     title: 'Publications',
   },
 
+  {
+    id: 'research',
+    title: 'Research',
+  },
 ]
 export const AboutmechDepartment = {
   name: 'Mechanical Engineering Department',
@@ -222,22 +226,25 @@ export const Infrastructure = [
     imageUrl: '/mechdept/infra/lab1.png',
     title: 'Mechanisms and Machines Laboratory',
     description:
-      "It facilitates experimentation related to mechanics with Force Table Apparatus, Coil & Belt Friction Apparatus, Friction Slide Apparatus, Simple Beam Apparatus, Collision of Elastic Bodies Apparatus, Bell Crank Lever, Friction Slide Apparatus as well as experimentation related to dynamics of machines with static & dynamic balancing apparatus, Whirling Speed of shaft, Gyroscope, Governor, Cam analysis apparatus, Coriolis Component of acceleration, Piezoelectric Vibrometer and Vibration Apparatus.",
+      'It facilitates experimentation related to mechanics with Force Table Apparatus, Coil & Belt Friction Apparatus, Friction Slide Apparatus, Simple Beam Apparatus, Collision of Elastic Bodies Apparatus, Bell Crank Lever, Friction Slide Apparatus as well as experimentation related to dynamics of machines with static & dynamic balancing apparatus, Whirling Speed of shaft, Gyroscope, Governor, Cam analysis apparatus, Coriolis Component of acceleration, Piezoelectric Vibrometer and Vibration Apparatus.',
   },
   {
     imageUrl: '/mechdept/infra/lab2.png',
     title: 'Cad Cam Lab',
-    description: "It is well-equipped with state-of-art computational facilities including High-End Graphic Workstations with 3D Modeling and Analysis Softwares such as Ansys, NX11, Solidworks, Autocad, 3D Printer.",
+    description:
+      'It is well-equipped with state-of-art computational facilities including High-End Graphic Workstations with 3D Modeling and Analysis Softwares such as Ansys, NX11, Solidworks, Autocad, 3D Printer.',
   },
   {
     imageUrl: '/mechdept/infra/lab3.png',
-    title: "Automation and Control Lab",
-    description: "It includes automation and control equipments such as Festo Pneumatic and Electro-Pneumatic Trainers, PCS Trainers, Fluidsim.",
+    title: 'Automation and Control Lab',
+    description:
+      'It includes automation and control equipments such as Festo Pneumatic and Electro-Pneumatic Trainers, PCS Trainers, Fluidsim.',
   },
   {
     imageUrl: '/mechdept/infra/lab4.png',
     title: 'Manufacturing Systems & Management / IE laboratory',
-    description: "It facilitates analysis of industrial engineering and operations management problems with Arena Manufacturing System Analysis Software and MATLAB",
+    description:
+      'It facilitates analysis of industrial engineering and operations management problems with Arena Manufacturing System Analysis Software and MATLAB',
   },
 ]
 export const hodsDesk = {
