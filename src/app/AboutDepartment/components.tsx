@@ -179,21 +179,9 @@ const HODsDesk: React.FC<HODsDeskProps> = ({
           >
             From HOD's Desk
           </p>
-          <div className="mt-10 flex flex-col rounded-lg border-[1px] bg-white px-2 shadow-lg sm:flex-row">
+          <div className="mt-10 flex flex-col rounded-lg border-[1px] bg-white px-8 md:px-2  shadow-lg sm:flex-row ">
             <div className="text-center sm:w-1/3 sm:py-8 sm:pl-6 sm:pr-8">
               <div className="inline-flex h-fit w-40 items-center justify-center rounded-full bg-gray-200 text-gray-400">
-                {/* <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="h-10 w-10"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg> */}
                 <Image
                   src={imageUrl}
                   alt={name}
