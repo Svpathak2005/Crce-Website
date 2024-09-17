@@ -23,8 +23,9 @@ import {
   Program,
 } from '../components'
 import { Zilla_Slab } from 'next/font/google'
-import infras from './infra'
+import ECSPublications from '@/app/academics/research/ecspublications'
 import Infras from './infra'
+
 const zilla = Zilla_Slab({
   weight: ['300', '500', '700'],
   style: ['normal', 'italic'],
@@ -56,6 +57,9 @@ const ElectronicsComputerEngineeringPage = () => {
         )
       case 'Faculty':
         return <FacultyGrid facultyData={FacultyTabData} />
+
+      case 'research':
+        return <ECSPublications />
 
       case 'infrastructure':
         return (

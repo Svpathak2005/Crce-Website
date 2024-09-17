@@ -489,15 +489,18 @@ const AlternatingCardLayout = ({
         ) => (
           <Card
             key={index}
-            className={`flex w-auto m-auto flex-col md:flex-row ${
+            className={`m-auto flex w-auto flex-col md:flex-row ${
               index % 2 === 0 ? 'md:flex-row-reverse' : ''
             }`}
-          > <div className='flex justify-center w-auto'>
-            <CardImage
-              src={card.imageUrl}
-              alt={card.title}
-              className="h-full w-full rounded-t-lg" 
-            /></div>
+          >
+            {' '}
+            <div className="flex w-auto justify-center">
+              <CardImage
+                src={card.imageUrl}
+                alt={card.title}
+                className="h-full w-full rounded-t-lg"
+              />
+            </div>
             <CardContent className="">
               <h3 className="mb-4 text-xl font-bold text-blue-900">
                 {card.title}

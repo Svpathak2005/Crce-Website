@@ -303,7 +303,7 @@ export const FacultyTabData = [
 export const tabs = [
   {
     id: 'about',
-    title: 'About Computer Department',
+    title: 'About Computer Departments',
   },
   {
     id: 'visionandmission',

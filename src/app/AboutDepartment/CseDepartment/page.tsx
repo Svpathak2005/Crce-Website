@@ -26,6 +26,7 @@ import {
 } from '../components'
 import { Zilla_Slab } from 'next/font/google'
 import Infrastructure from './infra'
+import AidsPublications from '@/app/academics/research/aidspublications'
 const zilla = Zilla_Slab({
   weight: ['300', '500', '700'],
   style: ['normal', 'italic'],
@@ -57,6 +58,9 @@ const CSEPage = () => {
         )
       case 'Faculty':
         return <FacultyGrid facultyData={FacultyTabData} />
+
+      case 'research':
+        return <AidsPublications />
 
       case 'infrastructure':
         return (
@@ -108,7 +112,7 @@ const CSEPage = () => {
             </div>
           </div>
         </div>
-        <HODsDesk {...hodsDesk} />
+
         {/* Program Highlights */}
         {/* <div className="text-gray-600">
         <div className="container mx-auto px-5 ">
@@ -149,7 +153,7 @@ const CSEPage = () => {
             tabContents={tabContents}
             duration="4 Years"
             lastDateToApply="26 July 2024"
-            programmeName="B.Tech Mechanical Engineering"
+            programmeName="B.Tech Computer Science and Engieering"
             feePerYear="Rs. 1,67,000"
             highestCTC="INR 17.75 LPA"
             onApplyClick="#"

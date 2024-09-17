@@ -26,6 +26,7 @@ import {
 } from '../components'
 import PreIncubationCenter from './PreincubationCentre'
 import Publications from './Publications'
+import Publicationss from '@/app/academics/research/computerpublications'
 import { Zilla_Slab } from 'next/font/google'
 const zilla = Zilla_Slab({
   weight: ['300', '500', '700'],
@@ -58,6 +59,9 @@ const ComputerEngineeringPage = () => {
         )
       case 'Faculty':
         return <FacultyGrid facultyData={FacultyTabData} />
+
+      case 'research':
+        return <Publicationss />
       case 'pre-Incubation':
         return <PreIncubationCenter />
       case 'Publications':
@@ -144,8 +148,8 @@ const ComputerEngineeringPage = () => {
         {/*placement data*/}
         <div>
           <PlacementTab
-            // tabs={["placements", "recruiters", "eligibility"]} 
-            tabs={Tabs} 
+            // tabs={["placements", "recruiters", "eligibility"]}
+            tabs={Tabs}
             tabContents={tabContents}
             duration="4 Years"
             lastDateToApply="26 July 2024"
