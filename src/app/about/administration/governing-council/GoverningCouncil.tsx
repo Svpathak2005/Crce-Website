@@ -13,7 +13,7 @@ const GoverningCouncil = () => {
     <div className="flex min-h-max w-full flex-col">
       <main className="container mx-auto flex-grow p-4">
         <div className="rounded-lg bg-white p-6 shadow-lg">
-          <h2 className="mb-6 text-2xl font-semibold">Trustees</h2>
+          <h2 className="mb-6 text-2xl font-semibold">Governing Council</h2>
           <section className="mb-10 mx-auto w-[50%]">
             <div className="overflow-x-auto">
               <table className="w-full border-collapse rounded-lg bg-white shadow-md">
