@@ -1,98 +1,112 @@
 export const FacultyTabData = [
   {
     id: '1',
-    name: 'Dr. A. K. Agarwal',
-    photoUrl: '/ssr3.png',
+    name: 'MR. DILEEP NAIR',
+    photoUrl: '/scifaculty/dileep.jpg',
     ctaText: 'View Profile',
-    designation: 'HOD',
-    description:
-      'Dr. A. K. Agarwal is the Head of Department of Mechanical Engineering at Fr.CRCE, Indore.',
+    designation: 'Assistant Professor & Head',
+    description: 'Ph.D (Pursuing), M.Sc (Electronics)',
     ctaOnClick: () => {
       window.location.href = '/faculty/1'
     },
   },
   {
     id: '2',
-    name: 'Dr. S. S. Rathore',
-    photoUrl: '/ssr3.png',
+    name: 'DR. HEMANT KHANOLKAR',
+    photoUrl: '/scifaculty/drhemantkhanolkar.jpg',
     ctaText: 'View Profile',
-    designation: 'Professor',
-    description:
-      'Dr. S. S. Rathore is a Professor of Mechanical Engineering at Fr.CRCE, Indore.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ea repellendus iure voluptates itaque dolorum pariatur aspernatur molestiae adipisci, quis eaque, sunt dolores ab earum. Laudantium dolor laborum deserunt expedita?  ',
+    designation: 'Assistant Professor',
+    description: 'Ph.D. (Chemistry)',
     ctaOnClick: () => {
       window.location.href = '/faculty/2'
     },
   },
   {
     id: '3',
-    name: 'Dr. A. K. Agarwal',
-    photoUrl: '/ssr3.png',
+    name: 'MR. PRASAD LALIT',
+    photoUrl: '/scifaculty/prasad1.jpg',
     ctaText: 'View Profile',
-    designation: 'HOD',
-    description:
-      'Dr. A. K. Agarwal is the Head of Department of Mechanical Engineering at Fr.CRCE, Indore.',
+    designation: 'Assistant Professor',
+    description: 'Ph.D (Pursuing), M.Phil. (Mathematics)',
     ctaOnClick: () => {
       window.location.href = '/faculty/3'
     },
   },
   {
     id: '4',
-    name: 'Dr. S. S. Rathore',
-    photoUrl: '/ssr3.png',
+    name: 'DR. SUNIL YADAV',
+    photoUrl: '/scifaculty/sunil1.jpg',
     ctaText: 'View Profile',
-    designation: 'Professor',
-    description:
-      ' Dr. S. S. Rathore is a Professor of Mechanical Engineering at Fr.CRCE, Indore.',
+    designation: 'Assistant Professor',
+    description: 'Ph.D (Chemistry)',
     ctaOnClick: () => {
       window.location.href = '/faculty/4'
     },
   },
   {
     id: '5',
-    name: 'Dr. A. K. Agarwal',
-    photoUrl: '/ssr3.png',
+    name: 'DR. JOSEPH RODRIGUES',
+    photoUrl: '/scifaculty/joseph1.jpg',
     ctaText: 'View Profile',
-    designation: 'HOD',
-    description:
-      'Dr. A. K. Agarwal is the Head of Department of Mechanical Engineering at Fr.CRCE, Indore.',
+    designation: 'Assistant Professor',
+    description: 'Ph.D. (English)',
     ctaOnClick: () => {
       window.location.href = '/faculty/5'
     },
   },
   {
     id: '6',
-    name: 'Dr. S. S. Rathore',
-    photoUrl: '/ssr3.png',
+    name: 'MR. PRADEEP SINGH',
+    photoUrl: '/scifaculty/pradeeep.jpg',
     ctaText: 'View Profile',
-    designation: 'Professor',
-    description:
-      'Dr. S. S. Rathore is a Professor of Mechanical Engineering at Fr.CRCE, Indore.',
+    designation: 'Assistant Professor',
+    description: 'MSc (Mathematics)',
     ctaOnClick: () => {
       window.location.href = '/faculty/6'
     },
   },
   {
     id: '7',
-    name: 'Dr. A. K. Agarwal',
-    photoUrl: '/ssr3.png',
+    name: 'DR. DIPAK BAUSKAR',
+    photoUrl: '/scifaculty/deepak.jpg',
     ctaText: 'View Profile',
-    designation: 'HOD',
-    description:
-      'Dr. A. K. Agarwal is the Head of Department of Mechanical Engineering at Fr.CRCE, Indore.',
+    designation: 'Assistant Professor',
+    description: 'Ph.D. (Physics)',
     ctaOnClick: () => {
       window.location.href = '/faculty/7'
     },
   },
   {
     id: '8',
-    name: 'Dr. S. S. Rathore',
-    photoUrl: '/ssr3.png',
+    name: 'MR. GAJENDRA SINGH',
+    photoUrl: '/scifaculty/gajendra.jpg',
     ctaText: 'View Profile',
-    designation: 'Professor',
-    description:
-      'Dr. S. S. Rathore is a Professor of Mechanical Engineering at Fr.CRCE, Indore.',
+    designation: 'Assistant Professor',
+    description: 'M.Sc. B.Ed (Mathematics)',
     ctaOnClick: () => {
       window.location.href = '/faculty/8'
+    },
+  },
+  {
+    id: '9',
+    name: 'MS. AASTHA BHATIA',
+    photoUrl: '/scifaculty/aastha-bhatia-scpic.jpg',
+    ctaText: 'View Profile',
+    designation: 'Assistant Professor',
+    description: 'Ph.D (Pursuing), M.A. (English Lit.), B.Ed',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/9'
+    },
+  },
+  {
+    id: '10',
+    name: 'MS. GAUREE JAGUSHTE',
+    photoUrl: '/scifaculty/gauri.jpg',
+    ctaText: 'View Profile',
+    designation: 'Assistant Professor',
+    description: 'M.Sc (Mathematics), B.Ed',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/10'
     },
   },
 ]
@@ -151,8 +165,7 @@ export const Mission = {
 }
 export const ProgramOutcomes = {
   name: 'Program Outcomes',
-  description:
-    `
+  description: `
 Engineering involves applying mathematics, science, and specialized knowledge to solve complex problems, while also considering public health, safety, and environmental impacts. It requires analyzing issues, designing effective solutions, and using modern tools and techniques, all while understanding societal, legal, and ethical responsibilities. Engineers must work effectively both independently and in teams, communicate clearly with diverse audiences, and manage projects efficiently. A commitment to continuous learning and adaptation is essential to remain relevant in the face of technological advancements.
 `,
   video: false,
@@ -201,14 +214,14 @@ export const tabContents = {
         Our Department has a remarkable track record when it comes to student
         placements. Year after year, a significant percentage of our graduates
         secure promising job opportunities with renowned companies in their
-        respective fields. Our dedicated career services team, in
-        collaboration with industry partnerships, plays a pivotal role in
-        ensuring our students are well-prepared and market-ready. With a focus
-        on skill development, internships, and fostering a culture of
-        innovation, our department empowers students to excel in their chosen
-        careers. This consistent success in student placements not only
-        reflects the high quality of education we provide but also the
-        enduring trust that industry leaders place in our graduates.
+        respective fields. Our dedicated career services team, in collaboration
+        with industry partnerships, plays a pivotal role in ensuring our
+        students are well-prepared and market-ready. With a focus on skill
+        development, internships, and fostering a culture of innovation, our
+        department empowers students to excel in their chosen careers. This
+        consistent success in student placements not only reflects the high
+        quality of education we provide but also the enduring trust that
+        industry leaders place in our graduates.
       </p>
 
       <div className="container mx-auto pr-6 pt-6">
@@ -273,9 +286,7 @@ export const tabContents = {
                 <td className="border-b border-gray-200 px-4 py-2">
                   J.P. Morgan Chase & Co. (Code For Good)
                 </td>
-                <td className="border-b border-gray-200 px-4 py-2">
-                  Razerpay
-                </td>
+                <td className="border-b border-gray-200 px-4 py-2">Razerpay</td>
                 <td className="border-b border-gray-200 px-4 py-2">
                   Browser Stack
                 </td>
@@ -285,9 +296,7 @@ export const tabContents = {
                 <td className="border-b border-gray-200 px-4 py-2">
                   Browser Stack
                 </td>
-                <td className="border-b border-gray-200 px-4 py-2">
-                  Direct-i
-                </td>
+                <td className="border-b border-gray-200 px-4 py-2">Direct-i</td>
               </tr>
               <tr className="hover:bg-gray-50">
                 <td className="border-b border-gray-200 px-4 py-2">
@@ -354,7 +363,7 @@ export const tabContents = {
     </div>
   ),
   Eligibility: (
-    <div className="w-full p-6 ">
+    <div className="w-full p-6">
       <h2 className="mb-6 font-roboto text-3xl font-semibold text-gray-900">
         Eligibility
       </h2>
@@ -362,8 +371,8 @@ export const tabContents = {
         <p>
           <div className="font-roboto text-base">
             <li>
-              For all B. Tech programmes candidates should have appeared in
-              JEE 2024 / MHTCET 2024 / PERA 2024 / MHTCET-B* 2024 / NEET* 2024
+              For all B. Tech programmes candidates should have appeared in JEE
+              2024 / MHTCET 2024 / PERA 2024 / MHTCET-B* 2024 / NEET* 2024
               score.
             </li>
             <li>
@@ -371,8 +380,7 @@ export const tabContents = {
               with any Technical Vocational Subject. Physics, Mathematics &
               English is Compulsory with Chemistry/Biotechnology* or
               Biology*/Technical Vocational Courses in 10+2/Class 12th or
-              equivalent examination AND 50% aggregate score in Class
-              12th/HSC.
+              equivalent examination AND 50% aggregate score in Class 12th/HSC.
             </li>
             <li>
               Reserved class category candidate belonging to Maharashtra State
@@ -386,5 +394,3 @@ export const tabContents = {
     </div>
   ),
 }
-
-

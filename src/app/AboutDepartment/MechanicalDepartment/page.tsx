@@ -15,7 +15,6 @@ import {
   tabContents,
   FacultyTabData,
   programs,
-  Infrastructure,
   hodsDesk,
 } from './data'
 import {
@@ -65,7 +64,7 @@ const MechanicalEngineeringPage = () => {
         return <FacultyGrid />
 
       case 'infrastructure':
-        return <AlternatingCardLayout cards={Infrastructure} />
+        return <Infrastructure />
       case 'Publications':
         return <Publications />
       default:
