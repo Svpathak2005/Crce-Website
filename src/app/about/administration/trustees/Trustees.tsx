@@ -17,7 +17,7 @@ const Trustees = () => {
   ]
 
   return (
-    <div className="mx-auto flex w-full flex-col items-center justify-center rounded-lg bg-white p-6 shadow-lg">
+    <div className="mx-auto flex sm:w-full w-[90vw] flex-col items-center justify-center rounded-lg bg-white p-2 sm:p-6 shadow-lg">
       <h2
         className={`${zilla.className} mb-8 text-center text-4xl font-bold text-blue-950 md:text-5xl lg:text-7xl`}
       >
