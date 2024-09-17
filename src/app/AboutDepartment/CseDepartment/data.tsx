@@ -1,101 +1,146 @@
 export const FacultyTabData = [
   {
     id: '1',
-    name: 'Dr. A. K. Agarwal',
-    photoUrl: '/ssr3.png',
+    name: 'DR. JAGRUTI SAVE',
+    photoUrl: '/facultycse/save.jpg',
     ctaText: 'View Profile',
-    designation: 'HOD',
-    description:
-      'Dr. A. K. Agarwal is the Head of Department of Mechanical Engineering at Fr.CRCE, Indore.',
+    designation: 'Professor & Head',
+    qualification: 'Ph.D. (Computer Engineering)',
+    areasOfInterest:
+      'Data mining, Image Processing, Soft Computing, Machine Learning',
     ctaOnClick: () => {
       window.location.href = '/faculty/1'
     },
   },
   {
     id: '2',
-    name: 'Dr. S. S. Rathore',
-    photoUrl: '/ssr3.png',
+    name: 'MS. SWAPNALI MAKEDEV',
+    photoUrl: '/facultycse/swapnalim.jpg',
     ctaText: 'View Profile',
-    designation: 'Professor',
-    description:
-      'Dr. S. S. Rathore is a Professor of Mechanical Engineering at Fr.CRCE, Indore.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo ea repellendus iure voluptates itaque dolorum pariatur aspernatur molestiae adipisci, quis eaque, sunt dolores ab earum. Laudantium dolor laborum deserunt expedita?  ',
+    designation: 'Asst. Professor',
+    qualification: 'Ph.D.(Electronics Engineering)(Pursuing)',
+    areasOfInterest:
+      'VLSI, Nanoelectronics, Computer Network, Software Engineering, Embedded System',
     ctaOnClick: () => {
       window.location.href = '/faculty/2'
     },
   },
   {
     id: '3',
-    name: 'Dr. A. K. Agarwal',
-    photoUrl: '/ssr3.png',
+    name: 'MS. SWATI RINGE',
+    photoUrl: '/facultycse/swati.jpg',
     ctaText: 'View Profile',
-    designation: 'HOD',
-    description:
-      'Dr. A. K. Agarwal is the Head of Department of Mechanical Engineering at Fr.CRCE, Indore.',
+    designation: 'Assistant Professor',
+    qualification: 'M.E.',
+    areasOfInterest:
+      'Big Data Analytics, Theory of Computer Science, Web Computing, Machine Learning, Natural Language Processing',
     ctaOnClick: () => {
       window.location.href = '/faculty/3'
     },
   },
   {
     id: '4',
-    name: 'Dr. S. S. Rathore',
-    photoUrl: '/ssr3.png',
+    name: 'MS. GARIMA TRIPATI',
+    photoUrl: '/facultycse/garima.jpg',
     ctaText: 'View Profile',
-    designation: 'Professor',
-    description:
-      ' Dr. S. S. Rathore is a Professor of Mechanical Engineering at Fr.CRCE, Indore.',
+    designation: 'Assistant Professor',
+    qualification: 'M.E.',
+    areasOfInterest:
+      'IoT, Microprocessor, Computer Organization and Architecture, Computer Graphics, Image Processing',
     ctaOnClick: () => {
       window.location.href = '/faculty/4'
     },
   },
   {
     id: '5',
-    name: 'Dr. A. K. Agarwal',
-    photoUrl: '/ssr3.png',
+    name: 'MS. SARIKA DAVARE',
+    photoUrl: '/facultycse/sarika1.jpg',
     ctaText: 'View Profile',
-    designation: 'HOD',
-    description:
-      'Dr. A. K. Agarwal is the Head of Department of Mechanical Engineering at Fr.CRCE, Indore.',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
+    areasOfInterest:
+      'Database systems, Data warehousing and Data Mining, Software Engineering, Project Management',
     ctaOnClick: () => {
       window.location.href = '/faculty/5'
     },
   },
   {
     id: '6',
-    name: 'Dr. S. S. Rathore',
-    photoUrl: '/ssr3.png',
+    name: 'MR. SAURABH KULKARNI',
+    photoUrl: '/facultycse/saurav.jpg',
     ctaText: 'View Profile',
-    designation: 'Professor',
-    description:
-      'Dr. S. S. Rathore is a Professor of Mechanical Engineering at Fr.CRCE, Indore.',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Computer Science & Engineering)(Pursuing)',
+    areasOfInterest:
+      'Big Data Analytics, Database Systems, Data Warehousing and Mining, Machine Learning, Web Programming, Software Testing',
     ctaOnClick: () => {
       window.location.href = '/faculty/6'
     },
   },
   {
     id: '7',
-    name: 'Dr. A. K. Agarwal',
-    photoUrl: '/ssr3.png',
+    name: 'MS. PRACHI DALVI',
+    photoUrl: '/facultycse/Prachi_Dalvi_photo.jpg',
     ctaText: 'View Profile',
-    designation: 'HOD',
-    description:
-      'Dr. A. K. Agarwal is the Head of Department of Mechanical Engineering at Fr.CRCE, Indore.',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
+    areasOfInterest: 'AI and ML, Data Science',
     ctaOnClick: () => {
       window.location.href = '/faculty/7'
     },
   },
   {
     id: '8',
-    name: 'Dr. S. S. Rathore',
-    photoUrl: '/ssr3.png',
+    name: 'MS. ADITI MALKAR',
+    photoUrl: '/facultycse/aditim.jpg',
     ctaText: 'View Profile',
-    designation: 'Professor',
-    description:
-      'Dr. S. S. Rathore is a Professor of Mechanical Engineering at Fr.CRCE, Indore.',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Computer Science Engineering)(Pursuing)',
+    areasOfInterest:
+      'Data Warehouse and Mining, Cloud Computing, Social Media Analytics',
     ctaOnClick: () => {
       window.location.href = '/faculty/8'
     },
   },
+  {
+    id: '9',
+    name: 'MS. SAVITA BOROLE',
+    photoUrl: '/facultycse/savitab.jpg',
+    ctaText: 'View Profile',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Pursuing)',
+    areasOfInterest: 'Data Science, Natural Language Processing, Data Mining',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/9'
+    },
+  },
+  {
+    id: '10',
+    name: 'MS. NAWAL DANDEKAR',
+    photoUrl: '/facultycse/nd_pic.jpg',
+    ctaText: 'View Profile',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Pursuing)',
+    areasOfInterest:
+      'Database Systems, Cyber Security, IoT, Computer Networks, Recommendation Systems',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/10'
+    },
+  },
+  {
+    id: '11',
+    name: 'MR. SUMEET SHINGI',
+    photoUrl: '/facultycse/sumeetshingi1.jpeg',
+    ctaText: 'View Profile',
+    designation: 'Assistant Professor',
+    qualification: 'Ph.D.(Pursuing)',
+    areasOfInterest: 'Artificial Intelligence',
+    ctaOnClick: () => {
+      window.location.href = '/faculty/11'
+    },
+  },
 ]
+
 export const tabs = [
   {
     id: 'about',
@@ -132,7 +177,8 @@ export const tabs = [
 ]
 export const AboutcseDepartment = {
   name: 'Computer Science and Engineering Department',
-  description: 'Computer Science Engineering (CSE) is an interdisciplinary field that blends Computer Science and Engineering, focusing on the design, development, and maintenance of computer systems, networks, and software. CSE graduates gain a deep understanding of programming languages, computation, and algorithms, bridging the gap between hardware and software. With specialization options like Artificial Intelligence, Machine Learning, Cyber Security, and Data Science, CSE programs offer tailored education to meet diverse professional goals. Graduates pursue careers in software development, IT consulting, network administration, data analysis, and more across industries such as technology, finance, healthcare, and research.',
+  description:
+    'Computer Science Engineering (CSE) is an interdisciplinary field that blends Computer Science and Engineering, focusing on the design, development, and maintenance of computer systems, networks, and software. CSE graduates gain a deep understanding of programming languages, computation, and algorithms, bridging the gap between hardware and software. With specialization options like Artificial Intelligence, Machine Learning, Cyber Security, and Data Science, CSE programs offer tailored education to meet diverse professional goals. Graduates pursue careers in software development, IT consulting, network administration, data analysis, and more across industries such as technology, finance, healthcare, and research.',
   video: false,
 }
 
@@ -212,14 +258,14 @@ export const tabContents = {
         Our Department has a remarkable track record when it comes to student
         placements. Year after year, a significant percentage of our graduates
         secure promising job opportunities with renowned companies in their
-        respective fields. Our dedicated career services team, in
-        collaboration with industry partnerships, plays a pivotal role in
-        ensuring our students are well-prepared and market-ready. With a focus
-        on skill development, internships, and fostering a culture of
-        innovation, our department empowers students to excel in their chosen
-        careers. This consistent success in student placements not only
-        reflects the high quality of education we provide but also the
-        enduring trust that industry leaders place in our graduates.
+        respective fields. Our dedicated career services team, in collaboration
+        with industry partnerships, plays a pivotal role in ensuring our
+        students are well-prepared and market-ready. With a focus on skill
+        development, internships, and fostering a culture of innovation, our
+        department empowers students to excel in their chosen careers. This
+        consistent success in student placements not only reflects the high
+        quality of education we provide but also the enduring trust that
+        industry leaders place in our graduates.
       </p>
 
       <div className="container mx-auto pr-6 pt-6">
@@ -284,9 +330,7 @@ export const tabContents = {
                 <td className="border-b border-gray-200 px-4 py-2">
                   J.P. Morgan Chase & Co. (Code For Good)
                 </td>
-                <td className="border-b border-gray-200 px-4 py-2">
-                  Razerpay
-                </td>
+                <td className="border-b border-gray-200 px-4 py-2">Razerpay</td>
                 <td className="border-b border-gray-200 px-4 py-2">
                   Browser Stack
                 </td>
@@ -296,9 +340,7 @@ export const tabContents = {
                 <td className="border-b border-gray-200 px-4 py-2">
                   Browser Stack
                 </td>
-                <td className="border-b border-gray-200 px-4 py-2">
-                  Direct-i
-                </td>
+                <td className="border-b border-gray-200 px-4 py-2">Direct-i</td>
               </tr>
               <tr className="hover:bg-gray-50">
                 <td className="border-b border-gray-200 px-4 py-2">
@@ -373,8 +415,8 @@ export const tabContents = {
         <p>
           <div className="font-roboto text-base">
             <li>
-              For all B. Tech programmes candidates should have appeared in
-              JEE 2024 / MHTCET 2024 / PERA 2024 / MHTCET-B* 2024 / NEET* 2024
+              For all B. Tech programmes candidates should have appeared in JEE
+              2024 / MHTCET 2024 / PERA 2024 / MHTCET-B* 2024 / NEET* 2024
               score.
             </li>
             <li>
@@ -382,8 +424,7 @@ export const tabContents = {
               with any Technical Vocational Subject. Physics, Mathematics &
               English is Compulsory with Chemistry/Biotechnology* or
               Biology*/Technical Vocational Courses in 10+2/Class 12th or
-              equivalent examination AND 50% aggregate score in Class
-              12th/HSC.
+              equivalent examination AND 50% aggregate score in Class 12th/HSC.
             </li>
             <li>
               Reserved class category candidate belonging to Maharashtra State
@@ -397,5 +438,3 @@ export const tabContents = {
     </div>
   ),
 }
-
-

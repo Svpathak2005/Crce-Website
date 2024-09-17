@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import Infras from './infra'
+
 import '../style.css'
 import { useState } from 'react'
 import {
@@ -24,6 +24,7 @@ import {
   Program,
 } from '../components'
 import { Zilla_Slab } from 'next/font/google'
+import Infrastructure from './infra'
 
 const zilla = Zilla_Slab({
   weight: ['300', '500', '700'],
@@ -60,7 +61,7 @@ const ComputerEngineeringPage = () => {
 
       case 'infrastructure':
         return (
-          <Infras
+          <Infrastructure
             title="Infrastructure Details"
             description="This is a description of the infrastructure."
             imageUrl="https://example.com/infrastructure.jpg"
