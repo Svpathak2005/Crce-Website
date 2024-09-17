@@ -5,6 +5,8 @@ export const FacultyTabData = [
     photoUrl: '/facultymech/bhushanpatil.jpg',
     ctaText: 'Profile',
     designation: 'Ph.D.',
+    qualification: '',
+    areasOfInterest: '',
     description: 'DR. BHUSHAN PATIL is a faculty member with a Ph.D. degree.',
     ctaOnClick: () => {
       window.location.href = '/faculty/1'
@@ -17,6 +19,8 @@ export const FacultyTabData = [
     ctaText: 'Profile',
     designation: 'M.Tech.',
     description: 'D.S.S SUDHAKAR is a faculty member with an M.Tech. degree.',
+    qualification: '',
+    areasOfInterest: '',
     ctaOnClick: () => {
       window.location.href = '/faculty/2'
     },
@@ -28,6 +32,8 @@ export const FacultyTabData = [
     ctaText: 'Profile',
     designation: 'Ph.D.',
     description: 'DR. SUNIL K. DAS is a faculty member with a Ph.D. degree.',
+    qualification: '',
+    areasOfInterest: '',
     ctaOnClick: () => {
       window.location.href = '/faculty/3'
     },
@@ -39,6 +45,8 @@ export const FacultyTabData = [
     ctaText: 'Profile',
     designation: 'Ph.D.',
     description: 'DR. VASIM SHAIKH is a faculty member with a Ph.D. degree.',
+    qualification: '',
+    areasOfInterest: '',
     ctaOnClick: () => {
       window.location.href = '/faculty/4'
     },
@@ -50,6 +58,8 @@ export const FacultyTabData = [
     ctaText: 'Profile',
     designation: 'Ph.D.',
     description: 'DR. KETAKI JOSHI is a faculty member with a Ph.D. degree.',
+    qualification: '',
+    areasOfInterest: '',
     ctaOnClick: () => {
       window.location.href = '/faculty/5'
     },
@@ -61,6 +71,8 @@ export const FacultyTabData = [
     ctaText: 'Profile',
     designation: 'M.E.',
     description: 'ANANT TARASE is a faculty member with an M.E. degree.',
+    qualification: '',
+    areasOfInterest: '',
     ctaOnClick: () => {
       window.location.href = '/faculty/6'
     },
@@ -72,6 +84,8 @@ export const FacultyTabData = [
     ctaText: 'Profile',
     designation: 'M.E.',
     description: 'SAURABH KORGAONKAR is a faculty member with an M.E. degree.',
+    qualification: '',
+    areasOfInterest: '',
     ctaOnClick: () => {
       window.location.href = '/faculty/7'
     },
@@ -84,6 +98,8 @@ export const FacultyTabData = [
     designation: 'M.E.',
     description:
       'MIRYALA VEERABHADRARAO D.N is a faculty member with an M.E. degree.',
+    qualification: '',
+    areasOfInterest: '',
     ctaOnClick: () => {
       window.location.href = '/faculty/8'
     },
@@ -95,6 +111,8 @@ export const FacultyTabData = [
     ctaText: 'Profile',
     designation: 'Ph.D.',
     description: 'DR. DIPALI BHISE is a faculty member with a Ph.D. degree.',
+    qualification: '',
+    areasOfInterest: '',
     ctaOnClick: () => {
       window.location.href = '/faculty/9'
     },
@@ -107,6 +125,8 @@ export const FacultyTabData = [
     designation: 'M.Tech., Ph.D.',
     description:
       'DR. C RAMULU JATAVALLU is a faculty member with M.Tech. and Ph.D. degrees.',
+    qualification: '',
+    areasOfInterest: '',
     ctaOnClick: () => {
       window.location.href = '/faculty/10'
     },
@@ -119,6 +139,8 @@ export const FacultyTabData = [
     designation: 'M.E.',
     description:
       'ASEEM SUDHIR NEYREKAR is a faculty member with an M.E. degree.',
+    qualification: '',
+    areasOfInterest: '',
     ctaOnClick: () => {
       window.location.href = '/faculty/11'
     },
@@ -130,6 +152,8 @@ export const FacultyTabData = [
     ctaText: 'Profile',
     designation: 'M.E.',
     description: 'ONKAR PODDAR is a faculty member with an M.E. degree.',
+    qualification: '',
+    areasOfInterest: '',
     ctaOnClick: () => {
       window.location.href = '/faculty/12'
     },
