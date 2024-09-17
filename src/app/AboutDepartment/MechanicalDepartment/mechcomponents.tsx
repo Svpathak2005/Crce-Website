@@ -418,102 +418,6 @@ const Program: React.FC<ProgramProps> = ({
   )
 }
 
-export const Card = ({
-  children,
-  className,
-  ...props
-}: {
-  children: React.ReactNode
-  className: string
-}) => (
-  <div className={`rounded-lg bg-white shadow-md ${className}`} {...props}>
-    {children}
-  </div>
-)
-
-export const CardBody = ({
-  children,
-  className,
-  ...props
-}: {
-  children: React.ReactNode
-  className: string
-}) => (
-  <div className={`p-6 ${className}`} {...props}>
-    {children}
-  </div>
-)
-
-export const CardImage = ({
-  src,
-  alt,
-  className,
-  ...props
-}: {
-  src: string
-  alt: string
-  className: string
-}) => (
-  <img
-    src={src}
-    alt={alt}
-    className={`h-auto max-h-[30vh] max-w-[30vw] rounded-t-lg object-cover ${className}`}
-    {...props}
-  />
-)
-
-export const CardContent = ({
-  children,
-  className,
-  ...props
-}: {
-  children: React.ReactNode
-  className: string
-}) => (
-  <div className={`p-6 ${className}`} {...props}>
-    {children}
-  </div>
-)
-
-const AlternatingCardLayout = ({
-  cards,
-}: {
-  cards: { imageUrl: string; title: string; description: string }[]
-}) => {
-  return (
-    <div className="grid grid-cols-1 gap-6">
-      {cards.map(
-        (
-          card: { imageUrl: string; title: string; description: string },
-          index: number
-        ) => (
-          <Card
-            key={index}
-            className={`m-auto flex w-auto flex-col md:flex-row ${
-              index % 2 === 0 ? 'md:flex-row-reverse' : ''
-            }`}
-          >
-            {' '}
-            <div className="flex w-auto justify-center">
-              <CardImage
-                src={card.imageUrl}
-                alt={card.title}
-                className="h-full w-full rounded-t-lg"
-              />
-            </div>
-            <CardContent className="">
-              <h3 className="mb-4 text-xl font-bold text-blue-900">
-                {card.title}
-              </h3>
-              <p className="text-black">{card.description}</p>
-            </CardContent>
-          </Card>
-        )
-      )}
-    </div>
-  )
-}
-
 export const Publications: React.FC = () => {
   return (
     <div className="container mx-auto px-4">
@@ -574,5 +478,4 @@ export {
   FacultyGrid,
   PlacementTab,
   Program,
-  AlternatingCardLayout,
 }

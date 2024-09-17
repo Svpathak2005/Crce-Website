@@ -24,9 +24,8 @@ import {
   FacultyGrid,
   PlacementTab,
   Program,
-  AlternatingCardLayout,
   Publications,
-} from './components'
+} from './mechcomponents'
 import { Zilla_Slab } from 'next/font/google'
 import Infrastructure from './infra'
 
