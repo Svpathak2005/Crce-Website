@@ -8,9 +8,7 @@ import {
   AboutmechDepartment,
   Vision,
   Mission,
-  ProgramEducationalObjectives,
   ProgramOutcomes,
-  ProgrammeSpecificOutcomes,
   tabContents,
   FacultyTabData,
 } from './data'
@@ -48,9 +46,7 @@ const ComputerEngineeringPage = () => {
       case 'peos,pos,psos':
         return (
           <>
-            <AboutDepartmentContainer {...ProgramEducationalObjectives} />
             <AboutDepartmentContainer {...ProgramOutcomes} />
-            <AboutDepartmentContainer {...ProgrammeSpecificOutcomes} />
           </>
         )
       case 'Faculty':
