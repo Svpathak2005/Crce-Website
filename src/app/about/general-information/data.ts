@@ -6,7 +6,7 @@ export const tabs = [
   {
     id: 'aicetsubsquent',
     title: 'AICTE - LOA And Subseqent EOAS',
-  }, 
+  },
   {
     id: 'corevalues',
     title: 'Core Values',
@@ -16,8 +16,8 @@ export const tabs = [
     title: 'Code Of Conduct',
   },
   {
-    id: 'tetephonedirectory',
-    title: 'Tetephone Directory',
+    id: 'telephonedirectory',
+    title: 'Telephone Directory',
   },
   {
     id: 'commoninfrastructure',

@@ -5,28 +5,27 @@ interface Speech {
   title: string
   description: string
 }
-
 const speeches: Speech[] = [
   {
-    date: 'October 6, 2023',
-    title: 'Announcing new School of Government and Policy',
+    date: 'August 15, 2023',
+    title: 'Independence Day Celebration and New Department Announcement',
     description:
-      'President Daniels shares that as a significant element of our deepening presence in the nation’s capital we are launching the Johns Hopkins University School of Government and Policy, our first new academic division since 2007.',
+      'Principal Dr. Sharma announces the establishment of a new Department of Artificial Intelligence and Machine Learning as part of our commitment to cutting-edge education on the occasion of Indias 77th Independence Day.',
   },
   {
-    date: 'January 5, 2023',
-    title: 'Hopkins featured on NBC Nightly News for ending legacy admissions',
+    date: 'June 20, 2023',
+    title:
+      'Fr. CRCE featured in Times of India for innovative teaching methods',
     description:
-      "Johns Hopkins University President Ron Daniels led the charge to eliminate legacy admissions at JHU. 'It’s opened up a lot more space for us to be able to recruit students from a host of different backgrounds,' Daniels says.",
+      "Fr. CRCE Principal Dr. Sharma highlighted in a national newspaper for implementing project-based learning across all departments. 'It's opened up new avenues for our students to apply theoretical knowledge to real-world problems,' Dr. Sharma says.",
   },
   {
-    date: 'September 15, 2023',
-    title: 'Announcing the Ten for One, 10 goals for 1 University',
+    date: 'July 1, 2023',
+    title: 'College Opening Ceremony for the New Academic Year',
     description:
-      'President Daniels shares the final version of our new strategic vision, the Ten for One — 10 ambitious goals for our One University.',
+      'Principal Dr. Sharma welcomes new and returning students, sharing the colleges vision for the upcoming year, including enhanced industry partnerships and a focus on entrepreneurship.',
   },
 ]
-
 const HighlightedSpeeches: React.FC = () => {
   return (
     <div className="bg-[#E5F0FF] px-8 py-16">
