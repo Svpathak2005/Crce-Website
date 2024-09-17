@@ -14,6 +14,9 @@ import {
   ProgrammeSpecificOutcomes,
   tabContents,
   FacultyTabData,
+  programs,
+  Infrastructure,
+  hodsDesk,
 } from './data'
 import {
   Sidebar,
@@ -22,7 +25,9 @@ import {
   FacultyGrid,
   PlacementTab,
   Program,
-} from '../components'
+  AlternatingCardLayout,
+  Publications,
+} from './components'
 import { Zilla_Slab } from 'next/font/google'
 import Infrastructure from './infra'
 
@@ -32,7 +37,7 @@ const zilla = Zilla_Slab({
   subsets: ['latin'],
   display: 'swap',
 })
-const ComputerEngineeringPage = () => {
+const MechanicalEngineeringPage = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]?.id || 'overview')
   const Tabs = ['Placements', 'Recruiters', 'Eligibility']
 
@@ -57,16 +62,12 @@ const ComputerEngineeringPage = () => {
         )
 
       case 'Faculty':
-        return <FacultyGrid facultyData={FacultyTabData} />
+        return <FacultyGrid />
 
       case 'infrastructure':
-        return (
-          <Infrastructure
-            title="Infrastructure Details"
-            description="This is a description of the infrastructure."
-            imageUrl="https://example.com/infrastructure.jpg"
-          />
-        )
+        return <AlternatingCardLayout cards={Infrastructure} />
+      case 'Publications':
+        return <Publications />
       default:
         return null
     }
@@ -107,31 +108,30 @@ const ComputerEngineeringPage = () => {
             onTabChange={(tabId) => setActiveTab(tabId)}
             AccordionContent={renderContent()}
           />
-          <div className="mx-2 flex-1 flex-col overflow-x-hidden overflow-y-scroll">
+          <div className="invisible-scrollbar mx-2 max-h-screen flex-1 flex-col overflow-x-hidden">
             <div id={activeTab} className="container mx-auto">
               {renderContent()}
             </div>
           </div>
         </div>
-
-        {/* Program Highlights */}
-        {/* <div className="text-gray-600">
-        <div className="container mx-auto px-5 ">
-          <div className="mb-10 flex w-full flex-col text-center">
-            <h1
-              className={`${zilla.className} text-3xl font-bold text-indigo-900 sm:text-xl lg:text-4xl`}
-            >
-              Programs Offered
-            </h1>
-          </div>
-          <div className="flex flex-col items-center justify-center md:flex-row lg:flex-row">
-            {programs.map((program, index) => (
-              <Program key={index} {...program} />
-            ))}
+        {/* HOD's Desk */}
+        <HODsDesk {...hodsDesk} />
+        <div className="text-gray-600">
+          <div className="container mx-auto px-5">
+            <div className="mb-10 flex w-full flex-col text-center">
+              <h1
+                className={`${zilla.className} text-3xl font-bold text-indigo-900 sm:text-xl lg:text-4xl`}
+              >
+                Programs Offered
+              </h1>
+            </div>
+            <div className="flex flex-col items-center justify-center md:flex-row lg:flex-row">
+              {programs.map((program, index) => (
+                <Program key={index} {...program} />
+              ))}
+            </div>
           </div>
         </div>
-      </div> */}
-
         {/*placement data*/}
         <div>
           <PlacementTab
@@ -152,4 +152,4 @@ const ComputerEngineeringPage = () => {
   )
 }
 
-export default ComputerEngineeringPage
+export default MechanicalEngineeringPage

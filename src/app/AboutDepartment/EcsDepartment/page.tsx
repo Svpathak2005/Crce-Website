@@ -106,7 +106,7 @@ const ElectronicsComputerEngineeringPage = () => {
             onTabChange={(tabId) => setActiveTab(tabId)}
             AccordionContent={renderContent()}
           />
-          <div className="mx-2 flex-1 flex-col overflow-x-hidden overflow-y-scroll">
+          <div className="invisible-scrollbar mx-2 max-h-screen flex-1 flex-col overflow-x-hidden">
             <div id={activeTab} className="container mx-auto">
               {renderContent()}
             </div>
@@ -138,7 +138,7 @@ const ElectronicsComputerEngineeringPage = () => {
             tabContents={tabContents}
             duration="4 Years"
             lastDateToApply="26 July 2024"
-            programmeName="B.Tech Mechanical Engineering"
+            programmeName="B.Tech Electronics and Computer Science Engineering"
             feePerYear="Rs. 1,67,000"
             highestCTC="INR 17.75 LPA"
             onApplyClick="#"

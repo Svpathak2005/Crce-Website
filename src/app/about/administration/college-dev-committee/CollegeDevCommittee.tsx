@@ -4,8 +4,10 @@ const CollegeDevelopmentCommittee = () => {
   return (
     <div className="flex min-h-screen w-full flex-col">
       <main className="container mx-auto flex-grow p-4">
-        <div className=" rounded-lg bg-white p-6 shadow-lg">
-          <h2 className="mb-4 text-2xl font-semibold">College Development Committee</h2>
+        <div className="rounded-lg bg-white p-6 shadow-lg">
+          <h2 className="mb-4 text-2xl font-semibold">
+            College Development Committee
+          </h2>
           <div className="h-[800px] w-full">
             {/* Adjust height as needed */}
             <object

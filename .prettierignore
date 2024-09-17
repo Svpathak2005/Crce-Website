@@ -10,3 +10,5 @@ node_modules
 .next
 build
 .contentlayer
+pnpm-lock.yaml
+bun.lockb

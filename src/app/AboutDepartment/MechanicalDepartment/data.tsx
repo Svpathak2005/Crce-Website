@@ -1,89 +1,98 @@
 export const FacultyTabData = [
   {
     id: '1',
-    name: 'DR. BHUSHAN PATIL',
-    photoUrl: '/facultymech/bhushanpatil.jpg',
-    ctaText: 'Profile',
-    designation: 'Ph.D.',
-    description: 'DR. BHUSHAN PATIL is a faculty member with a Ph.D. degree.',
+    name: 'Dr. Bhushan Patil',
+    photoUrl: '/mechdept/bhushan.png',
+    ctaText: 'View Profile',
+    designation: 'Proffessor and Head of Department',
+    description:
+      'Dr. Bhushan Patil is the Head of Department of Mechanical Engineering at Fr.CRCE, Bandra.',
     ctaOnClick: () => {
       window.location.href = '/faculty/1'
     },
   },
   {
     id: '2',
-    name: 'D.S.S SUDHAKAR',
-    photoUrl: '/facultymech/DSSsudhakar.jpg',
-    ctaText: 'Profile',
-    designation: 'M.Tech.',
-    description: 'D.S.S SUDHAKAR is a faculty member with an M.Tech. degree.',
+    name: 'D.S.S.Sudhakar',
+    photoUrl: '/mechdept/sudhakar.png',
+    ctaText: 'View Profile',
+    designation: 'Associate Professor and Student affairs Incharge',
+    description:
+      ' D.S.S.Sudhakar is a Associate Professor of Mechanical Engineering at Fr.CRCE, Bandra.',
     ctaOnClick: () => {
       window.location.href = '/faculty/2'
     },
   },
   {
     id: '3',
-    name: 'DR. SUNIL K. DAS',
-    photoUrl: '/facultymech/skdas.jpg',
-    ctaText: 'Profile',
-    designation: 'Ph.D.',
-    description: 'DR. SUNIL K. DAS is a faculty member with a Ph.D. degree.',
+    name: 'Dr. Sunil K. Das',
+    photoUrl: '/mechdept/skdas.png',
+    ctaText: 'View Profile',
+    designation: 'Associate Professor',
+    description:
+      'Dr. Sunil K. Das is a Associate Professor of Mechanical Engineering at Fr.CRCE, Bandra.',
     ctaOnClick: () => {
       window.location.href = '/faculty/3'
     },
   },
   {
     id: '4',
-    name: 'DR. VASIM SHAIKH',
-    photoUrl: '/facultymech/drvasim.jpg',
-    ctaText: 'Profile',
-    designation: 'Ph.D.',
-    description: 'DR. VASIM SHAIKH is a faculty member with a Ph.D. degree.',
+    name: 'Dr. Vasim Shaikh',
+    photoUrl: '/mechdept/vasim.png',
+    ctaText: 'View Profile',
+    designation: 'Associate Professor',
+    description:
+      'Dr. Vasim Shaikh is a Associate Professor of Mechanical Engineering at Fr.CRCE, Bandra.',
     ctaOnClick: () => {
       window.location.href = '/faculty/4'
     },
   },
   {
     id: '5',
-    name: 'DR. KETAKI JOSHI',
-    photoUrl: '/facultymech/ketakijoshi.jpg',
-    ctaText: 'Profile',
-    designation: 'Ph.D.',
-    description: 'DR. KETAKI JOSHI is a faculty member with a Ph.D. degree.',
+    name: 'Dr. Ketaki Joshi',
+    photoUrl: '/mechdept/ketaki.png',
+    ctaText: 'View Profile',
+    designation: 'Associate Professor',
+    description:
+      'Dr. Ketaki Joshi is a Associate Professor of Mechanical Engineering at Fr.CRCE, Bandra.',
     ctaOnClick: () => {
       window.location.href = '/faculty/5'
     },
   },
   {
     id: '6',
-    name: 'ANANT TARASE',
-    photoUrl: '/facultymech/anant.jpg',
-    ctaText: 'Profile',
-    designation: 'M.E.',
-    description: 'ANANT TARASE is a faculty member with an M.E. degree.',
+    name: 'Prof Anant Tarase',
+    photoUrl: '/mechdept/anant.png',
+    ctaText: 'View Profile',
+    designation: ' Assistant Professor',
+    description:
+      'Prof Anant Tarase is a Assistant Professor of Mechanical Engineering at Fr.CRCE, Bandra.',
     ctaOnClick: () => {
       window.location.href = '/faculty/6'
     },
   },
   {
     id: '7',
-    name: 'SAURABH KORGAONKAR',
-    photoUrl: '/facultymech/saurabhk.jpg',
-    ctaText: 'Profile',
-    designation: 'M.E.',
-    description: 'SAURABH KORGAONKAR is a faculty member with an M.E. degree.',
+    name: 'Prof. Saurabh Korgaonkar',
+    photoUrl: '/mechdept/saurabh.png',
+    ctaText: 'View Profile',
+    designation: 'Assistant Professor',
+    description:
+      'Prof. Saurabh Korgaonkar is a Assistant Professor of Mechanical Engineering at Fr.CRCE, Bandra.',
     ctaOnClick: () => {
       window.location.href = '/faculty/7'
     },
   },
   {
     id: '8',
-    name: 'MIRYALA VEERABHADRARAO D.N',
-    photoUrl: '/facultymech/raosir.jpg',
-    ctaText: 'Profile',
-    designation: 'M.E.',
+    name: 'Prof. Onkar Poddar',
+    photoUrl: '/mechdept/onkar.png',
+    ctaText: 'View Profile',
+    designation: 'Assistant Professor',
     description:
       'MIRYALA VEERABHADRARAO D.N is a faculty member with an M.E. degree.',
+    qualification: '',
+    areasOfInterest: '',
     ctaOnClick: () => {
       window.location.href = '/faculty/8'
     },
@@ -95,6 +104,8 @@ export const FacultyTabData = [
     ctaText: 'Profile',
     designation: 'Ph.D.',
     description: 'DR. DIPALI BHISE is a faculty member with a Ph.D. degree.',
+    qualification: '',
+    areasOfInterest: '',
     ctaOnClick: () => {
       window.location.href = '/faculty/9'
     },
@@ -107,6 +118,8 @@ export const FacultyTabData = [
     designation: 'M.Tech., Ph.D.',
     description:
       'DR. C RAMULU JATAVALLU is a faculty member with M.Tech. and Ph.D. degrees.',
+    qualification: '',
+    areasOfInterest: '',
     ctaOnClick: () => {
       window.location.href = '/faculty/10'
     },
@@ -119,6 +132,8 @@ export const FacultyTabData = [
     designation: 'M.E.',
     description:
       'ASEEM SUDHIR NEYREKAR is a faculty member with an M.E. degree.',
+    qualification: '',
+    areasOfInterest: '',
     ctaOnClick: () => {
       window.location.href = '/faculty/11'
     },
@@ -130,6 +145,8 @@ export const FacultyTabData = [
     ctaText: 'Profile',
     designation: 'M.E.',
     description: 'ONKAR PODDAR is a faculty member with an M.E. degree.',
+    qualification: '',
+    areasOfInterest: '',
     ctaOnClick: () => {
       window.location.href = '/faculty/12'
     },
@@ -156,23 +173,17 @@ export const tabs = [
     id: 'infrastructure',
     title: 'Infrastructure',
   },
-  {
-    id: 'research',
-    title: 'Research',
-  },
+  
   {
     id: 'Publications',
     title: 'Publications',
   },
-  {
-    id: 'pre-Incubation',
-    title: 'Pre-Incubation',
-  },
+
 ]
 export const AboutmechDepartment = {
   name: 'Mechanical Engineering Department',
   description:
-    'The Department of Mechanical Engineering at Fr.CRCE is committed to providing quality education in the field of Mechanical engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Mechanical engineering principles and practices. Our faculty members are experts in their fields and are dedicated to providing students with a challenging and rewarding educational experience. The department has state-of-the-art labs and facilities that allow students to gain hands-on experience with the latest technologies and tools. We also offer a variety of research opportunities and industry collaborations that give students the chance to work on real-world problems and projects. Our graduates are highly sought after by employers and go on to successful careers in a variety of industries and fields.',
+    "The Department of Mechanical Engineering offers B.E, M.E., and Ph.D. programs, along with a B.E. Honours program in Robotics, 3D printing, IoT, and Data Sciences. In 1974, the Fr. Agnels was involved in making components for Aryabhata, India's first satellite. The department draws from a strong legacy in Production Engineering, running for 38 years, and has fostered alumni at top firms like Tesla, Siemens, Mahindra, and Godrej, as well as prestigious universities like Cornell and Harvard. The department features over nine instructional labs equipped with state-of-the-art technology, including 3D printing machines, CNC machines, industrial robots, and CAD/CAM software. Professional societies such as ASME, SAE, and student teams like Abadha and Robocon participate in national and international technical competitions, excelling in fields like ATVs, robotics, and hackathons. With a vision to be a top-rated department in the country, the program continually evolves to meet industry demands. The faculty lead innovative teaching, research, and project-based learning in areas like Thermal and Fluids Engineering, Design Engineering, and Manufacturing Engineering.",
   video: false,
 }
 
@@ -206,6 +217,128 @@ export const ProgrammeSpecificOutcomes = {
     'The Department of Mechanical Engineering at CRCE is committed to providing quality education in the field of Mechanical Engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Mechanical Engineering principles and practices.',
   video: false,
 }
+export const Infrastructure = [
+  {
+    imageUrl: '/mechdept/infra/lab1.png',
+    title: 'Mechanisms and Machines Laboratory',
+    description:
+      "It facilitates experimentation related to mechanics with Force Table Apparatus, Coil & Belt Friction Apparatus, Friction Slide Apparatus, Simple Beam Apparatus, Collision of Elastic Bodies Apparatus, Bell Crank Lever, Friction Slide Apparatus as well as experimentation related to dynamics of machines with static & dynamic balancing apparatus, Whirling Speed of shaft, Gyroscope, Governor, Cam analysis apparatus, Coriolis Component of acceleration, Piezoelectric Vibrometer and Vibration Apparatus.",
+  },
+  {
+    imageUrl: '/mechdept/infra/lab2.png',
+    title: 'Cad Cam Lab',
+    description: "It is well-equipped with state-of-art computational facilities including High-End Graphic Workstations with 3D Modeling and Analysis Softwares such as Ansys, NX11, Solidworks, Autocad, 3D Printer.",
+  },
+  {
+    imageUrl: '/mechdept/infra/lab3.png',
+    title: "Automation and Control Lab",
+    description: "It includes automation and control equipments such as Festo Pneumatic and Electro-Pneumatic Trainers, PCS Trainers, Fluidsim.",
+  },
+  {
+    imageUrl: '/mechdept/infra/lab4.png',
+    title: 'Manufacturing Systems & Management / IE laboratory',
+    description: "It facilitates analysis of industrial engineering and operations management problems with Arena Manufacturing System Analysis Software and MATLAB",
+  },
+]
+export const hodsDesk = {
+  name: 'Dr. Bhushan Patil',
+  bio: 'The Department of Mechanical Engineering at CRCE is committed to providing quality education in the field of Mechanical science and engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Mechanical science and engineering principles and practices.',
+  imageUrl: '/mechdept/bhushan.png',
+  content:
+    'I am pleased to extend a warm welcome to the incoming students of the Mechanical Engineering program at our esteemed institute. The Department of Mechanical Engineering is deeply committed to fostering your holistic development, paving the way for successful careers, and ultimately, shaping you into invaluable national assets. Our dedicated and experienced faculty, is instrumental in nurturing your overall growth, encompassing analytical skill and the ability for creative thinking to compete on a global scale. In addition to the traditional engineering curriculum, our department offers Honour courses that prepare you to meet the dynamic demands of the modern business landscape, cultivating a professional mind-set. We encourage collaborative teamwork, idea sharing, presentations, and the enhancing of communication skills among our students. Active participation in Professional Chapters and social clubs not only expands your network but also fosters leadership and team spirit, exposing you to a world beyond the confines of the curriculum. Our department boasts state-of-the-art computational tools and modern laboratories, including a dedicated Machine Learning Server. Additionally, we offer workshops and training to sharpen your interview and job-seeking skills. Over the past decade, we have maintained an impressive placement rate of more 85% for our qualified students, with many of our graduates holding prominent positions at leading organizations such as Apple, Google, Amazon, JP Morgan, TIAA, TCS, Wipro, and government agencies. Our departmental researchers are deeply involved in pivotal areas like AI & Machine Learning, Cloud Computing, and Block chain. Furthermore, our alumni actively support our students with their projects, internships, and career and placement opportunities. We have established fruitful collaborations with industries and esteemed institutions. In conclusion, I encourage you to embrace this unique educational journey with enthusiasm and dedication. Your time here will not only equip you with technical knowledge but also inculcate in you the qualities of leadership, teamwork, and innovation that are vital for success in today&apos;s world. Please keep yourself updated through our department&apos;s website and regular communications for information on curriculum enhancements, internship prospects, and upcoming events. We are deeply committed to your success and are here to assist you at every stage of your educational journey. If you have any questions or suggestions, please do not hesitate to reach out to us. Your feedback is valuable as we work together to ensure your academic and personal growth. ',
+}
+export const programs = [
+  {
+    title: 'Bachelors of Technology',
+    description: [
+      'Undergrad program in Mechanical Engineering.',
+      'Duration: 4 years ',
+      'Intake: 180 students ',
+      'Eligibility: 10+2 with PCM',
+    ],
+    icon: (
+      <svg
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        className="h-5 w-5"
+        viewBox="0 0 24 24"
+      >
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+      </svg>
+    ),
+    button: [
+      { label: 'Syllabus', onClick: () => console.log('Button 1 clicked') },
+      {
+        label: 'Co-Curricular',
+        onClick: () => console.log('Button 2 clicked'),
+      },
+    ],
+  },
+  {
+    title: 'Masters of Technology',
+    description: [
+      'Postgrad program in Mechanical Engineering',
+      'Duration: 2 years',
+      'Intake: 60 students',
+      'Eligibility: B.Tech in Mechanical Engineering',
+    ],
+    icon: (
+      <svg
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        className="h-5 w-5"
+        viewBox="0 0 24 24"
+      >
+        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+      </svg>
+    ),
+    button: [
+      { label: 'Syllabus', onClick: () => console.log('Button 1 clicked') },
+      {
+        label: 'Co-Curricular',
+        onClick: () => console.log('Button 2 clicked'),
+      },
+    ],
+  },
+  {
+    title: 'PhD Programs',
+    description: [
+      'Doctoral programs in Mechanical Engineering',
+      'Duration : 3 years',
+      'Intake: 10 students',
+      'Eligibility: M.Tech in Mechanical Engineering',
+    ],
+    icon: (
+      <svg
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        className="h-5 w-5"
+        viewBox="0 0 24 24"
+      >
+        <circle cx="6" cy="6" r="3"></circle>
+        <circle cx="6" cy="18" r="3"></circle>
+        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+      </svg>
+    ),
+    button: [
+      { label: 'Syllabus', onClick: () => console.log('Button 1 clicked') },
+      {
+        label: 'Co-Curricular',
+        onClick: () => console.log('Button 2 clicked'),
+      },
+    ],
+  },
+]
 
 const events = [
   {

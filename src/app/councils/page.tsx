@@ -1,4 +1,3 @@
-
 import Council from '@/components/council'
 
 export default function Home() {

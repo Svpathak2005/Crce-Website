@@ -17,42 +17,40 @@ const Trustees = () => {
   ]
 
   return (
-    <div className="mx-auto flex w-full flex-col items-center  bg-white shadow-lg p-6 rounded-lg justify-center">
-
+    <div className="mx-auto flex w-full flex-col items-center justify-center rounded-lg bg-white p-6 shadow-lg">
       <h2
         className={`${zilla.className} mb-8 text-center text-4xl font-bold text-blue-950 md:text-5xl lg:text-7xl`}
       >
         Trustees
       </h2>
-      
-        <table className="w-fit border-collapse rounded-lg bg-white shadow-md overflow-scroll">
-          <thead className="bg-[#001f3f] text-white">
-            <tr>
-              <th className="border border-gray-300 p-3">Sr.</th>
-              <th className="border border-gray-300 p-3">Name</th>
-              <th className="border border-gray-300 p-3">Designation</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              ['1', 'Fr. Bento Rodrigues', 'Chairman'],
-              ['2', 'Fr. Alarico Carvalho', 'Vice Chairman'],
-              ['3', 'Fr. Peter D’Souza', 'Treasurer'],
-              ['4', 'Fr. Valerian D’Souza', 'Secretary'],
-              ['5', 'Fr. Agnelo Gomes', 'Member'],
-            ].map((row, index) => (
-              <tr
-                key={index}
-                className={index % 2 === 0 ? 'bg-gray-100' : 'bg-white'}
-              >
-                <td className="border border-gray-300 p-3">{row[0]}</td>
-                <td className="border border-gray-300 p-3">{row[1]}</td>
-                <td className="border border-gray-300 p-3">{row[2]}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
 
+      <table className="w-fit border-collapse overflow-scroll rounded-lg bg-white shadow-md">
+        <thead className="bg-[#001f3f] text-white">
+          <tr>
+            <th className="border border-gray-300 p-3">Sr.</th>
+            <th className="border border-gray-300 p-3">Name</th>
+            <th className="border border-gray-300 p-3">Designation</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            ['1', 'Fr. Bento Rodrigues', 'Chairman'],
+            ['2', 'Fr. Alarico Carvalho', 'Vice Chairman'],
+            ['3', 'Fr. Peter D’Souza', 'Treasurer'],
+            ['4', 'Fr. Valerian D’Souza', 'Secretary'],
+            ['5', 'Fr. Agnelo Gomes', 'Member'],
+          ].map((row, index) => (
+            <tr
+              key={index}
+              className={index % 2 === 0 ? 'bg-gray-100' : 'bg-white'}
+            >
+              <td className="border border-gray-300 p-3">{row[0]}</td>
+              <td className="border border-gray-300 p-3">{row[1]}</td>
+              <td className="border border-gray-300 p-3">{row[2]}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   )
 }

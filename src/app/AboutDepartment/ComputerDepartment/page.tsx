@@ -80,7 +80,7 @@ const ComputerEngineeringPage = () => {
     }
   }
   return (
-    <div className="flex-row">
+    <div className="flex-row text-black">
       {/* Hero section */}
       <div>
         <section className="hero relative min-h-screen overflow-hidden text-white">
@@ -114,7 +114,7 @@ const ComputerEngineeringPage = () => {
             onTabChange={(tabId) => setActiveTab(tabId)}
             AccordionContent={renderContent()}
           />
-          <div className="mx-2 flex-1 flex-col overflow-x-hidden overflow-y-scroll">
+          <div className="invisible-scrollbar mx-2 max-h-screen flex-1 flex-col overflow-x-hidden">
             <div id={activeTab} className="container mx-auto">
               {renderContent()}
             </div>
@@ -144,7 +144,8 @@ const ComputerEngineeringPage = () => {
         {/*placement data*/}
         <div>
           <PlacementTab
-            tabs={Tabs}
+            // tabs={["placements", "recruiters", "eligibility"]} 
+            tabs={Tabs} 
             tabContents={tabContents}
             duration="4 Years"
             lastDateToApply="26 July 2024"
