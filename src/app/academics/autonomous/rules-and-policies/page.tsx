@@ -10,12 +10,36 @@ const zilla = Zilla_Slab({
 })
 
 const data = [
-  { id: 1, title: 'Academic Rule Book', url: '#' },
-  { id: 2, title: 'Training, Internship and Placement Rule Book', url: '#' },
-  { id: 3, title: 'Student Activities Rule Book', url: '#' },
-  { id: 4, title: 'Academic Calendar', url: '#' },
-  { id: 5, title: 'SE/TE/BE MSE Exam Time-Table for ODD SEM', url: '#' },
-  { id: 6, title: 'SE/TE/BE ESE Exam Time-Table for ODD SEM', url: '#' },
+  {
+    id: 1,
+    title: 'Academic Rule Book',
+    url: '/rules/Academic_Rule_Book_FrCRCE_2024_25.pdf',
+  },
+  {
+    id: 2,
+    title: 'Training, Internship and Placement Rule Book',
+    url: '/rules/Rule_Book_training_internships_placement_2024_25.pdf',
+  },
+  {
+    id: 3,
+    title: 'Student Activities Rule Book',
+    url: '/rules/Student_Activities_Rule_Book_2024_25.pdf',
+  },
+  {
+    id: 4,
+    title: 'Academic Calendar',
+    url: '/rules/Academic_calender_2024_25.pdf',
+  },
+  {
+    id: 5,
+    title: 'SE/TE/BE MSE Exam Time-Table for ODD SEM',
+    url: '/rules/MSE_TT_SEP-24.pdf',
+  },
+  {
+    id: 6,
+    title: 'SE/TE/BE ESE Exam Time-Table for ODD SEM',
+    url: '/rules/ESE_TT_NOV-24.pdf',
+  },
 ]
 
 const RulesAndPolicies = () => {
@@ -43,7 +67,12 @@ const RulesAndPolicies = () => {
                 <td className="border px-4 py-2 text-center">{index + 1}</td>
                 <td className="flex items-center border px-4 py-2">
                   <BookOpen className="mr-2 h-5 w-5 text-blue-600" />
-                  <a href={item.url} className="text-blue-600 hover:underline">
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline"
+                  >
                     {item.title}
                   </a>
                 </td>
