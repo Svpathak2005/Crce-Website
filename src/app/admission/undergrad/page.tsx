@@ -60,12 +60,18 @@ const dseAdmissionData = [
   },
 ]
 
+type AdmissionCardProps = {
+  title: string
+  description: string
+  link: string
+  buttonText: string
+}
+
 export default function Home() {
   const [isChatbotOpen, setIsChatbotOpen] = useState(false)
 
   return (
     <main className="min-h-screen bg-gray-100">
-      {/* ChatBot Toggle Button */}
       {!isChatbotOpen && (
         <button
           onClick={() => setIsChatbotOpen(true)}
@@ -75,14 +81,12 @@ export default function Home() {
         </button>
       )}
 
-      {/* ChatBot Component */}
       {isChatbotOpen && (
         <div className="fixed bottom-4 right-4 z-50 h-[500px] w-[350px] rounded-lg bg-white shadow-xl sm:h-[600px] sm:w-[550px]">
           <ChatBot onClose={() => setIsChatbotOpen(false)} />
         </div>
       )}
 
-      {/* Hero Section */}
       <section className="relative overflow-hidden pt-40">
         <div className="absolute inset-0 z-0">
           <Image
@@ -116,7 +120,6 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 h-16 w-full origin-bottom-right -skew-y-3 transform bg-white"></div>
       </section>
 
-      {/* Quick Links Section */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-4">
           <h2
@@ -138,7 +141,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Admissions Section */}
       <section id="admissions" className="bg-gray-100 py-16">
         <div className="container mx-auto px-4">
           <h2
@@ -147,7 +149,6 @@ export default function Home() {
             Admissions
           </h2>
 
-          {/* FE Admissions */}
           <div className="mb-16">
             <h3
               className={`${zilla.className} mb-8 text-2xl font-bold text-blue-800`}
@@ -161,7 +162,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* DSE Admissions */}
           <div>
             <h3
               className={`${zilla.className} mb-8 text-2xl font-bold text-blue-800`}
@@ -180,7 +180,12 @@ export default function Home() {
   )
 }
 
-const AdmissionCard = ({ title, description, link, buttonText }) => (
+const AdmissionCard = ({
+  title,
+  description,
+  link,
+  buttonText,
+}: AdmissionCardProps) => (
   <div className="flex flex-col rounded-lg bg-white p-6 shadow-md transition-all hover:shadow-lg">
     <h4 className="mb-2 text-xl font-bold text-blue-900">{title}</h4>
     <p className="mb-4 flex-grow text-gray-600">{description}</p>
