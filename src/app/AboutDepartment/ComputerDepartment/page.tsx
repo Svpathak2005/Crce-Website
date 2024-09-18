@@ -60,12 +60,10 @@ const ComputerEngineeringPage = () => {
       case 'Faculty':
         return <FacultyGrid facultyData={FacultyTabData} />
 
-      case 'research':
+      case 'researchandpublications':
         return <Publicationss />
       case 'pre-Incubation':
         return <PreIncubationCenter />
-      case 'Publications':
-        return <Publications />
       case 'infrastructure':
         return (
           <div className="flex h-full w-full">
