@@ -49,7 +49,7 @@ const Happenings = () => {
   ]
 
   return (
-    <div className="mt-5 w-full bg-white py-8">
+    <div id="news" className="mt-5 w-full bg-white py-8">
       <div className="container mx-auto max-w-6xl px-4">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {news.map((item, index) => (

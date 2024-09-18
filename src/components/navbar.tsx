@@ -342,18 +342,7 @@ const Navbar: React.FC = () => {
               >
                 Faculty & Staff
               </Link>
-              <Link
-                href="/parents"
-                className="transition duration-300 hover:text-yellow-300"
-              >
-                Parents
-              </Link>
-              <Link
-                href="/visitors"
-                className="transition duration-300 hover:text-yellow-300"
-              >
-                Visitors
-              </Link>
+
               <Link
                 href="https://alumni.frcrce.ac.in/"
                 className="transition duration-300 hover:text-yellow-300"
@@ -367,10 +356,16 @@ const Navbar: React.FC = () => {
                 Examinations
               </Link>
               <Link
-                href=""
+                href="https://mail.crce.edu.in/webMail/src/login.phpA"
                 className="transition duration-300 hover:text-yellow-300"
               >
-                Campuses
+                Student Mail Service
+              </Link>
+              <Link
+                href="https://ldap.fragnel.edu.in/sso/module.php/core/loginuserpass.php?AuthState=_6b157699dea50ff48aabaaecd16e081fa7068b966f%3Ahttps%3A%2F%2Fldap.fragnel.edu.in%2Fsso%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dgoogle.com%26cookieTime%3D1726659075%26RelayState%3Dhttps%253A%252F%252Fwww.google.com%252Fa%252Ffragnel.edu.in%252FServiceLogin%253Fservice%253Dmail%2526passive%253Dtrue%2526rm%253Dfalse%2526continue%253Dhttps%25253A%25252F%25252Fmail.google.com%25252Fmail%25252F%2526ss%253D1%2526ltmpl%253Ddefault%2526ltmplcache%253D2%2526emr%253D1%2526osid%253D1"
+                className="transition duration-300 hover:text-yellow-300"
+              >
+                Agnel Staff E-mail
               </Link>
             </div>
             <Link
@@ -399,16 +394,16 @@ const Navbar: React.FC = () => {
             <div className="flex w-3/4 flex-col pb-1.5">
               <div className="flex justify-end space-x-6 py-3 text-sm">
                 <Link
-                  href="/news"
+                  href="#news"
                   className="transition duration-300 hover:text-yellow-300"
                 >
-                  News
+                  News and Events
                 </Link>
                 <Link
-                  href="/events"
+                  href="#notices"
                   className="transition duration-300 hover:text-yellow-300"
                 >
-                  Events
+                  Notices
                 </Link>
                 <Link
                   href="/careers"
