@@ -10,7 +10,7 @@ const zilla = Zilla_Slab({
 
 const MOUCollaborationPage = () => {
   return (
-    <div className="container mx-auto w-full px-4 py-16 pt-48">
+    <div className="container mx-auto w-full px-4 py-16 pt-32 md:pt-48">
       <h1
         className={`${zilla.className} mb-6 text-4xl font-bold text-[#001f3f] md:text-5xl lg:text-7xl`}
       >
