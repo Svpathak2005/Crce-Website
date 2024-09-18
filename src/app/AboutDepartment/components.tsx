@@ -246,8 +246,8 @@ const FacultyTab: React.FC<FacultyTabProps> = ({
         />
       </div>
       <h2 className="text-lg font-medium">{name}</h2>
-      <p className="mb-4 font-semibold text-gray-700">{designation}</p>
-      <p className="text-gray-900">{qualification}</p>
+      <p className="mb-4 font-semibold text-gray-700 text-center">{designation}</p>
+      <p className="text-gray-900 text-center">{qualification}</p>
       <p className="mb-4 text-center text-gray-900">
         {' '}
         Area of Interest: {areasOfInterest}

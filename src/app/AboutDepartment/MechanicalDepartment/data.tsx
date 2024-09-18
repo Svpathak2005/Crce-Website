@@ -1,4 +1,4 @@
-export const FacultyTabData = [
+/*export const FacultyTabData = [
   {
     id: '1',
     name: 'Dr. Bhushan Patil',
@@ -151,7 +151,166 @@ export const FacultyTabData = [
       window.location.href = '/faculty/12'
     },
   },
+]*/
+export const FacultyTabData = [
+  {
+    id: '1',
+    name: 'Dr. Bhushan Patil',
+    photoUrl: '/mechdept/bhushan.png',
+    ctaText: 'View Profile',
+    designation: 'Professor and Head of Department',
+    qualification: '',
+    areasOfInterest: '',
+    ctaOnClick: () => {
+      window.location.href =
+        'https://fragnel.edu.in/images/crce/department/mech/profile/Dr_Bhushan_Faculty_Profile.pdf'
+    },
+  },
+  {
+    id: '2',
+    name: 'D.S.S.Sudhakar',
+    photoUrl: '/mechdept/sudhakar.png',
+    ctaText: 'View Profile',
+    designation: 'Associate Professor and Student Affairs Incharge',
+    qualification: '',
+    areasOfInterest: '',
+    ctaOnClick: () => {
+      window.location.href =
+        'https://fragnel.edu.in/images/crce/department/mech/profile/D_S_S_Sudhakar.pdf'
+    },
+  },
+  {
+    id: '3',
+    name: 'Dr. Sunil K. Das',
+    photoUrl: '/mechdept/skdas.png',
+    ctaText: 'View Profile',
+    designation: 'Associate Professor',
+    qualification: '',
+    areasOfInterest: '',
+    ctaOnClick: () => {
+      window.location.href =
+        'https://fragnel.edu.in/images/crce/department/mech/profile/Dr_S_K_Das.pdf'
+    },
+  },
+  {
+    id: '4',
+    name: 'Dr. Vasim Shaikh',
+    photoUrl: '/mechdept/vasim.png',
+    ctaText: 'View Profile',
+    designation: 'Associate Professor',
+    qualification: '',
+    areasOfInterest: '',
+    ctaOnClick: () => {
+      window.location.href =
+        'https://fragnel.edu.in/images/crce/department/mech/profile/Dr_Vasim_A_Shaikh_CV.pdf'
+    },
+  },
+  {
+    id: '5',
+    name: 'Dr. Ketaki Joshi',
+    photoUrl: '/mechdept/ketaki.png',
+    ctaText: 'View Profile',
+    designation: 'Associate Professor',
+    qualification: '',
+    areasOfInterest: '',
+    ctaOnClick: () => {
+      window.location.href =
+        'https://fragnel.edu.in/images/crce/department/mech/profile/KJ_Faculty_Profile.pdf'
+    },
+  },
+  {
+    id: '6',
+    name: 'Prof Anant Tarase',
+    photoUrl: '/mechdept/anant.png',
+    ctaText: 'View Profile',
+    designation: 'Assistant Professor',
+    qualification: '',
+    areasOfInterest: '',
+    ctaOnClick: () => {
+      window.location.href =
+        'https://fragnel.edu.in/images/crce/department/mech/profile/Prof_Tarase_Profile.pdf'
+    },
+  },
+  {
+    id: '7',
+    name: 'Prof. Saurabh Korgaonkar',
+    photoUrl: '/mechdept/saurabh.png',
+    ctaText: 'View Profile',
+    designation: 'Assistant Professor',
+    qualification: '',
+    areasOfInterest: '',
+    ctaOnClick: () => {
+      window.location.href =
+        'https://fragnel.edu.in/images/crce/department/mech/profile/Saurabh_Korgaonkar_profile.pdf'
+    },
+  },
+  {
+    id: '8',
+    name: 'Prof. Miriyala Veerabhadra Rao D.N',
+    photoUrl: '/facultymech/raosir.jpg',
+    ctaText: 'View Profile',
+    designation: 'Assistant Professor',
+    qualification: '',
+    areasOfInterest: '',
+    ctaOnClick: () => {
+      window.location.href =
+        'https://fragnel.edu.in/images/crce/department/mech/profile/MVB_Rao.pdf'
+    },
+  },
+  {
+    id: '9',
+    name: 'Dr. Dipli Bhise',
+    photoUrl: '/facultymech/Dipali-Bhise.jpg',
+    ctaText: 'Profile',
+    designation: 'Ph.D.',
+    qualification: '',
+    areasOfInterest: '',
+    ctaOnClick: () => {
+      window.location.href =
+        'https://fragnel.edu.in/media/attachments/2024/08/19/dipali-bhise_profile.pdf'
+    },
+  },
+  {
+    id: '10',
+    name: 'DR. Challa Jayaramulu',
+    photoUrl: '/facultymech/cj_photo.jpg',
+    ctaText: 'Profile',
+    designation: 'M.Tech., Ph.D.',
+    qualification: '',
+    areasOfInterest: '',
+    ctaOnClick: () => {
+      window.location.href =
+        'https://fragnel.edu.in/media/attachments/2023/09/25/cj_faculty-profile.pdf'
+    },
+  },
+  {
+    id: '11',
+    name: 'Prof. Aseem Sudhir Nevrekar',
+    photoUrl: '/facultymech/an_photo.jpg',
+    ctaText: 'Profile',
+    designation: 'M.E.',
+    qualification: '',
+    areasOfInterest: '',
+    ctaOnClick: () => {
+      window.location.href =
+        'https://fragnel.edu.in/media/attachments/2023/09/25/an_profile.pdf'
+    },
+  },
+  {
+    id: '12',
+    name: 'Onkar Potadar',
+    photoUrl: '/facultymech/onkar-potadar_photo.jpg',
+    ctaText: 'Profile',
+    designation: 'M.E.',
+    qualification: '',
+    areasOfInterest: '',
+    ctaOnClick: () => {
+      window.location.href =
+        'https://fragnel.edu.in/media/attachments/2024/07/04/onkar-poadar.pdf'
+    },
+  },
 ]
+
 export const tabs = [
   {
     id: 'about',

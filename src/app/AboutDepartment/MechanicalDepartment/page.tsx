@@ -24,11 +24,11 @@ import {
   FacultyGrid,
   PlacementTab,
   Program,
-  Publications,
-} from './mechcomponents'
+  
+} from '../components'
 import { Zilla_Slab } from 'next/font/google'
 import Infrastructure from './infra'
-
+import MechPublications from '@/app/academics/research/mechpublications'
 const zilla = Zilla_Slab({
   weight: ['300', '500', '700'],
   style: ['normal', 'italic'],
@@ -60,11 +60,11 @@ const MechanicalEngineeringPage = () => {
         )
 
       case 'Faculty':
-        return <FacultyGrid />
+        return <FacultyGrid facultyData={FacultyTabData}/>
       case 'infrastructure':
         return <Infrastructure />
       case 'Publications':
-        return <Publications />
+        return <MechPublications />
       default:
         return null
     }
