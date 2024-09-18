@@ -9,12 +9,13 @@ export const FacultyTabData = [
     areasOfInterest:
       'Data mining, Image Processing, Soft Computing, Machine Learning',
     ctaOnClick: () => {
-      window.location.href = '/faculty/1'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/ai-ds/Profile/jagruti_save_profile.pdf'
     },
   },
   {
     id: '2',
-    name: 'DR. SWAPNALI MAKEDEY',
+    name: 'DR. SWAPNALI MAKDEY',
     photoUrl: '/facultycse/swapnalim.jpg',
     ctaText: 'View Profile',
     designation: 'Asst. Professor',
@@ -22,7 +23,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'VLSI, Nanoelectronics, Computer Network, Software Engineering, Embedded System',
     ctaOnClick: () => {
-      window.location.href = '/faculty/2'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/ai-ds/Profile/Swapnali_profile.pdf'
     },
   },
   {
@@ -35,7 +37,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'Big Data Analytics, Theory of Computer Science, Web Computing, Machine Learning, Natural Language Processing',
     ctaOnClick: () => {
-      window.location.href = '/faculty/3'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/ai-ds/Profile/Swati_Ringe_facultyprofile_22-23.pdf'
     },
   },
   {
