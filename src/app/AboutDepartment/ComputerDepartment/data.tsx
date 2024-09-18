@@ -8,7 +8,8 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Tech.) in Info.Tech',
     areasOfInterest: 'Data Mining, Machine Learning, Blockchain',
     ctaOnClick: () => {
-      window.location.href = '/faculty/1'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/comps/profile/sujata_deshmukh.pdf'
     },
   },
   {
@@ -21,7 +22,7 @@ export const FacultyTabData = [
     areasOfInterest:
       'Artificial Intelligence, Machine Learning, Robotics, Cyber Security',
     ctaOnClick: () => {
-      window.location.href = '/faculty/2'
+      window.location.href = 'https://frcrce.ac.in/images/crce/department/comps/profile/SunilSurveProfile.pdf'
     },
   },
   {
@@ -33,7 +34,7 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Computer Science and Engineering)',
     areasOfInterest: 'Software Engineering, Artificial Intelligence',
     ctaOnClick: () => {
-      window.location.href = '/faculty/3'
+      window.location.href = 'https://frcrce.ac.in/images/crce/department/comps/profile/Daga_profile.pdf'
     },
   },
   {
@@ -45,7 +46,7 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Computer Engg.) (Pursuing)',
     areasOfInterest: 'Computer Networks, Security & Distributed Computing',
     ctaOnClick: () => {
-      window.location.href = '/faculty/4'
+      window.location.href = 'https://frcrce.ac.in/images/crce/department/comps/profile/merly_thomas.pdf'
     },
   },
   {
@@ -58,7 +59,7 @@ export const FacultyTabData = [
     areasOfInterest:
       'Wireless Network Security, Cyber Security, Machine Learning',
     ctaOnClick: () => {
-      window.location.href = '/faculty/5'
+      window.location.href = 'https://frcrce.ac.in/images/crce/department/comps/profile/ashok.pdf'
     },
   },
   {
@@ -71,7 +72,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'Telecommunications, Blockchain Technology, Computer Networks',
     ctaOnClick: () => {
-      window.location.href = '/faculty/6'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/comps/profile/Monica_Khanore_Profile_2022-23.pdf'
     },
   },
   {
@@ -84,7 +86,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'Natural Language Processing, Data Structures, Advance Algorithm',
     ctaOnClick: () => {
-      window.location.href = '/faculty/7'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/comps/profile/kalpana_CV_for_website.pdf'
     },
   },
   {
@@ -97,7 +100,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'Image Processing, Data Warehouse and Mining, Machine Learning, Deep Learning, Artificial Intelligence',
     ctaOnClick: () => {
-      window.location.href = '/faculty/8'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/comps/profile/Faculty_Profile_-_Roshni_Padate.pdf'
     },
   },
   {
@@ -110,7 +114,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'Computer Organization, Embedded Systems, Real Time Operating System, Internet of Things',
     ctaOnClick: () => {
-      window.location.href = '/faculty/9'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/comps/profile/Biodata_kranti_1.pdf'
     },
   },
   {
@@ -123,7 +128,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'Computer Networks, Database Management Systems, Digital Signal Processing',
     ctaOnClick: () => {
-      window.location.href = '/faculty/10'
+      window.location.href =
+        'https://fragnel.edu.in/images/crce/department/comps/profile/FACULTY_PROFILE_jagruti.pdf'
     },
   },
   {
@@ -135,7 +141,8 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
     areasOfInterest: 'Artificial Intelligence, Machine Learning, Deep Learning',
     ctaOnClick: () => {
-      window.location.href = '/faculty/11'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/comps/profile/Ashwini_Pansare_Profile_22_23.pdf'
     },
   },
   {
@@ -147,7 +154,8 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Computer Engineering)',
     areasOfInterest: 'Artificial Intelligence, Machine Learning, Deep Learning',
     ctaOnClick: () => {
-      window.location.href = '/faculty/12'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/comps/profile/SUPRIYA_KAMOJI-Resume.pdf'
     },
   },
   {
@@ -160,7 +168,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'Image processing, Machine Learning, Deep Learning, Signal Processing',
     ctaOnClick: () => {
-      window.location.href = '/faculty/13'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/comps/profile/FACULTY_PROFILE_sushma_2022-23.pdf'
     },
   },
   {
@@ -173,7 +182,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'Computer Networks, System Security, Blockchain Technology',
     ctaOnClick: () => {
-      window.location.href = '/faculty/14'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/comps/profile/MonaliShetty_Profile.pdf'
     },
   },
   {
@@ -185,7 +195,8 @@ export const FacultyTabData = [
     qualification: 'M.E.(Computer Engineering)',
     areasOfInterest: 'Programming Languages, Machine Learning',
     ctaOnClick: () => {
-      window.location.href = '/faculty/15'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/comps/profile/Prachi_patil_10454_Profile.pdf'
     },
   },
   {
@@ -198,7 +209,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'Programming Languages, Computer Architecture, Machine Learning',
     ctaOnClick: () => {
-      window.location.href = '/faculty/16'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/comps/profile/FACULTY_PROFILE_Parshvi.pdf'
     },
   },
   {
@@ -210,7 +222,8 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
     areasOfInterest: 'Digital Logic, Computer Organization, IoT, Deep Learning',
     ctaOnClick: () => {
-      window.location.href = '/faculty/17'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/comps/profile/Sangeeta_Resume1.pdf'
     },
   },
   {
@@ -222,7 +235,8 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
     areasOfInterest: 'Embedded systems, Internet of Things',
     ctaOnClick: () => {
-      window.location.href = '/faculty/18'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/comps/profile/FACULTY_PROFILE_FOR_WEBSITE_Heena.pdf'
     },
   },
   {
@@ -235,7 +249,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'Data structure and Algorithms, Data mining, Machine Learning',
     ctaOnClick: () => {
-      window.location.href = '/faculty/19'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/comps/profile/Faculty_Profile_Prajakta_Final.pdf'
     },
   },
   {
@@ -247,7 +262,8 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
     areasOfInterest: 'Cloud Computing, System / Information Security',
     ctaOnClick: () => {
-      window.location.href = '/faculty/20'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/comps/profile/unik_lokhande.pdf'
     },
   },
   {
@@ -259,7 +275,8 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Tech.)(COMP.)',
     areasOfInterest: 'Database Systems, Data Privacy and Security',
     ctaOnClick: () => {
-      window.location.href = '/faculty/21'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/comps/profile/Vijayprofile.pdf'
     },
   },
   {
@@ -271,7 +288,8 @@ export const FacultyTabData = [
     qualification: 'M.Tech(Computer Engineering)',
     areasOfInterest: 'Machine Learning, Software engineering',
     ctaOnClick: () => {
-      window.location.href = '/faculty/22'
+      window.location.href =
+        'https://frcrce.ac.in/images//crce/department/comps/profile/Ankita_Amburle_faculty_profile.pdf'
     },
   },
   {
@@ -283,7 +301,8 @@ export const FacultyTabData = [
     qualification: 'M.Tech(Computer Engineering)',
     areasOfInterest: 'Generative AI, Machine Learning',
     ctaOnClick: () => {
-      window.location.href = '/faculty/23'
+      window.location.href =
+        'http://www.frcrce.ac.in/media/attachments/2024/07/04/joshua_resume_28062024.pdf'
     },
   },
   {
@@ -295,7 +314,8 @@ export const FacultyTabData = [
     qualification: 'M.E.(Information Technology)',
     areasOfInterest: 'Software testing, Data Science',
     ctaOnClick: () => {
-      window.location.href = '/faculty/24'
+      window.location.href =
+        'http://www.frcrce.ac.in/media/attachments/2024/07/10/nayana_vaidya_profile.pdf'
     },
   },
 ]
