@@ -146,7 +146,7 @@ export const FacultyTabData = [
 export const tabs = [
   {
     id: 'about',
-    title: 'About Mechanical Department',
+    title: 'About Electronics and Computer Science Department',
   },
   {
     id: 'visionandmission',
@@ -175,7 +175,13 @@ export const AboutecsDepartment = {
     'The Department of Electronics and Computer Science at Fr.CRCE is committed to providing quality education in the field of Electronics and Computer Science.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Electronics and Computer Science principles and practices. Our faculty members are experts in their fields and are dedicated to providing students with a challenging and rewarding educational experience. The department has state-of-the-art labs and facilities that allow students to gain hands-on experience with the latest technologies and tools. We also offer a variety of research opportunities and industry collaborations that give students the chance to work on real-world problems and projects. Our graduates are highly sought after by employers and go on to successful careers in a variety of industries and fields.',
   video: false,
 }
-
+export const hodsDesk = {
+  name: 'Dr. Sapna Prabhu',
+  bio: 'Dr. Sapna Prabhu is the Head of the Electronics and Computer Science Department at Fr.CRCE. She specializes in Microprocessor system design, Embedded systems, IoT, and Biomedical instrumentation.',
+  imageUrl: '/facultyecs/sapnaprabhu.jpg',
+  content:
+   "The Department of Electronics and Computer Science Engineering offers an academic programme which has an optimum mix of Electronics, Communication and Computer Engineering with an emphasis on VLSI, Embedded systems, Instrumentation, Automation and Robotics, and allied subjects. Our strict adherence to quality norms in teaching-learning and evaluation has always been the strength of the department. Students are moulded to be technically skilled and socially conscious so as to contribute to finding solutions to real-life problems. They are provided with avenues to develop inter-disciplinary projects and to acquire organization, presentation and leadership skills. The department works with the commitment and resolves to keep the laboratories updated with the latest technologies, to adopt innovative teaching methodologies and thus to impart quality education in Electronics Engineering. We focus on Research in key areas such as Communication, Instrumentation, VLSI and Processor Architecture. The department has a good Industry interaction in terms of project design, consultancy, internships, and industry visits. Our Alumni occupy prestigious positions in reputed organizations in India and abroad. Always striving to provide the best facilities to our students, the department is constantly on the move by organizing workshops, seminars, hands-on sessions to improve the practical aspects of a student’s learning process. An excellent academic ambiance with highly motivated faculty complemented with a wide variety ofco-curricular and extra-curricular activities provide a holistic approach to the development of students.",
+}
 export const Vision = {
   name: 'Vision',
   description:
@@ -206,29 +212,6 @@ export const ProgrammeSpecificOutcomes = {
     'The Department of Electronics and Computer Science at CRCE is committed to providing quality education in the field of Electronics and Computer Science.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in Electronics and Computer Science principles and practices.',
   video: false,
 }
-
-const events = [
-  {
-    imageUrl: '/godrej.png',
-  },
-  {
-    imageUrl: '/quantifi.png',
-  },
-  {
-    imageUrl: '/ubs.png',
-  },
-  {
-    imageUrl: '/carwale.png',
-  },
-
-  {
-    imageUrl: '/godrej.png',
-  },
-  {
-    imageUrl: '/quantifi.png',
-  },
-]
-
 export const images = [
   'accectire.png',
   'colgate.jpg',
@@ -239,7 +222,6 @@ export const images = [
   'seclore.png',
   'tcs.jpg',
 ]
-
 export const tabContents = {
   Placements: (
     <div className="mx-auto p-6 font-roboto">

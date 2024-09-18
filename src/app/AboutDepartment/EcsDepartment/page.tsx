@@ -13,6 +13,7 @@ import {
   ProgrammeSpecificOutcomes,
   tabContents,
   FacultyTabData,
+  hodsDesk,
 } from './data'
 import {
   Sidebar,
@@ -25,6 +26,7 @@ import {
 import { Zilla_Slab } from 'next/font/google'
 import ECSPublications from '@/app/academics/research/ecspublications'
 import Infras from './infra'
+
 
 const zilla = Zilla_Slab({
   weight: ['300', '500', '700'],
@@ -114,7 +116,7 @@ const ElectronicsComputerEngineeringPage = () => {
         </div>
 
         {/* Program Highlights */}
-        {/* <div className="text-gray-600">
+     {/* <div className="text-gray-600">
         <div className="container mx-auto px-5 ">
           <div className="mb-10 flex w-full flex-col text-center">
             <h1
@@ -129,8 +131,14 @@ const ElectronicsComputerEngineeringPage = () => {
             ))}
           </div>
         </div>
-      </div> */}
-
+      </div>  */}
+       {/* hods desk */}
+       <HODsDesk 
+         name={hodsDesk.name} 
+         bio={hodsDesk.bio} 
+         imageUrl={hodsDesk.imageUrl} 
+         content={hodsDesk.content} 
+       />
         {/*placement data*/}
         <div>
           <PlacementTab
