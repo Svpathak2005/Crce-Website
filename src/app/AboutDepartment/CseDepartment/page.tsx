@@ -12,6 +12,7 @@ import {
   ProgrammeSpecificOutcomes,
   tabContents,
   FacultyTabData,
+  programs,
 } from './data'
 import {
   Sidebar,
@@ -107,24 +108,6 @@ const CSEPage = () => {
             </div>
           </div>
         </div>
-
-        {/* Program Highlights */}
-        {/* <div className="text-gray-600">
-        <div className="container mx-auto px-5 ">
-          <div className="mb-10 flex w-full flex-col text-center">
-            <h1
-              className={`${zilla.className} text-3xl font-bold text-indigo-900 sm:text-xl lg:text-4xl`}
-            >
-              Programs Offered
-            </h1>
-          </div>
-          <div className="flex flex-col items-center justify-center md:flex-row lg:flex-row">
-            {programs.map((program, index) => (
-              <Program key={index} {...program} />
-            ))}
-          </div>
-        </div>
-      </div> */}
         <div className="text-gray-600">
           <div className="container mx-auto px-5">
             <div className="mb-10 flex w-full flex-col text-center">
