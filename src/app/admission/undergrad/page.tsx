@@ -13,11 +13,14 @@ const zilla = Zilla_Slab({
 })
 
 const quickLinks = [
-  { name: 'FE Admission Process', url: '/admission-process' },
-  { name: 'Education Loan', url: '/education-loan' },
-  { name: 'Prospectus 23-24', url: '/prospectus' },
-  { name: 'Medical Certificate', url: '/medical-certificate' },
-  { name: 'Listen to Leadership team', url: '/leadership-team' },
+  {
+    name: 'FE Admission Process',
+    url: 'https://www.youtube.com/live/thjcEVavoGg?si=EdlsDXKJZa1665Jc',
+  },
+  { name: 'Education Loan', url: '/admission/Education.mp4' },
+  { name: 'Prospectus 23-24', url: '/admission/CRCEProspectus2024.pdf/' },
+  { name: 'Medical Certificate', url: '/admission/Medical_certificate.pdf' },
+  { name: 'Listen to Leadership team', url: '/admission/leadership' },
 ]
 
 const feAdmissionData = [
