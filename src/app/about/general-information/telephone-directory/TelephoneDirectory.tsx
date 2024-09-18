@@ -776,7 +776,7 @@ const TelephoneDirectory = () => {
 
   return (
     <div className="mx-auto max-w-4xl py-10">
-      <div className="mb-6 flex justify-center">
+      <div className="mb-6 flex justify-center space-x-1 md:space-x-2">
         <CarouselButton
           onClick={() => handleLocationChange('college')}
           active={activeLocation === 'college'}

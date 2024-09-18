@@ -10,10 +10,21 @@ const zilla = Zilla_Slab({
   display: 'swap',
 })
 
-export default function ProjectGroups() {
-  const [hoveredCard, setHoveredCard] = useState(null)
+type Card = {
+  title: string
+  subtitle: string
+  image: string
+  website?: string
+  instagram?: string
+  youtube?: string
+  linkedin?: string
+  facebook?: string
+}
 
-  const cards = [
+export default function ProjectGroups() {
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null)
+
+  const cards: Card[] = [
     {
       title: 'Team Abadha CRCE',
       subtitle:
@@ -73,7 +84,7 @@ export default function ProjectGroups() {
 
   return (
     <section className="body-font text-gray-600">
-      <div className="container mx-auto px-5 py-24">
+      <div className="container mx-auto px-5 py-12 md:py-24">
         <div className="mb-20 flex w-full flex-wrap">
           <div className="mb-6 w-full lg:mb-0 lg:w-1/2">
             <h1
@@ -84,18 +95,18 @@ export default function ProjectGroups() {
             <div className="h-1 w-32 rounded bg-blue-900"></div>
           </div>
         </div>
-        <div className="-m-4 flex flex-wrap">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {cards.map((card, index) => (
-            <div key={index} className="p-4 md:w-1/2 xl:w-1/4">
+            <div key={index} className="relative">
               <div
-                className="relative h-full overflow-hidden rounded-lg bg-gray-100 p-6"
+                className="relative h-full overflow-hidden rounded-lg bg-gray-100 p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl"
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
                 <img
                   className="mb-6 h-40 w-full rounded object-cover object-center"
                   src={card.image}
-                  alt="content"
+                  alt={card.title}
                 />
 
                 <h2 className="title-font mb-4 text-lg font-medium text-gray-900">

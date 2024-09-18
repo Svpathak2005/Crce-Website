@@ -1,13 +1,14 @@
 export const FacultyTabData = [
   {
     id: '1',
-    name: 'MR. DILEEP NAIR',
+    name: 'MR. DILEEP CHANDRA',
     photoUrl: '/scifaculty/dileep.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor & Head',
     description: 'Ph.D (Pursuing), M.Sc (Electronics)',
     ctaOnClick: () => {
-      window.location.href = '/faculty/1'
+      window.location.href =
+        'http://www.frcrce.ac.in/media/attachments/2023/10/15/dileep_cv.pdf'
     },
   },
   {
@@ -18,7 +19,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     description: 'Ph.D. (Chemistry)',
     ctaOnClick: () => {
-      window.location.href = '/faculty/2'
+      window.location.href =
+        'http://www.frcrce.ac.in/media/attachments/2023/10/16/hemant_cv.pdf'
     },
   },
   {
@@ -29,7 +31,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     description: 'Ph.D (Pursuing), M.Phil. (Mathematics)',
     ctaOnClick: () => {
-      window.location.href = '/faculty/3'
+      window.location.href =
+        'http://www.frcrce.ac.in/media/attachments/2023/10/15/prasad_cv.pdf'
     },
   },
   {
@@ -40,7 +43,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     description: 'Ph.D (Chemistry)',
     ctaOnClick: () => {
-      window.location.href = '/faculty/4'
+      window.location.href =
+        'http://www.frcrce.ac.in/media/attachments/2023/10/15/sunil_yadav_cv.pdf'
     },
   },
   {
@@ -51,7 +55,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     description: 'Ph.D. (English)',
     ctaOnClick: () => {
-      window.location.href = '/faculty/5'
+      window.location.href =
+        'http://www.frcrce.ac.in/media/attachments/2023/10/15/joseph_cv.pdf'
     },
   },
   {
@@ -62,7 +67,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     description: 'MSc (Mathematics)',
     ctaOnClick: () => {
-      window.location.href = '/faculty/6'
+      window.location.href =
+        'http://www.frcrce.ac.in/media/attachments/2023/10/15/pradeep_singh_cv.pdf'
     },
   },
   {
@@ -73,7 +79,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     description: 'Ph.D. (Physics)',
     ctaOnClick: () => {
-      window.location.href = '/faculty/7'
+      window.location.href =
+        'http://www.frcrce.ac.in/media/attachments/2023/10/15/dipak-cv.pdf'
     },
   },
   {
@@ -84,7 +91,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     description: 'M.Sc. B.Ed (Mathematics)',
     ctaOnClick: () => {
-      window.location.href = '/faculty/8'
+      window.location.href =
+        'http://www.frcrce.ac.in/media/attachments/2023/10/15/gajendra_cv.pdf'
     },
   },
   {
@@ -95,7 +103,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     description: 'Ph.D (Pursuing), M.A. (English Lit.), B.Ed',
     ctaOnClick: () => {
-      window.location.href = '/faculty/9'
+      window.location.href =
+        'http://www.frcrce.ac.in/media/attachments/2023/10/15/aastha_cv.pdf'
     },
   },
   {

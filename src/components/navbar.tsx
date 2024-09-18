@@ -166,13 +166,8 @@ const dropdownContent: DropdownContent = {
       icon: <Briefcase size={18} />,
     },
     {
-      name: 'Forums',
-      href: '/international/partnerships',
-      icon: <MessageSquare size={18} />,
-    },
-    {
       name: 'Students Council',
-      href: '/international/admissions',
+      href: '/councils/Stuco_List.pdf',
       icon: <Users size={18} />,
     },
     {
@@ -182,23 +177,23 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Project Groups',
-      href: '/project_teams',
+      href: '/students/project_teams',
       icon: <FolderGit2 size={18} />,
     },
     {
+      name: 'Councils',
+      href: '/students/councils',
+      icon: <UserPlus size={18} />,
+    },
+    {
       name: 'Notices',
-      href: '/academics/notices',
+      href: '/students/notices',
       icon: <Bell size={18} />,
     },
     {
       name: 'Students Information',
-      href: '/international/programs',
+      href: '/students/student-info',
       icon: <FileText size={18} />,
-    },
-    {
-      name: 'Events',
-      href: '/international/partnerships',
-      icon: <Calendar size={18} />,
     },
     {
       name: 'Grievances',

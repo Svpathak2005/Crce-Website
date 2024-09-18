@@ -44,15 +44,15 @@ const data: PreIncubationCenterData = {
         'The system aims to improve tree growth through data analysis, fostering a sense of community and responsibility for the environment.',
         'Its long-term vision is to create a global network dedicated to reforestation and environmental conservation.',
       ],
-      image: '/images/crce/department/comps/FinalArbor.png',
+      image: '/cspreincubation/arbortrack.png',
     },
     {
       title: 'Legally Yours',
       overview:
         'Our vision is to revolutionize law enforcement by providing cutting-edge Automatic Number Plate Recognition (ANPR) and Face Recognition software. We envision a safer, more orderly society where police forces can effectively maintain law and decorum. By harnessing the power of AI and machine learning, we aim to empower law enforcement agencies with advanced tools that enhance their capabilities. Our vision is to create a world where crimes are swiftly identified and prevented, traffic violations are efficiently managed, and missing persons are found with ease. We are committed to fostering a secure environment where police forces can perform their duties with maximum efficiency and minimal hassle.',
-      image: '/images/crce/department/comps/LegallyYours.png',
+      image: '/cspreincubation/legallyyours.png',
     details:[
-        '',
+     
     ]
     },
     
@@ -91,14 +91,15 @@ const PreIncubationCenter: React.FC = () => {
         <h2 className="text-2xl font-semibold text-blue-950">Projects</h2>
         {data.projects.map((project, index) => (
           <div key={index} className="mb-8">
-            <h3 className="text-xl font-semibold text-blue-950">{project.title}</h3>
+            <h3 className="text-2xl md:text-4xl mt-5 font-semibold text-blue-950 text-center">{project.title}</h3>
             <p>{project.overview}</p>
             <ul className="list-inside list-disc">
               {project.details.map((detail, detailIndex) => (
                 <li key={detailIndex}>{detail}</li>
               ))}
             </ul>
-            <img src={project.image} alt={project.title} className="mt-4" />
+            <div className='flex w-full justify-center'>
+            <img src={project.image} alt={project.title} className="mt-4 " /></div>
           </div>
         ))}
       </div>

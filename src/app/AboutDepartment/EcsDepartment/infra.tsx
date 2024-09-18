@@ -13,7 +13,7 @@ const Infrastructure = () => {
   return (
     <div className="container mx-auto p-6">
       <h1
-        className={`${zilla.className} mb-12 text-center text-5xl font-bold text-blue-900`}
+        className={`${zilla.className} mb-12 text-center md:text-5xl text-3xl font-bold text-blue-900`}
       >
         Infrastructure
       </h1>
@@ -57,7 +57,7 @@ const Infrastructure = () => {
                   alt="Computing Laboratory - I"
                   width={400}
                   height={400}
-                  className="rounded-lg"
+                  className="rounded-lg w-full"
                 />
               </div>
             </div>
@@ -90,7 +90,7 @@ const Infrastructure = () => {
                   alt="Computing Laboratory - II"
                   width={400}
                   height={400}
-                  className="rounded-lg"
+                  className="rounded-lg w-full"
                 />
               </div>
             </div>
@@ -123,7 +123,7 @@ const Infrastructure = () => {
                   alt="Computing Laboratory - III"
                   width={400}
                   height={400}
-                  className="rounded-lg"
+                  className="rounded-lg w-full"
                 />
               </div>
             </div>
@@ -150,7 +150,7 @@ const Infrastructure = () => {
                   alt="Hardware Laboratory - I"
                   width={800}
                   height={400}
-                  className="rounded-lg"
+                  className="rounded-lg w-full"
                 />
               </div>
             </div>
@@ -178,7 +178,7 @@ const Infrastructure = () => {
                   alt="Hardware Laboratory - II"
                   width={800}
                   height={400}
-                  className="rounded-lg"
+                  className="rounded-lg w-full"
                 />
               </div>
             </div>
@@ -213,7 +213,7 @@ const Infrastructure = () => {
                   alt="Electrical Lab"
                   width={800}
                   height={400}
-                  className="rounded-lg"
+                  className="rounded-lg w-full"
                 />
               </div>
             </div>

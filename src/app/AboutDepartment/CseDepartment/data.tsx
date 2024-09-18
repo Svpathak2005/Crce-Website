@@ -198,7 +198,6 @@ export const Mission = {
     'Provide students with a skill-based education that will help them master problem-solving and analytical skills, as well as expand their domain expertise.Promote continuous learning and research in the core and emerging areas of AI and Data science.Facilitate an excellent scholastic environment for students and faculty by developing center of excellence in advanced technology.',
   video: false,
 }
-
 export const ProgramEducationalObjectives = {
   name: 'Program Educational Objectives',
   description:
@@ -211,36 +210,98 @@ export const ProgrammeSpecificOutcomes = {
     'The graduates of BE in Computer Science & Engineering program will have strong foundation and ability to use cutting-edge AI tools and techniques to innovate and develop new solutions.',
   video: false,
 }
-// export const hodsDesk = {
-//   name: 'Dr. Sujata Deshmukh',
-//   bio: 'The Department of Computer Engineering at CRCE is committed to providing quality education in the field of computer science and engineering.Our programs are designed to prepare students for successful careers in industry, research, and entrepreneurship. We offer a range of undergraduate and postgraduate programs, as well as a PhD program, that provide students with a solid foundation in computer science and engineering principles and practices.',
-//   imageUrl: '/computerdept/sujata.png',
-//   content:
-//     'The Department of Electronics and Computer Science Engineering offers an academic programme which has an optimum mix of Electronics, Communication and Computer Engineering with an emphasis on VLSI, Embedded systems, Instrumentation, Automation and Robotics, and allied subjects. Our strict adherence to quality norms in teaching-learning and evaluation has always been the strength of the department. Students are moulded to be technically skilled and socially conscious so as to contribute to finding solutions to real-life problems. They are provided with avenues to develop inter-disciplinary projects and to acquire organization, presentation and leadership skills. The department works with the commitment and resolves to keep the laboratories updated with the latest technologies, to adopt innovative teaching methodologies and thus to impart quality education in Electronics Engineering. We focus on Research in key areas such as Communication, Instrumentation, VLSI and Processor Architecture. The department has a good Industry interaction in terms of project design, consultancy, internships, and industry visits. Our Alumni occupy prestigious positions in reputed organizations in India and abroad. Always striving to provide the best facilities to our students, the department is constantly on the move by organizing workshops, seminars, hands-on sessions to improve the practical aspects of a student’s learning process. An excellent academic ambiance with highly motivated faculty complemented with a wide variety of co-curricular and extra-curricular activities provide a holistic approach to the development of students.',
-// }
-
-const events = [
+export const programs = [
   {
-    imageUrl: '/godrej.png',
+    title: 'Bachelors of Technology',
+    description: [
+      'Undergrad program in Computer Science and Engineering.',
+      'Duration: 4 years ',
+      'Intake: 180 students ',
+      'Eligibility: 10+2 with PCM',
+    ],
+    icon: (
+      <svg
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        className="h-5 w-5"
+        viewBox="0 0 24 24"
+      >
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+      </svg>
+    ),
+    button: [
+      { label: 'Syllabus', onClick: () => console.log('Button 1 clicked') },
+      {
+        label: 'Co-Curricular',
+        onClick: () => console.log('Button 2 clicked'),
+      },
+    ],
   },
   {
-    imageUrl: '/quantifi.png',
+    title: 'Masters of Technology',
+    description: [
+      'Postgrad program in Computer Science and Engineering',
+      'Duration: 2 years',
+      'Intake: 60 students',
+      'Eligibility: B.Tech in Computer Science and Engineering',
+    ],
+    icon: (
+      <svg
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        className="h-5 w-5"
+        viewBox="0 0 24 24"
+      >
+        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+      </svg>
+    ),
+    button: [
+      { label: 'Syllabus', onClick: () => console.log('Button 1 clicked') },
+      {
+        label: 'Co-Curricular',
+        onClick: () => console.log('Button 2 clicked'),
+      },
+    ],
   },
   {
-    imageUrl: '/ubs.png',
-  },
-  {
-    imageUrl: '/carwale.png',
-  },
-
-  {
-    imageUrl: '/godrej.png',
-  },
-  {
-    imageUrl: '/quantifi.png',
+    title: 'PhD Programs',
+    description: [
+      'Doctoral programs in Computer Science and Engineering',
+      'Duration : 3 years',
+      'Intake: 10 students',
+      'Eligibility: M.Tech in Computer Science and Engineering',
+    ],
+    icon: (
+      <svg
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        className="h-5 w-5"
+        viewBox="0 0 24 24"
+      >
+        <circle cx="6" cy="6" r="3"></circle>
+        <circle cx="6" cy="18" r="3"></circle>
+        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+      </svg>
+    ),
+    button: [
+      { label: 'Syllabus', onClick: () => console.log('Button 1 clicked') },
+      {
+        label: 'Co-Curricular',
+        onClick: () => console.log('Button 2 clicked'),
+      },
+    ],
   },
 ]
-
 export const images = [
   'accectire.png',
   'colgate.jpg',
@@ -442,3 +503,10 @@ export const tabContents = {
     </div>
   ),
 }
+/*
+name: 'Dr. Jagruti Save',
+bio: 'Dr. Jagruti Save is a Professor and Head of the Department of Computer Science and Engineering at Fr. Conceicao Rodrigues College of Engineering and Technology. She has a Ph.D. in Computer Engineering and has over 20 years of experience in teaching and research. Her areas of interest include Data mining, Image Processing, Soft Computing, and Machine Learning. Dr. Save has published several research papers in national and international journals and conferences. She is passionate about mentoring students and guiding them to excel in their academic and professional pursuits.', 
+imageUrl: '/facultycse/save.jpg',
+content:
+    'The Department of Electronics and Computer Science Engineering offers an academic programme which has an optimum mix of Electronics, Communication and Computer Engineering with an emphasis on VLSI, Embedded systems, Instrumentation, Automation and Robotics, and allied subjects. Our strict adherence to quality norms in teaching-learning and evaluation has always been the strength of the department. Students are moulded to be technically skilled and socially conscious so as to contribute to finding solutions to real-life problems. They are provided with avenues to develop inter-disciplinary projects and to acquire organization, presentation and leadership skills. The department works with the commitment and resolves to keep the laboratories updated with the latest technologies, to adopt innovative teaching methodologies and thus to impart quality education in Electronics Engineering. We focus on Research in key areas such as Communication, Instrumentation, VLSI and Processor Architecture. The department has a good Industry interaction in terms of project design, consultancy, internships, and industry visits. Our Alumni occupy prestigious positions in reputed organizations in India and abroad. Always striving to provide the best facilities to our students, the department is constantly on the move by organizing workshops, seminars, hands-on sessions to improve the practical aspects of a student’s learning process. An excellent academic ambiance with highly motivated faculty complemented with a wide variety of co-curricular and extra-curricular activities provide a holistic approach to the development of students.',
+ */
