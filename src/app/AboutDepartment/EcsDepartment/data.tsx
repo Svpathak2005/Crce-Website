@@ -9,7 +9,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'Microprocessor system design, Embedded systems, Internet of Things, Biomedical instrumentation, Computer Architecture',
     ctaOnClick: () => {
-      window.location.href = '/faculty/1'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/ecs/profile/sapna_prabhu_prodile.pdf'
     },
   },
   {
@@ -22,7 +23,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'Instrumentation, Biomedical Instrumentation, Virtual Instrumentation, VLSI Design, MEMS, Automation',
     ctaOnClick: () => {
-      window.location.href = '/faculty/2'
+      window.location.href =
+        'http://www.frcrce.ac.in/media/attachments/2024/09/11/d-v-bhoir-bio-data.pdf'
     },
   },
   {
@@ -35,7 +37,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'Power electronics, Electrical Vehicle Battery Management, Renewable Energy System',
     ctaOnClick: () => {
-      window.location.href = '/faculty/3'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/ecs/profile/binsy_joseph_profile.pdf'
     },
   },
   {
@@ -48,7 +51,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'Deep Learning, Machine Learning, Mobile Computing, Soft Computing, Database Management Systems',
     ctaOnClick: () => {
-      window.location.href = '/faculty/4'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/ecs/profile/dipali_koshti_profile.pdf'
     },
   },
   {
@@ -61,7 +65,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'Web Programming, Linux System Administration, Machine Learning, Bio-inspired Computation, Big Data Analytics',
     ctaOnClick: () => {
-      window.location.href = '/faculty/5'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/ecs/profile/vaibhavprofile.pdf'
     },
   },
   {
@@ -74,7 +79,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'Soft Computing, Computer Vision, Machine Learning, Data Structures and Algorithms, Discrete Structures, Automata Theory, Object-Oriented Programming',
     ctaOnClick: () => {
-      window.location.href = '/faculty/6'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/ecs/profile/Archana_Profile.pdf'
     },
   },
   {
@@ -87,7 +93,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'Electronic Devices & Circuits, Signal Conditioning Circuit Design, Control Systems Engineering, Instrumentation Systems, Industrial Automation & Process Control, Management Information Systems, Project Management',
     ctaOnClick: () => {
-      window.location.href = '/faculty/7'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/ecs/profile/Archana_Profile.pdf'
     },
   },
   {
@@ -114,7 +121,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'Biomedical Signal Processing, Neuroscience, Artificial Intelligence',
     ctaOnClick: () => {
-      window.location.href = '/faculty/8'
+      window.location.href =
+        'https://frcrce.ac.in/images/crce/department/ecs/profile/Archana_Profile.pdf'
     },
   },
   {
@@ -126,11 +134,12 @@ export const FacultyTabData = [
     qualification: 'M.E.',
     areasOfInterest: 'Image Processing, Microprocessor, Embedded systems',
     ctaOnClick: () => {
-      window.location.href = '/faculty/8'
+      window.location.href =
+        'http://www.frcrce.ac.in/media/attachments/2024/06/28/flynn-cv_2806.pdf'
     },
   },
   {
-    id: '8',
+    id: '11',
     name: 'Mrs. Garima Singh',
     photoUrl: '/facultyecs/garima.jpg',
     ctaText: 'View Profile',
@@ -139,7 +148,8 @@ export const FacultyTabData = [
     areasOfInterest:
       'VLSI Design, Internet of Things, Image Processing, Machine Learning',
     ctaOnClick: () => {
-      window.location.href = '/faculty/8'
+      window.location.href =
+        'http://www.frcrce.ac.in/media/attachments/2024/08/10/garima_resume_asst_prof.pdf'
     },
   },
 ]
