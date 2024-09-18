@@ -345,7 +345,7 @@ const Navbar: React.FC = () => {
                 Alumni
               </Link>
               <Link
-                href="https://frcrce.ac.in/index.php/academics/examination/exam-process"
+                href="/academics/grading-process"
                 className="transition duration-300 hover:text-yellow-300"
               >
                 Examinations
