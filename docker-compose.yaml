@@ -1,0 +1,61 @@
+services:
+  minio-server:
+    image: bitnami/minio:latest
+    container_name: minio-server
+    environment:
+      MINIO_ROOT_USER: "Zane"
+      MINIO_ROOT_PASSWORD: "Zane123456"
+      MINIO_DEFAULT_BUCKETS: "b11"
+    volumes:
+      - minio_data:/bitnami/minio/data
+    ports:
+      - 9000:9000
+      - 9001:9001
+
+  directus:
+    image: directus/directus:latest
+    environment:
+      SECRET: "u+23/0z8ZLkYzM6LVinGLw=="
+      ADMIN_EMAIL: "zane.ferns360@gmail.com"
+      ADMIN_PASSWORD: "Zane123456"
+      WEBSOCKETS_ENABLED: "true"
+      DB_CLIENT: "pg"
+      DB_CONNECTION_STRING: "postgresql://postgres:zane123456@db:5432/postgres?connect_timeout=300"
+      STORAGE_LOCATIONS: "s3"
+      STORAGE_S3_DRIVER: "s3"
+      STORAGE_S3_KEY: "Zane"
+      STORAGE_S3_SECRET: "Zane123456"
+      STORAGE_S3_REGION: "us-east-1"
+      STORAGE_S3_BUCKET: "b11"
+      STORAGE_S3_ENDPOINT: "http://minio-server:9000"
+      STORAGE_S3_FORCE_PATH_STYLE: "true"
+      CACHE_ENABLED: "true"
+      CACHE_AUTO_PURGE: "true"
+      CACHE_TTL: "8 hrs"
+      CACHE_SKIP_ALLOWED: "true"
+      CORS_ENABLED: "true"
+      CORS_ORIGIN: "http://localhost:3000"
+      CORS_METHODS: "GET,POST,PATCH,DELETE,OPTIONS"
+      CORS_ALLOWED_HEADERS: "Content-Type,Authorization"
+      CORS_EXPOSED_HEADERS: "Content-Range"
+      CORS_CREDENTIALS: "true"
+    ports:
+      - 8055:8055
+    depends_on:
+      - db
+      - minio-server
+
+  db:
+    image: bitnami/postgresql:latest
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: zane123456
+    volumes:
+      - postgres_data:/bitnami/postgresql
+    ports:
+      - 5432:5432
+
+
+volumes:
+  minio_data:
+  postgres_data:

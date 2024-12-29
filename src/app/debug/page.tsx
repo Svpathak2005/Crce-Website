@@ -8,7 +8,7 @@ interface SiteData {
 }
 
 async function getSiteData(domain: string | null): Promise<SiteData> {
-  const headersList = headers()
+  const headersList = await headers()
   const entries = Array.from(headersList.entries())
 
   return {
@@ -18,7 +18,7 @@ async function getSiteData(domain: string | null): Promise<SiteData> {
 }
 
 export default async function Page() {
-  const headersList = headers()
+  const headersList = await headers()
   const domain = headersList.get('host')
   const data = await getSiteData(domain)
 

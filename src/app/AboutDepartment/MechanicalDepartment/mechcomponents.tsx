@@ -137,7 +137,7 @@ const AboutDepartmentContainer: FC<AboutDepartmentContainerProps> = ({
   name,
   description,
   video,
-}): ReactElement => {
+}): ReactElement<any> => {
   return (
     <div className="mx-auto flex w-fit flex-col items-center justify-center p-8">
       <h2
