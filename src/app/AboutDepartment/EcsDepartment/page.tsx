@@ -27,7 +27,6 @@ import { Zilla_Slab } from 'next/font/google'
 import ECSPublications from '@/app/academics/research/ecspublications'
 import Infras from './infra'
 
-
 const zilla = Zilla_Slab({
   weight: ['300', '500', '700'],
   style: ['normal', 'italic'],
@@ -64,9 +63,7 @@ const ElectronicsComputerEngineeringPage = () => {
         return <ECSPublications />
 
       case 'infrastructure':
-        return (
-          <Infras/>
-        )
+        return <Infras />
 
       default:
         return null
@@ -90,7 +87,7 @@ const ElectronicsComputerEngineeringPage = () => {
 
           <div className="container relative z-10 mx-auto flex h-full flex-col justify-center px-4 py-20">
             <div className="max-w-4xl md:max-w-6xl lg:max-w-7xl">
-              <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl lg:text-7xl">
+              <h1 className="mb-6 text-5xl font-bold leading-tight md:text-5xl lg:text-6xl">
                 ELECTRONICS AND COMPUTER SCIENCE
               </h1>
             </div>
@@ -116,7 +113,7 @@ const ElectronicsComputerEngineeringPage = () => {
         </div>
 
         {/* Program Highlights */}
-     {/* <div className="text-gray-600">
+        {/* <div className="text-gray-600">
         <div className="container mx-auto px-5 ">
           <div className="mb-10 flex w-full flex-col text-center">
             <h1
@@ -132,13 +129,13 @@ const ElectronicsComputerEngineeringPage = () => {
           </div>
         </div>
       </div>  */}
-       {/* hods desk */}
-       <HODsDesk 
-         name={hodsDesk.name} 
-         bio={hodsDesk.bio} 
-         imageUrl={hodsDesk.imageUrl} 
-         content={hodsDesk.content} 
-       />
+        {/* hods desk */}
+        <HODsDesk
+          name={hodsDesk.name}
+          bio={hodsDesk.bio}
+          imageUrl={hodsDesk.imageUrl}
+          content={hodsDesk.content}
+        />
         {/*placement data*/}
         <div>
           <PlacementTab

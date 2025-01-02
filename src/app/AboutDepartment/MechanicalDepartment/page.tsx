@@ -24,7 +24,6 @@ import {
   FacultyGrid,
   PlacementTab,
   Program,
-  
 } from '../components'
 import { Zilla_Slab } from 'next/font/google'
 import Infrastructure from './infra'
@@ -60,7 +59,7 @@ const MechanicalEngineeringPage = () => {
         )
 
       case 'Faculty':
-        return <FacultyGrid facultyData={FacultyTabData}/>
+        return <FacultyGrid facultyData={FacultyTabData} />
       case 'infrastructure':
         return <Infrastructure />
       case 'Publications':
@@ -87,7 +86,7 @@ const MechanicalEngineeringPage = () => {
 
           <div className="container relative z-10 mx-auto flex h-full flex-col justify-center px-4 py-20">
             <div className="max-w-4xl md:max-w-6xl lg:max-w-7xl">
-              <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl lg:text-7xl">
+              <h1 className="mb-6 text-5xl font-bold leading-tight md:text-5xl lg:text-6xl">
                 MECHANICAL ENGINEERING
               </h1>
             </div>
