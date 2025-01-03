@@ -135,7 +135,6 @@
 import React, { useState, useEffect } from 'react';
 
 import { Calendar, ChevronRight, Bell, Book, GraduationCap } from 'lucide-react'
-import Link from 'next/link'
 interface Notice {
   id: string
   date: string
@@ -231,6 +230,7 @@ const getColorForNoticeType = (type: Notice['type']) => {
 
 const NoticesSection: React.FC = () => {
   const [visibleNoticesCount, setVisibleNoticesCount] = useState(6)
+  const [showAll, setShowAll] = useState(false)
 
   const updateVisibleNoticesCount = () => {
     if (window.innerWidth < 640) {
@@ -248,7 +248,9 @@ const NoticesSection: React.FC = () => {
     return () => window.removeEventListener('resize', updateVisibleNoticesCount)
   }, [])
 
-  const visibleNotices = notices.slice(0, visibleNoticesCount)
+  const visibleNotices = showAll
+    ? notices
+    : notices.slice(0, visibleNoticesCount)
 
   return (
     <section
@@ -293,14 +295,20 @@ const NoticesSection: React.FC = () => {
             </div>
           ))}
         </div>
-        <div className="mt-8 text-center">
-          <button className="inline-flex items-center justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-            View All
-            <ChevronRight className="ml-2 h-5 w-5" />
-          </button>
-        </div>
+        {!showAll && (
+          <div className="mt-8 text-center">
+            <button
+              onClick={() => setShowAll(true)}
+              className="inline-flex items-center justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            >
+              View All
+              <ChevronRight className="ml-2 h-5 w-5" />
+            </button>
+          </div>
+        )}
       </div>
     </section>
   )
 }
+
 export default NoticesSection
