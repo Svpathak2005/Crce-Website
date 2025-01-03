@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 
 // Happenings (News) Component
 const Happenings = () => {
+   const [selectedNews, setSelectedNews] = useState<number | null>(null)
   const news = [
     {
       date: '9 Jun 2024',
@@ -47,9 +48,17 @@ const Happenings = () => {
         'https://media.licdn.com/dms/image/v2/D5622AQFesUJ0xZCX9g/feedshare-shrink_1280/feedshare-shrink_1280/0/1706547776154?e=1729123200&v=beta&t=15Zt-AW17kdy9lrTzbP0MZgFGmQJVxXaW3CijLIL7y8',
     },
   ]
+  const handleCardClick = (index: number) => {
+    setSelectedNews(index)
+  }
+
+  const closePopup = () => {
+    setSelectedNews(null)
+  }
 
   return (
-    <div id="news" className="mt-5 w-full bg-white py-8">
+    /*  
+  <div id="news" className="mt-5 w-full bg-white py-8">
       <div className="container mx-auto max-w-6xl px-4">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {news.map((item, index) => (
@@ -74,6 +83,59 @@ const Happenings = () => {
           ))}
         </div>
       </div>
+    </div>
+  */
+    <div id="news" className="mt-5 w-full bg-white py-8">
+      <div className="container mx-auto max-w-6xl px-4">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {news.map((item, index) => (
+            <div
+              key={index}
+              className="group h-64 overflow-hidden rounded-lg bg-white shadow-sm transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-md"
+              style={{
+                backgroundImage: `url(${item.imageUrl})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+              onClick={() => handleCardClick(index)}
+            >
+              <div className="flex h-full flex-col justify-end bg-black bg-opacity-50 p-4 transition-all duration-300 group-hover:bg-opacity-0">
+                {/* <img
+                  src={item.imageUrl}
+                  alt={item.title}
+                  className="mb-2 h-16 w-16 object-cover"
+                /> */}
+                <h3 className="line-clamp-1 text-base font-semibold text-white transition-all duration-300 group-hover:text-lg group-hover:text-blue-200">
+                  {item.title}
+                </h3>
+                <button className="mt-2 cursor-pointer rounded-md bg-transperent px-4 py-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-blue-700">
+                  View More
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {selectedNews !== null && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+          onClick={closePopup}
+        >
+          <div className="w-full max-w-md rounded-lg bg-white p-6">
+            <button className="absolute right-2 top-2 text-gray-600 hover:text-gray-800">
+              &times;
+            </button>
+            <img
+              src={news[selectedNews]?.imageUrl}
+              alt={news[selectedNews]?.title}
+              className="mb-4 h-auto w-full"
+            />
+            <h3 className="text-xl font-bold">{news[selectedNews]?.title}</h3>
+            <p className="text-sm text-gray-500">{news[selectedNews]?.date}</p>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
