@@ -350,6 +350,80 @@ const PlacementTab: React.FC<PlacementTabProps> = ({
     </div>
   )
 }
+
+interface Tab {
+  id: string;
+  title: string;
+}
+
+// Updated TypeScript interfaces for props
+
+interface Tab {
+  id: string;
+  title: string;
+}
+
+interface PlacementContentProps {
+  tabContents: {
+    [key: string]: React.ReactNode;
+  };
+}
+
+const PlacementContent: React.FC<PlacementContentProps> = ({ tabContents }) => {
+  // Create tabs from tabContents keys with type safety
+  const tabs: Tab[] = Object.entries(tabContents).map(([key]) => ({
+    id: key,
+    title: key
+  }));
+  
+  const [activeTab, setActiveTab] = useState<string>(tabs[0]?.id || '');
+
+  // Handle empty tabContents case
+  if (tabs.length === 0) {
+    return <div className="p-4 text-gray-500">No content available</div>;
+  }
+
+  return (
+    <div className="w-full bg-white shadow-sm ">
+      <div className="border-b border-gray-200 overflow-x-auto">
+        {/* Scrollable container for tabs */}
+        <div className="min-w-full md:min-w-0">
+          <div className="flex max-w-2xl mx-auto px-4 md:px-0 md:justify-center md:space-x-12">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                className={`
+                  relative flex-shrink-0 px-3 md:px-4 py-4 md:py-6
+                  text-sm md:text-lg font-medium tracking-wide
+                  transition-colors duration-200 whitespace-nowrap
+                  ${
+                    activeTab === tab.id
+                      ? "text-blue-600"
+                      : "text-gray-500 hover:text-gray-900"
+                  }
+                `}
+                onClick={() => setActiveTab(tab.id)}
+              >
+                {tab.title}
+                {activeTab === tab.id && (
+                  <div className="absolute bottom-0 left-0 right-0 h-1 rounded-t-sm bg-blue-600" />
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="min-h-[400px] bg-white p-4 md:p-6">
+        {tabContents[activeTab]}
+      </div>
+    </div>
+  );
+};
+
+
+
+
 const Program: React.FC<ProgramProps> = ({
   title,
   description,
@@ -431,5 +505,7 @@ export {
   FacultyTab,
   FacultyGrid,
   PlacementTab,
+  PlacementContent,
+  
   Program,
 }

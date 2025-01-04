@@ -5,6 +5,7 @@ import { Zilla_Slab } from 'next/font/google'
 import { useState } from 'react'
 import ChatBot from './chatBot'
 
+
 const zilla = Zilla_Slab({
   weight: ['400', '700'],
   style: ['normal', 'italic'],
@@ -120,26 +121,6 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 h-16 w-full origin-bottom-right -skew-y-3 transform bg-white"></div>
       </section>
 
-      <section className="bg-white py-16">
-        <div className="container mx-auto px-4">
-          <h2
-            className={`${zilla.className} mb-8 text-3xl font-bold text-blue-900`}
-          >
-            Quick Links
-          </h2>
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-            {quickLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.url}
-                className="rounded-lg bg-gray-100 p-4 text-center font-semibold text-blue-800 shadow transition-all hover:bg-blue-100 hover:shadow-md"
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section id="admissions" className="bg-gray-100 py-16">
         <div className="container mx-auto px-4">
@@ -162,6 +143,7 @@ export default function Home() {
             </div>
           </div>
 
+
           <div>
             <h3
               className={`${zilla.className} mb-8 text-2xl font-bold text-blue-800`}
@@ -176,6 +158,82 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      <section className="bg-white px-6 py-16">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col gap-8 lg:flex-row">
+          {/* Quick Links Section */}
+          <div className="w-full lg:w-3/4">
+            <h2 className="mb-8 text-2xl font-bold text-blue-900">
+              Quick Links
+            </h2>
+            <div className="flex flex-col space-y-4">
+              {quickLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.url}
+                  className="rounded-lg bg-gray-50 p-4 text-blue-600 font-semibold transition-all hover:bg-blue-50 hover:text-blue-700 hover:shadow-md"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Program Details Card Section */}
+          <div className="w-full lg:w-2/3">
+            <h2 className="mb-8 text-2xl font-bold text-blue-900">
+              Fee Details for All Programs
+            </h2>
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <div className="bg-blue-50 p-6 space-y-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">Duration</h3>
+                  <p className="text-3xl font-bold text-blue-600">4 Years</p>
+                  <p className="text-sm text-gray-600 mt-1">Last Date To Apply: 26 July 2024</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">Programmes: </h3>
+                  <p className="text-gray-800 text-sm">B.Tech Computer Engineering</p>
+<p className="text-gray-800 text-sm">B.Tech Electronics and Computer Science</p>
+<p className="text-gray-800 text-sm">B.Tech Mechanical Engineering</p>
+<p className="text-gray-800 text-sm">B.Tech Computer Science and Engineering</p>
+<p className="text-gray-800 text-sm">B.Tech Science and Humanities</p>
+                </div>
+              </div>
+
+              <div className="space-y-6 bg-gray-900 p-8 text-white">
+                <div>
+                  <p className="text-gray-300 text-lg">Fee Per Year</p>
+                  <h2 className="text-xl font-bold mt-1">Rs. 1,67,000</h2>
+                </div>
+
+                <button className="w-full rounded-lg bg-blue-500 px-6 py-4 font-semibold text-white hover:bg-blue-600 transition-colors">
+                  Apply Online Now
+                </button>
+
+                <div className="flex flex-col space-y-3 pt-2">
+                  <a href="#" className="text-blue-400 hover:text-blue-300 flex items-center">
+                    <span>Brochure</span>
+                    <span className="ml-2">→</span>
+                  </a>
+                  <a href="#" className="text-blue-400 hover:text-blue-300 flex items-center">
+                    <span>Course Structure</span>
+                    <span className="ml-2">→</span>
+                  </a>
+                </div>
+
+                <div className="pt-4 border-t border-gray-700">
+                  <p className="text-gray-300 text-lg">Highest CTC</p>
+                  <p className="text-2xl font-semibold mt-1">INR 17.75 LPA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     </main>
   )
 }

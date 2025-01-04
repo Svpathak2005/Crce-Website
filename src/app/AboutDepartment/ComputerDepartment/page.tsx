@@ -22,6 +22,7 @@ import {
   HODsDesk,
   FacultyGrid,
   PlacementTab,
+  PlacementContent,
   Program,
 } from '../components'
 import PreIncubationCenter from './PreincubationCentre'
@@ -145,19 +146,13 @@ const ComputerEngineeringPage = () => {
 
         {/*placement data*/}
         <div>
-          <PlacementTab
-            // tabs={["placements", "recruiters", "eligibility"]}
-            tabs={Tabs}
-            tabContents={tabContents}
-            duration="4 Years"
-            lastDateToApply="26 July 2024"
-            programmeName="B.Tech Computer Engineering"
-            feePerYear="Rs. 1,67,000"
-            highestCTC="INR 17.75 LPA"
-            onApplyClick="#"
-            brochureLink="#"
-            courseStructureLink="#"
-          />
+         
+          <div className='my-24'>
+                   <PlacementContent 
+                                   
+                                   tabContents={tabContents}
+                                 />
+                                 </div>
         </div>
       </section>
     </div>

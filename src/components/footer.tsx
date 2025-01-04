@@ -10,8 +10,8 @@ import {
 const Footer: React.FC = () => {
   return (
     <footer className="w-full border-t border-gray-200 bg-white pb-8 pt-14 text-gray-600">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
+      <div className="container mx-auto px-2 ml-7">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-6">
           <div>
             <h3 className="mb-4 text-lg font-semibold text-blue-900">
               Contact Information
@@ -270,6 +270,72 @@ const Footer: React.FC = () => {
               </Link>
             </div>
           </div>
+          <div>
+            <h3 className="mb-4 text-lg font-semibold text-blue-900">
+              OTHERS
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="https://www.agnelashram.org/"
+                  target="_blank"
+                  className="hover:text-blue-600"
+                >
+                  Agnel Ashram
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://www.frcrce.ac.in/"
+                  target="_blank"
+                  className="hover:text-blue-600"
+                >
+                  Fr.CRCE Website
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://agnelbandra.org/"
+                  target="_blank"
+                  className="hover:text-blue-600"
+                >
+                  Agnel Bandra
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://school.agnelbandra.org/"
+                  target="_blank"
+                  className="hover:text-blue-600"
+                >
+                  Agnel School
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://iti.agnelbandra.org/"
+                  target="_blank"
+                  className="hover:text-blue-600"
+                >
+                  Agnel ITI
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://aitted.agnelbandra.org/"
+                  target="_blank"
+                  className="hover:text-blue-600"
+                >
+                  Agnel ITTED
+                </Link>
+              </li>
+            </ul>
+          </div>
+       
+
+
+
+
         </div>
         <div className="mt-8 flex flex-wrap items-center justify-between border-t border-gray-200 pt-8">
           <div className="space-x-4">

@@ -20,6 +20,7 @@ import {
   HODsDesk,
   FacultyGrid,
   PlacementTab,
+  PlacementContent,
   Program,
 } from '../components'
 import { Zilla_Slab } from 'next/font/google'
@@ -126,18 +127,12 @@ const CSEPage = () => {
         </div>
         {/*placement data*/}
         <div>
-          <PlacementTab
-            tabs={Tabs}
-            tabContents={tabContents}
-            duration="4 Years"
-            lastDateToApply="26 July 2024"
-            programmeName="B.Tech Computer Science and Engieering"
-            feePerYear="Rs. 1,67,000"
-            highestCTC="INR 17.75 LPA"
-            onApplyClick="#"
-            brochureLink="#"
-            courseStructureLink="#"
-          />
+       <div className='my-24'>
+                <PlacementContent 
+                                
+                                tabContents={tabContents}
+                              />
+                              </div>
         </div>
       </section>
     </div>
