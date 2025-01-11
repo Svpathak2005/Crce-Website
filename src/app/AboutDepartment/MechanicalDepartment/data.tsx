@@ -160,7 +160,7 @@ export const FacultyTabData = [
     ctaText: 'View Profile',
     designation: 'Professor and Head of Department',
     qualification: '',
-    areasOfInterest: '',
+    areasOfInterest: 'Mechanical Engineering Subjects',
     ctaOnClick: () => {
       window.location.href =
         'https://fragnel.edu.in/images/crce/department/mech/profile/Dr_Bhushan_Faculty_Profile.pdf'
@@ -173,7 +173,7 @@ export const FacultyTabData = [
     ctaText: 'View Profile',
     designation: 'Associate Professor and Student Affairs Incharge',
     qualification: '',
-    areasOfInterest: '',
+    areasOfInterest: 'Mechanical Engineering Subjects',
     ctaOnClick: () => {
       window.location.href =
         'https://fragnel.edu.in/images/crce/department/mech/profile/D_S_S_Sudhakar.pdf'
@@ -186,7 +186,7 @@ export const FacultyTabData = [
     ctaText: 'View Profile',
     designation: 'Associate Professor',
     qualification: '',
-    areasOfInterest: '',
+    areasOfInterest: 'Mechanical Engineering Subjects',
     ctaOnClick: () => {
       window.location.href =
         'https://fragnel.edu.in/images/crce/department/mech/profile/Dr_S_K_Das.pdf'
@@ -199,7 +199,7 @@ export const FacultyTabData = [
     ctaText: 'View Profile',
     designation: 'Associate Professor',
     qualification: '',
-    areasOfInterest: '',
+    areasOfInterest: 'Mechanical Engineering Subjects',
     ctaOnClick: () => {
       window.location.href =
         'https://fragnel.edu.in/images/crce/department/mech/profile/Dr_Vasim_A_Shaikh_CV.pdf'
@@ -212,7 +212,7 @@ export const FacultyTabData = [
     ctaText: 'View Profile',
     designation: 'Associate Professor',
     qualification: '',
-    areasOfInterest: '',
+    areasOfInterest: 'Mechanical Engineering Subjects',
     ctaOnClick: () => {
       window.location.href =
         'https://fragnel.edu.in/images/crce/department/mech/profile/KJ_Faculty_Profile.pdf'
@@ -225,7 +225,7 @@ export const FacultyTabData = [
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
     qualification: '',
-    areasOfInterest: '',
+    areasOfInterest: 'Mechanical Engineering Subjects',
     ctaOnClick: () => {
       window.location.href =
         'https://fragnel.edu.in/images/crce/department/mech/profile/Prof_Tarase_Profile.pdf'
@@ -238,7 +238,7 @@ export const FacultyTabData = [
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
     qualification: '',
-    areasOfInterest: '',
+    areasOfInterest: 'Mechanical Engineering Subjects',
     ctaOnClick: () => {
       window.location.href =
         'https://fragnel.edu.in/images/crce/department/mech/profile/Saurabh_Korgaonkar_profile.pdf'
@@ -251,7 +251,7 @@ export const FacultyTabData = [
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
     qualification: '',
-    areasOfInterest: '',
+    areasOfInterest: 'Mechanical Engineering Subjects',
     ctaOnClick: () => {
       window.location.href =
         'https://fragnel.edu.in/images/crce/department/mech/profile/MVB_Rao.pdf'
@@ -264,7 +264,7 @@ export const FacultyTabData = [
     ctaText: 'Profile',
     designation: 'Ph.D.',
     qualification: '',
-    areasOfInterest: '',
+    areasOfInterest: 'Mechanical Engineering Subjects',
     ctaOnClick: () => {
       window.location.href =
         'https://fragnel.edu.in/media/attachments/2024/08/19/dipali-bhise_profile.pdf'
@@ -277,7 +277,7 @@ export const FacultyTabData = [
     ctaText: 'Profile',
     designation: 'M.Tech., Ph.D.',
     qualification: '',
-    areasOfInterest: '',
+    areasOfInterest: 'Mechanical Engineering Subjects',
     ctaOnClick: () => {
       window.location.href =
         'https://fragnel.edu.in/media/attachments/2023/09/25/cj_faculty-profile.pdf'
@@ -290,7 +290,7 @@ export const FacultyTabData = [
     ctaText: 'Profile',
     designation: 'M.E.',
     qualification: '',
-    areasOfInterest: '',
+    areasOfInterest: 'Mechanical Engineering Subjects',
     ctaOnClick: () => {
       window.location.href =
         'https://fragnel.edu.in/media/attachments/2023/09/25/an_profile.pdf'
@@ -303,7 +303,7 @@ export const FacultyTabData = [
     ctaText: 'Profile',
     designation: 'M.E.',
     qualification: '',
-    areasOfInterest: '',
+    areasOfInterest: 'Mechanical Engineering Subjects',
     ctaOnClick: () => {
       window.location.href =
         'https://fragnel.edu.in/media/attachments/2024/07/04/onkar-poadar.pdf'

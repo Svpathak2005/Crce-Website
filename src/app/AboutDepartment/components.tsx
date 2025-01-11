@@ -42,6 +42,7 @@ interface FacultyTabProps {
   photoUrl: string
   ctaText: string
   designation: string
+  contact : string
   qualification: string
   areasOfInterest: string
   ctaOnClick: () => void
@@ -230,12 +231,13 @@ const FacultyTab: React.FC<FacultyTabProps> = ({
   photoUrl,
   ctaText,
   designation,
+  contact,
   qualification,
   areasOfInterest,
   ctaOnClick,
 }) => {
   return (
-    <div className="mb-10 flex flex-col items-center justify-center rounded-xl bg-white p-4 shadow-md">
+    <div className="mb-10 flex flex-col items-center justify-center rounded-xl m-2 bg-white p-4 shadow-md">
       <div className="mb-4 flex items-center justify-center w-full">
         <Image
           src={photoUrl}
@@ -250,7 +252,9 @@ const FacultyTab: React.FC<FacultyTabProps> = ({
       <p className="text-gray-900 text-center">{qualification}</p>
       <p className="mb-4 text-center text-gray-900">
         {' '}
-        Area of Interest: {areasOfInterest}
+        Area of Interest: {areasOfInterest} 
+        <br className='mb-3' />
+        Contact: email@gmail.com {contact}
       </p>
       <button
         className="rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-900"

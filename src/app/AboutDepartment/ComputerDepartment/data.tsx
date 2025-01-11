@@ -5,6 +5,7 @@ export const FacultyTabData = [
     photoUrl: '/facultyimg/sujata.png',
     ctaText: 'View Profile',
     designation: 'Professor & HOD',
+    contact: '',
     qualification: 'Ph.D.(Tech.) in Info.Tech',
     areasOfInterest: 'Data Mining, Machine Learning, Blockchain',
     ctaOnClick: () => {

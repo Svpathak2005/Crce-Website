@@ -5,6 +5,7 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/dileep.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor & Head',
+    areasOfInterest: 'Science & Humanities Subjects',
     description: 'Ph.D (Pursuing), M.Sc (Electronics)',
     ctaOnClick: () => {
       window.location.href =
@@ -17,6 +18,7 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/drhemantkhanolkar.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    areasOfInterest: 'Science & Humanities Subjects',
     description: 'Ph.D. (Chemistry)',
     ctaOnClick: () => {
       window.location.href =
@@ -29,6 +31,7 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/prasad1.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    areasOfInterest: 'Science & Humanities Subjects',
     description: 'Ph.D (Pursuing), M.Phil. (Mathematics)',
     ctaOnClick: () => {
       window.location.href =
@@ -41,6 +44,7 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/sunil1.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    areasOfInterest: 'Science & Humanities Subjects',
     description: 'Ph.D (Chemistry)',
     ctaOnClick: () => {
       window.location.href =
@@ -53,6 +57,7 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/joseph1.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    areasOfInterest: 'Science & Humanities Subjects',
     description: 'Ph.D. (English)',
     ctaOnClick: () => {
       window.location.href =
@@ -65,6 +70,7 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/pradeeep.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    areasOfInterest: 'Science & Humanities Subjects',
     description: 'MSc (Mathematics)',
     ctaOnClick: () => {
       window.location.href =
@@ -77,6 +83,7 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/deepak.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    areasOfInterest: 'Science & Humanities Subjects',
     description: 'Ph.D. (Physics)',
     ctaOnClick: () => {
       window.location.href =
@@ -89,6 +96,7 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/gajendra.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    areasOfInterest: 'Science & Humanities Subjects',
     description: 'M.Sc. B.Ed (Mathematics)',
     ctaOnClick: () => {
       window.location.href =
@@ -101,6 +109,7 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/aastha-bhatia-scpic.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    areasOfInterest: 'Science & Humanities Subjects',
     description: 'Ph.D (Pursuing), M.A. (English Lit.), B.Ed',
     ctaOnClick: () => {
       window.location.href =
@@ -113,6 +122,7 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/gauri.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    areasOfInterest: 'Science & Humanities Subjects',
     description: 'M.Sc (Mathematics), B.Ed',
     ctaOnClick: () => {
       window.location.href = '/faculty/10'
