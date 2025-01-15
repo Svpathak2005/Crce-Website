@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const publications_22 = [
   {
@@ -165,76 +165,107 @@ const publications_20 = [
   },
 ]
 
-const AidsPublications = () => {
+type Publication = {
+  title: string
+  details?: string
+  conference?: string
+}
+
+type PublicationsByYear = {
+  [year: string]: Publication[]
+}
+
+const AidsPublications: React.FC = () => {
+  const allPublications: PublicationsByYear = {
+    2022: publications_22,
+    2021: publications_21,
+    2020: publications_20,
+  }
+
+  const sortedYears = Object.keys(allPublications).sort(
+    (a, b) => Number(b) - Number(a)
+  )
+
+  const [expandedYears, setExpandedYears] = useState<Record<string, boolean>>(
+    {}
+  )
+
+  const toggleYear = (year: string) => {
+    setExpandedYears((prev) => ({
+      ...prev,
+      [year]: !prev[year],
+    }))
+  }
+
+  const loadMore = (year: string) => {
+    setExpandedYears((prev) => ({
+      ...prev,
+      [year]: true,
+    }))
+  }
+
   return (
-    <>
-      <div className="bg-gray-50 p-4">
-        <h2 className="mb-4 text-xl font-semibold">
-          Publications for the year 2021-22
-        </h2>
-        <ul className="space-y-3">
-          {publications_22.map((publication, index) => (
-            <li
-              key={index}
-              className="rounded-md border border-gray-200 bg-white p-3"
+    <div className="bg-gray-50 p-4">
+      <h2 className="mb-4 text-2xl font-semibold">Publications</h2>
+      <ul className="space-y-3">
+        {sortedYears.map((year) => (
+          <li
+            key={year}
+            className="rounded-md border border-gray-200 bg-white p-3"
+          >
+            <div
+              className="flex cursor-pointer items-center justify-between"
+              onClick={() => toggleYear(year)}
             >
-              <p className="text-base font-medium text-gray-800">
-                {publication.title}
-              </p>
-              {publication.details && (
-                <p className="mt-1 text-sm text-gray-600">
-                  {publication.details}
-                </p>
-              )}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="bg-gray-50 p-4">
-        <h2 className="mb-4 text-xl font-semibold">
-          Publications for the year 2020-21
-        </h2>
-        <ul className="space-y-3">
-          {publications_21.map((publication, index) => (
-            <li
-              key={index}
-              className="rounded-md border border-gray-200 bg-white p-3"
-            >
-              <p className="text-base font-medium text-gray-800">
-                {publication.title}
-              </p>
-              {publication.details && (
-                <p className="mt-1 text-sm text-gray-600">
-                  {publication.details}
-                </p>
-              )}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="bg-gray-50 p-4">
-        <h2 className="mb-4 text-xl font-semibold">
-          Publications for the year 2019-20
-        </h2>
-        <ul className="space-y-3">
-          {publications_20.map((publication, index) => (
-            <li
-              key={index}
-              className="rounded-md border border-gray-200 bg-white p-3"
-            >
-              <p className="text-base font-medium text-gray-800">
-                {publication.title}
-              </p>
-              {publication.details && (
-                <p className="mt-1 text-sm text-gray-600">
-                  {publication.details}
-                </p>
-              )}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </>
+              <h3 className="text-xl font-medium text-gray-800">{`Publications for the year ${year}`}</h3>
+              <span className="text-gray-600">
+                {expandedYears[year] ? '-' : '+'}
+              </span>
+            </div>
+            {expandedYears[year] && allPublications[year] && (
+              <ul className="mt-3 space-y-2">
+                {allPublications[year]
+                  ?.slice(
+                    0,
+                    expandedYears[year] === true
+                      ? allPublications[year].length
+                      : 5
+                  )
+                  .map((publication, index) => (
+                    <li
+                      key={index}
+                      className="rounded-md border border-gray-200 bg-gray-100 p-3"
+                    >
+                      <p className="text-base font-medium text-gray-800">
+                        {publication.title}
+                      </p>
+                      {publication.details && (
+                        <p className="mt-1 text-sm text-gray-600">
+                          {publication.details}
+                        </p>
+                      )}
+                      {publication.conference && (
+                        <p className="mt-1 text-sm text-gray-600">
+                          {publication.conference}
+                        </p>
+                      )}
+                    </li>
+                  ))}
+                {allPublications[year]?.length > 5 &&
+                  expandedYears[year] !== true && (
+                    <button
+                      onClick={() => loadMore(year)}
+                      className="mt-2 text-blue-500 hover:underline"
+                    >
+                      Load More
+                    </button>
+                  )}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }
 
