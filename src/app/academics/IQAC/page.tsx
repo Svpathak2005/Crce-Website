@@ -17,9 +17,9 @@ const IQACPage = () => {
   ]
 
   return (
-    <div className="flex h-fit w-full flex-col bg-gradient-to-b from-white to-[#E5F0FF] text-gray-900">
+    <div className="flex h-fit w-full flex-col bg-linear-to-b from-white to-[#E5F0FF] text-gray-900">
       <div
-        className="flex h-full w-full flex-col justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] md:flex-row md:pt-36"
+        className="flex h-full w-full flex-col justify-center bg-linear-to-br from-[#001f3f] to-[#003366] md:flex-row md:pt-36"
         id="iqac"
       >
         <div className="flex w-full flex-col items-center justify-center p-8 pt-40 text-white md:w-2/3 md:p-16 md:pt-16">
@@ -248,7 +248,7 @@ const IQACPage = () => {
         <section className="mb-8 text-center">
           <Link
             href="/IQAC-2023.pdf"
-            className="inline-block rounded-full bg-gradient-to-r from-[#4a90e2] to-[#357abd] px-6 py-3 font-semibold text-white transition-all hover:from-[#357abd] hover:to-[#4a90e2] hover:shadow-lg"
+            className="inline-block rounded-full bg-linear-to-r from-[#4a90e2] to-[#357abd] px-6 py-3 font-semibold text-white transition-all hover:from-[#357abd] hover:to-[#4a90e2] hover:shadow-lg"
             download
           >
             Download IQAC 2023 PDF

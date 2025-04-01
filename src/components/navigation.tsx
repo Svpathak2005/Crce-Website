@@ -12,7 +12,7 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ items }) => {
   return (
-    <nav className="rounded-full bg-white/20 px-4 py-2 text-sm font-light text-white backdrop-blur-sm md:text-base">
+    <nav className="rounded-full bg-white/20 px-4 py-2 text-sm font-light text-white backdrop-blur-xs md:text-base">
       <ol className="flex items-center space-x-2">
         <li>
           <Link

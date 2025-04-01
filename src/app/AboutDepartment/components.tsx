@@ -195,7 +195,7 @@ const HODsDesk: React.FC<HODsDeskProps> = ({
                 <h2 className="title-font mt-4 text-lg font-medium text-gray-900">
                   {name}
                 </h2>
-                <div className="mb-4 mt-2 h-1 w-12 rounded bg-indigo-900"></div>
+                <div className="mb-4 mt-2 h-1 w-12 rounded-sm bg-indigo-900"></div>
                 <p className="text-base">HOD and Professor</p>
                 <h3>{bio}</h3>
                 <a className="inline-flex items-center text-indigo-800">
@@ -257,7 +257,7 @@ const FacultyTab: React.FC<FacultyTabProps> = ({
         Contact: email@gmail.com {contact}
       </p>
       <button
-        className="rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-900"
+        className="rounded-sm bg-blue-600 px-4 py-2 text-white hover:bg-blue-900"
         onClick={ctaOnClick}
       >
         {ctaText}
@@ -333,7 +333,7 @@ const PlacementTab: React.FC<PlacementTabProps> = ({
               <p>Fee Per Year</p>
               <h2 className="mb-2 text-2xl font-bold">{feePerYear}</h2>
               <a href={onApplyClick}>
-                <button className="mb-4 w-full rounded bg-blue-500 px-4 py-2 text-white">
+                <button className="mb-4 w-full rounded-sm bg-blue-500 px-4 py-2 text-white">
                   Apply Online Now
                 </button>
               </a>
@@ -388,7 +388,7 @@ const PlacementContent: React.FC<PlacementContentProps> = ({ tabContents }) => {
   }
 
   return (
-    <div className="w-full bg-white shadow-sm ">
+    <div className="w-full bg-white shadow-xs ">
       <div className="border-b border-gray-200 overflow-x-auto">
         {/* Scrollable container for tabs */}
         <div className="min-w-full md:min-w-0">
@@ -397,7 +397,7 @@ const PlacementContent: React.FC<PlacementContentProps> = ({ tabContents }) => {
               <button
                 key={tab.id}
                 className={`
-                  relative flex-shrink-0 px-3 md:px-4 py-4 md:py-6
+                  relative shrink-0 px-3 md:px-4 py-4 md:py-6
                   text-sm md:text-lg font-medium tracking-wide
                   transition-colors duration-200 whitespace-nowrap
                   ${
@@ -486,7 +486,7 @@ const Program: React.FC<ProgramProps> = ({
             {button?.map((button, index) => (
               <button
                 key={index}
-                className="m-4 mr-2 rounded-md bg-white px-4 py-2 text-blue-950 outline-none"
+                className="m-4 mr-2 rounded-md bg-white px-4 py-2 text-blue-950 outline-hidden"
                 onClick={button.onClick}
               >
                 {button.label}

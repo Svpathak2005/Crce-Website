@@ -40,7 +40,7 @@ export default function HeroSection() {
             <p className="mb-6 text-lg font-bold text-gray-900">
               Deadline: 8th July, 2024
             </p>
-            <button className="w-full rounded-md bg-yellow-500 px-6 py-3 text-lg font-semibold text-black transition duration-300 hover:bg-yellow-600 focus:outline-none">
+            <button className="w-full rounded-md bg-yellow-500 px-6 py-3 text-lg font-semibold text-black transition duration-300 hover:bg-yellow-600 focus:outline-hidden">
               Get Started
             </button>
           </div>

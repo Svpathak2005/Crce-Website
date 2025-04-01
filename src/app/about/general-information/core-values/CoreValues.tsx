@@ -11,7 +11,7 @@ const zilla = Zilla_Slab({
 const CoreValues = () => {
   return (
     <div className="flex min-h-screen w-full flex-col">
-      <main className="container mx-auto flex-grow p-4">
+      <main className="container mx-auto grow p-4">
         <div className="rounded-lg bg-white p-6 shadow-lg">
           <h2 className="mb-4 text-2xl font-semibold">Core Values</h2>
           <div className="container mx-auto px-4 py-2">

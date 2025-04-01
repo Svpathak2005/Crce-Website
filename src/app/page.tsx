@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between">
       <HeroSection />
-      {/* <div className='bg-gradient-to-b from-white to-[#E5F0FF] w-full'> */}
+      {/* <div className='bg-linear-to-b from-white to-[#E5F0FF] w-full'> */}
       <Newsandupcoming />
       <NoticesSection />
       <Industry />

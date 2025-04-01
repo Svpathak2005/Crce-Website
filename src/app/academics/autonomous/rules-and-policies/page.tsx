@@ -89,7 +89,7 @@ const Page = () => {
   return (
     <div className="flex h-fit w-full flex-col bg-white text-gray-900">
       <div
-        className="flex h-full w-full flex-col justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] pt-36 md:flex-row"
+        className="flex h-full w-full flex-col justify-center bg-linear-to-br from-[#001f3f] to-[#003366] pt-36 md:flex-row"
         id="admission"
       >
         <div className="flex w-full flex-col items-center justify-center p-8 text-center text-white md:w-2/3 md:p-16 md:pt-16 md:pt-40">

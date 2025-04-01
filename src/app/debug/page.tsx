@@ -43,7 +43,7 @@ export default async function Page() {
           <div className="text-center">
             <Link
               href="/"
-              className="inline-block rounded bg-blue-600 px-4 py-2 text-white transition duration-300 hover:bg-blue-700"
+              className="inline-block rounded-sm bg-blue-600 px-4 py-2 text-white transition duration-300 hover:bg-blue-700"
             >
               Return to Main Page
             </Link>

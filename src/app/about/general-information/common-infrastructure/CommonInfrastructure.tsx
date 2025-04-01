@@ -11,7 +11,7 @@ const zilla = Zilla_Slab({
 const CommonInfrastructure = () => {
   return (
     <div className={`${zilla.className} flex min-h-screen w-full flex-col`}>
-      <main className="container mx-auto flex-grow p-4">
+      <main className="container mx-auto grow p-4">
         <div className="rounded-lg bg-white p-6 shadow-lg">
           <h2 className="mb-4 text-center text-2xl font-semibold">
             Common Infrastructure

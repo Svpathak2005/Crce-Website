@@ -13,8 +13,8 @@ const TeachingLearningProcessPage = () => {
   const navigationItems = [{ label: 'About', url: '/' }]
 
   return (
-    <div className="flex h-fit w-full flex-col bg-gradient-to-b from-white to-[#E5F0FF] text-gray-900">
-      <div className="flex h-full w-full flex-col justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] pt-36 md:flex-row">
+    <div className="flex h-fit w-full flex-col bg-linear-to-b from-white to-[#E5F0FF] text-gray-900">
+      <div className="flex h-full w-full flex-col justify-center bg-linear-to-br from-[#001f3f] to-[#003366] pt-36 md:flex-row">
         <div className="flex w-full flex-col items-center justify-center p-8 text-white md:w-2/3 md:p-16 md:pt-32">
           <h1
             className={`${zilla.className} mb-6 text-4xl font-bold md:text-5xl lg:text-7xl`}

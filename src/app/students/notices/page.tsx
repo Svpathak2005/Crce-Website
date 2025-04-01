@@ -106,7 +106,7 @@ export default function Page() {
   return (
     <main className="flex h-fit w-full flex-col items-center justify-center">
       <div
-        className="flex h-full w-full flex-col justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] md:flex-row md:pt-36"
+        className="flex h-full w-full flex-col justify-center bg-linear-to-br from-[#001f3f] to-[#003366] md:flex-row md:pt-36"
         id="iqac"
       >
         <div className="flex w-full flex-col items-center justify-center p-8 pt-36 text-white md:w-2/3 md:p-16 md:pt-16">
@@ -134,7 +134,7 @@ export default function Page() {
                 key={notice.id}
                 className="group relative overflow-hidden rounded-lg bg-white shadow-md transition duration-300 ease-in-out hover:shadow-lg"
               >
-                <div className="absolute right-0 top-0 h-24 w-24 translate-x-8 translate-y-8 transform rounded-full bg-gradient-to-br from-blue-100 to-blue-200 opacity-20 transition-transform duration-300 group-hover:translate-x-6 group-hover:translate-y-6"></div>
+                <div className="absolute right-0 top-0 h-24 w-24 translate-x-8 translate-y-8 transform rounded-full bg-linear-to-br from-blue-100 to-blue-200 opacity-20 transition-transform duration-300 group-hover:translate-x-6 group-hover:translate-y-6"></div>
                 <div className="relative z-10 p-6">
                   <div className="mb-4 flex items-center justify-between">
                     <span

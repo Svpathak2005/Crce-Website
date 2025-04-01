@@ -760,7 +760,7 @@ type CarouselButtonProps = {
 const CarouselButton = ({ onClick, children, active }: CarouselButtonProps) => (
   <button
     onClick={onClick}
-    className={`mx-2 rounded p-2 ${active ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-600'}`}
+    className={`mx-2 rounded-sm p-2 ${active ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-600'}`}
   >
     {children}
   </button>

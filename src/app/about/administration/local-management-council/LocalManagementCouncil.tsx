@@ -17,7 +17,7 @@ const LocalManagementCouncil = () => {
 
   return (
     <div className="flex min-h-max sm:w-full w-[90vw]  flex-col">
-      <main className="container mx-auto flex-grow p-2 sm:p-4">
+      <main className="container mx-auto grow p-2 sm:p-4">
         <div className="rounded-lg bg-white p-2 sm:p-6 shadow-lg">
           <h2 className="mb-6 text-2xl font-semibold">
             Local Management Council

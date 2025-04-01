@@ -19,7 +19,7 @@ const zilla = Zilla_Slab({
 
 const ContactUs = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#001f3f] to-[#003366] pt-40 text-white">
+    <div className="min-h-screen bg-linear-to-br from-[#001f3f] to-[#003366] pt-40 text-white">
       <div className="container mx-auto px-4 py-16 pt-0 md:pt-10">
         <h1
           className={`${zilla.className} mb-12 text-center text-4xl font-bold sm:text-5xl`}
@@ -109,7 +109,7 @@ const ContactUs = () => {
                 <input
                   type="text"
                   id="name"
-                  className="w-full rounded-md bg-white/20 px-4 py-2 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="w-full rounded-md bg-white/20 px-4 py-2 backdrop-blur-xs focus:outline-hidden focus:ring-2 focus:ring-blue-400"
                   required
                 />
               </div>
@@ -120,7 +120,7 @@ const ContactUs = () => {
                 <input
                   type="email"
                   id="email"
-                  className="w-full rounded-md bg-white/20 px-4 py-2 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="w-full rounded-md bg-white/20 px-4 py-2 backdrop-blur-xs focus:outline-hidden focus:ring-2 focus:ring-blue-400"
                   required
                 />
               </div>
@@ -131,13 +131,13 @@ const ContactUs = () => {
                 <textarea
                   id="message"
                   rows={4}
-                  className="w-full rounded-md bg-white/20 px-4 py-2 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="w-full rounded-md bg-white/20 px-4 py-2 backdrop-blur-xs focus:outline-hidden focus:ring-2 focus:ring-blue-400"
                   required
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full rounded-full bg-gradient-to-r from-[#4a90e2] to-[#357abd] px-6 py-3 font-semibold transition-all hover:from-[#357abd] hover:to-[#4a90e2] hover:shadow-lg sm:w-auto"
+                className="w-full rounded-full bg-linear-to-r from-[#4a90e2] to-[#357abd] px-6 py-3 font-semibold transition-all hover:from-[#357abd] hover:to-[#4a90e2] hover:shadow-lg sm:w-auto"
               >
                 Send Message
               </button>

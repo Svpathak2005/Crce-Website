@@ -21,7 +21,7 @@ export default function Page() {
   return (
     <main className="flex h-fit w-full flex-col items-center justify-center">
       <div
-        className="flex h-full w-full flex-col justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] md:flex-row md:pt-36"
+        className="flex h-full w-full flex-col justify-center bg-linear-to-br from-[#001f3f] to-[#003366] md:flex-row md:pt-36"
         id="iqac"
       >
         <div className="flex w-full flex-col items-center justify-center p-8 pt-36 text-white md:w-2/3 md:p-16 md:pt-16">
@@ -32,7 +32,7 @@ export default function Page() {
           </h1>
         </div>
       </div>
-      <div className="flex h-fit w-full flex-col items-center justify-center bg-gradient-to-b from-white to-[#E5F0FF] pt-10">
+      <div className="flex h-fit w-full flex-col items-center justify-center bg-linear-to-b from-white to-[#E5F0FF] pt-10">
         <div className="container mx-auto mb-20 flex max-w-[90%] flex-col gap-10 rounded-xl bg-white p-10 shadow-lg md:flex-row-reverse">
           <Image
             alt="college photo"

@@ -12,12 +12,12 @@ export default function NotFound() {
         </p>
         <div className="flex space-x-4">
           <Link href="/">
-            <div className="rounded-lg bg-blue-600 px-6 py-3 text-white shadow transition-colors hover:bg-blue-700">
+            <div className="rounded-lg bg-blue-600 px-6 py-3 text-white shadow-sm transition-colors hover:bg-blue-700">
               Return Home
             </div>
           </Link>
           <Link href="/debug">
-            <div className="rounded-lg bg-green-600 px-6 py-3 text-white shadow transition-colors hover:bg-green-700">
+            <div className="rounded-lg bg-green-600 px-6 py-3 text-white shadow-sm transition-colors hover:bg-green-700">
               Go to Debug Page
             </div>
           </Link>

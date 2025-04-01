@@ -18,9 +18,9 @@ const Page = () => {
   ]
 
   return (
-    <div className="flex h-fit w-full flex-col bg-gradient-to-b from-gray-50 to-[#E5F0FF] text-gray-900">
+    <div className="flex h-fit w-full flex-col bg-linear-to-b from-gray-50 to-[#E5F0FF] text-gray-900">
       <div
-        className="flex h-full w-full flex-col bg-gradient-to-br from-[#001f3f] to-[#003366] pt-36 md:flex-row"
+        className="flex h-full w-full flex-col bg-linear-to-br from-[#001f3f] to-[#003366] pt-36 md:flex-row"
         id="admission"
       >
         <div className="flex w-full flex-col items-center justify-center p-8 pt-40 text-white md:w-2/3 md:p-16 md:pt-16">
@@ -44,7 +44,7 @@ const Page = () => {
           </p>
           <Link
             href="/"
-            className="rounded-full bg-gradient-to-r from-[#4a90e2] to-[#357abd] px-6 py-3 text-center text-sm font-semibold text-white transition-all hover:from-[#357abd] hover:to-[#4a90e2] hover:shadow-lg md:text-base"
+            className="rounded-full bg-linear-to-r from-[#4a90e2] to-[#357abd] px-6 py-3 text-center text-sm font-semibold text-white transition-all hover:from-[#357abd] hover:to-[#4a90e2] hover:shadow-lg md:text-base"
           >
             Fill Out Enquiry Form
           </Link>
@@ -121,7 +121,7 @@ const Page = () => {
             </Link>
           </nav>
         </div>
-        <div className="flex-grow p-6 text-[#534a43] md:p-8 lg:p-12">
+        <div className="grow p-6 text-[#534a43] md:p-8 lg:p-12">
           <div className="mx-auto max-w-3xl">
             {[
               {
@@ -149,7 +149,7 @@ const Page = () => {
                 </p>
                 <Link
                   href={link}
-                  className="rounded-full bg-gradient-to-r from-[#4a90e2] to-[#357abd] px-6 py-3 text-sm font-semibold text-white transition-all hover:from-[#357abd] hover:to-[#4a90e2] hover:shadow-lg md:text-base"
+                  className="rounded-full bg-linear-to-r from-[#4a90e2] to-[#357abd] px-6 py-3 text-sm font-semibold text-white transition-all hover:from-[#357abd] hover:to-[#4a90e2] hover:shadow-lg md:text-base"
                 >
                   MORE ABOUT {title.toUpperCase()}
                 </Link>

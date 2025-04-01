@@ -148,7 +148,7 @@ export default function Council() {
             >
               Councils
             </h1>
-            <div className="h-1 w-32 rounded bg-blue-900"></div>
+            <div className="h-1 w-32 rounded-sm bg-blue-900"></div>
           </div>
         </div>
         <div className="-m-4 flex flex-wrap">
@@ -160,7 +160,7 @@ export default function Council() {
                 onMouseLeave={() => setHoveredCard(null)}
               >
                 <img
-                  className="mb-6 h-40 w-full rounded object-cover object-center"
+                  className="mb-6 h-40 w-full rounded-sm object-cover object-center"
                   src={card.image}
                   alt="image"
                 />

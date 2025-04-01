@@ -76,7 +76,7 @@ export default function Home() {
       {!isChatbotOpen && (
         <button
           onClick={() => setIsChatbotOpen(true)}
-          className="fixed bottom-4 right-4 z-50 rounded-full bg-blue-600 p-4 font-semibold text-white shadow-lg transition-all hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          className="fixed bottom-4 right-4 z-50 rounded-full bg-blue-600 p-4 font-semibold text-white shadow-lg transition-all hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
         >
           FAQs
         </button>
@@ -246,7 +246,7 @@ const AdmissionCard = ({
 }: AdmissionCardProps) => (
   <div className="flex flex-col rounded-lg bg-white p-6 shadow-md transition-all hover:shadow-lg">
     <h4 className="mb-2 text-xl font-bold text-blue-900">{title}</h4>
-    <p className="mb-4 flex-grow text-gray-600">{description}</p>
+    <p className="mb-4 grow text-gray-600">{description}</p>
     <a
       href={link}
       target="_blank"

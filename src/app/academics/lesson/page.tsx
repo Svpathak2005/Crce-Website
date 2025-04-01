@@ -10,7 +10,7 @@ const zilla = Zilla_Slab({
 
 const LessonPlanPage = () => {
   return (
-    <div className="flex min-h-screen w-full flex-col bg-gradient-to-b from-white to-[#E5F0FF] pt-10 text-gray-900 md:pt-36">
+    <div className="flex min-h-screen w-full flex-col bg-linear-to-b from-white to-[#E5F0FF] pt-10 text-gray-900 md:pt-36">
       <div className="container mx-auto px-4 py-16">
         <div className="rounded-lg bg-white p-8 shadow-lg">
           <h1
@@ -103,7 +103,7 @@ const LessonPlanPage = () => {
             </li>
           </ol>
           <div className="space-y-4">
-            <div className="rounded-lg bg-gray-100 p-4 shadow">
+            <div className="rounded-lg bg-gray-100 p-4 shadow-sm">
               <a
                 href="/index.php/academics/tlp/lesson-plan/category/4-computer-engineering"
                 className="text-blue-500 hover:underline"
@@ -112,7 +112,7 @@ const LessonPlanPage = () => {
               </a>{' '}
               <small>(0)</small>
             </div>
-            <div className="rounded-lg bg-gray-100 p-4 shadow">
+            <div className="rounded-lg bg-gray-100 p-4 shadow-sm">
               <a
                 href="/index.php/academics/tlp/lesson-plan/category/5-production-engineering"
                 className="text-blue-500 hover:underline"
@@ -121,7 +121,7 @@ const LessonPlanPage = () => {
               </a>{' '}
               <small>(0)</small>
             </div>
-            <div className="rounded-lg bg-gray-100 p-4 shadow">
+            <div className="rounded-lg bg-gray-100 p-4 shadow-sm">
               <a
                 href="/index.php/academics/tlp/lesson-plan/category/8-mechanical-engineering"
                 className="text-blue-500 hover:underline"
@@ -130,7 +130,7 @@ const LessonPlanPage = () => {
               </a>{' '}
               <small>(0)</small>
             </div>
-            <div className="rounded-lg bg-gray-100 p-4 shadow">
+            <div className="rounded-lg bg-gray-100 p-4 shadow-sm">
               <a
                 href="/index.php/academics/tlp/lesson-plan/category/9-electronics-and-computer-science"
                 className="text-blue-500 hover:underline"
@@ -139,7 +139,7 @@ const LessonPlanPage = () => {
               </a>{' '}
               <small>(0)</small>
             </div>
-            <div className="rounded-lg bg-gray-100 p-4 shadow">
+            <div className="rounded-lg bg-gray-100 p-4 shadow-sm">
               <a
                 href="/index.php/academics/tlp/lesson-plan/category/68-fy-lp"
                 className="text-blue-500 hover:underline"
@@ -148,7 +148,7 @@ const LessonPlanPage = () => {
               </a>{' '}
               <small>(0)</small>
             </div>
-            <div className="rounded-lg bg-gray-100 p-4 shadow">
+            <div className="rounded-lg bg-gray-100 p-4 shadow-sm">
               <a
                 href="/index.php/academics/tlp/lesson-plan/category/74-science-humanities"
                 className="text-blue-500 hover:underline"
@@ -157,7 +157,7 @@ const LessonPlanPage = () => {
               </a>{' '}
               <small>(0)</small>
             </div>
-            <div className="rounded-lg bg-gray-100 p-4 shadow">
+            <div className="rounded-lg bg-gray-100 p-4 shadow-sm">
               <a
                 href="/index.php/academics/tlp/lesson-plan/category/135-artificial-intelligence-data-science"
                 className="text-blue-500 hover:underline"

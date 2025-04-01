@@ -124,7 +124,7 @@ const ResearchMenu = () => {
           </p>
           <Link
             href="https://frcrce.ac.in/attachments/article/173/Research%20Promotion%20Policy.pdf"
-            className="inline-block rounded bg-[#001f3f] px-6 py-2 text-white transition-colors hover:bg-[#003366]"
+            className="inline-block rounded-sm bg-[#001f3f] px-6 py-2 text-white transition-colors hover:bg-[#003366]"
           >
             Research Promotion Policy.pdf
           </Link>
@@ -353,10 +353,10 @@ const ResearchMenu = () => {
 
   return (
     <div
-      className={`${zilla.className} flex h-fit w-full flex-col bg-gradient-to-b from-white to-[#E5F0FF] text-gray-900`}
+      className={`${zilla.className} flex h-fit w-full flex-col bg-linear-to-b from-white to-[#E5F0FF] text-gray-900`}
     >
       <div
-        className="flex h-full w-full flex-col justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] md:flex-row md:pt-36"
+        className="flex h-full w-full flex-col justify-center bg-linear-to-br from-[#001f3f] to-[#003366] md:flex-row md:pt-36"
         id="research"
       >
         <div className="flex w-full flex-col items-center justify-center p-8 pt-40 text-white md:w-2/3 md:p-16 md:pt-16">

@@ -58,7 +58,7 @@ const StudentInformation: React.FC = () => {
               <Link
                 key={index}
                 href={link.url}
-                className="flex h-full items-center justify-center rounded-lg bg-gray-100 p-4 text-center font-semibold text-blue-800 shadow transition-all hover:bg-blue-100 hover:shadow-md"
+                className="flex h-full items-center justify-center rounded-lg bg-gray-100 p-4 text-center font-semibold text-blue-800 shadow-sm transition-all hover:bg-blue-100 hover:shadow-md"
               >
                 {link.name}
               </Link>

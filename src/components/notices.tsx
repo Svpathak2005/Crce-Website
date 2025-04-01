@@ -99,7 +99,7 @@
 //               key={notice.id}
 //               className="group relative overflow-hidden rounded-lg bg-white shadow-md transition duration-300 ease-in-out hover:shadow-lg"
 //             >
-//               <div className="absolute right-0 top-0 h-24 w-24 translate-x-8 translate-y-8 transform rounded-full bg-gradient-to-br from-blue-100 to-blue-200 opacity-20 transition-transform duration-300 group-hover:translate-x-6 group-hover:translate-y-6"></div>
+//               <div className="absolute right-0 top-0 h-24 w-24 translate-x-8 translate-y-8 transform rounded-full bg-linear-to-br from-blue-100 to-blue-200 opacity-20 transition-transform duration-300 group-hover:translate-x-6 group-hover:translate-y-6"></div>
 //               <div className="relative z-10 p-6">
 //                 <div className="mb-4 flex items-center justify-between">
 //                   <span
@@ -299,7 +299,7 @@ const NoticesSection: React.FC = () => {
           <div className="mt-8 text-center">
             <button
               onClick={() => setShowAll(true)}
-              className="inline-flex items-center justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="inline-flex items-center justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-base font-medium text-white shadow-xs hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               View All
               <ChevronRight className="ml-2 h-5 w-5" />

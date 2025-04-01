@@ -27,8 +27,8 @@ const HomePage = () => {
   ]
 
   return (
-    <div className="flex min-h-screen flex-col bg-gradient-to-b from-gray-50 to-[#E5F0FF] pt-60">
-      <main className="container mx-auto flex flex-grow">
+    <div className="flex min-h-screen flex-col bg-linear-to-b from-gray-50 to-[#E5F0FF] pt-60">
+      <main className="container mx-auto flex grow">
         <section className="w-1/3 p-4">
           <h2 className="mb-4 text-2xl font-bold text-blue-800">Quick Links</h2>
           <ul className="space-y-4">

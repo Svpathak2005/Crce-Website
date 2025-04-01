@@ -18,8 +18,8 @@ const PhDAdmissionsPage = () => {
   ]
 
   return (
-    <div className="flex h-fit w-full flex-col bg-gradient-to-b from-gray-50 to-[#E5F0FF] text-center text-gray-900">
-      <div className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] pt-20 md:pt-36">
+    <div className="flex h-fit w-full flex-col bg-linear-to-b from-gray-50 to-[#E5F0FF] text-center text-gray-900">
+      <div className="flex h-full w-full flex-col items-center justify-center bg-linear-to-br from-[#001f3f] to-[#003366] pt-20 md:pt-36">
         <div className="flex w-full flex-col items-center justify-center p-8 text-white md:w-2/3 md:p-16">
           <h1
             className={`${zilla.className} mb-6 text-4xl font-bold md:text-5xl lg:text-7xl`}

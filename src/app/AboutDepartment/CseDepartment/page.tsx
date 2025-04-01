@@ -95,7 +95,7 @@ const CSEPage = () => {
       </div>
       {/* Quicklinks and tabs about the department  */}
 
-      <section className="w-full bg-gradient-to-b from-white to-[#E5F0FF]">
+      <section className="w-full bg-linear-to-b from-white to-[#E5F0FF]">
         <div className="flex md:pl-10 md:pt-10">
           <Sidebar
             tabs={tabs}

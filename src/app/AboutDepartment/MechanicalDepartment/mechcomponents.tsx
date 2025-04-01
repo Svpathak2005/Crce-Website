@@ -194,7 +194,7 @@ const HODsDesk: React.FC<HODsDeskProps> = ({
                 <h2 className="title-font mt-4 text-lg font-medium text-gray-900">
                   {name}
                 </h2>
-                <div className="mb-4 mt-2 h-1 w-12 rounded bg-indigo-900"></div>
+                <div className="mb-4 mt-2 h-1 w-12 rounded-sm bg-indigo-900"></div>
                 <p className="text-base">HOD and Professor</p>
                 <h3>{bio}</h3>
                 <a className="inline-flex items-center text-indigo-800">
@@ -250,7 +250,7 @@ const FacultyTab: React.FC<FacultyTabProps> = ({
       </p>
       <p className="mb-4 text-gray-900">{description}</p>
       <button
-        className="rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-900"
+        className="rounded-sm bg-blue-600 px-4 py-2 text-white hover:bg-blue-900"
         onClick={ctaOnClick}
       >
         {ctaText}
@@ -323,7 +323,7 @@ const PlacementTab: React.FC<PlacementTabProps> = ({
               <p>Fee Per Year</p>
               <h2 className="mb-2 text-2xl font-bold">{feePerYear}</h2>
               <a href={onApplyClick}>
-                <button className="mb-4 w-full rounded bg-blue-500 px-4 py-2 text-white">
+                <button className="mb-4 w-full rounded-sm bg-blue-500 px-4 py-2 text-white">
                   Apply Online Now
                 </button>
               </a>
@@ -402,7 +402,7 @@ const Program: React.FC<ProgramProps> = ({
             {button?.map((button, index) => (
               <button
                 key={index}
-                className="m-4 mr-2 rounded-md bg-white px-4 py-2 text-blue-950 outline-none"
+                className="m-4 mr-2 rounded-md bg-white px-4 py-2 text-blue-950 outline-hidden"
                 onClick={button.onClick}
               >
                 {button.label}

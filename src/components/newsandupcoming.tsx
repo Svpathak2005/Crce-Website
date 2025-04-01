@@ -64,7 +64,7 @@ const Happenings = () => {
           {news.map((item, index) => (
             <div
               key={index}
-              className="group h-64 overflow-hidden rounded-lg bg-white shadow-sm transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-md"
+              className="group h-64 overflow-hidden rounded-lg bg-white shadow-xs transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-md"
               style={{
                 backgroundImage: `url(${item.imageUrl})`,
                 backgroundSize: 'cover',
@@ -91,7 +91,7 @@ const Happenings = () => {
           {news.map((item, index) => (
             <div
               key={index}
-              className="group h-64 overflow-hidden rounded-lg bg-white shadow-sm transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-md"
+              className="group h-64 overflow-hidden rounded-lg bg-white shadow-xs transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-md"
               style={{
                 backgroundImage: `url(${item.imageUrl})`,
                 backgroundSize: 'cover',
@@ -164,7 +164,7 @@ const EventCards = () => {
           {events.map((event, index) => (
             <div
               key={index}
-              className="group h-64 overflow-hidden rounded-lg bg-white shadow-sm transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-md"
+              className="group h-64 overflow-hidden rounded-lg bg-white shadow-xs transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-md"
               style={{
                 backgroundImage: `url(${event.imageUrl})`,
                 backgroundSize: 'cover',
@@ -206,7 +206,7 @@ const DeadlineCards = () => {
           {deadlines.map((deadline, index) => (
             <div
               key={index}
-              className="group h-64 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all duration-300 ease-in-out hover:shadow-md"
+              className="group h-64 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-xs transition-all duration-300 ease-in-out hover:shadow-md"
             >
               <div className="flex h-full flex-col justify-between p-6">
                 <div>

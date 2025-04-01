@@ -88,15 +88,15 @@ const GrievanceForm: React.FC = () => {
   )
 
   return (
-    <div className="flex h-fit w-full flex-col bg-gradient-to-b from-white to-[#E5F0FF] text-gray-900">
-      <div className="flex h-fit w-full flex-col items-center justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] pt-10 md:pt-40">
+    <div className="flex h-fit w-full flex-col bg-linear-to-b from-white to-[#E5F0FF] text-gray-900">
+      <div className="flex h-fit w-full flex-col items-center justify-center bg-linear-to-br from-[#001f3f] to-[#003366] pt-10 md:pt-40">
         <div className="flex w-full flex-col items-center justify-center p-8 pt-40 text-white md:w-2/3 md:p-16 md:pt-16">
           <h1
             className={`${zilla.className} mb-6 text-4xl font-bold md:text-5xl lg:text-7xl`}
           >
             Grievance Submission
           </h1>
-          <p className="rounded-full bg-white/20 px-4 py-2 text-sm font-light text-white backdrop-blur-sm md:text-base">
+          <p className="rounded-full bg-white/20 px-4 py-2 text-sm font-light text-white backdrop-blur-xs md:text-base">
             Home {'>'} Contact {'>'} Grievance
           </p>
         </div>
@@ -118,7 +118,7 @@ const GrievanceForm: React.FC = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-[#001f3f] focus:outline-none"
+                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-[#001f3f] focus:outline-hidden"
                 required
               />
             </div>
@@ -132,7 +132,7 @@ const GrievanceForm: React.FC = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-[#001f3f] focus:outline-none"
+                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-[#001f3f] focus:outline-hidden"
                 required
               />
             </div>
@@ -146,7 +146,7 @@ const GrievanceForm: React.FC = () => {
                 name="mobile"
                 value={formData.mobile}
                 onChange={handleInputChange}
-                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-[#001f3f] focus:outline-none"
+                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-[#001f3f] focus:outline-hidden"
               />
             </div>
             <div>
@@ -161,7 +161,7 @@ const GrievanceForm: React.FC = () => {
                 name="messageCategory"
                 value={formData.messageCategory}
                 onChange={handleInputChange}
-                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-[#001f3f] focus:outline-none"
+                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-[#001f3f] focus:outline-hidden"
                 required
               >
                 <option value="">Select a category</option>
@@ -182,7 +182,7 @@ const GrievanceForm: React.FC = () => {
                 name="subject"
                 value={formData.subject}
                 onChange={handleInputChange}
-                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-[#001f3f] focus:outline-none"
+                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-[#001f3f] focus:outline-hidden"
                 required
               />
             </div>
@@ -196,7 +196,7 @@ const GrievanceForm: React.FC = () => {
                 value={formData.message}
                 onChange={handleInputChange}
                 maxLength={250}
-                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-[#001f3f] focus:outline-none"
+                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-[#001f3f] focus:outline-hidden"
                 required
               ></textarea>
             </div>

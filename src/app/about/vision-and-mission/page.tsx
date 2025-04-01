@@ -11,15 +11,15 @@ const zilla = Zilla_Slab({
 
 const VisionMissionPage = () => {
   return (
-    <div className="flex h-fit w-full flex-col bg-gradient-to-b from-white to-[#E5F0FF] text-gray-900">
-      <div className="flex h-full w-full flex-col justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] pt-36 md:flex-row">
+    <div className="flex h-fit w-full flex-col bg-linear-to-b from-white to-[#E5F0FF] text-gray-900">
+      <div className="flex h-full w-full flex-col justify-center bg-linear-to-br from-[#001f3f] to-[#003366] pt-36 md:flex-row">
         <div className="flex w-full flex-col items-center justify-center p-8 pt-40 text-white md:w-2/3 md:p-16 md:pt-16">
           <h1
             className={`${zilla.className} mb-6 text-4xl font-bold md:text-5xl lg:text-7xl`}
           >
             VISION & MISSION
           </h1>
-          <p className="rounded-full bg-white/20 px-4 py-2 text-sm font-light text-white backdrop-blur-sm md:text-base">
+          <p className="rounded-full bg-white/20 px-4 py-2 text-sm font-light text-white backdrop-blur-xs md:text-base">
             Home {'>'} About {'>'} Vision & Mission
           </p>
         </div>
@@ -64,7 +64,7 @@ const VisionMissionPage = () => {
                 key={index}
                 className="flex items-start rounded-lg bg-gray-100 p-4 shadow-lg"
               >
-                <span className="mr-4 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#4a90e2] text-white">
+                <span className="mr-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#4a90e2] text-white">
                   {index + 1}
                 </span>
                 <p className="text-gray-700">{item}</p>

@@ -92,7 +92,7 @@ export default function ProjectGroups() {
             >
               Project Groups
             </h1>
-            <div className="h-1 w-32 rounded bg-blue-900"></div>
+            <div className="h-1 w-32 rounded-sm bg-blue-900"></div>
           </div>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -104,7 +104,7 @@ export default function ProjectGroups() {
                 onMouseLeave={() => setHoveredCard(null)}
               >
                 <img
-                  className="mb-6 h-40 w-full rounded object-cover object-center"
+                  className="mb-6 h-40 w-full rounded-sm object-cover object-center"
                   src={card.image}
                   alt={card.title}
                 />
