@@ -1,6 +1,6 @@
 services:
   minio-server:
-    image: bitnami/minio:latest
+    image: bitnami/minio:2025.3.12
     container_name: minio-server
     environment:
       MINIO_ROOT_USER: "Zane"
@@ -13,7 +13,7 @@ services:
       - 9001:9001
 
   directus:
-    image: directus/directus:latest
+    image: directus/directus:11
     environment:
       SECRET: "u+23/0z8ZLkYzM6LVinGLw=="
       ADMIN_EMAIL: "zane.ferns360@gmail.com"
@@ -46,7 +46,7 @@ services:
       - minio-server
 
   db:
-    image: bitnami/postgresql:latest
+    image: bitnami/postgresql:17.4.0
     restart: always
     environment:
       POSTGRES_PASSWORD: zane123456

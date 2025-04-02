@@ -1,53 +1,35 @@
 'use client'
 import { Calendar, ChevronRight } from 'lucide-react'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+
+// Import the server function
+import getNews, { News, NewsResponse } from '@/app/api/news' // Update with the correct import path
 
 // Happenings (News) Component
 const Happenings = () => {
-   const [selectedNews, setSelectedNews] = useState<number | null>(null)
-  const news = [
-    {
-      date: '9 Jun 2024',
-      title:
-        'Fr. Conceicao Rodrigues College Of Engineering achieved an impressive milestone, securing the 3rd position among the top engineering colleges in Mumbai in the year 2024.',
-      imageUrl: '/ssr2.png',
-    },
-    {
-      date: '5th July 2024',
-      title:
-        'We , the Fr. CRCE extend our heartfelt gratitude for your contributions and commitment. Your presence has made a lasting impact, and we wish you continued success and fulfillment in your future endeavors.Happy Farewell.',
-      imageUrl:
-        'https://media.licdn.com/dms/image/v2/D4D22AQE23ch8dhe_Lg/feedshare-shrink_1280/feedshare-shrink_1280/0/1725991344448?e=1729123200&v=beta&t=B5e6u3TOfU7tGEU-97QYKERb4zOgDvTaKAWGgRFSBqs',
-    },
-    {
-      date: '15 Aug 2024',
-      title:
-        'We hosted the 26th Edition of the FR CONCEICAO RODRIGUES MEMORIAL DEBATE (CRMD) on 23rd & 24th August 24! This prestigious event had 32 formidable teams from across the nation, showcasing their unparalleled debating prowess. 🌟',
-      imageUrl:
-        'https://media.licdn.com/dms/image/v2/D4D22AQH89X7z1KvIag/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1725085515956?e=1729123200&v=beta&t=qwsxm47dvjx64PFquyqQCZU2acmAUXqMQ7VIEZjQmL4',
-    },
-    {
-      date: '25 Sep 2024',
-      title:
-        'We are excited to share the launch of the "Startup Clinic", an incubation center at Fr. Conceicao Rodrigues College of Engineering, powered by the University of Mumbai IDEAS Foundation!',
-      imageUrl:
-        'https://media.licdn.com/dms/image/v2/D4D22AQEiVTX3dJCMIg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1725335957750?e=1729123200&v=beta&t=1L8QNSbxfbQa5qVM1yBlr5W52l2Bip3jDtVvFVzyuJU',
-    },
-    {
-      date: '10 Oct 2024',
-      title:
-        'We are deeply grateful to our alumni for their invaluable support and guidance to our students.',
-      imageUrl:
-        'https://media.licdn.com/dms/image/v2/D4D22AQFyFHCAIdMhbg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1719188271605?e=1729123200&v=beta&t=74ejCueEMbg5Mf9FDQnZ5mGKSSVTVPtlcUz-7FlBx2w',
-    },
-    {
-      date: '1 Nov 2024',
-      title:
-        'Our upcoming TEDxCRCE event (8th Edition) scheduled for 3rd February 24, themed "Cracks in the Canvas."',
-      imageUrl:
-        'https://media.licdn.com/dms/image/v2/D5622AQFesUJ0xZCX9g/feedshare-shrink_1280/feedshare-shrink_1280/0/1706547776154?e=1729123200&v=beta&t=15Zt-AW17kdy9lrTzbP0MZgFGmQJVxXaW3CijLIL7y8',
-    },
-  ]
+  const [selectedNews, setSelectedNews] = useState<number | null>(null)
+  const [newsData, setNewsData] = useState<News[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true)
+        const result = await getNews()
+        setNewsData(result.data)
+        setError(null)
+      } catch (err) {
+        setError('Failed to load news data')
+        console.error('Error fetching news:', err)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchData()
+  }, [])
+
   const handleCardClick = (index: number) => {
     setSelectedNews(index)
   }
@@ -56,61 +38,68 @@ const Happenings = () => {
     setSelectedNews(null)
   }
 
-  return (
-    /*  
-  <div id="news" className="mt-5 w-full bg-white py-8">
-      <div className="container mx-auto max-w-6xl px-4">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {news.map((item, index) => (
-            <div
-              key={index}
-              className="group h-64 overflow-hidden rounded-lg bg-white shadow-xs transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-md"
-              style={{
-                backgroundImage: `url(${item.imageUrl})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
-            >
-              <div className="flex h-full flex-col justify-end bg-black bg-opacity-50 p-4 transition-all duration-300 group-hover:bg-opacity-0">
-                <p className="mb-2 text-sm text-gray-200 transition-colors duration-300 group-hover:text-white">
-                  {item.date}
-                </p>
-                <h3 className="line-clamp-2 text-base font-semibold text-white transition-all duration-300 group-hover:text-lg group-hover:text-blue-200">
-                  {item.title}
-                </h3>
-              </div>
-            </div>
-          ))}
-        </div>
+  if (loading) {
+    return (
+      <div className="flex h-64 w-full items-center justify-center">
+        Loading news...
       </div>
-    </div>
-  */
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="flex h-64 w-full items-center justify-center text-red-500">
+        {error}
+      </div>
+    )
+  }
+
+  // Fallback to static data if no data is returned
+  const news =
+    newsData.length > 0
+      ? newsData.map((item) => ({
+          date: new Date(item.date_created).toLocaleDateString('en-US', {
+            day: 'numeric',
+            month: 'short',
+            year: 'numeric',
+          }),
+          title: item.title,
+          imageUrl: item.image || '/placeholder-image.jpg',
+        }))
+      : [
+          {
+            date: '9 Jun 2024',
+            title:
+              'Fr. Conceicao Rodrigues College Of Engineering achieved an impressive milestone, securing the 3rd position among the top engineering colleges in Mumbai in the year 2024.',
+            imageUrl: '/ssr2.png',
+          },
+          // ... other static news items
+        ]
+
+  return (
     <div id="news" className="mt-5 w-full bg-white py-8">
       <div className="container mx-auto max-w-6xl px-4">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {news.map((item, index) => (
             <div
               key={index}
-              className="group h-64 overflow-hidden rounded-lg bg-white shadow-xs transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-md"
-              style={{
-                backgroundImage: `url(${item.imageUrl})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
+              className="group relative h-64 overflow-hidden rounded-lg bg-white shadow-xs transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-md"
               onClick={() => handleCardClick(index)}
             >
-              <div className="flex h-full flex-col justify-end bg-black bg-opacity-50 p-4 transition-all duration-300 group-hover:bg-opacity-0">
-                {/* <img
-                  src={item.imageUrl}
-                  alt={item.title}
-                  className="mb-2 h-16 w-16 object-cover"
-                /> */}
+              <img
+                src={`${process.env.NEXT_PUBLIC_ASSET_URL}${item.imageUrl}`}
+                alt="News Image"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+
+              <div className="opacity-50 group-hover:opacity-30 flex h-full flex-col justify-end bg-black p-4 transition-all duration-300">
                 <h3 className="line-clamp-1 text-base font-semibold text-white transition-all duration-300 group-hover:text-lg group-hover:text-blue-200">
                   {item.title}
                 </h3>
-                <button className="mt-2 cursor-pointer rounded-md bg-transperent px-4 py-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-blue-700">
+                <button className="mt-2 cursor-pointer rounded-md bg-transparent px-4 py-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-blue-700">
                   View More
                 </button>
+                <p>{item.imageUrl}</p>
               </div>
             </div>
           ))}
@@ -119,17 +108,23 @@ const Happenings = () => {
 
       {selectedNews !== null && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+          className="bg-opacity-50 fixed inset-0 z-50 flex items-center justify-center bg-black"
           onClick={closePopup}
         >
-          <div className="w-full max-w-md rounded-lg bg-white p-6">
-            <button className="absolute right-2 top-2 text-gray-600 hover:text-gray-800">
+          <div
+            className="w-full max-w-md rounded-lg bg-white p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
+              onClick={closePopup}
+            >
               &times;
             </button>
             <img
-              src={news[selectedNews]?.imageUrl}
+              src={`${process.env.NEXT_PUBLIC_ASSET_URL}${news[selectedNews]?.imageUrl}`}
               alt={news[selectedNews]?.title}
-              className="mb-4 h-auto w-full"
+              className="mb-4 h-auto w-full rounded"
             />
             <h3 className="text-xl font-bold">{news[selectedNews]?.title}</h3>
             <p className="text-sm text-gray-500">{news[selectedNews]?.date}</p>
@@ -171,7 +166,7 @@ const EventCards = () => {
                 backgroundPosition: 'center',
               }}
             >
-              <div className="flex h-full flex-col justify-end bg-black bg-opacity-50 p-4 transition-all duration-300 group-hover:bg-opacity-0">
+              <div className="bg-opacity-50 group-hover:bg-opacity-0 flex h-full flex-col justify-end bg-black p-4 transition-all duration-300">
                 <p className="mb-2 text-sm text-gray-200 transition-colors duration-300 group-hover:text-white">
                   {event.date}
                 </p>
@@ -216,7 +211,7 @@ const DeadlineCards = () => {
                       {deadline.date}
                     </p>
                   </div>
-                  <h3 className="mb-4 text-xl font-bold leading-tight text-gray-800">
+                  <h3 className="mb-4 text-xl leading-tight font-bold text-gray-800">
                     {deadline.title}
                   </h3>
                 </div>
@@ -232,6 +227,7 @@ const DeadlineCards = () => {
     </div>
   )
 }
+
 const Newsandupcoming = () => {
   const [activeTab, setActiveTab] = useState('news')
 
@@ -241,7 +237,7 @@ const Newsandupcoming = () => {
 
   return (
     <div className="w-screen max-w-full bg-white px-4 py-8">
-      <div className="relative mb-8 mt-10 text-center">
+      <div className="relative mt-10 mb-8 text-center">
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-3/4 border-t border-gray-300"></div>
         </div>
@@ -254,8 +250,8 @@ const Newsandupcoming = () => {
         {['news', 'events', 'deadlines'].map((tab) => (
           <button
             key={tab}
-            className={`select-none rounded-sm bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900 transition-all duration-300 hover:bg-gray-100 hover:text-blue-800 focus:z-10 focus:bg-blue-800 focus:text-white ${
-              activeTab === tab ? 'bg-blue-700 text-black' : 'hover:shadow-md'
+            className={`rounded-sm bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900 transition-all duration-300 select-none hover:bg-gray-100 hover:text-blue-800 focus:z-10 focus:bg-blue-800 focus:text-white ${
+              activeTab === tab ? 'bg-blue-700 text-white' : 'hover:shadow-md'
             }`}
             onClick={() => handleTabClick(tab)}
           >
