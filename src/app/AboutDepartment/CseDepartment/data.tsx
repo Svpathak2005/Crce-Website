@@ -8,10 +8,8 @@ export const FacultyTabData = [
     qualification: 'Ph.D. (Computer Engineering)',
     areasOfInterest:
       'Data mining, Image Processing, Soft Computing, Machine Learning',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/ai-ds/Profile/jagruti_save_profile.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/ai-ds/Profile/jagruti_save_profile.pdf',
   },
   {
     id: '2',
@@ -22,10 +20,8 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Electronics Engineering)(Pursuing)',
     areasOfInterest:
       'VLSI, Nanoelectronics, Computer Network, Software Engineering, Embedded System',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/ai-ds/Profile/Swapnali_profile.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/ai-ds/Profile/Swapnali_profile.pdf',
   },
   {
     id: '3',
@@ -36,10 +32,8 @@ export const FacultyTabData = [
     qualification: 'M.E.',
     areasOfInterest:
       'Big Data Analytics, Theory of Computer Science, Web Computing, Machine Learning, Natural Language Processing',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/ai-ds/Profile/Swati_Ringe_facultyprofile_22-23.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/ai-ds/Profile/Swati_Ringe_facultyprofile_22-23.pdf',
   },
   {
     id: '4',
@@ -50,9 +44,7 @@ export const FacultyTabData = [
     qualification: 'M.E.',
     areasOfInterest:
       'IoT, Microprocessor, Computer Organization and Architecture, Computer Graphics, Image Processing',
-    ctaOnClick: () => {
-      window.location.href = '/faculty/4'
-    },
+    ctaOnClick: '/faculty/4',
   },
   {
     id: '5',
@@ -63,9 +55,7 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
     areasOfInterest:
       'Database systems, Data warehousing and Data Mining, Software Engineering, Project Management',
-    ctaOnClick: () => {
-      window.location.href = '/faculty/5'
-    },
+    ctaOnClick: '/faculty/5',
   },
   {
     id: '6',
@@ -76,9 +66,7 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Computer Science & Engineering)(Pursuing)',
     areasOfInterest:
       'Big Data Analytics, Database Systems, Data Warehousing and Mining, Machine Learning, Web Programming, Software Testing',
-    ctaOnClick: () => {
-      window.location.href = '/faculty/6'
-    },
+    ctaOnClick: '/faculty/6',
   },
   {
     id: '7',
@@ -88,9 +76,7 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
     areasOfInterest: 'AI and ML, Data Science',
-    ctaOnClick: () => {
-      window.location.href = '/faculty/7'
-    },
+    ctaOnClick: '/faculty/7',
   },
   {
     id: '8',
@@ -101,9 +87,7 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Computer Science Engineering)(Pursuing)',
     areasOfInterest:
       'Data Warehouse and Mining, Cloud Computing, Social Media Analytics',
-    ctaOnClick: () => {
-      window.location.href = '/faculty/8'
-    },
+    ctaOnClick: '/faculty/8',
   },
   {
     id: '9',
@@ -113,9 +97,7 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'Ph.D.(Pursuing)',
     areasOfInterest: 'Data Science, Natural Language Processing, Data Mining',
-    ctaOnClick: () => {
-      window.location.href = '/faculty/9'
-    },
+    ctaOnClick: '/faculty/9',
   },
   {
     id: '10',
@@ -126,9 +108,7 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Pursuing)',
     areasOfInterest:
       'Database Systems, Cyber Security, IoT, Computer Networks, Recommendation Systems',
-    ctaOnClick: () => {
-      window.location.href = '/faculty/10'
-    },
+    ctaOnClick: '/faculty/10',
   },
   {
     id: '11',
@@ -138,9 +118,7 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'Ph.D.(Pursuing)',
     areasOfInterest: 'Artificial Intelligence',
-    ctaOnClick: () => {
-      window.location.href = '/faculty/11'
-    },
+    ctaOnClick: '/faculty/11',
   },
 ]
 
@@ -318,7 +296,7 @@ export const images = [
 
 export const tabContents = {
   Placements: (
-    <div className="mx-auto p-6 font-roboto">
+    <div className="font-roboto mx-auto p-6">
       <h2 className="mb-6 text-3xl font-semibold text-gray-900">
         Placement Statiscs
       </h2>
@@ -336,7 +314,7 @@ export const tabContents = {
         industry leaders place in our graduates.
       </p>
 
-      <div className="container mx-auto pr-6 pt-6">
+      <div className="container mx-auto pt-6 pr-6">
         <h2 className="mb-6 text-3xl font-semibold text-gray-900">
           Placement Highest and Lowest Package
         </h2>
@@ -458,10 +436,10 @@ export const tabContents = {
   ),
   Recruiters: (
     <div className="w-full bg-white p-6 py-8">
-      <h2 className="mb-6 font-roboto text-3xl font-semibold text-gray-900">
+      <h2 className="font-roboto mb-6 text-3xl font-semibold text-gray-900">
         Our Recruiters
       </h2>
-      <div className="w-full border-t border-gray-300 pt-6 md:border-t-0 md:pl-12 md:pt-0">
+      <div className="w-full border-t border-gray-300 pt-6 md:border-t-0 md:pt-0 md:pl-12">
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:gap-6">
           {images.map((img, index) => (
             <div
@@ -476,7 +454,7 @@ export const tabContents = {
   ),
   Eligibility: (
     <div className="p-6">
-      <h2 className="mb-6 font-roboto text-3xl font-semibold text-gray-900">
+      <h2 className="font-roboto mb-6 text-3xl font-semibold text-gray-900">
         Eligibility
       </h2>
       <div className="font-roboto">

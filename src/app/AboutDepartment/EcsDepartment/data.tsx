@@ -8,10 +8,8 @@ export const FacultyTabData = [
     qualification: 'Ph.D.',
     areasOfInterest:
       'Microprocessor system design, Embedded systems, Internet of Things, Biomedical instrumentation, Computer Architecture',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/ecs/profile/sapna_prabhu_prodile.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/ecs/profile/sapna_prabhu_prodile.pdf',
   },
   {
     id: '2',
@@ -22,10 +20,8 @@ export const FacultyTabData = [
     qualification: 'Ph.D.',
     areasOfInterest:
       'Instrumentation, Biomedical Instrumentation, Virtual Instrumentation, VLSI Design, MEMS, Automation',
-    ctaOnClick: () => {
-      window.location.href =
-        'http://www.frcrce.ac.in/media/attachments/2024/09/11/d-v-bhoir-bio-data.pdf'
-    },
+    ctaOnClick:
+      'http://www.frcrce.ac.in/media/attachments/2024/09/11/d-v-bhoir-bio-data.pdf',
   },
   {
     id: '3',
@@ -36,10 +32,8 @@ export const FacultyTabData = [
     qualification: 'M.E. (Pursuing PhD)',
     areasOfInterest:
       'Power electronics, Electrical Vehicle Battery Management, Renewable Energy System',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/ecs/profile/binsy_joseph_profile.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/ecs/profile/binsy_joseph_profile.pdf',
   },
   {
     id: '4',
@@ -50,10 +44,8 @@ export const FacultyTabData = [
     qualification: 'M.E. (Pursuing PhD)',
     areasOfInterest:
       'Deep Learning, Machine Learning, Mobile Computing, Soft Computing, Database Management Systems',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/ecs/profile/dipali_koshti_profile.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/ecs/profile/dipali_koshti_profile.pdf',
   },
   {
     id: '5',
@@ -64,10 +56,8 @@ export const FacultyTabData = [
     qualification: 'M.E. (Pursuing PhD)',
     areasOfInterest:
       'Web Programming, Linux System Administration, Machine Learning, Bio-inspired Computation, Big Data Analytics',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/ecs/profile/vaibhavprofile.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/ecs/profile/vaibhavprofile.pdf',
   },
   {
     id: '6',
@@ -78,10 +68,8 @@ export const FacultyTabData = [
     qualification: 'M.E. (Pursuing PhD)',
     areasOfInterest:
       'Soft Computing, Computer Vision, Machine Learning, Data Structures and Algorithms, Discrete Structures, Automata Theory, Object-Oriented Programming',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/ecs/profile/Archana_Profile.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/ecs/profile/Archana_Profile.pdf',
   },
   {
     id: '7',
@@ -92,10 +80,8 @@ export const FacultyTabData = [
     qualification: 'M.E. (Pursuing PhD)',
     areasOfInterest:
       'Electronic Devices & Circuits, Signal Conditioning Circuit Design, Control Systems Engineering, Instrumentation Systems, Industrial Automation & Process Control, Management Information Systems, Project Management',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/ecs/profile/Archana_Profile.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/ecs/profile/Archana_Profile.pdf',
   },
   {
     id: '8',
@@ -106,9 +92,7 @@ export const FacultyTabData = [
     qualification: 'M.E. (Pursuing PhD)',
     areasOfInterest:
       'Security, Blockchain Technology, Big Data Analysis, Java Programming',
-    ctaOnClick: () => {
-      window.location.href = '/faculty/8'
-    },
+    ctaOnClick: '/faculty/8',
   },
 
   {
@@ -120,10 +104,8 @@ export const FacultyTabData = [
     qualification: 'M.E. (Pursuing PhD)',
     areasOfInterest:
       'Biomedical Signal Processing, Neuroscience, Artificial Intelligence',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/ecs/profile/Archana_Profile.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/ecs/profile/Archana_Profile.pdf',
   },
   {
     id: '10',
@@ -133,10 +115,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'M.E.',
     areasOfInterest: 'Image Processing, Microprocessor, Embedded systems',
-    ctaOnClick: () => {
-      window.location.href =
-        'http://www.frcrce.ac.in/media/attachments/2024/06/28/flynn-cv_2806.pdf'
-    },
+    ctaOnClick:
+      'http://www.frcrce.ac.in/media/attachments/2024/06/28/flynn-cv_2806.pdf',
   },
   {
     id: '11',
@@ -147,10 +127,8 @@ export const FacultyTabData = [
     qualification: 'M.E.',
     areasOfInterest:
       'VLSI Design, Internet of Things, Image Processing, Machine Learning',
-    ctaOnClick: () => {
-      window.location.href =
-        'http://www.frcrce.ac.in/media/attachments/2024/08/10/garima_resume_asst_prof.pdf'
-    },
+    ctaOnClick:
+      'http://www.frcrce.ac.in/media/attachments/2024/08/10/garima_resume_asst_prof.pdf',
   },
 ]
 export const tabs = [
@@ -190,7 +168,7 @@ export const hodsDesk = {
   bio: 'Dr. Sapna Prabhu is the Head of the Electronics and Computer Science Department at Fr.CRCE. She specializes in Microprocessor system design, Embedded systems, IoT, and Biomedical instrumentation.',
   imageUrl: '/facultyecs/sapnaprabhu.jpg',
   content:
-   "The Department of Electronics and Computer Science Engineering offers an academic programme which has an optimum mix of Electronics, Communication and Computer Engineering with an emphasis on VLSI, Embedded systems, Instrumentation, Automation and Robotics, and allied subjects. Our strict adherence to quality norms in teaching-learning and evaluation has always been the strength of the department. Students are moulded to be technically skilled and socially conscious so as to contribute to finding solutions to real-life problems. They are provided with avenues to develop inter-disciplinary projects and to acquire organization, presentation and leadership skills. The department works with the commitment and resolves to keep the laboratories updated with the latest technologies, to adopt innovative teaching methodologies and thus to impart quality education in Electronics Engineering. We focus on Research in key areas such as Communication, Instrumentation, VLSI and Processor Architecture. The department has a good Industry interaction in terms of project design, consultancy, internships, and industry visits. Our Alumni occupy prestigious positions in reputed organizations in India and abroad. Always striving to provide the best facilities to our students, the department is constantly on the move by organizing workshops, seminars, hands-on sessions to improve the practical aspects of a student’s learning process. An excellent academic ambiance with highly motivated faculty complemented with a wide variety ofco-curricular and extra-curricular activities provide a holistic approach to the development of students.",
+    'The Department of Electronics and Computer Science Engineering offers an academic programme which has an optimum mix of Electronics, Communication and Computer Engineering with an emphasis on VLSI, Embedded systems, Instrumentation, Automation and Robotics, and allied subjects. Our strict adherence to quality norms in teaching-learning and evaluation has always been the strength of the department. Students are moulded to be technically skilled and socially conscious so as to contribute to finding solutions to real-life problems. They are provided with avenues to develop inter-disciplinary projects and to acquire organization, presentation and leadership skills. The department works with the commitment and resolves to keep the laboratories updated with the latest technologies, to adopt innovative teaching methodologies and thus to impart quality education in Electronics Engineering. We focus on Research in key areas such as Communication, Instrumentation, VLSI and Processor Architecture. The department has a good Industry interaction in terms of project design, consultancy, internships, and industry visits. Our Alumni occupy prestigious positions in reputed organizations in India and abroad. Always striving to provide the best facilities to our students, the department is constantly on the move by organizing workshops, seminars, hands-on sessions to improve the practical aspects of a student’s learning process. An excellent academic ambiance with highly motivated faculty complemented with a wide variety ofco-curricular and extra-curricular activities provide a holistic approach to the development of students.',
 }
 export const Vision = {
   name: 'Vision',
@@ -234,7 +212,7 @@ export const images = [
 ]
 export const tabContents = {
   Placements: (
-    <div className="mx-auto p-6 font-roboto">
+    <div className="font-roboto mx-auto p-6">
       <h2 className="mb-6 text-3xl font-semibold text-gray-900">
         Placement Statiscs
       </h2>
@@ -252,7 +230,7 @@ export const tabContents = {
         industry leaders place in our graduates.
       </p>
 
-      <div className="container mx-auto pr-6 pt-6">
+      <div className="container mx-auto pt-6 pr-6">
         <h2 className="mb-6 text-3xl font-semibold text-gray-900">
           Placement Highest and Lowest Package
         </h2>
@@ -374,10 +352,10 @@ export const tabContents = {
   ),
   Recruiters: (
     <div className="w-full bg-white p-6 py-8">
-      <h2 className="mb-6 font-roboto text-3xl font-semibold text-gray-900">
+      <h2 className="font-roboto mb-6 text-3xl font-semibold text-gray-900">
         Our Recruiters
       </h2>
-      <div className="w-full border-t border-gray-300 pt-6 md:border-t-0 md:pl-12 md:pt-0">
+      <div className="w-full border-t border-gray-300 pt-6 md:border-t-0 md:pt-0 md:pl-12">
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:gap-6">
           {images.map((img, index) => (
             <div
@@ -392,7 +370,7 @@ export const tabContents = {
   ),
   Eligibility: (
     <div className="p-6">
-      <h2 className="mb-6 font-roboto text-3xl font-semibold text-gray-900">
+      <h2 className="font-roboto mb-6 text-3xl font-semibold text-gray-900">
         Eligibility
       </h2>
       <div className="font-roboto">

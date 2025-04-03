@@ -42,10 +42,10 @@ interface FacultyTabProps {
   photoUrl: string
   ctaText: string
   designation: string
-  contact : string
+  contact: string
   qualification: string
   areasOfInterest: string
-  ctaOnClick: () => void
+  ctaOnClick: string
 }
 
 interface FacultyGridProps {
@@ -96,10 +96,11 @@ const Sidebar: React.FC<SidebarTabsProps> = ({
           <button
             key={tab.id}
             onClick={() => onTabChange(tab.id)}
-            className={`flex w-full justify-start border-b border-gray-400 px-2 py-2 ${activeTab === tab.id
+            className={`flex w-full justify-start border-b border-gray-400 px-2 py-2 ${
+              activeTab === tab.id
                 ? 'bg-gray-50 text-blue-600'
                 : 'text-gray-600 hover:text-blue-400'
-              }`}
+            }`}
           >
             {tab.title}
           </button>
@@ -112,10 +113,11 @@ const Sidebar: React.FC<SidebarTabsProps> = ({
           <div key={tab.id} className="border-b border-gray-400">
             <button
               onClick={() => toggleAccordion(tab.id)}
-              className={`flex w-full items-center justify-between px-2 py-2 ${activeTab === tab.id
+              className={`flex w-full items-center justify-between px-2 py-2 ${
+                activeTab === tab.id
                   ? 'bg-gray-50 text-blue-600'
                   : 'text-gray-600 hover:text-blue-400'
-                }`}
+              }`}
             >
               {tab.title}
               <span className="transform transition-transform duration-200 ease-in-out">
@@ -180,8 +182,8 @@ const HODsDesk: React.FC<HODsDeskProps> = ({
           >
             From HOD's Desk
           </p>
-          <div className="mt-10 flex flex-col rounded-lg border-[1px] bg-white px-8 md:px-2  shadow-lg sm:flex-row ">
-            <div className="text-center sm:w-1/3 sm:py-8 sm:pl-6 sm:pr-8">
+          <div className="mt-10 flex flex-col rounded-lg border-[1px] bg-white px-8 shadow-lg sm:flex-row md:px-2">
+            <div className="text-center sm:w-1/3 sm:py-8 sm:pr-8 sm:pl-6">
               <div className="inline-flex h-fit w-40 items-center justify-center rounded-full bg-gray-200 text-gray-400">
                 <Image
                   src={imageUrl}
@@ -195,7 +197,7 @@ const HODsDesk: React.FC<HODsDeskProps> = ({
                 <h2 className="title-font mt-4 text-lg font-medium text-gray-900">
                   {name}
                 </h2>
-                <div className="mb-4 mt-2 h-1 w-12 rounded-sm bg-indigo-900"></div>
+                <div className="mt-2 mb-4 h-1 w-12 rounded-sm bg-indigo-900"></div>
                 <p className="text-base">HOD and Professor</p>
                 <h3>{bio}</h3>
                 <a className="inline-flex items-center text-indigo-800">
@@ -214,7 +216,7 @@ const HODsDesk: React.FC<HODsDeskProps> = ({
                 </a>
               </div>
             </div>
-            <div className="invisible-scrollbar mt-4 h-fit overflow-y-scroll border-t border-gray-200 pt-4 text-center sm:mt-0 sm:w-2/3 sm:border-l sm:border-t-0 sm:py-8 sm:pl-8 sm:text-left">
+            <div className="invisible-scrollbar mt-4 h-fit overflow-y-scroll border-t border-gray-200 pt-4 text-center sm:mt-0 sm:w-2/3 sm:border-t-0 sm:border-l sm:py-8 sm:pl-8 sm:text-left">
               <p className="text-md leading-relaxed sm:text-xs md:text-xl">
                 {content}
               </p>
@@ -237,31 +239,34 @@ const FacultyTab: React.FC<FacultyTabProps> = ({
   ctaOnClick,
 }) => {
   return (
-    <div className="mb-10 flex flex-col items-center justify-center rounded-xl m-2 bg-white p-4 shadow-md">
-      <div className="mb-4 flex items-center justify-center w-full">
+    <div className="m-2 mb-10 flex flex-col items-center justify-center rounded-xl bg-white p-4 shadow-md">
+      <div className="mb-4 flex w-full items-center justify-center">
         <Image
           src={photoUrl}
           alt={name}
           className="h-40 w-40 rounded-full"
           width={200}
           height={200}
+          unoptimized
         />
       </div>
       <h2 className="text-lg font-medium">{name}</h2>
-      <p className="mb-4 font-semibold text-gray-700 text-center">{designation}</p>
-      <p className="text-gray-900 text-center">{qualification}</p>
+      <p className="mb-4 text-center font-semibold text-gray-700">
+        {designation}
+      </p>
+      <p className="text-center text-gray-900">{qualification}</p>
       <p className="mb-4 text-center text-gray-900">
         {' '}
-        Area of Interest: {areasOfInterest} 
-        <br className='mb-3' />
+        Area of Interest: {areasOfInterest}
+        <br className="mb-3" />
         Contact: email@gmail.com {contact}
       </p>
-      <button
+      <Link
         className="rounded-sm bg-blue-600 px-4 py-2 text-white hover:bg-blue-900"
-        onClick={ctaOnClick}
+        href={ctaOnClick}
       >
         {ctaText}
-      </button>
+      </Link>
     </div>
   )
 }
@@ -274,7 +279,11 @@ const FacultyGrid: React.FC<FacultyGridProps> = ({ facultyData }) => {
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
       {facultyData.map((faculty) => (
-        <FacultyTab key={faculty.id} {...faculty} contact={faculty.contact || 'N/A'} />
+        <FacultyTab
+          key={faculty.id}
+          {...faculty}
+          contact={faculty.contact || 'N/A'}
+        />
       ))}
     </div>
   )
@@ -302,10 +311,11 @@ const PlacementTab: React.FC<PlacementTabProps> = ({
             {tabs.map((tab) => (
               <button
                 key={tab}
-                className={`px-4 py-2 font-bold ${activeTab === tab
+                className={`px-4 py-2 font-bold ${
+                  activeTab === tab
                     ? 'border-b-2 border-blue-600 text-blue-600'
                     : 'text-gray-600'
-                  }`}
+                }`}
                 onClick={() => setActiveTab(tab)}
               >
                 {tab}
@@ -356,61 +366,56 @@ const PlacementTab: React.FC<PlacementTabProps> = ({
 }
 
 interface Tab {
-  id: string;
-  title: string;
+  id: string
+  title: string
 }
 
 // Updated TypeScript interfaces for props
 
 interface Tab {
-  id: string;
-  title: string;
+  id: string
+  title: string
 }
 
 interface PlacementContentProps {
   tabContents: {
-    [key: string]: React.ReactNode;
-  };
+    [key: string]: React.ReactNode
+  }
 }
 
 const PlacementContent: React.FC<PlacementContentProps> = ({ tabContents }) => {
   // Create tabs from tabContents keys with type safety
   const tabs: Tab[] = Object.entries(tabContents).map(([key]) => ({
     id: key,
-    title: key
-  }));
-  
-  const [activeTab, setActiveTab] = useState<string>(tabs[0]?.id || '');
+    title: key,
+  }))
+
+  const [activeTab, setActiveTab] = useState<string>(tabs[0]?.id || '')
 
   // Handle empty tabContents case
   if (tabs.length === 0) {
-    return <div className="p-4 text-gray-500">No content available</div>;
+    return <div className="p-4 text-gray-500">No content available</div>
   }
 
   return (
-    <div className="w-full bg-white shadow-xs ">
-      <div className="border-b border-gray-200 overflow-x-auto">
+    <div className="w-full bg-white shadow-xs">
+      <div className="overflow-x-auto border-b border-gray-200">
         {/* Scrollable container for tabs */}
         <div className="min-w-full md:min-w-0">
-          <div className="flex max-w-2xl mx-auto px-4 md:px-0 md:justify-center md:space-x-12">
+          <div className="mx-auto flex max-w-2xl px-4 md:justify-center md:space-x-12 md:px-0">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
-                className={`
-                  relative shrink-0 px-3 md:px-4 py-4 md:py-6
-                  text-sm md:text-lg font-medium tracking-wide
-                  transition-colors duration-200 whitespace-nowrap
-                  ${
-                    activeTab === tab.id
-                      ? "text-blue-600"
-                      : "text-gray-500 hover:text-gray-900"
-                  }
-                `}
+                className={`relative shrink-0 px-3 py-4 text-sm font-medium tracking-wide whitespace-nowrap transition-colors duration-200 md:px-4 md:py-6 md:text-lg ${
+                  activeTab === tab.id
+                    ? 'text-blue-600'
+                    : 'text-gray-500 hover:text-gray-900'
+                } `}
                 onClick={() => setActiveTab(tab.id)}
               >
                 {tab.title}
                 {activeTab === tab.id && (
-                  <div className="absolute bottom-0 left-0 right-0 h-1 rounded-t-sm bg-blue-600" />
+                  <div className="absolute right-0 bottom-0 left-0 h-1 rounded-t-sm bg-blue-600" />
                 )}
               </button>
             ))}
@@ -422,11 +427,8 @@ const PlacementContent: React.FC<PlacementContentProps> = ({ tabContents }) => {
         {tabContents[activeTab]}
       </div>
     </div>
-  );
-};
-
-
-
+  )
+}
 
 const Program: React.FC<ProgramProps> = ({
   title,
@@ -510,6 +512,5 @@ export {
   FacultyGrid,
   PlacementTab,
   PlacementContent,
-  
   Program,
 }

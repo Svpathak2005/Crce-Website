@@ -7,6 +7,15 @@ const nextConfig = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
+  images: {
+    domains: ['localhost'],
+  },
+  remotePatterns: [
+    {
+      protocol: 'http',
+      hostname: 'localhost',
+    },
+  ],
 
   async headers() {
     return [

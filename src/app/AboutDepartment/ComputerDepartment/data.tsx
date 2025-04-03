@@ -8,10 +8,8 @@ export const FacultyTabData = [
     contact: '',
     qualification: 'Ph.D.(Tech.) in Info.Tech',
     areasOfInterest: 'Data Mining, Machine Learning, Blockchain',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/comps/profile/sujata_deshmukh.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/sujata_deshmukh.pdf',
   },
   {
     id: '2',
@@ -19,12 +17,12 @@ export const FacultyTabData = [
     photoUrl: '/facultyimg/surve.png',
     ctaText: 'View Profile',
     designation: 'Professor',
+    contact: '',
     qualification: 'Ph.D.(Electronics Engineering)',
     areasOfInterest:
       'Artificial Intelligence, Machine Learning, Robotics, Cyber Security',
-    ctaOnClick: () => {
-      window.location.href = 'https://frcrce.ac.in/images/crce/department/comps/profile/SunilSurveProfile.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/SunilSurveProfile.pdf',
   },
   {
     id: '3',
@@ -32,11 +30,11 @@ export const FacultyTabData = [
     photoUrl: '/facultyimg/daga.png',
     ctaText: 'View Profile',
     designation: 'Associate Professor',
+    contact: '',
     qualification: 'Ph.D.(Computer Science and Engineering)',
     areasOfInterest: 'Software Engineering, Artificial Intelligence',
-    ctaOnClick: () => {
-      window.location.href = 'https://frcrce.ac.in/images/crce/department/comps/profile/Daga_profile.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/Daga_profile.pdf',
   },
   {
     id: '4',
@@ -44,11 +42,11 @@ export const FacultyTabData = [
     photoUrl: '/facultyimg/merly.png',
     ctaText: 'View Profile',
     designation: 'Associate Professor',
+    contact: '',
     qualification: 'Ph.D.(Computer Engg.) (Pursuing)',
     areasOfInterest: 'Computer Networks, Security & Distributed Computing',
-    ctaOnClick: () => {
-      window.location.href = 'https://frcrce.ac.in/images/crce/department/comps/profile/merly_thomas.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/merly_thomas.pdf',
   },
   {
     id: '5',
@@ -56,12 +54,12 @@ export const FacultyTabData = [
     photoUrl: '/facultyimg/kanthe.png',
     ctaText: 'View Profile',
     designation: 'Associate Professor',
+    contact: '',
     qualification: 'Ph.D.(Computer Technology)',
     areasOfInterest:
       'Wireless Network Security, Cyber Security, Machine Learning',
-    ctaOnClick: () => {
-      window.location.href = 'https://frcrce.ac.in/images/crce/department/comps/profile/ashok.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/ashok.pdf',
   },
   {
     id: '6',
@@ -69,13 +67,12 @@ export const FacultyTabData = [
     photoUrl: '/facultyimg/monica.png',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    contact: '',
     qualification: 'Ph.D.(Electronics Engineering)',
     areasOfInterest:
       'Telecommunications, Blockchain Technology, Computer Networks',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/comps/profile/Monica_Khanore_Profile_2022-23.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/Monica_Khanore_Profile_2022-23.pdf',
   },
   {
     id: '7',
@@ -83,13 +80,12 @@ export const FacultyTabData = [
     photoUrl: '/facultyimg/kalpana.png',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    contact: '',
     qualification: 'Ph.D.(Computer Engineering) (Pursuing)',
     areasOfInterest:
       'Natural Language Processing, Data Structures, Advance Algorithm',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/comps/profile/kalpana_CV_for_website.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/kalpana_CV_for_website.pdf',
   },
   {
     id: '8',
@@ -100,10 +96,8 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Computer Engineering) (Pursuing)',
     areasOfInterest:
       'Image Processing, Data Warehouse and Mining, Machine Learning, Deep Learning, Artificial Intelligence',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/comps/profile/Faculty_Profile_-_Roshni_Padate.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/Faculty_Profile_-_Roshni_Padate.pdf',
   },
   {
     id: '9',
@@ -114,10 +108,8 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
     areasOfInterest:
       'Computer Organization, Embedded Systems, Real Time Operating System, Internet of Things',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/comps/profile/Biodata_kranti_1.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/Biodata_kranti_1.pdf',
   },
   {
     id: '10',
@@ -128,10 +120,8 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
     areasOfInterest:
       'Computer Networks, Database Management Systems, Digital Signal Processing',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://fragnel.edu.in/images/crce/department/comps/profile/FACULTY_PROFILE_jagruti.pdf'
-    },
+    ctaOnClick:
+      'https://fragnel.edu.in/images/crce/department/comps/profile/FACULTY_PROFILE_jagruti.pdf',
   },
   {
     id: '11',
@@ -141,10 +131,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
     areasOfInterest: 'Artificial Intelligence, Machine Learning, Deep Learning',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/comps/profile/Ashwini_Pansare_Profile_22_23.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/Ashwini_Pansare_Profile_22_23.pdf',
   },
   {
     id: '12',
@@ -154,10 +142,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'Ph.D.(Computer Engineering)',
     areasOfInterest: 'Artificial Intelligence, Machine Learning, Deep Learning',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/comps/profile/SUPRIYA_KAMOJI-Resume.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/SUPRIYA_KAMOJI-Resume.pdf',
   },
   {
     id: '13',
@@ -168,10 +154,8 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Electronics Engineering)(Pursuing)',
     areasOfInterest:
       'Image processing, Machine Learning, Deep Learning, Signal Processing',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/comps/profile/FACULTY_PROFILE_sushma_2022-23.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/FACULTY_PROFILE_sushma_2022-23.pdf',
   },
   {
     id: '14',
@@ -182,10 +166,8 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
     areasOfInterest:
       'Computer Networks, System Security, Blockchain Technology',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/comps/profile/MonaliShetty_Profile.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/MonaliShetty_Profile.pdf',
   },
   {
     id: '15',
@@ -195,10 +177,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'M.E.(Computer Engineering)',
     areasOfInterest: 'Programming Languages, Machine Learning',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/comps/profile/Prachi_patil_10454_Profile.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/Prachi_patil_10454_Profile.pdf',
   },
   {
     id: '16',
@@ -209,10 +189,8 @@ export const FacultyTabData = [
     qualification: 'Ph.D.(Pursuing)',
     areasOfInterest:
       'Programming Languages, Computer Architecture, Machine Learning',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/comps/profile/FACULTY_PROFILE_Parshvi.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/FACULTY_PROFILE_Parshvi.pdf',
   },
   {
     id: '17',
@@ -222,10 +200,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
     areasOfInterest: 'Digital Logic, Computer Organization, IoT, Deep Learning',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/comps/profile/Sangeeta_Resume1.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/Sangeeta_Resume1.pdf',
   },
   {
     id: '18',
@@ -235,10 +211,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
     areasOfInterest: 'Embedded systems, Internet of Things',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/comps/profile/FACULTY_PROFILE_FOR_WEBSITE_Heena.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/FACULTY_PROFILE_FOR_WEBSITE_Heena.pdf',
   },
   {
     id: '19',
@@ -249,10 +223,8 @@ export const FacultyTabData = [
     qualification: 'PhD (Computer Engineering)(Pursuing)',
     areasOfInterest:
       'Data structure and Algorithms, Data mining, Machine Learning',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/comps/profile/Faculty_Profile_Prajakta_Final.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/Faculty_Profile_Prajakta_Final.pdf',
   },
   {
     id: '20',
@@ -262,10 +234,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'Ph.D.(Computer Engineering)(Pursuing)',
     areasOfInterest: 'Cloud Computing, System / Information Security',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/comps/profile/unik_lokhande.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/unik_lokhande.pdf',
   },
   {
     id: '21',
@@ -275,10 +245,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'Ph.D.(Tech.)(COMP.)',
     areasOfInterest: 'Database Systems, Data Privacy and Security',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images/crce/department/comps/profile/Vijayprofile.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images/crce/department/comps/profile/Vijayprofile.pdf',
   },
   {
     id: '22',
@@ -288,10 +256,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'M.Tech(Computer Engineering)',
     areasOfInterest: 'Machine Learning, Software engineering',
-    ctaOnClick: () => {
-      window.location.href =
-        'https://frcrce.ac.in/images//crce/department/comps/profile/Ankita_Amburle_faculty_profile.pdf'
-    },
+    ctaOnClick:
+      'https://frcrce.ac.in/images//crce/department/comps/profile/Ankita_Amburle_faculty_profile.pdf',
   },
   {
     id: '23',
@@ -301,10 +267,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'M.Tech(Computer Engineering)',
     areasOfInterest: 'Generative AI, Machine Learning',
-    ctaOnClick: () => {
-      window.location.href =
-        'http://www.frcrce.ac.in/media/attachments/2024/07/04/joshua_resume_28062024.pdf'
-    },
+    ctaOnClick:
+      'http://www.frcrce.ac.in/media/attachments/2024/07/04/joshua_resume_28062024.pdf',
   },
   {
     id: '24',
@@ -314,10 +278,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'M.E.(Information Technology)',
     areasOfInterest: 'Software testing, Data Science',
-    ctaOnClick: () => {
-      window.location.href =
-        'http://www.frcrce.ac.in/media/attachments/2024/07/10/nayana_vaidya_profile.pdf'
-    },
+    ctaOnClick:
+      'http://www.frcrce.ac.in/media/attachments/2024/07/10/nayana_vaidya_profile.pdf',
   },
 ]
 
@@ -522,7 +484,7 @@ export const images = [
 
 export const tabContents = {
   Placements: (
-    <div className="mx-auto p-6 font-roboto">
+    <div className="font-roboto mx-auto p-6">
       <h2 className="mb-6 text-3xl font-semibold text-gray-900">
         Placement Statiscs
       </h2>
@@ -540,7 +502,7 @@ export const tabContents = {
         industry leaders place in our graduates.
       </p>
 
-      <div className="container mx-auto pr-6 pt-6">
+      <div className="container mx-auto pt-6 pr-6">
         <h2 className="mb-6 text-center text-3xl font-semibold text-gray-900">
           Highest and Lowest Packages
         </h2>
@@ -662,10 +624,10 @@ export const tabContents = {
   ),
   Recruiters: (
     <div className="w-full bg-white p-6 py-8">
-      <h2 className="mb-6 font-roboto text-3xl font-semibold text-gray-900">
+      <h2 className="font-roboto mb-6 text-3xl font-semibold text-gray-900">
         Our Recruiters
       </h2>
-      <div className="w-full border-t border-gray-300 pt-6 md:border-t-0 md:pl-12 md:pt-0">
+      <div className="w-full border-t border-gray-300 pt-6 md:border-t-0 md:pt-0 md:pl-12">
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:gap-6">
           {images.map((img, index) => (
             <div
@@ -680,7 +642,7 @@ export const tabContents = {
   ),
   Eligibility: (
     <div className="p-6">
-      <h2 className="mb-6 font-roboto text-3xl font-semibold text-gray-900">
+      <h2 className="font-roboto mb-6 text-3xl font-semibold text-gray-900">
         Eligibility
       </h2>
       <div className="font-roboto">

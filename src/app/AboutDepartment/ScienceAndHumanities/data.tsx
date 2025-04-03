@@ -7,10 +7,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor & Head',
     qualification: 'Ph.D (Pursuing), M.Sc (Electronics)',
     areasOfInterest: 'Science & Humanities Subjects',
-    ctaOnClick: () => {
-      window.location.href =
-        'http://www.frcrce.ac.in/media/attachments/2023/10/15/dileep_cv.pdf'
-    },
+    ctaOnClick:
+      'http://www.frcrce.ac.in/media/attachments/2023/10/15/dileep_cv.pdf',
   },
   {
     id: '2',
@@ -20,10 +18,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'Ph.D. (Chemistry)',
     areasOfInterest: 'Science & Humanities Subjects',
-    ctaOnClick: () => {
-      window.location.href =
-        'http://www.frcrce.ac.in/media/attachments/2023/10/16/hemant_cv.pdf'
-    },
+    ctaOnClick:
+      'http://www.frcrce.ac.in/media/attachments/2023/10/16/hemant_cv.pdf',
   },
   {
     id: '3',
@@ -33,10 +29,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'Ph.D (Pursuing), M.Phil. (Mathematics)',
     areasOfInterest: 'Science & Humanities Subjects',
-    ctaOnClick: () => {
-      window.location.href =
-        'http://www.frcrce.ac.in/media/attachments/2023/10/15/prasad_cv.pdf'
-    },
+    ctaOnClick:
+      'http://www.frcrce.ac.in/media/attachments/2023/10/15/prasad_cv.pdf',
   },
   {
     id: '4',
@@ -46,10 +40,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'Ph.D (Chemistry)',
     areasOfInterest: 'Science & Humanities Subjects',
-    ctaOnClick: () => {
-      window.location.href =
-        'http://www.frcrce.ac.in/media/attachments/2023/10/15/sunil_yadav_cv.pdf'
-    },
+    ctaOnClick:
+      'http://www.frcrce.ac.n/media/attachments/2023/10/15/sunil_yadav_cv.pdf',
   },
   {
     id: '5',
@@ -59,10 +51,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'Ph.D. (English)',
     areasOfInterest: 'Science & Humanities Subjects',
-    ctaOnClick: () => {
-      window.location.href =
-        'http://www.frcrce.ac.in/media/attachments/2023/10/15/joseph_cv.pdf'
-    },
+    ctaOnClick:
+      'http://www.frcrce.ac.in/media/attachments/2023/10/15/joseph_cv.pdf',
   },
   {
     id: '6',
@@ -72,10 +62,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'MSc (Mathematics)',
     areasOfInterest: 'Science & Humanities Subjects',
-    ctaOnClick: () => {
-      window.location.href =
-        'http://www.frcrce.ac.in/media/attachments/2023/10/15/pradeep_singh_cv.pdf'
-    },
+    ctaOnClick:
+      'http://www.frcrce.ac.in/media/attachments/2023/10/15/pradeep_singh_cv.pdf',
   },
   {
     id: '7',
@@ -85,10 +73,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'Ph.D. (Physics)',
     areasOfInterest: 'Science & Humanities Subjects',
-    ctaOnClick: () => {
-      window.location.href =
-        'http://www.frcrce.ac.in/media/attachments/2023/10/15/dipak-cv.pdf'
-    },
+    ctaOnClick:
+      'http://www.frcrce.ac.in/media/attachments/2023/10/15/dipak-cv.pdf',
   },
   {
     id: '8',
@@ -98,10 +84,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'M.Sc. B.Ed (Mathematics)',
     areasOfInterest: 'Science & Humanities Subjects',
-    ctaOnClick: () => {
-      window.location.href =
-        'http://www.frcrce.ac.in/media/attachments/2023/10/15/gajendra_cv.pdf'
-    },
+    ctaOnClick:
+      'http://www.frcrce.ac.in/media/attachments/2023/10/15/gajendra_cv.pdf',
   },
   {
     id: '9',
@@ -111,10 +95,8 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'Ph.D (Pursuing), M.A. (English Lit.), B.Ed',
     areasOfInterest: 'Science & Humanities Subjects',
-    ctaOnClick: () => {
-      window.location.href =
-        'http://www.frcrce.ac.in/media/attachments/2023/10/15/aastha_cv.pdf'
-    },
+    ctaOnClick:
+      'http://www.frcrce.ac.in/media/attachments/2023/10/15/aastha_cv.pdf',
   },
   {
     id: '10',
@@ -124,9 +106,7 @@ export const FacultyTabData = [
     designation: 'Assistant Professor',
     qualification: 'M.Sc (Mathematics), B.Ed',
     areasOfInterest: 'Science & Humanities Subjects',
-    ctaOnClick: () => {
-      window.location.href = '/faculty/10'
-    },
+    ctaOnClick: '/faculty/10',
   },
 ]
 export const tabs = [
