@@ -8,7 +8,8 @@
     "find_err": "NODE_OPTIONS='--trace-warnings' next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+     "sitemap": "next-sitemap"
   },
   "dependencies": {
     "lucide": "^0.414.0",
