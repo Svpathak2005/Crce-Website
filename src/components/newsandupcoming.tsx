@@ -17,11 +17,12 @@ const Happenings = () => {
       try {
         setLoading(true)
         const result = await getNews()
-        setNewsData(result.data)
+        setNewsData(result?.data ?? [])
         setError(null)
       } catch (err) {
         setError('Failed to load news data')
         console.error('Error fetching news:', err)
+        setNewsData([])
       } finally {
         setLoading(false)
       }
