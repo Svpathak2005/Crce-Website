@@ -2,7 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import '../style.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   tabs,
   AboutmechDepartment,
@@ -17,18 +17,38 @@ import {
   AboutDepartmentContainer,
   HODsDesk,
   FacultyGrid,
- PlacementContent,
+  PlacementContent,
   Program,
 } from '../components'
 import { Zilla_Slab } from 'next/font/google'
 import Infrastructure from './infra'
+
+import getTeachers, { MappedTeacher } from '@/app/api/teachers'
+
 const zilla = Zilla_Slab({
   weight: ['300', '500', '700'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
   display: 'swap',
 })
+
 const ComputerEngineeringPage = () => {
+  const [facultyData, setFacultyData] = useState<MappedTeacher[]>([])
+
+  useEffect(() => {
+    async function fetchFaculty() {
+      try {
+        const data = await getTeachers('humanities')
+        console.log(data[0]?.photoUrl)
+        setFacultyData(data)
+      } catch (error) {
+        console.error('Error fetching teacher data, using dummy data', error)
+        setFacultyData(FacultyTabData)
+      }
+    }
+    fetchFaculty()
+  }, [])
+
   const [activeTab, setActiveTab] = useState(tabs[0]?.id || 'overview')
   const Tabs = ['Placements', 'Recruiters', 'Eligibility']
 
@@ -50,15 +70,14 @@ const ComputerEngineeringPage = () => {
           </>
         )
       case 'Faculty':
-        return <FacultyGrid facultyData={FacultyTabData} />
-
+        return <FacultyGrid facultyData={facultyData} />
       case 'infrastructure':
         return <Infrastructure />
-
       default:
         return null
     }
   }
+
   return (
     <div className="flex-row">
       {/* Hero section */}
@@ -75,9 +94,9 @@ const ComputerEngineeringPage = () => {
             <div className="absolute inset-0 bg-blue-950 opacity-70"></div>
           </div>
 
-          <div className="container relative z-10 mx-auto flex h-full flex-col justify-center px-4 py-20">
+          <div className="relative z-10 container mx-auto flex h-full flex-col justify-center px-4 py-20">
             <div className="max-w-4xl md:max-w-6xl lg:max-w-7xl">
-              <h1 className="mb-6 text-5xl font-bold leading-tight md:text-5xl lg:text-6xl">
+              <h1 className="mb-6 text-5xl leading-tight font-bold md:text-5xl lg:text-6xl">
                 SCIENCE AND HUMANITIES
               </h1>
             </div>
@@ -88,7 +107,7 @@ const ComputerEngineeringPage = () => {
       {/* Quicklinks and tabs about the department  */}
 
       <section className="w-full bg-linear-to-b from-white to-[#E5F0FF]">
-        <div className="flex md:pl-10 md:pt-10">
+        <div className="flex md:pt-10 md:pl-10">
           <Sidebar
             tabs={tabs}
             activeTab={activeTab}
@@ -102,31 +121,10 @@ const ComputerEngineeringPage = () => {
           </div>
         </div>
 
-        {/* Program Highlights */}
-        {/* <div className="text-gray-600">
-        <div className="container mx-auto px-5 ">
-          <div className="mb-10 flex w-full flex-col text-center">
-            <h1
-              className={`${zilla.className} text-3xl font-bold text-indigo-900 sm:text-xl lg:text-4xl`}
-            >
-              Programs Offered
-            </h1>
-          </div>
-          <div className="flex flex-col items-center justify-center md:flex-row lg:flex-row">
-            {programs.map((program, index) => (
-              <Program key={index} {...program} />
-            ))}
-          </div>
-        </div>
-      </div> */}
-
         {/*placement data*/}
-        <div className='my-24'>
-          <PlacementContent 
-                          
-                          tabContents={tabContents}
-                        />
-                        </div>
+        <div className="my-24">
+          <PlacementContent tabContents={tabContents} />
+        </div>
       </section>
     </div>
   )

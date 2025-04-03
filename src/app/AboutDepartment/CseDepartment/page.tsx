@@ -2,7 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import '../style.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   tabs,
   AboutcseDepartment,
@@ -26,15 +26,34 @@ import {
 import { Zilla_Slab } from 'next/font/google'
 import Infrastructure from './infra'
 import AidsPublications from '@/app/academics/research/aidspublications'
+//ignore imports
+
+import getTeachers, { MappedTeacher } from '@/app/api/teachers'
+
 const zilla = Zilla_Slab({
   weight: ['300', '500', '700'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
   display: 'swap',
 })
+
 const CSEPage = () => {
+  const [facultyData, setFacultyData] = useState<MappedTeacher[]>([])
   const [activeTab, setActiveTab] = useState(tabs[0]?.id || 'overview')
-  const Tabs = ['Placements', 'Recruiters', 'Eligibility']
+
+  useEffect(() => {
+    async function fetchFaculty() {
+      try {
+        const data = await getTeachers('cse')
+        console.log(data[0]?.photoUrl)
+        setFacultyData(data)
+      } catch (error) {
+        console.error('Error fetching teacher data, using dummy data', error)
+        setFacultyData(FacultyTabData)
+      }
+    }
+    fetchFaculty()
+  }, [])
 
   const renderContent = () => {
     switch (activeTab) {
@@ -51,52 +70,45 @@ const CSEPage = () => {
         return (
           <>
             <AboutDepartmentContainer {...ProgramEducationalObjectives} />
-
             <AboutDepartmentContainer {...ProgrammeSpecificOutcomes} />
           </>
         )
       case 'Faculty':
-        return <FacultyGrid facultyData={FacultyTabData} />
-
+        return <FacultyGrid facultyData={facultyData} />
       case 'research':
         return <AidsPublications />
-
       case 'infrastructure':
         return <Infrastructure />
       default:
         return null
     }
   }
+
   return (
     <div className="flex-row">
-      {/* Hero section */}
-      <div>
-        <section className="hero relative min-h-screen overflow-hidden text-white">
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/college2.avif"
-              alt="Campus background"
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-            />
-            <div className="absolute inset-0 bg-blue-950 opacity-70"></div>
+      <section className="hero relative min-h-screen overflow-hidden text-white">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/college2.avif"
+            alt="Campus background"
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+          />
+          <div className="absolute inset-0 bg-blue-950 opacity-70"></div>
+        </div>
+        <div className="relative z-10 container mx-auto flex h-full flex-col justify-center px-4 py-20">
+          <div className="max-w-4xl md:max-w-6xl lg:max-w-7xl">
+            <h1 className="mb-6 text-5xl leading-tight font-bold md:text-5xl lg:text-6xl">
+              COMPUTER SCIENCE AND ENGINEERING
+            </h1>
           </div>
-
-          <div className="container relative z-10 mx-auto flex h-full flex-col justify-center px-4 py-20">
-            <div className="max-w-4xl md:max-w-6xl lg:max-w-7xl">
-              <h1 className="mb-6 text-5xl font-bold leading-tight md:text-5xl lg:text-6xl">
-                COMPUTER SCIENCE AND ENGINEERING
-              </h1>
-            </div>
-          </div>
-          <div className="absolute bottom-0 left-0 h-16 w-full origin-bottom-right -skew-y-3 transform bg-white"></div>
-        </section>
-      </div>
-      {/* Quicklinks and tabs about the department  */}
+        </div>
+        <div className="absolute bottom-0 left-0 h-16 w-full origin-bottom-right -skew-y-3 transform bg-white"></div>
+      </section>
 
       <section className="w-full bg-linear-to-b from-white to-[#E5F0FF]">
-        <div className="flex md:pl-10 md:pt-10">
+        <div className="flex md:pt-10 md:pl-10">
           <Sidebar
             tabs={tabs}
             activeTab={activeTab}
@@ -125,14 +137,10 @@ const CSEPage = () => {
             </div>
           </div>
         </div>
-        {/*placement data*/}
         <div>
-       <div className='my-24'>
-                <PlacementContent 
-                                
-                                tabContents={tabContents}
-                              />
-                              </div>
+          <div className="my-24">
+            <PlacementContent tabContents={tabContents} />
+          </div>
         </div>
       </section>
     </div>

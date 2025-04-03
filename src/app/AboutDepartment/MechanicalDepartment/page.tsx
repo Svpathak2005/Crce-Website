@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 
 import '../style.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   tabs,
   AboutmechDepartment,
@@ -13,7 +13,6 @@ import {
   ProgramOutcomes,
   ProgrammeSpecificOutcomes,
   tabContents,
-  
   FacultyTabData,
   programs,
   hodsDesk,
@@ -30,13 +29,32 @@ import {
 import { Zilla_Slab } from 'next/font/google'
 import Infrastructure from './infra'
 import MechPublications from '@/app/academics/research/mechpublications'
+
+import getTeachers, { MappedTeacher } from '@/app/api/teachers'
 const zilla = Zilla_Slab({
   weight: ['300', '500', '700'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
   display: 'swap',
 })
+
 const MechanicalEngineeringPage = () => {
+  const [facultyData, setFacultyData] = useState<MappedTeacher[]>([])
+
+  useEffect(() => {
+    async function fetchFaculty() {
+      try {
+        const data = await getTeachers('mechanical')
+        console.log(data[0]?.photoUrl)
+        setFacultyData(data)
+      } catch (error) {
+        console.error('Error fetching teacher data, using dummy data', error)
+        setFacultyData(FacultyTabData)
+      }
+    }
+    fetchFaculty()
+  }, [])
+
   const [activeTab, setActiveTab] = useState(tabs[0]?.id || 'overview')
   const Tabs = ['Placements', 'Recruiters', 'Eligibility']
 
@@ -59,9 +77,8 @@ const MechanicalEngineeringPage = () => {
             <AboutDepartmentContainer {...ProgrammeSpecificOutcomes} />
           </>
         )
-
       case 'Faculty':
-        return <FacultyGrid facultyData={FacultyTabData} />
+        return <FacultyGrid facultyData={facultyData} />
       case 'infrastructure':
         return <Infrastructure />
       case 'Publications':
@@ -70,6 +87,7 @@ const MechanicalEngineeringPage = () => {
         return null
     }
   }
+
   return (
     <div className="flex-row">
       {/* Hero section */}
@@ -86,9 +104,9 @@ const MechanicalEngineeringPage = () => {
             <div className="absolute inset-0 bg-blue-950 opacity-70"></div>
           </div>
 
-          <div className="container relative z-10 mx-auto flex h-full flex-col justify-center px-4 py-20">
+          <div className="relative z-10 container mx-auto flex h-full flex-col justify-center px-4 py-20">
             <div className="max-w-4xl md:max-w-6xl lg:max-w-7xl">
-              <h1 className="mb-6 text-5xl font-bold leading-tight md:text-5xl lg:text-6xl">
+              <h1 className="mb-6 text-5xl leading-tight font-bold md:text-5xl lg:text-6xl">
                 MECHANICAL ENGINEERING
               </h1>
             </div>
@@ -99,7 +117,7 @@ const MechanicalEngineeringPage = () => {
       {/* Quicklinks and tabs about the department  */}
 
       <section className="w-full bg-linear-to-b from-white to-[#E5F0FF]">
-        <div className="flex md:pl-10 md:pt-10">
+        <div className="flex md:pt-10 md:pl-10">
           <Sidebar
             tabs={tabs}
             activeTab={activeTab}
@@ -131,14 +149,10 @@ const MechanicalEngineeringPage = () => {
           </div>
         </div>
         {/*placement data*/}
-        
-          
-         <div className='my-24'>
-                  <PlacementContent 
-                                  
-                                  tabContents={tabContents}
-                                />
-                                </div>
+
+        <div className="my-24">
+          <PlacementContent tabContents={tabContents} />
+        </div>
       </section>
     </div>
   )
