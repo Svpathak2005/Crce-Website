@@ -77,8 +77,8 @@ export default function S3FileBrowser({ initialPath = '' }: FileBrowserProps) {
   }
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="mb-4 text-2xl font-bold">S3 File Browser</h1>
+    <div className="container mx-auto p-4 pb-32">
+      <h1 className="mb-4 text-2xl font-bold"> File Browser</h1>
 
       {/* Breadcrumb navigation */}
       <div className="mb-4 rounded bg-gray-100 p-2">
