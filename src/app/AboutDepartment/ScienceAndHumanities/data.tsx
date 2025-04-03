@@ -5,8 +5,8 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/dileep.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor & Head',
+    qualification: 'Ph.D (Pursuing), M.Sc (Electronics)',
     areasOfInterest: 'Science & Humanities Subjects',
-    description: 'Ph.D (Pursuing), M.Sc (Electronics)',
     ctaOnClick: () => {
       window.location.href =
         'http://www.frcrce.ac.in/media/attachments/2023/10/15/dileep_cv.pdf'
@@ -18,8 +18,8 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/drhemantkhanolkar.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    qualification: 'Ph.D. (Chemistry)',
     areasOfInterest: 'Science & Humanities Subjects',
-    description: 'Ph.D. (Chemistry)',
     ctaOnClick: () => {
       window.location.href =
         'http://www.frcrce.ac.in/media/attachments/2023/10/16/hemant_cv.pdf'
@@ -31,8 +31,8 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/prasad1.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    qualification: 'Ph.D (Pursuing), M.Phil. (Mathematics)',
     areasOfInterest: 'Science & Humanities Subjects',
-    description: 'Ph.D (Pursuing), M.Phil. (Mathematics)',
     ctaOnClick: () => {
       window.location.href =
         'http://www.frcrce.ac.in/media/attachments/2023/10/15/prasad_cv.pdf'
@@ -44,8 +44,8 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/sunil1.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    qualification: 'Ph.D (Chemistry)',
     areasOfInterest: 'Science & Humanities Subjects',
-    description: 'Ph.D (Chemistry)',
     ctaOnClick: () => {
       window.location.href =
         'http://www.frcrce.ac.in/media/attachments/2023/10/15/sunil_yadav_cv.pdf'
@@ -57,8 +57,8 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/joseph1.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    qualification: 'Ph.D. (English)',
     areasOfInterest: 'Science & Humanities Subjects',
-    description: 'Ph.D. (English)',
     ctaOnClick: () => {
       window.location.href =
         'http://www.frcrce.ac.in/media/attachments/2023/10/15/joseph_cv.pdf'
@@ -70,8 +70,8 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/pradeeep.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    qualification: 'MSc (Mathematics)',
     areasOfInterest: 'Science & Humanities Subjects',
-    description: 'MSc (Mathematics)',
     ctaOnClick: () => {
       window.location.href =
         'http://www.frcrce.ac.in/media/attachments/2023/10/15/pradeep_singh_cv.pdf'
@@ -83,8 +83,8 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/deepak.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    qualification: 'Ph.D. (Physics)',
     areasOfInterest: 'Science & Humanities Subjects',
-    description: 'Ph.D. (Physics)',
     ctaOnClick: () => {
       window.location.href =
         'http://www.frcrce.ac.in/media/attachments/2023/10/15/dipak-cv.pdf'
@@ -96,8 +96,8 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/gajendra.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    qualification: 'M.Sc. B.Ed (Mathematics)',
     areasOfInterest: 'Science & Humanities Subjects',
-    description: 'M.Sc. B.Ed (Mathematics)',
     ctaOnClick: () => {
       window.location.href =
         'http://www.frcrce.ac.in/media/attachments/2023/10/15/gajendra_cv.pdf'
@@ -109,8 +109,8 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/aastha-bhatia-scpic.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    qualification: 'Ph.D (Pursuing), M.A. (English Lit.), B.Ed',
     areasOfInterest: 'Science & Humanities Subjects',
-    description: 'Ph.D (Pursuing), M.A. (English Lit.), B.Ed',
     ctaOnClick: () => {
       window.location.href =
         'http://www.frcrce.ac.in/media/attachments/2023/10/15/aastha_cv.pdf'
@@ -122,8 +122,8 @@ export const FacultyTabData = [
     photoUrl: '/scifaculty/gauri.jpg',
     ctaText: 'View Profile',
     designation: 'Assistant Professor',
+    qualification: 'M.Sc (Mathematics), B.Ed',
     areasOfInterest: 'Science & Humanities Subjects',
-    description: 'M.Sc (Mathematics), B.Ed',
     ctaOnClick: () => {
       window.location.href = '/faculty/10'
     },
@@ -213,7 +213,7 @@ export const images = [
 
 export const tabContents = {
   Placements: (
-    <div className="mx-auto p-6 font-roboto">
+    <div className="font-roboto mx-auto p-6">
       <h2 className="mb-6 text-3xl font-semibold text-gray-900">
         Placement Statiscs
       </h2>
@@ -231,7 +231,7 @@ export const tabContents = {
         industry leaders place in our graduates.
       </p>
 
-      <div className="container mx-auto pr-6 pt-6">
+      <div className="container mx-auto pt-6 pr-6">
         <h2 className="mb-6 text-3xl font-semibold text-gray-900">
           Placement Highest and Lowest Package
         </h2>
@@ -353,10 +353,10 @@ export const tabContents = {
   ),
   Recruiters: (
     <div className="w-full bg-white p-6 py-8">
-      <h2 className="mb-6 font-roboto text-3xl font-semibold text-gray-900">
+      <h2 className="font-roboto mb-6 text-3xl font-semibold text-gray-900">
         Our Recruiters
       </h2>
-      <div className="w-full border-t border-gray-300 pt-6 md:border-t-0 md:pl-12 md:pt-0">
+      <div className="w-full border-t border-gray-300 pt-6 md:border-t-0 md:pt-0 md:pl-12">
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:gap-6">
           {images.map((img, index) => (
             <div
@@ -371,7 +371,7 @@ export const tabContents = {
   ),
   Eligibility: (
     <div className="w-full p-6">
-      <h2 className="mb-6 font-roboto text-3xl font-semibold text-gray-900">
+      <h2 className="font-roboto mb-6 text-3xl font-semibold text-gray-900">
         Eligibility
       </h2>
       <div className="font-roboto">
