@@ -80,7 +80,7 @@ const CSEPage = () => {
               objectFit="cover"
               quality={100}
             />
-            <div className="absolute inset-0 bg-blue-950 bg-opacity-70"></div>
+            <div className="absolute inset-0 bg-blue-950 opacity-70"></div>
           </div>
 
           <div className="container relative z-10 mx-auto flex h-full flex-col justify-center px-4 py-20">
