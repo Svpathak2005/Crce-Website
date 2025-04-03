@@ -10,7 +10,7 @@ export async function GET(request: NextRequest) {
 
     // Ensure the path starts with /data
     if (!path.startsWith('/')) path = '/' + path
-    const fullPath = 'data' + path
+    const fullPath =  path
 
     // Remove leading slash for S3 listing
     const s3Path = fullPath.startsWith('/') ? fullPath.substring(1) : fullPath

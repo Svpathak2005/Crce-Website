@@ -274,7 +274,7 @@ const FacultyGrid: React.FC<FacultyGridProps> = ({ facultyData }) => {
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
       {facultyData.map((faculty) => (
-        <FacultyTab key={faculty.id} {...faculty} />
+        <FacultyTab key={faculty.id} {...faculty} contact={faculty.contact || 'N/A'} />
       ))}
     </div>
   )

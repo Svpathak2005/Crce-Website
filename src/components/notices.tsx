@@ -51,11 +51,15 @@ const NoticesSection: React.FC = () => {
     async function fetchNotices() {
       try {
         const response = await getNotices()
-        if (!response || !response.data)
-          throw new Error('Failed to fetch notices')
-        setNotices(response.data)
+        if (!response?.data || !Array.isArray(response.data)) {
+          throw new Error('Failed to fetch notices: Invalid data format')
+        }
+        setNotices(response.data.filter((notice): notice is Notice => 
+          notice && typeof notice === 'object' && 'id' in notice
+        ))
       } catch (err) {
         setError((err as Error).message)
+        setNotices([])
       } finally {
         setLoading(false)
       }
