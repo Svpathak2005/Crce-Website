@@ -1,6 +1,6 @@
-// app/api/s3/download/route.ts
 import { NextRequest } from 'next/server'
 import { s3Client } from '@/utils/s3-file-management'
+import { Readable } from 'stream'
 
 export async function GET(request: NextRequest) {
   try {
@@ -11,20 +11,22 @@ export async function GET(request: NextRequest) {
       return new Response('Path parameter is required', { status: 400 })
     }
 
-    // Get bucket name from environment variables
     const bucketName = process.env.STORAGE_S3_BUCKET || 'b11'
 
-    // Get file metadata to determine content type
     const stat = await s3Client.statObject(bucketName, path)
-
-    // Get the stream for the file
-    const stream = await s3Client.getObject(bucketName, path)
-
-    // Get the filename from the path
+    const nodeStream = await s3Client.getObject(bucketName, path)
     const filename = path.split('/').pop() || 'download'
 
-    // Return the file stream as the response
-    return new Response(stream, {
+    // Convert Node.js stream to Web ReadableStream
+    const webStream = new ReadableStream({
+      start(controller) {
+        nodeStream.on('data', (chunk) => controller.enqueue(chunk))
+        nodeStream.on('end', () => controller.close())
+        nodeStream.on('error', (err) => controller.error(err))
+      },
+    })
+
+    return new Response(webStream, {
       headers: {
         'Content-Type':
           stat.metaData['content-type'] || 'application/octet-stream',

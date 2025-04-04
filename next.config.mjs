@@ -8,9 +8,12 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    domains: ['localhost'],
+    remotePatterns: [
+      {
+        hostname: '*', // Allow images from all domains
+      },
+    ],
   },
-
   async headers() {
     return [
       {
