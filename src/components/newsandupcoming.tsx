@@ -3,11 +3,16 @@ import { Calendar, ChevronRight, ChevronLeft, X } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
+import { News } from '@/app/api/news'
+import { Event } from '@/app/api/events'
 
 // Import the server function
-import getNews, { News, NewsResponse } from '@/app/api/news' // Update with the correct import path
-import getEvents, { Events } from '@/app/api/events' // Update with the correct import path
 import { div } from 'framer-motion/client'
+
+interface NewsandupcomingProps {
+  news: News[]
+  events: Event[]
+}
 
 // Happenings (News) Component
 const Happenings = () => {
@@ -403,7 +408,7 @@ const EventCards = () => {
   )
 }
 
-const Newsandupcoming = () => {
+const Newsandupcoming = ({ news, events }: NewsandupcomingProps) => {
   const [activeTab, setActiveTab] = useState('news')
 
   const handleTabClick = (tab: React.SetStateAction<string>) => {
