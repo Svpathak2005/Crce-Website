@@ -47,6 +47,7 @@ import {
   CreditCard,
   Images,
   ScrollText,
+  Folder,
 } from 'lucide-react'
 
 interface DropdownItem {
@@ -107,6 +108,11 @@ const dropdownContent: DropdownContent = {
       name: 'Contact Us',
       href: '/about/contact-us',
       icon: <Phone size={18} />,
+    },
+    {
+      name: 'Public File Browser',
+      href: '/folders',
+      icon: <Folder size={18} />,
     },
   ],
   Academics: [
@@ -176,8 +182,8 @@ const dropdownContent: DropdownContent = {
       name: 'Alumni',
       href: 'https://alumni.frcrce.ac.in',
       icon: <UserCheck size={18} />,
-      target: "_blank",
-      rel: "noopener noreferrer"
+      target: '_blank',
+      rel: 'noopener noreferrer',
     },
     {
       name: 'Project Groups',
@@ -318,7 +324,7 @@ const Navbar: React.FC = () => {
     <>
       {/* Desktop Navigation */}
       <nav
-        className={`fixed top-0 z-50 hidden w-full bg-[hsl(224,37%,12%)] opacity-90 font-semibold text-white transition-transform duration-300 ease-in-out md:block ${
+        className={`fixed top-0 z-50 hidden w-full bg-[hsl(224,37%,12%)] font-semibold text-white opacity-90 transition-transform duration-300 ease-in-out md:block ${
           hasScrolled
             ? visible
               ? 'translate-y-0'
