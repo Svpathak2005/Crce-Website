@@ -53,6 +53,8 @@ interface DropdownItem {
   name: string
   href: string
   icon?: React.ReactNode
+  target?: string
+  rel?: string
 }
 
 interface DropdownContent {
@@ -167,13 +169,15 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Students Council',
-      href: '/councils/Stuco_List.pdf',
+      href: 'students/students_council',
       icon: <Users size={18} />,
     },
     {
       name: 'Alumni',
       href: 'https://alumni.frcrce.ac.in',
       icon: <UserCheck size={18} />,
+      target: "_blank",
+      rel: "noopener noreferrer"
     },
     {
       name: 'Project Groups',
@@ -314,7 +318,7 @@ const Navbar: React.FC = () => {
     <>
       {/* Desktop Navigation */}
       <nav
-        className={`fixed top-0 z-50 hidden w-full bg-[#131929] bg-opacity-90 font-semibold text-white transition-transform duration-300 ease-in-out md:block ${
+        className={`fixed top-0 z-50 hidden w-full bg-[hsl(224,37%,12%)] opacity-90 font-semibold text-white transition-transform duration-300 ease-in-out md:block ${
           hasScrolled
             ? visible
               ? 'translate-y-0'
@@ -323,7 +327,7 @@ const Navbar: React.FC = () => {
         }`}
       >
         <div className="flex flex-col px-20">
-          <div className="flex h-1/3 items-center justify-between px-6 pb-1.5 pt-3">
+          <div className="flex h-1/3 items-center justify-between px-6 pt-3 pb-1.5">
             <div className="flex space-x-6 text-sm">
               <Link
                 href="http://granth.fragnel.edu.in:5186/pinfo/index.php"
@@ -413,7 +417,7 @@ const Navbar: React.FC = () => {
                   Contact us
                 </Link>
               </div>
-              <div className="flex justify-center space-x-8 py-4">
+              <div className="flex justify-center space-x-8 py-4 text-sm">
                 {Object.keys(dropdownContent).map((key) => (
                   <button
                     key={key}
@@ -431,7 +435,7 @@ const Navbar: React.FC = () => {
       </nav>
       {dropdown && dropdownContent[dropdown] && (
         <div
-          className={`fixed top-[165px] z-40 hidden w-full bg-white text-black shadow-lg transition-all duration-300 ease-out md:block ${
+          className={`fixed top-[165px] z-50 hidden w-full bg-white text-black shadow-lg transition-all duration-300 ease-out md:block ${
             hasScrolled
               ? visible
                 ? 'md:translate-y-0'
@@ -439,9 +443,9 @@ const Navbar: React.FC = () => {
               : 'md:-translate-y-full'
           }`}
         >
-          <div className="container mx-auto px-8 pb-11 pt-9">
+          <div className="container mx-auto px-8 pt-9 pb-11">
             <button
-              className="absolute right-8 top-8 text-xl text-gray-600 hover:text-gray-800"
+              className="absolute top-8 right-8 text-xl text-gray-600 hover:text-gray-800"
               onClick={() => setDropdown(null)}
             >
               <X size={30} />
@@ -455,6 +459,8 @@ const Navbar: React.FC = () => {
                   <Link
                     href={item.href}
                     className="flex items-center space-x-3 text-lg font-semibold transition duration-300 hover:text-blue-600"
+                    target={item.target}
+                    rel={item.rel}
                   >
                     <span className="text-blue-500 transition-colors duration-300 group-hover:text-blue-600">
                       {item.icon}
@@ -473,7 +479,7 @@ const Navbar: React.FC = () => {
       )}{' '}
       {/* Mobile Navigation */}
       <nav
-        className={`fixed top-0 z-50 w-full bg-gray-900 bg-opacity-90 font-semibold capitalize text-white transition-transform duration-300 ease-in-out md:hidden ${
+        className={`bg-opacity-90 fixed top-0 z-50 w-full bg-gray-900 font-semibold text-white capitalize transition-transform duration-300 ease-in-out md:hidden ${
           hasScrolled
             ? visible
               ? 'translate-y-0'
@@ -501,7 +507,7 @@ const Navbar: React.FC = () => {
       </nav>
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-50 transform overflow-y-auto bg-gray-900 capitalize text-white transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed inset-0 z-50 transform overflow-y-auto bg-gray-900 text-white capitalize transition-transform duration-300 ease-in-out md:hidden ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -527,7 +533,7 @@ const Navbar: React.FC = () => {
             <button
               key={key}
               onClick={() => openMobileSubmenu(key)}
-              className="flex items-center justify-between border-b border-gray-700 py-3 pb-2 text-left text-lg font-medium transition-colors hover:bg-gray-800"
+              className="flex items-center justify-between border-b border-gray-700 py-3 pb-2 text-left text-sm font-medium transition-colors hover:bg-gray-800"
             >
               <span>{key.replace(/([A-Z])/g, ' $1').trim()}</span>
               <ChevronRight size={20} />
@@ -565,14 +571,14 @@ const Navbar: React.FC = () => {
       </div>
       {/* Mobile Submenu */}
       <div
-        className={`fixed inset-0 z-50 transform overflow-y-auto bg-gray-800 capitalize text-white transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed inset-0 z-50 transform overflow-y-auto bg-gray-800 text-white capitalize transition-transform duration-300 ease-in-out md:hidden ${
           mobileSubmenu ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         {mobileSubmenu && dropdownContent[mobileSubmenu] && (
           <div className="flex flex-col p-4">
             <button
-              className="flex items-center pb-6 text-lg font-medium"
+              className="flex items-center pb-6 text-sm font-medium"
               onClick={closeMobileSubmenu}
             >
               <ArrowLeft size={24} className="mr-2" />
@@ -585,7 +591,7 @@ const Navbar: React.FC = () => {
               <Link
                 key={index}
                 href={item.href}
-                className="flex items-center space-x-3 border-b border-gray-700 py-3 pb-2 text-lg transition-colors hover:bg-gray-700"
+                className="flex items-center space-x-3 border-b border-gray-700 py-3 pb-2 text-sm transition-colors hover:bg-gray-700"
                 onClick={toggleMobileMenu}
               >
                 {item.icon}
