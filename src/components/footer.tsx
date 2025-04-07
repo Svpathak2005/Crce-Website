@@ -9,23 +9,25 @@ import {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full border-t border-gray-200 bg-white pb-8 pt-14 text-gray-600">
-      <div className="container w-full mx-auto px-2">
+    <footer className="w-full border-t border-gray-200 bg-white pt-14 pb-8 pl-15 text-gray-600">
+      <div className="container mx-auto w-full px-2">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-6">
           <div>
-            <h3 className="mb-4 text-lg font-semibold text-blue-900">
-              Contact Information
+            <h3 className="mb-4 text-sm font-semibold text-blue-900">
+              CONTACT INFORMATION
             </h3>
             <ul className="space-y-2">
-              <li>Fr. Agnel Ashram, Bandstand, Bandra (W),</li>
-              <li>Mumbai 400050, MH, IN</li>
-              <li>Phone: +91 22-6711 4000</li>
-              <li>Fax: +91 22-6711 4100</li>
-              <li>Email: crce@frcrce.ac.in</li>
+              <li className="text-sm">
+                Fr. Agnel Ashram, Bandstand, Bandra (W),
+              </li>
+              <li className="text-sm">Mumbai 400050, MH, IN</li>
+              <li className="text-sm">Phone: +91 22-6711 4000</li>
+              <li className="text-sm">Fax: +91 22-6711 4100</li>
+              <li className="text-sm">Email: crce@frcrce.ac.in</li>
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-lg font-semibold text-blue-900">
+            <h3 className="mb-4 text-sm font-semibold text-blue-900">
               STAFF SERVICES
             </h3>
             <ul className="space-y-2">
@@ -33,7 +35,7 @@ const Footer: React.FC = () => {
                 <Link
                   href="https://ldap.fragnel.edu.in/sso/module.php/core/loginuserpass.php?AuthState=_e09ef94c4e220fb440ccb822476863ceb2cd2653ed%3Ahttps%3A%2F%2Fldap.fragnel.edu.in%2Fsso%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dgoogle.com%26cookieTime%3D1723957253%26RelayState%3Dhttps%253A%252F%252Fwww.google.com%252Fa%252Ffragnel.edu.in%252FServiceLogin%253Fservice%253Dmail%2526passive%253Dtrue%2526rm%253Dfalse%2526continue%253Dhttps%25253A%25252F%25252Fmail.google.com%25252Fmail%25252F%2526ss%253D1%2526ltmpl%253Ddefault%2526ltmplcache%253D2%2526emr%253D1%2526osid%253D1"
                   target="_blank"
-                  className="hover:text-blue-600"
+                  className="text-sm hover:text-blue-600"
                 >
                   Agnel Mail Service
                 </Link>
@@ -42,7 +44,7 @@ const Footer: React.FC = () => {
                 <Link
                   href="https://samay.fragnel.edu.in:1235/timeo/"
                   target="_blank"
-                  className="hover:text-blue-600"
+                  className="text-sm hover:text-blue-600"
                 >
                   Biometric Attendance Service
                 </Link>
@@ -51,20 +53,24 @@ const Footer: React.FC = () => {
                 <Link
                   href="https://frcrce.ac.in/index.php/other-services"
                   target="_blank"
-                  className="hover:text-blue-600"
+                  className="text-sm hover:text-blue-600"
                 >
                   Other Services
                 </Link>
               </li>
               <li>
-                <Link href="#" target="_blank" className="hover:text-blue-600">
+                <Link
+                  href="#"
+                  target="_blank"
+                  className="text-sm hover:text-blue-600"
+                >
                   Site Login
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-lg font-semibold text-blue-900">
+            <h3 className="mb-4 text-sm font-semibold text-blue-900">
               RESOURCES
             </h3>
             <ul className="space-y-2">
@@ -72,7 +78,7 @@ const Footer: React.FC = () => {
                 <Link
                   href="#"
                   target="_blank"
-                  className="inline-flex items-center hover:text-blue-600"
+                  className="inline-flex items-center text-sm hover:text-blue-600"
                 >
                   Tinkering Lab
                   <SquareArrowOutUpRight className="ml-1 h-4 w-4" />
@@ -82,7 +88,7 @@ const Footer: React.FC = () => {
                 <Link
                   href="http://gyan.fragnel.edu.in:6644/moodle/"
                   target="_blank"
-                  className="inline-flex items-center hover:text-blue-600"
+                  className="inline-flex items-center text-sm hover:text-blue-600"
                 >
                   Moodle Access
                   <SquareArrowOutUpRight className="ml-1 h-4 w-4" />
@@ -92,7 +98,7 @@ const Footer: React.FC = () => {
                 <Link
                   href="http://granth.fragnel.edu.in:5186/pinfo/index.php"
                   target="_blank"
-                  className="inline-flex items-center hover:text-blue-600"
+                  className="inline-flex items-center text-sm hover:text-blue-600"
                 >
                   Students Portal
                   <SquareArrowOutUpRight className="ml-1 h-4 w-4" />
@@ -102,7 +108,7 @@ const Footer: React.FC = () => {
                 <Link
                   href="#"
                   target="_blank"
-                  className="inline-flex items-center hover:text-blue-600"
+                  className="inline-flex items-center text-sm hover:text-blue-600"
                 >
                   Student Notices
                   <SquareArrowOutUpRight className="ml-1 h-4 w-4" />
@@ -112,18 +118,18 @@ const Footer: React.FC = () => {
                 <Link
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-gray-500 hover:text-blue-600"
+                  className="items-center text-sm hover:text-blue-600"
                   href="https://frcrce.ac.in/images/crce/Essentials_of_Ethics.pdf"
                 >
                   Student's handbook- essentials of ethics
-                  <SquareArrowOutUpRight className="ml-1 h-4 w-4" />
+                  <SquareArrowOutUpRight className="h-4 w-4" />
                 </Link>
               </li>
               <li>
                 <Link
                   href="#"
                   target="_blank"
-                  className="inline-flex items-center hover:text-blue-600"
+                  className="inline-flex items-center text-sm hover:text-blue-600"
                 >
                   Downloads
                   <SquareArrowOutUpRight className="ml-1 h-4 w-4" />
@@ -133,7 +139,7 @@ const Footer: React.FC = () => {
                 <Link
                   href="https://iic-website.netlify.app/"
                   target="_blank"
-                  className="inline-flex items-center hover:text-blue-600"
+                  className="inline-flex items-center text-sm hover:text-blue-600"
                 >
                   Institutions Innovation Cell
                   <SquareArrowOutUpRight className="ml-1 h-4 w-4" />
@@ -142,7 +148,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-lg font-semibold text-blue-900">
+            <h3 className="mb-4 text-sm font-semibold text-blue-900">
               RESOURCES
             </h3>
             <ul className="space-y-2">
@@ -184,19 +190,19 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
             </ul>
-            <h4 className="text-md mb-2 mt-4 font-semibold text-blue-900">
+            <h4 className="text-sm mt-4 mb-2 font-semibold text-blue-900">
               Can't find something?
             </h4>
             <Link
               href="/students/grievance"
               target="_blank"
-              className="text-blue-600 hover:underline"
+              className="text-blue-600 hover:underline text-sm"
             >
               Give Feedback
             </Link>
           </div>{' '}
           <div>
-            <h3 className="mb-4 text-lg font-semibold text-blue-900">
+            <h3 className="mb-4 text-sm font-semibold text-blue-900">
               LIBRARY QUICK LINKS
             </h3>
             <ul className="space-y-2">
@@ -204,7 +210,7 @@ const Footer: React.FC = () => {
                 <Link
                   href="https://fragnelcollegelibrary.blogspot.com/"
                   target="_blank"
-                  className="hover:text-blue-600"
+                  className="text-sm hover:text-blue-600"
                 >
                   Fr. Agnel College Library Blogs
                 </Link>
@@ -213,7 +219,7 @@ const Footer: React.FC = () => {
                 <Link
                   href="http://pustak.fragnel.edu.in:4040/"
                   target="_blank"
-                  className="hover:text-blue-600"
+                  className="text-sm hover:text-blue-600"
                 >
                   Online Library Catlog (WebOPAC)
                 </Link>
@@ -222,7 +228,7 @@ const Footer: React.FC = () => {
                 <Link
                   href="https://epgp.inflibnet.ac.in/"
                   target="_blank"
-                  className="hover:text-blue-600"
+                  className="text-sm hover:text-blue-600"
                 >
                   PG Students Resource Hub - PG Pathsala
                 </Link>
@@ -231,7 +237,7 @@ const Footer: React.FC = () => {
                 <Link
                   href="https://www.rarebooksocietyofindia.org/"
                   target="_blank"
-                  className="hover:text-blue-600"
+                  className="text-sm hover:text-blue-600"
                 >
                   Rare Books Society of India
                 </Link>
@@ -240,7 +246,7 @@ const Footer: React.FC = () => {
                 <Link
                   href="https://ieeexplore.ieee.org/Xplore/home.jsp"
                   target="_blank"
-                  className="hover:text-blue-600"
+                  className="text-sm hover:text-blue-600"
                 >
                   IEEE Xplore
                 </Link>
@@ -271,15 +277,13 @@ const Footer: React.FC = () => {
             </div>
           </div>
           <div>
-            <h3 className="mb-4 text-lg font-semibold text-blue-900">
-              OTHERS
-            </h3>
+            <h3 className="mb-4 text-sm font-semibold text-blue-900">OTHERS</h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="https://www.agnelashram.org/"
                   target="_blank"
-                  className="hover:text-blue-600"
+                  className="text-sm hover:text-blue-600"
                 >
                   Agnel Ashram
                 </Link>
@@ -288,7 +292,7 @@ const Footer: React.FC = () => {
                 <Link
                   href="https://www.frcrce.ac.in/"
                   target="_blank"
-                  className="hover:text-blue-600"
+                  className="text-sm hover:text-blue-600"
                 >
                   Fr.CRCE Website
                 </Link>
@@ -297,7 +301,7 @@ const Footer: React.FC = () => {
                 <Link
                   href="https://agnelbandra.org/"
                   target="_blank"
-                  className="hover:text-blue-600"
+                  className="text-sm hover:text-blue-600"
                 >
                   Agnel Bandra
                 </Link>
@@ -306,7 +310,7 @@ const Footer: React.FC = () => {
                 <Link
                   href="https://school.agnelbandra.org/"
                   target="_blank"
-                  className="hover:text-blue-600"
+                  className="text-sm hover:text-blue-600"
                 >
                   Agnel School
                 </Link>
@@ -315,7 +319,7 @@ const Footer: React.FC = () => {
                 <Link
                   href="https://iti.agnelbandra.org/"
                   target="_blank"
-                  className="hover:text-blue-600"
+                  className="text-sm hover:text-blue-600"
                 >
                   Agnel ITI
                 </Link>
@@ -324,18 +328,13 @@ const Footer: React.FC = () => {
                 <Link
                   href="https://aitted.agnelbandra.org/"
                   target="_blank"
-                  className="hover:text-blue-600"
+                  className="text-sm hover:text-blue-600"
                 >
                   Agnel ITTED
                 </Link>
               </li>
             </ul>
           </div>
-       
-
-
-
-
         </div>
         <div className="mt-8 flex flex-wrap items-center justify-between border-t border-gray-200 pt-8">
           <div className="space-x-4">

@@ -12,24 +12,19 @@ const zilla = Zilla_Slab({
 const VisionMissionPage = () => {
   return (
     <div className="flex h-fit w-full flex-col bg-linear-to-b from-white to-[#E5F0FF] text-gray-900">
-      <div className="flex h-full w-full flex-col justify-center bg-linear-to-br from-[#001f3f] to-[#003366] pt-36 md:flex-row">
-        <div className="flex w-full flex-col items-center justify-center p-8 pt-40 text-white md:w-2/3 md:p-16 md:pt-16">
+      <div className="flex h-full w-full flex-col bg-white pt-24 md:flex-row">
+        <div className="flex w-full flex-col px-28 pt-36 text-[#00122a]">
           <h1
-            className={`${zilla.className} mb-6 text-4xl font-bold md:text-5xl lg:text-7xl`}
+            className={`mb-4 flex items-center text-center font-serif text-2xl font-bold md:text-3xl lg:text-4xl`}
           >
             VISION & MISSION
           </h1>
-          <p className="rounded-full bg-white/20 px-4 py-2 text-sm font-light text-white backdrop-blur-xs md:text-base">
-            Home {'>'} About {'>'} Vision & Mission
-          </p>
         </div>
       </div>
 
-      <div className="container mx-auto w-full px-4 py-16">
+      <div className="container mx-auto w-full px-28 py-16">
         <div className="mb-16">
-          <h2
-            className={`${zilla.className} mb-6 text-3xl font-bold text-[#001f3f] md:text-4xl`}
-          >
+          <h2 className={`mb-6 text-2xl font-bold text-[#001f3f] md:text-2xl`}>
             Our Vision
           </h2>
           <div className="rounded-lg bg-gray-100 p-6 shadow-lg">
@@ -47,9 +42,8 @@ const VisionMissionPage = () => {
         </div>
 
         <div>
-          <h2
-            className={`${zilla.className} mb-6 text-3xl font-bold text-[#001f3f] md:text-4xl`}
-          >
+          <h2 className={`mb-6 text-2xl font-bold text-[#001f3f] md:text-2xl`}>
+            {' '}
             Our Mission
           </h2>
           <ul className="space-y-4">
