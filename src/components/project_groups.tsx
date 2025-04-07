@@ -88,11 +88,10 @@ export default function ProjectGroups() {
         <div className="mb-20 flex w-full flex-wrap">
           <div className="mb-6 w-full lg:mb-0 lg:w-1/2">
             <h1
-              className={`${zilla.className} mb-6 text-4xl font-bold md:text-5xl lg:text-7xl`}
-            >
-              Project Groups
-            </h1>
-            <div className="h-1 w-32 rounded-sm bg-blue-900"></div>
+            className={`mb-4 flex items-center text-center font-serif text-2xl font-bold md:text-3xl lg:text-4xl`}
+          >
+            PROJECT GROUPS
+          </h1>
           </div>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

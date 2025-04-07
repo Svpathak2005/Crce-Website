@@ -1,22 +1,29 @@
 'use server'
 
-export interface Events {
+export interface Event {
   id: number
   status: string
-  date_created: string
-  date_updated: string | null
   title: string
-  description: string
   date: string
-  imageUrl : string
+  description: string
+  image: string
+  user_updated: string | null
+  date_updated: string | null
+  // Add other fields if needed
 }
 
 export interface EventsResponse {
-  data: Events[]
+  data: Event[]
 }
 
 export default async function getEvents(): Promise<EventsResponse> {
-  const response = await fetch('http://localhost:8055/items/events')
+  const url = `http://localhost:8055/items/events?filter[status][_eq]=published&sort[]=-date`
+
+  const response = await fetch(url, { cache: 'no-store' })
+  if (!response.ok) {
+    throw new Error(`Failed to fetch events: ${response.statusText}`)
+  }
+
   const data: EventsResponse = await response.json()
   return data
 }
