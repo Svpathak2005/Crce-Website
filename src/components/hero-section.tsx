@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { ChevronRight, X } from 'lucide-react'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import Image from 'next/image'
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -43,6 +44,34 @@ export default function HeroSection() {
           <source src="intro3.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <div className=" absolute top-[20%] z-40 flex w-full flex-col items-center justify-center text-white md:top-[57%] md:w-fit md:flex-row">
+          <Image
+            height={300}
+            width={250}
+            src="/frAgnelo.png"
+            alt="fr crce"
+            className="hidden md:block"
+          />
+          <Image
+            height={150}
+            width={150}
+            src="/frAgnelo.png"
+            alt="fr crce"
+            className="block md:hidden"
+          />
+          <div className="flex flex-col items-center justify-center space-y-1 md:space-y-2">
+            <h1 className="font-Helvetica-neue w-full md:text-justify text-center text-xl font-bold text-white md:text-5xl">
+              Fr. Conceicao Rodrigues <br />
+              College of Engineering
+            </h1>
+            <h1 className="font-josefinsans w-full md:text-justify text-center font-semibold text-white md:text-2xl">
+              An Autonomous Institute Affiliated to <br />
+              University of Mumbai <br className="block md:hidden" />| NAAC "A"
+              Grade Accredited |
+            </h1>
+            {/* <h1 className='text-2xl font-josefinsans'></h1> */}
+          </div>
+        </div>
       </div>
       {isAdmission ? (
         //TRUE
@@ -96,7 +125,7 @@ export default function HeroSection() {
         <div className="relative z-40 flex min-h-screen items-center justify-end text-center">
           <div className="sm:relative">
             <div
-              className={`fixed top-1/2 left-0 w-4/5 max-w-fit -translate-y-1/2 transform rounded-r-lg transition-transform duration-500 sm:relative sm:top-auto sm:left-auto sm:w-full sm:max-w-md sm:translate-x-0 sm:translate-y-0 sm:rounded-lg ${
+              className={`fixed top-[75%] left-0 w-4/5 max-w-fit -translate-y-1/2 transform rounded-r-lg transition-transform duration-500 sm:relative sm:top-auto sm:left-auto sm:w-full sm:max-w-md sm:translate-x-0 sm:translate-y-0 sm:rounded-lg ${
                 isVisible ? 'translate-x-0' : '-translate-x-full'
               }`}
             >
@@ -107,7 +136,7 @@ export default function HeroSection() {
                 <X className="h-5 w-5 text-gray-700" />
               </button>
               <div className="mb-2 sm:hidden">
-                <h2 className=" w-fit px-2 text-2xl font-bold text-white sm:text-4xl">
+                <h2 className="w-fit px-2 text-2xl font-bold text-white sm:text-4xl">
                   Quick Glance
                 </h2>
               </div>
@@ -118,23 +147,23 @@ export default function HeroSection() {
                 }}
                 transition={{ duration: 1.0 }}
               >
-                <motion.button className="group text-md 0 w-full rounded-sm bg-blue-700 p-2 font-semibold text-white shadow-sm duration-300 ease-in-out hover:bg-white hover:text-blue-900 hover:shadow-md focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
+                <motion.button className="group text-md 0 w-full rounded-sm bg-[hsl(225,38%,20%)] p-2 font-semibold text-white shadow-sm duration-300 ease-in-out hover:bg-white hover:text-[hsl(225,38%,20%)] hover:shadow-md focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
                   <span className="flex pl-2">Faculty Recruitment Advt</span>
                 </motion.button>
-                <motion.button className="group text-md hover:to- w-full rounded-sm bg-gradient-to-r from-white to-gray-100 p-2 font-semibold text-blue-900 shadow-sm duration-100 ease-in-out hover:bg-gradient-to-r hover:from-blue-700 hover:shadow-md hover:text-white focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
+                <motion.button className="group text-md hover:to- w-full rounded-sm bg-gradient-to-r from-white to-gray-100 p-2 font-semibold text-[hsl(225,38%,20%)] shadow-sm duration-100 ease-in-out hover:bg-gradient-to-r hover:from-[hsl(225,38%,20%)] hover:text-white hover:shadow-md focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
                   <span className="flex pl-2">NIRF</span>
                 </motion.button>
-                <motion.button className="group text-md w-full rounded-sm bg-gradient-to-r from-white to-gray-100 p-2 font-semibold text-blue-900 shadow-sm transition-all duration-100 ease-in-out hover:from-blue-700 hover:to-gray-100 hover:shadow-md focus:ring-2 hover:text-white focus:ring-blue-400 focus:ring-offset-2">
+                <motion.button className="group text-md w-full rounded-sm bg-gradient-to-r from-white to-gray-100 p-2 font-semibold text-[hsl(225,38%,20%)] shadow-sm transition-all duration-100 ease-in-out hover:from-[hsl(225,38%,20%)] hover:to-gray-100 hover:text-white hover:shadow-md focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
                   <span className="flex pl-2">Students Bytes</span>
                 </motion.button>
-                <motion.button className="group text-md w-full rounded-sm bg-gradient-to-r from-white to-gray-100 p-2 font-semibold text-blue-900 shadow-sm transition-all duration-100 ease-in-out hover:from-blue-700 hover:to-gray-100 hover:shadow-md focus:ring-2 hover:text-white focus:ring-blue-400 focus:ring-offset-2">
+                <motion.button className="group text-md w-full rounded-sm bg-gradient-to-r from-white to-gray-100 p-2 font-semibold text-[hsl(225,38%,20%)] shadow-sm transition-all duration-100 ease-in-out hover:from-[hsl(225,38%,20%)] hover:to-gray-100 hover:text-white hover:shadow-md focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
                   <span className="flex pl-2">Alumni Spotlight</span>
                 </motion.button>
               </motion.div>
             </div>
             <button
               onClick={handleToggle}
-              className={`fixed top-1/2 left-0 -translate-y-1/2 transform rounded-r-md bg-white p-2 shadow-md transition-all duration-500 sm:hidden ${
+              className={`fixed top-[70%] left-0 -translate-y-1/2 transform rounded-r-md bg-white p-2 shadow-md transition-all duration-500 sm:hidden ${
                 isVisible
                   ? 'pointer-events-none translate-x-full opacity-0'
                   : 'translate-x-0 opacity-100'
