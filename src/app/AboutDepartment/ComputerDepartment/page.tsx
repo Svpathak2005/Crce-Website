@@ -45,7 +45,7 @@ const updatedTabs = [
   },
   {
     id: 'hoddesk',
-    title: 'HOD\'s Desk',
+    title: "HOD's Desk",
   },
   {
     id: 'visionandmission',
@@ -109,14 +109,15 @@ const updatedTabs = [
     id: 'DepartmentsNotices',
     title: 'Department Notices',
   },
-];
+]
 
 const ComputerEngineeringPage = () => {
   // Initially, facultyData can be an empty array or dummy data.
   const [facultyData, setFacultyData] = useState<MappedTeacher[]>([])
   const [activeTab, setActiveTab] = useState('about')
   // New state for tracking which toggle button is active
-  const [activeFacultyToggle, setActiveFacultyToggle] = useState('FDPSDPPrograms')
+  const [activeFacultyToggle, setActiveFacultyToggle] =
+    useState('FDPSDPPrograms')
 
   useEffect(() => {
     async function fetchFaculty() {
@@ -172,7 +173,7 @@ const ComputerEngineeringPage = () => {
 
       {/* Bottom section with extended description */}
       {extendedDescription && (
-        <div className="rounded-lg bg-white p-6 shadow-md text-justify">
+        <div className="rounded-lg bg-white p-6 text-justify shadow-md">
           <p className="leading-relaxed text-gray-700">{extendedDescription}</p>
         </div>
       )}
@@ -259,7 +260,7 @@ const ComputerEngineeringPage = () => {
   // "View More" button component for tabs that need it
   const ViewMoreButton = ({ tabId }: { tabId: string }) => (
     <div className="mt-4 text-center">
-      <button 
+      <button
         onClick={() => setActiveTab(tabId)}
         className="inline-flex items-center rounded-md bg-[#131929] px-6 py-2 text-base font-medium text-white transition-colors hover:bg-[#1F2942]"
       >
@@ -311,7 +312,7 @@ const ComputerEngineeringPage = () => {
             </button>
             <button
               onClick={() => setActiveTab('Recruiters')}
-              className={`px-8 py-3 text-base font-medium rounded-r-md ${
+              className={`rounded-r-md px-8 py-3 text-base font-medium ${
                 activeTab === 'Recruiters'
                   ? 'bg-[#131929] text-white'
                   : 'bg-gray-200 text-[#131929] hover:bg-gray-300'
@@ -419,21 +420,38 @@ const ComputerEngineeringPage = () => {
       case 'infrastructure':
         return (
           <div className="container mx-auto px-6 py-8">
-            <h2 className={`${zilla.className} mb-6 text-3xl font-bold text-[#131929]`}>
+            <h2
+              className={`${zilla.className} mb-6 text-3xl font-bold text-[#131929]`}
+            >
               Infrastructure
             </h2>
-            <p className="mb-6 text-gray-700 leading-relaxed">
-              Our department is equipped with state-of-the-art facilities including specialized labs, research centers, and modern classrooms to provide students with an optimal learning environment.
+            <p className="mb-6 leading-relaxed text-gray-700">
+              Our department is equipped with state-of-the-art facilities
+              including specialized labs, research centers, and modern
+              classrooms to provide students with an optimal learning
+              environment.
             </p>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               <div className="rounded-lg bg-white p-4 shadow-md">
-                <h3 className={`${zilla.className} mb-2 text-xl font-semibold text-[#131929]`}>6 Computer Labs</h3>
+                <h3
+                  className={`${zilla.className} mb-2 text-xl font-semibold text-[#131929]`}
+                >
+                  6 Computer Labs
+                </h3>
               </div>
               <div className="rounded-lg bg-white p-4 shadow-md">
-                <h3 className={`${zilla.className} mb-2 text-xl font-semibold text-[#131929]`}>Advanced Research Center</h3>
+                <h3
+                  className={`${zilla.className} mb-2 text-xl font-semibold text-[#131929]`}
+                >
+                  Advanced Research Center
+                </h3>
               </div>
               <div className="rounded-lg bg-white p-4 shadow-md">
-                <h3 className={`${zilla.className} mb-2 text-xl font-semibold text-[#131929]`}>Project Development Space</h3>
+                <h3
+                  className={`${zilla.className} mb-2 text-xl font-semibold text-[#131929]`}
+                >
+                  Project Development Space
+                </h3>
               </div>
             </div>
             <ViewMoreButton tabId={tabId} />
@@ -442,11 +460,15 @@ const ComputerEngineeringPage = () => {
       case 'pre-Incubation':
         return (
           <div className="container mx-auto px-6 py-8">
-            <h2 className={`${zilla.className} mb-6 text-3xl font-bold text-[#131929]`}>
+            <h2
+              className={`${zilla.className} mb-6 text-3xl font-bold text-[#131929]`}
+            >
               Pre-Incubation Center
             </h2>
-            <p className="mb-6 text-gray-700 leading-relaxed">
-              The department's pre-incubation center provides support for student entrepreneurs to develop their innovative ideas into viable business ventures.
+            <p className="mb-6 leading-relaxed text-gray-700">
+              The department's pre-incubation center provides support for
+              student entrepreneurs to develop their innovative ideas into
+              viable business ventures.
             </p>
             <ViewMoreButton tabId={tabId} />
           </div>
@@ -454,11 +476,15 @@ const ComputerEngineeringPage = () => {
       case 'NBAAccreditations':
         return (
           <div className="container mx-auto px-6 py-8">
-            <h2 className={`${zilla.className} mb-6 text-3xl font-bold text-[#131929]`}>
+            <h2
+              className={`${zilla.className} mb-6 text-3xl font-bold text-[#131929]`}
+            >
               NBA Accreditations
             </h2>
-            <p className="mb-6 text-gray-700 leading-relaxed">
-              Our Computer Engineering program is accredited by the National Board of Accreditation (NBA), affirming our commitment to quality education and continuous improvement.
+            <p className="mb-6 leading-relaxed text-gray-700">
+              Our Computer Engineering program is accredited by the National
+              Board of Accreditation (NBA), affirming our commitment to quality
+              education and continuous improvement.
             </p>
             <ViewMoreButton tabId={tabId} />
           </div>
@@ -466,11 +492,15 @@ const ComputerEngineeringPage = () => {
       case 'InnovativeTeachingLearning':
         return (
           <div className="container mx-auto px-6 py-8">
-            <h2 className={`${zilla.className} mb-6 text-3xl font-bold text-[#131929]`}>
+            <h2
+              className={`${zilla.className} mb-6 text-3xl font-bold text-[#131929]`}
+            >
               Innovative Teaching & Learning
             </h2>
-            <p className="mb-6 text-gray-700 leading-relaxed">
-              The department employs various innovative teaching methodologies to enhance student learning, including project-based learning, flipped classrooms, and industry-integrated approaches.
+            <p className="mb-6 leading-relaxed text-gray-700">
+              The department employs various innovative teaching methodologies
+              to enhance student learning, including project-based learning,
+              flipped classrooms, and industry-integrated approaches.
             </p>
             <ViewMoreButton tabId={tabId} />
           </div>
@@ -478,11 +508,15 @@ const ComputerEngineeringPage = () => {
       case 'NotableAlumnus':
         return (
           <div className="container mx-auto px-6 py-8">
-            <h2 className={`${zilla.className} mb-6 text-3xl font-bold text-[#131929]`}>
+            <h2
+              className={`${zilla.className} mb-6 text-3xl font-bold text-[#131929]`}
+            >
               Notable Alumni
             </h2>
-            <p className="mb-6 text-gray-700 leading-relaxed">
-              Our alumni have achieved significant success in various fields including technology leadership, entrepreneurship, research, and academia.
+            <p className="mb-6 leading-relaxed text-gray-700">
+              Our alumni have achieved significant success in various fields
+              including technology leadership, entrepreneurship, research, and
+              academia.
             </p>
             <ViewMoreButton tabId={tabId} />
           </div>
@@ -490,11 +524,15 @@ const ComputerEngineeringPage = () => {
       case 'FacultyPrograms':
         return (
           <div className="container mx-auto px-6 py-8">
-            <h2 className={`${zilla.className} mb-6 text-3xl font-bold text-[#131929]`}>
+            <h2
+              className={`${zilla.className} mb-6 text-3xl font-bold text-[#131929]`}
+            >
               Department Programs
             </h2>
-            <p className="mb-6 text-gray-700 leading-relaxed">
-              Our department organizes various development programs, including Faculty Development Programs (FDPs), Staff Development Programs (SDPs), and industrial visits.
+            <p className="mb-6 leading-relaxed text-gray-700">
+              Our department organizes various development programs, including
+              Faculty Development Programs (FDPs), Staff Development Programs
+              (SDPs), and industrial visits.
             </p>
             <ViewMoreButton tabId={tabId} />
           </div>
@@ -508,8 +546,8 @@ const ComputerEngineeringPage = () => {
   // and show preview content for "View More" tabs
   const renderContent = () => {
     // First check if the tab has viewMore property and if we're on the main page
-    const currentTab = updatedTabs.find(tab => tab.id === activeTab)
-    
+    const currentTab = updatedTabs.find((tab) => tab.id === activeTab)
+
     if (currentTab?.viewMore) {
       // This is a tab that has a "View More" option
       switch (activeTab) {
@@ -539,7 +577,7 @@ const ComputerEngineeringPage = () => {
           return null
       }
     }
-    
+
     // Regular non-viewMore tabs
     switch (activeTab) {
       case 'about':
@@ -614,14 +652,13 @@ const ComputerEngineeringPage = () => {
             <div id={activeTab} className="container mx-auto">
               {/* Show toggle buttons for Faculty Programs tab */}
               {activeTab === 'FacultyPrograms' && <FacultyProgramsToggle />}
-              
+
               {/* Render full content or preview based on whether we're in a detailed view */}
-              {updatedTabs.find(tab => tab.id === activeTab)?.viewMore 
-                ? renderContent() 
-                : activeTab === 'overview' 
+              {updatedTabs.find((tab) => tab.id === activeTab)?.viewMore
+                ? renderContent()
+                : activeTab === 'overview'
                   ? renderPreviewContent('infrastructure')
-                  : renderContent()
-              }
+                  : renderContent()}
             </div>
           </div>
         </div>
@@ -658,3 +695,4 @@ const ComputerEngineeringPage = () => {
 }
 
 export default ComputerEngineeringPage
+
