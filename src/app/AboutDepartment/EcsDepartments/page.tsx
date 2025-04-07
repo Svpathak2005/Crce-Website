@@ -5,7 +5,7 @@ import '../style.css'
 import { useState, useEffect } from 'react'
 import {
   tabs,
-  AboutmechDepartment,
+  AboutcsDepartment,
   hodsDesk,
   programs,
   tabContents,
@@ -111,7 +111,7 @@ const updatedTabs = [
   },
 ]
 
-const MechEngineringPage = () => {
+const ComputerEngineeringPage = () => {
   // Initially, facultyData can be an empty array or dummy data.
   const [facultyData, setFacultyData] = useState<MappedTeacher[]>([])
   const [activeTab, setActiveTab] = useState('about')
@@ -581,7 +581,7 @@ const MechEngineringPage = () => {
     // Regular non-viewMore tabs
     switch (activeTab) {
       case 'about':
-        return <AboutDepartmentContainer {...AboutmechDepartment} />
+        return <AboutDepartmentContainer {...AboutcsDepartment} />
       case 'hoddesk':
         return <AboutHOD {...hodsDesk} />
       case 'visionandmission':
@@ -605,7 +605,7 @@ const MechEngineringPage = () => {
       case 'DepartmentsNotices':
         return <DepartmentsNotices />
       default:
-        return <AboutDepartmentContainer {...AboutmechDepartment} />
+        return <AboutDepartmentContainer {...AboutcsDepartment} />
     }
   }
 
@@ -694,4 +694,5 @@ const MechEngineringPage = () => {
   )
 }
 
-export default MechEngineringPage
+export default ComputerEngineeringPage
+
