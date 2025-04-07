@@ -45,11 +45,6 @@ const data = [
 const RulesAndPolicies = () => {
   return (
     <div className="flex flex-col items-center justify-center bg-gray-50 py-10">
-      <h2
-        className={`${zilla.className} mb-6 text-4xl font-bold text-gray-800`}
-      >
-        Rules and Policies
-      </h2>
       <div className="w-full max-w-4xl overflow-hidden rounded-lg shadow-lg">
         <table className="min-w-full bg-white">
           <thead className="bg-blue-600 text-white">
@@ -87,25 +82,14 @@ const RulesAndPolicies = () => {
 
 const Page = () => {
   return (
-    <div className="flex h-fit w-full flex-col bg-white text-gray-900">
-      <div
-        className="flex h-full w-full flex-col justify-center bg-linear-to-br from-[#001f3f] to-[#003366] pt-36 md:flex-row"
-        id="admission"
-      >
-        <div className="flex w-full flex-col items-center justify-center p-8 text-center text-white md:w-2/3 md:p-16 md:pt-16 md:pt-40">
+    <div className="flex h-fit w-full flex-col bg-linaer-to-b from-white to-[#E5F0FF] text-gray-900">
+      <div className="flex h-full w-full flex-col bg-white pt-24 md:flex-row">
+        <div className="flex w-full flex-col px-28 pt-36 text-[#00122a]">
           <h1
-            className={`${zilla.className} mb-6 text-4xl font-bold md:text-5xl lg:text-7xl`}
+            className={`mb-4 flex items-center text-center font-serif text-2x1 font-bold md:text-3xl lg:text-4xl`}
           >
-            Welcome to Our Institution
+            RULES AND POLICIES
           </h1>
-          <p
-            className={`${zilla.className} mb-6 text-lg md:text-xl lg:text-2xl`}
-          >
-            We are committed to providing the best educational experience.
-          </p>
-          <button className="transform rounded-full bg-blue-600 px-6 py-3 text-lg font-bold text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl">
-            Learn More
-          </button>
         </div>
       </div>
       <RulesAndPolicies />
