@@ -92,9 +92,9 @@ const NoticesSection: React.FC = () => {
   return (
     <section
       id="notices"
-      className="bg-white py-12 text-black sm:py-16 lg:py-20"
+      className="bg-white w-full text-black py-10"
     >
-      <div className="mx-auto w-3/4 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto container px-4 sm:px-6 lg:px-8">
         <div className="relative mt-10 mb-8 text-center">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-3/4 border-t border-gray-300"></div>

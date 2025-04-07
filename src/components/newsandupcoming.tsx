@@ -1,46 +1,21 @@
 'use client'
 import { Calendar, ChevronRight, ChevronLeft, X } from 'lucide-react'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import { News } from '@/app/api/news'
 import { Event } from '@/app/api/events'
-
-// Import the server function
-import { div } from 'framer-motion/client'
 
 interface NewsandupcomingProps {
   news: News[]
   events: Event[]
 }
 
-// Happenings (News) Component
-const Happenings = () => {
+// Updated Happenings component with props
+const Happenings = ({ news }: { news: News[] }) => {
   const [selectedNews, setSelectedNews] = useState<number | null>(null)
-  const [newsData, setNewsData] = useState<News[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 4
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true)
-        const result = await getNews()
-        setNewsData(result?.data ?? [])
-        setError(null)
-      } catch (err) {
-        setError('Failed to load news data')
-        console.error('Error fetching news:', err)
-        setNewsData([])
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchData()
-  }, [])
 
   const handleCardClick = (index: number) => {
     setSelectedNews(index)
@@ -53,38 +28,6 @@ const Happenings = () => {
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber)
   }
-
-  if (loading) {
-    return (
-      <div className="flex h-64 w-full items-center justify-center">
-        Loading news...
-      </div>
-    )
-  }
-
-  if (error) {
-    return (
-      <div className="flex h-64 w-full items-center justify-center text-red-500">
-        {error}
-      </div>
-    )
-  }
-
-  // Fallback to static data if no data is returned
-  const news =
-    newsData.length > 0
-      ? newsData.map((item) => ({
-          date: new Date(item.date_created).toLocaleDateString('en-US', {
-            day: 'numeric',
-            month: 'short',
-            year: 'numeric',
-          }),
-          title: item.title,
-          imageUrl: item.image || '/placeholder-image.jpg',
-        }))
-      : [
-          // ... other static news items
-        ]
 
   // Calculate pagination
   const indexOfLastItem = currentPage * itemsPerPage
@@ -218,33 +161,11 @@ const Happenings = () => {
   )
 }
 
-// Events Component
-const EventCards = () => {
+// Updated EventCards component with props
+const EventCards = ({ events }: { events: Event[] }) => {
   const [selectedEvent, setSelectedEvent] = useState<number | null>(null)
-  const [eventsData, setEventsData] = useState<Events[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 4
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true)
-        const result = await getEvents()
-        setEventsData(result?.data ?? [])
-        setError(null)
-      } catch (err) {
-        setError('Failed to load events data')
-        console.error('Error fetching events:', err)
-        setEventsData([])
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchData()
-  }, [])
 
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber)
@@ -258,55 +179,10 @@ const EventCards = () => {
     setSelectedEvent(null)
   }
 
-  if (loading) {
-    return (
-      <div className="flex h-64 w-full items-center justify-center">
-        Loading events...
-      </div>
-    )
-  }
-
-  if (error) {
-    return (
-      <div className="flex h-64 w-full items-center justify-center text-red-500">
-        {error}
-      </div>
-    )
-  }
-
-  // Fallback to static data if no data is returned
-  const events =
-    eventsData.length > 0
-      ? eventsData.map((item) => ({
-          date: new Date(item.date).toLocaleDateString('en-US', {
-            day: 'numeric',
-            month: 'short',
-            year: 'numeric',
-          }),
-          title: item.title,
-          description: item.description,
-          imageUrl: item.imageUrl || '/placeholder-image.jpg',
-        }))
-      : [
-          {
-            date: '01 Jan 2023',
-            title: 'Event Title 1',
-            description: 'Event Description 1',
-            imageUrl: '/placeholder-image.jpg',
-          },
-          {
-            date: '02 Feb 2023',
-            title: 'Event Title 2',
-            description: 'Event Description 2',
-            imageUrl: '/placeholder-image.jpg',
-          },
-          // Your existing static events can go here as fallback
-        ]
-
-  // Calculate pagination
-  const indexOfLastItem = currentPage * itemsPerPage
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage
-  const currentItems = events.slice(indexOfFirstItem, indexOfLastItem)
+  const currentItems = events.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  )
   const totalPages = Math.ceil(events.length / itemsPerPage)
 
   return (
@@ -359,8 +235,6 @@ const EventCards = () => {
             ))}
           </motion.div>
         </AnimatePresence>
-
-        {/* ... existing pagination controls ... */}
       </div>
 
       {/* Event Details Modal */}
@@ -441,8 +315,8 @@ const Newsandupcoming = ({ news, events }: NewsandupcomingProps) => {
       </div>
 
       <div id="contentArea" className="mt-6 text-center text-lg">
-        {activeTab === 'news' && <Happenings />}
-        {activeTab === 'events' && <EventCards />}
+        {activeTab === 'news' && <Happenings news={news} />}
+        {activeTab === 'events' && <EventCards events={events} />}
       </div>
     </div>
   )
