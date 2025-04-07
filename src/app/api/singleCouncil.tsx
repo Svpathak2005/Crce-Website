@@ -1,0 +1,23 @@
+'use server'
+
+export interface OneCouncil {
+  id: number
+  status: string
+  name: string
+  report: string
+  image: string
+  website: string
+  data: any // Update type if you know the shape of `data`
+}
+
+export async function getOneCouncil(id: string): Promise<OneCouncil> {
+  const url = `http://localhost:8055/items/councils/${id}?fields=id,status,name,report,image,website,data`
+
+  const response = await fetch(url, { cache: 'no-store' })
+  if (!response.ok) {
+    throw new Error(`Failed to fetch council: ${response.statusText}`)
+  }
+
+  const { data } = await response.json()
+  return data
+}
