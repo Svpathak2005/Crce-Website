@@ -58,7 +58,7 @@ const Happenings = ({ news }: { news: News[] }) => {
                 >
                   <div>
                     <img
-                      src={`${process.env.NEXT_PUBLIC_ASSET_URL}${item.imageUrl}`}
+                      src={`${process.env.NEXT_PUBLIC_ASSET_URL}${item.image}`}
                       alt="News Image"
                       className="absolute inset-0 h-full w-full object-cover"
                     />
@@ -148,7 +148,7 @@ const Happenings = ({ news }: { news: News[] }) => {
               &times;
             </button>
             <img
-              src={`${process.env.NEXT_PUBLIC_ASSET_URL}${news[selectedNews]?.imageUrl}`}
+              src={`${process.env.NEXT_PUBLIC_ASSET_URL}${news[seletedNews]?.image}`}
               alt={news[selectedNews]?.title}
               className="mb-4 h-auto w-full rounded"
             />
@@ -208,7 +208,7 @@ const EventCards = ({ events }: { events: Event[] }) => {
                 >
                   <div>
                     <img
-                      src={`${process.env.NEXT_PUBLIC_ASSET_URL}${item.imageUrl}`}
+                      src={`${process.env.NEXT_PUBLIC_ASSET_URL}${item.image}`}
                       alt="events Image"
                       className="absolute inset-0 h-full w-full object-cover"
                     />
@@ -254,7 +254,7 @@ const EventCards = ({ events }: { events: Event[] }) => {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={`${process.env.NEXT_PUBLIC_ASSET_URL}${events[selectedEvent]?.imageUrl}`}
+              src={`${process.env.NEXT_PUBLIC_ASSET_URL}${events[selectedEvent]?.image}`}
               alt={events[selectedEvent]?.title}
               className="h-[400px] w-full object-cover"
             />
