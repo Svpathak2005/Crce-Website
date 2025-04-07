@@ -7,6 +7,7 @@ export interface News {
   date_updated: string | null
   title: string
   info: string
+  date: string
   image: string
 }
 
