@@ -318,7 +318,7 @@ const Navbar: React.FC = () => {
     <>
       {/* Desktop Navigation */}
       <nav
-        className={`fixed top-0 z-50 hidden w-full bg-[#131929] bg-opacity-90 font-semibold text-white transition-transform duration-300 ease-in-out md:block ${
+        className={`fixed top-0 z-50 hidden w-full bg-[hsl(224,37%,12%)] opacity-90 font-semibold text-white transition-transform duration-300 ease-in-out md:block ${
           hasScrolled
             ? visible
               ? 'translate-y-0'
@@ -435,7 +435,7 @@ const Navbar: React.FC = () => {
       </nav>
       {dropdown && dropdownContent[dropdown] && (
         <div
-          className={`fixed top-[165px] z-40 hidden w-full bg-white text-black shadow-lg transition-all duration-300 ease-out md:block ${
+          className={`fixed top-[165px] z-50 hidden w-full bg-white text-black shadow-lg transition-all duration-300 ease-out md:block ${
             hasScrolled
               ? visible
                 ? 'md:translate-y-0'
