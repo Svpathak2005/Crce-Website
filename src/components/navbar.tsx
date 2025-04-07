@@ -53,6 +53,8 @@ interface DropdownItem {
   name: string
   href: string
   icon?: React.ReactNode
+  target?: string
+  rel?: string
 }
 
 interface DropdownContent {
@@ -167,13 +169,15 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Students Council',
-      href: '/councils/Stuco_List.pdf',
+      href: 'students/students_council',
       icon: <Users size={18} />,
     },
     {
       name: 'Alumni',
       href: 'https://alumni.frcrce.ac.in',
       icon: <UserCheck size={18} />,
+      target: "_blank",
+      rel: "noopener noreferrer"
     },
     {
       name: 'Project Groups',
@@ -455,6 +459,8 @@ const Navbar: React.FC = () => {
                   <Link
                     href={item.href}
                     className="flex items-center space-x-3 text-lg font-semibold transition duration-300 hover:text-blue-600"
+                    target={item.target}
+                    rel={item.rel}
                   >
                     <span className="text-blue-500 transition-colors duration-300 group-hover:text-blue-600">
                       {item.icon}
