@@ -53,6 +53,8 @@ interface DropdownItem {
   name: string
   href: string
   icon?: React.ReactNode
+  target?: string
+  rel?: string
 }
 
 interface DropdownContent {
@@ -167,13 +169,15 @@ const dropdownContent: DropdownContent = {
     },
     {
       name: 'Students Council',
-      href: '/councils/Stuco_List.pdf',
+      href: 'students/students_council',
       icon: <Users size={18} />,
     },
     {
       name: 'Alumni',
       href: 'https://alumni.frcrce.ac.in',
       icon: <UserCheck size={18} />,
+      target: "_blank",
+      rel: "noopener noreferrer"
     },
     {
       name: 'Project Groups',
@@ -314,7 +318,7 @@ const Navbar: React.FC = () => {
     <>
       {/* Desktop Navigation */}
       <nav
-        className={`bg-opacity-90 fixed top-0 z-50 hidden w-full bg-[#131929] font-semibold text-white transition-transform duration-300 ease-in-out md:block ${
+        className={`fixed top-0 z-50 hidden w-full bg-[hsl(224,37%,12%)] opacity-90 font-semibold text-white transition-transform duration-300 ease-in-out md:block ${
           hasScrolled
             ? visible
               ? 'translate-y-0'
@@ -431,7 +435,7 @@ const Navbar: React.FC = () => {
       </nav>
       {dropdown && dropdownContent[dropdown] && (
         <div
-          className={`fixed top-[165px] z-40 hidden w-full bg-white text-black shadow-lg transition-all duration-300 ease-out md:block ${
+          className={`fixed top-[165px] z-50 hidden w-full bg-white text-black shadow-lg transition-all duration-300 ease-out md:block ${
             hasScrolled
               ? visible
                 ? 'md:translate-y-0'
@@ -454,7 +458,9 @@ const Navbar: React.FC = () => {
                 <li key={index} className="group">
                   <Link
                     href={item.href}
-                    className="flex items-center space-x-3 text-sm font-semibold transition duration-300 hover:text-blue-600"
+                    className="flex items-center space-x-3 text-lg font-semibold transition duration-300 hover:text-blue-600"
+                    target={item.target}
+                    rel={item.rel}
                   >
                     <span className="text-blue-500 transition-colors duration-300 group-hover:text-blue-600">
                       {item.icon}
