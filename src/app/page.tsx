@@ -9,7 +9,7 @@ export default function Home() {
       {/* <div className='bg-linear-to-b from-white to-[#E5F0FF] w-full'> */}
       <Newsandupcoming />
       <NoticesSection />
-      <Industry />
+      {/* <Industry /> */}
       {/* </div> */}
     </main>
   )
