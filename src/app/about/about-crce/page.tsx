@@ -2,13 +2,13 @@
 import React from 'react'
 import { Zilla_Slab } from 'next/font/google'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import {
   BookOpenText,
   GraduationCap,
   School,
   UsersRound,
-  Youtube,
-  ChevronRight,
+  PlayCircle,
 } from 'lucide-react'
 import Link from 'next/link'
 
@@ -19,155 +19,178 @@ const zilla = Zilla_Slab({
   display: 'swap',
 })
 
+const fadeIn = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6 },
+}
+
 export default function Page() {
+  const videoId = 'ZMDlPfqqAsY'
+  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
+
   return (
-    <main className="mt-[100px] flex w-full flex-col items-center justify-center">
-      <div
-        id="about"
-        className="w-full bg-gradient-to-b from-white to-[#E5F0FF] py-20"
-        style={{ minHeight: 'calc(100vh - 100px)' }}
+    <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white pt-[191px]">
+      {/* Hero Section */}
+      <motion.div
+        className="relative w-full overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
       >
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col items-center gap-16 md:flex-row">
-            <div className="md:w-1/2">
-              <h2
-                className={`${zilla.className} mb-6 text-4xl font-bold text-blue-950 md:text-5xl`}
-              >
-                About Our College
-              </h2>
-              <div className="prose prose-lg text-gray-700">
-                <p className="mb-4">
-                  Fr. Conceicao Rodrigues College of Engineering (Fr.CRCE),
-                  located in the heart of Mumbai, is a premier private
-                  engineering college known for its unique approach to
-                  engineering education and holistic development.
-                </p>
-                <p className="mb-4">
-                  Established by Agnel Ashram, which began as an orphanage and
-                  trade school in 1957, the institute has evolved into a
-                  significant technical complex.
-                </p>
-                <p className="mb-4">
-                  Fr.CRCE began in 1984 with a Production Engineering program
-                  and has since expanded to include Electronics, Computer,
-                  Information Technology, and Mechanical Engineering, along with
-                  Master's and Doctoral programs.
-                </p>
-                <p>
-                  The college is consistently ranked highly in surveys by TOI,
-                  INDIA TODAY, and others, and is accredited by both NBA and
-                  NAAC with a grade 'A'.
-                </p>
-              </div>
-            </div>
-            <div className="md:w-1/2">
+        <div className="relative z-10 flex h-full items-center justify-center px-4">
+          <h1
+            className={`${zilla.className} text-center text-5xl font-bold tracking-tight text-black md:text-7xl`}
+          >
+            About Our College
+          </h1>
+        </div>
+      </motion.div>
+
+      {/* About Section */}
+      <motion.div
+        className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8"
+        {...fadeIn}
+      >
+        <div className="overflow-hidden rounded-2xl bg-white shadow-xl">
+          <div className="grid gap-8 md:grid-cols-2">
+            <div className="relative aspect-[4/3] h-full w-full overflow-hidden">
               <Image
-                alt="College campus view"
+                alt="college photo"
                 src="/college.jpg"
-                height={600}
-                width={800}
-                className="h-auto w-full rounded-lg object-cover shadow-xl transition-shadow duration-300 hover:shadow-2xl"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover object-center transition-all duration-500 hover:scale-105"
               />
             </div>
+            <motion.div
+              className="p-8"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+            >
+              <p className="prose prose-lg max-w-none text-gray-600">
+                Fr. Conceicao Rodrigues College of Engineering (Fr.CRCE),
+                located in the heart of Mumbai, is a premier private engineering
+                college known for its unique approach to engineering education
+                and holistic development. Established by Agnel Ashram, which
+                began as an orphanage and trade school in 1957, the institute
+                has evolved into a significant technical complex.
+                <br className="mb-2" />
+                Fr.CRCE began in 1984 with a Production Engineering program and
+                has since expanded to include Electronics, Computer, Information
+                Technology, and Mechanical Engineering, along with Master's and
+                Doctoral programs. Notably, the institute introduced an AI &
+                Data Science undergraduate program in 2020 and a Doctoral
+                program in Computer Engineering in 2023.
+                <br className="mb-2" />
+                The college is consistently ranked highly in surveys by TOI,
+                INDIA TODAY, and others, and is accredited by both NBA and NAAC
+                with a grade 'A'. Fr.CRCE has also been recognized in the NIRF
+                rankings in 2017 and 2020.
+              </p>
+            </motion.div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Stats Section */}
-      <div className="w-full bg-[#E5F0FF] py-20">
-        <div className="container mx-auto px-6">
-          <h2
-            className={`${zilla.className} mb-4 text-center text-4xl font-bold text-blue-950 md:text-5xl`}
-          >
-            At A Glance
-          </h2>
-          <p className="mx-auto mb-12 max-w-2xl text-center text-xl text-blue-900">
-            Excellence in numbers: Our legacy of education, innovation, and
-            growth
-          </p>
-
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="transform rounded-xl bg-white p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-2">
-              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-950">
-                <GraduationCap size={32} />
-              </div>
-              <h3 className="mb-2 text-5xl font-bold text-blue-950">9,000+</h3>
-              <p className="font-medium text-blue-700">Graduates</p>
-            </div>
-
-            <div className="transform rounded-xl bg-white p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-2">
-              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-950">
-                <BookOpenText size={32} />
-              </div>
-              <h3 className="mb-2 text-5xl font-bold text-blue-950">8</h3>
-              <p className="font-medium text-blue-700">Programs</p>
-            </div>
-
-            <div className="transform rounded-xl bg-white p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-2">
-              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-950">
-                <School size={32} />
-              </div>
-              <h3 className="mb-2 text-5xl font-bold text-blue-950">23</h3>
-              <p className="font-medium text-blue-700">Classrooms</p>
-            </div>
-
-            <div className="transform rounded-xl bg-white p-8 text-center shadow-lg transition-all duration-300 hover:-translate-y-2">
-              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-950">
-                <UsersRound size={32} />
-              </div>
-              <h3 className="mb-2 text-5xl font-bold text-blue-950">1,200</h3>
-              <p className="font-medium text-blue-700">Students</p>
-            </div>
+      <div className="bg-gradient-to-b from-blue-50 to-white py-16">
+        <motion.div
+          className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              At A Glance
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              The Numbers That Define Our Excellence
+            </p>
           </div>
-        </div>
+
+          <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { label: 'Graduates', value: '9000+', icon: GraduationCap },
+              { label: 'Programs', value: '8', icon: BookOpenText },
+              { label: 'Classrooms', value: '23', icon: School },
+              { label: 'Students', value: '1200+', icon: UsersRound },
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+              >
+                <div className="absolute -top-4 -right-4 h-24 w-24 rounded-full bg-blue-500/10 transition-transform group-hover:scale-150" />
+                <stat.icon className="h-8 w-8 text-blue-600" />
+                <p className="mt-4 text-4xl font-bold text-gray-900">
+                  {stat.value}
+                </p>
+                <p className="mt-2 text-sm font-medium text-gray-600">
+                  {stat.label}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
 
-      {/* Campus Tour Section */}
-      <div className="w-full bg-gradient-to-b from-[#E5F0FF] to-white py-20">
-        <div className="container mx-auto px-6">
-          <div className="mx-auto mb-12 max-w-3xl text-center">
-            <h2
-              className={`${zilla.className} mb-4 text-4xl font-bold text-blue-950 md:text-5xl`}
-            >
+      {/* Tour Section */}
+      <div className="bg-white py-16">
+        <motion.div
+          className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Take A Tour
             </h2>
-            <p className="mb-4 text-xl text-blue-900">
-              OUR CAMPUSES ARE A LIVING LABORATORY FOR SUSTAINABILITY
+            <p className="mt-4 text-lg text-gray-600">
+              Our Campus: A Living Laboratory for Sustainability
             </p>
-            <p className="text-lg text-gray-700">
-              The college is located at Bandstand, Bandra, Mumbai in a
-              picturesque environment surrounded by the Arabian Sea
+            <p className="mt-2 text-gray-500">
+              Located at Bandstand, Bandra, Mumbai in a picturesque environment
+              surrounded by the Arabian Sea
             </p>
           </div>
 
           <Link
-            href="https://youtu.be/ZMDlPfqqAsY?si=y2gZUALPeEHLMqN2"
+            href={`https://youtu.be/${videoId}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:shadow-3xl relative block overflow-hidden rounded-xl shadow-2xl transition-all"
+            className="group mt-12 block"
           >
-            <div className="relative aspect-video w-full overflow-hidden bg-blue-950">
-              <div className="absolute inset-0 z-0 opacity-30">
+            <motion.div
+              className="relative overflow-hidden rounded-2xl shadow-xl"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="relative aspect-video w-full">
                 <Image
-                  src="/college.jpg"
-                  alt="Video thumbnail"
+                  src={thumbnailUrl}
+                  alt="Campus Tour Video Thumbnail"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 1280px) 100vw, 1280px"
                 />
-              </div>
-              <div className="absolute inset-0 z-10 flex items-center justify-center">
-                <div className="transform rounded-full bg-white p-4 shadow-lg transition-transform duration-300 hover:scale-110">
-                  <Youtube size={64} className="text-blue-950" />
+                <div className="absolute inset-0 bg-black/30 transition-opacity duration-300 group-hover:bg-black/50" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <PlayCircle className="h-16 w-16 text-white transition-transform duration-300 group-hover:scale-125 sm:h-24 sm:w-24" />
                 </div>
               </div>
-              <div className="absolute right-0 bottom-0 left-0 z-10 bg-gradient-to-t from-blue-950 to-transparent p-4 text-center">
-                <p className="text-lg font-medium text-white">
-                  Watch our campus tour video
-                </p>
-              </div>
-            </div>
+            </motion.div>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </main>
   )

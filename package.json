@@ -9,9 +9,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-     "sitemap": "next-sitemap"
+    "sitemap": "next-sitemap"
   },
   "dependencies": {
+    "framer-motion": "^12.6.3",
     "lucide": "^0.414.0",
     "lucide-react": "^0.412.0",
     "minio": "^8.0.5",
