@@ -102,10 +102,6 @@ const updatedTabs = [
     viewMore: true,
   },
   {
-    id: 'AchievementsTab',
-    title: 'Achievements Tab',
-  },
-  {
     id: 'DepartmentsNotices',
     title: 'Department Notices',
   },
@@ -682,10 +678,10 @@ const ComputerEngineeringPage = () => {
           </div>
         </div>
 
-        {/* Placement data */}
+        {/*Achivement data */}
         <div className="bg-white px-20 py-8">
-          <div className="my-12">
-            <PlacementContent />
+          <div className="my-12 h-min overflow-hidden ">
+            <AchievementsTab />
           </div>
         </div>
       </section>
@@ -694,4 +690,3 @@ const ComputerEngineeringPage = () => {
 }
 
 export default ComputerEngineeringPage
-
