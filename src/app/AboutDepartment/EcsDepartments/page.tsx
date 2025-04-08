@@ -41,7 +41,7 @@ const zilla = Zilla_Slab({
 const updatedTabs = [
   {
     id: 'about',
-    title: 'About Computer Department',
+    title: 'About Electronics and Computer Science Department',
   },
   {
     id: 'hoddesk',
@@ -111,7 +111,7 @@ const updatedTabs = [
   },
 ]
 
-const ComputerEngineeringPage = () => {
+const EcsEngineeringPage = () => {
   // Initially, facultyData can be an empty array or dummy data.
   const [facultyData, setFacultyData] = useState<MappedTeacher[]>([])
   const [activeTab, setActiveTab] = useState('about')
@@ -626,7 +626,7 @@ const ComputerEngineeringPage = () => {
         <div className="relative z-10 container mx-auto flex h-full flex-col justify-center px-4 py-20">
           <div className="max-w-4xl md:max-w-6xl lg:max-w-7xl">
             <h1 className="mt-28 mb-6 p-28 text-6xl leading-tight font-bold md:text-5xl lg:text-6xl">
-              COMPUTER ENGINEERING
+              ELECTRONICS AND COMPUTER SCIENCE ENGINEERING
             </h1>
           </div>
         </div>
@@ -694,5 +694,4 @@ const ComputerEngineeringPage = () => {
   )
 }
 
-export default ComputerEngineeringPage
-
+export default EcsEngineeringPage
