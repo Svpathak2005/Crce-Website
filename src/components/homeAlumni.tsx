@@ -33,7 +33,7 @@ export default function FamousAlumni() {
     <>
       <div className="w-3/4 border-t border-gray-300"></div>
 
-      <section className="relative mb-10 w-full h-screen pt-21">
+      <section className="relative px-4 mb-36 md:mb-0 w-full h-screen pt-21 ">
         {/* Mobile Alumni Row - Visible only on mobile */}
         <div className="md:hidden">
           <h2 className="mb-6 text-center text-3xl font-bold text-blue-900">
@@ -65,7 +65,7 @@ export default function FamousAlumni() {
         </div>
 
         {/* Main content - Adapts for mobile and desktop */}
-        <div className="relative container mx-auto h-auto md:h-[600px]">
+        <div className="relative container mx-auto h-auto md:h-[650px]">
           <div className="relative h-full w-full">
             {/* Title - Visible on desktop, hidden on mobile */}
             <h2 className="hidden font-serif md:block absolute top-20 left-10 z-10 text-center text-5xl font-bold text-blue-900">
@@ -198,8 +198,8 @@ export default function FamousAlumni() {
 function getPosition(index: number) {
   const positions = [
     'left-25 bottom-12 w-60 h-72 transform rotate-10',
-    'right-40 top-0 w-60 h-72 transform rotate-0',
-    'right-12 bottom-0 w-60 h-72 transform -rotate-6',
+    'right-40 top-0 w-60 h-72 transform rotate-2',
+    'right-12 bottom-0 w-60 h-72 transform -rotate-7',
   ]
   return positions[index] || ''
 }
