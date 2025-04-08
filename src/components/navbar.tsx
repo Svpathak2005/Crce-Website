@@ -399,23 +399,23 @@ const Navbar: React.FC = () => {
             <div className="flex w-3/4 flex-col pb-1.5">
               <div className="flex justify-end space-x-6 py-3 text-sm">
                 <Link
-                  href="#news"
+                  href="/#events"
                   className="transition duration-300 hover:text-yellow-300"
                 >
                   News and Events
                 </Link>
                 <Link
-                  href="#notices"
+                  href="/#notices"
                   className="transition duration-300 hover:text-yellow-300"
                 >
                   Notices
                 </Link>
-                <Link
+                {/* <Link
                   href="/careers"
                   className="transition duration-300 hover:text-yellow-300"
                 >
                   Careers
-                </Link>
+                </Link> */}
                 <Link
                   href="/about/contact-us"
                   className="transition duration-300 hover:text-yellow-300"
