@@ -119,16 +119,21 @@ export default function LibraryPage() {
 
   // Sample carousel images - replace with actual library images
   const carouselImages = [
-    { src: '/infracse/computinglab,jpg', alt: 'Library Main Hall' },
-    { src: '/infracse/computinglab,jpg', alt: 'Library Main Hall' },
-    { src: '/infracse/computinglab,jpg', alt: 'Library Main Hall' },
+    { src: '/infracse/computinglab.jpg', alt: 'Library Main Hall' },
+    { src: '/infracse/computinglab.jpg', alt: 'Library Main Hall' },
+    { src: '/infracse/computinglab.jpg', alt: 'Library Main Hall' },
+    { src: '/infracse/computinglab.jpg', alt: 'Library Main Hall' },
   ]
 
   const toggleAdditionalServices = () => {
     setShowAdditionalServices(!showAdditionalServices)
   }
 
-  const toggleSection = (section: string | null) => {
+  interface Section {
+    name: string
+  }
+
+  const toggleSection = (section: string): void => {
     if (activeSection === section) {
       setActiveSection(null)
     } else {
@@ -152,7 +157,7 @@ export default function LibraryPage() {
     <div className="flex h-fit w-full flex-col bg-linear-to-b from-white to-[#E5F0FF] text-gray-900">
       {/* Header Section - now matching the provided image style */}
       <div className="flex h-full w-full flex-col bg-white pt-24 md:flex-row">
-        <div className="flex w-full flex-col px-8 pt-36 text-[#00122a] md:px-28">
+        <div className="flex w-full flex-col px-8 pt-36 text-[#011a3b] md:px-28">
           <h1
             className={`text-left font-serif text-5xl font-bold tracking-wide`}
           >
@@ -178,15 +183,10 @@ export default function LibraryPage() {
                   <Image
                     src={image.src}
                     alt={image.alt}
-                    layout="fill"
-                    objectFit="cover"
-                    className="h-full w-full"
                     width={1200}
                     height={500}
+                    className="h-full w-full object-cover"
                   />
-                  <div className="bg-opacity-60 absolute bottom-0 left-0 w-full bg-black p-4 text-white">
-                    <h3 className="text-xl font-semibold">{image.alt}</h3>
-                  </div>
                 </div>
               ))}
             </div>
@@ -275,7 +275,7 @@ export default function LibraryPage() {
                 Library Services & Facilities
               </h2>
               <div
-                className="rounded-lg bg-gray-50 p-8 shadow-lg"
+                className="rounded-t-sm bg-gray-50 p-8 shadow-lg"
                 id="services-container"
               >
                 <div className="grid gap-y-4 md:grid-cols-2 md:gap-x-12">
@@ -297,11 +297,7 @@ export default function LibraryPage() {
                     <div className="border-b border-gray-200 py-3">
                       <p className="text-gray-700">Reservation of Books</p>
                     </div>
-                    <div className="border-b border-gray-200 py-3">
-                      <p className="text-gray-700">
-                        Display of New Arrival of Books
-                      </p>
-                    </div>
+                    
                   </div>
                   <div className="space-y-4">
                     <div className="border-b border-gray-200 py-3">
@@ -323,9 +319,6 @@ export default function LibraryPage() {
                     <div className="border-b border-gray-200 py-3">
                       <p className="text-gray-700">Multimedia center</p>
                     </div>
-                    <div className="border-b border-gray-200 py-3">
-                      <p className="text-gray-700">Newspaper clippings</p>
-                    </div>
                   </div>
                 </div>
                 {showAdditionalServices && (
@@ -336,6 +329,10 @@ export default function LibraryPage() {
                           <p className="text-gray-700">
                             Current Awareness system (CAS)
                           </p>
+                        </div>
+                        
+                        <div className="border-b border-gray-200 py-3">
+                          <p className="text-gray-700">Newspaper clippings</p>
                         </div>
                         <div className="border-b border-gray-200 py-3">
                           <p className="text-gray-700">
@@ -378,7 +375,7 @@ export default function LibraryPage() {
                     </div>
                   </div>
                 )}
-                <div className="mt-8 text-center">
+                <div className="mt-12 text-center">
                   <button
                     className="inline-block rounded-full bg-[#1F2942] px-10 py-3 font-semibold text-white transition-all hover:bg-[#357abd] hover:shadow-lg"
                     onClick={toggleAdditionalServices}
@@ -389,108 +386,107 @@ export default function LibraryPage() {
                   </button>
                 </div>
               </div>
+              {/* Expandable Sections with Horizontal Headers */}
+              <div className="mb-16">
+                <div className="overflow-hidden rounded-b-lg shadow-lg">
+                  {/* Header Row */}
+                  <div className="grid grid-cols-3 bg-gray-100 text-[#1F2942">
+                    {/* User Orientation Section Header */}
+                    <div
+                      className={`flex cursor-pointer items-center justify-between border-r border-gray-200 px-6 py-4 ${activeSection === 'orientation' ? 'bg-gray-300/35' : ''}`}
+                      onClick={() => toggleSection('orientation')}
+                    >
+                      <h3 className="font-semibold">
+                        User Orientation & Book Exhibition
+                      </h3>
+                      {activeSection === 'orientation' ? (
+                        <ChevronUp className="h-5 w-5" />
+                      ) : (
+                        <ChevronDown className="h-5 w-5" />
+                      )}
+                    </div>
+
+                    {/* Print Collection Section Header */}
+                    <div
+                      className={`flex cursor-pointer items-center justify-between border-r border-gray-200 px-6 py-4 ${activeSection === 'print' ? 'bg-gray-300/35' : ''}`}
+                      onClick={() => toggleSection('print')}
+                    >
+                      <h3 className="font-semibold">Print Collection</h3>
+                      {activeSection === 'print' ? (
+                        <ChevronUp className="h-5 w-5" />
+                      ) : (
+                        <ChevronDown className="h-5 w-5" />
+                      )}
+                    </div>
+
+                    {/* Digital Resources Section Header */}
+                    <div
+                      className={`flex cursor-pointer items-center justify-between px-6 py-4 ${activeSection === 'digital' ? 'bg-gray-300/35' : ''}`}
+                      onClick={() => toggleSection('digital')}
+                    >
+                      <h3 className="font-semibold">Digital Resources</h3>
+                      {activeSection === 'digital' ? (
+                        <ChevronUp className="h-5 w-5" />
+                      ) : (
+                        <ChevronDown className="h-5 w-5" />
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Expandable Content Sections */}
+                  {activeSection === 'orientation' && (
+                    <div className="border-t border-gray-200 bg-gray-50 p-8">
+                      <p className="mb-4 text-gray-700">
+                        First-year students are given orientation about the
+                        library rules, services, and facilities. They are taken
+                        on a library tour, informed about various sections, and
+                        the rules to be followed.
+                      </p>
+                      <p className="text-gray-700">
+                        Additionally, a book exhibition is organized for
+                        students to explore new titles and research materials
+                        relevant to their courses.
+                      </p>
+                    </div>
+                  )}
+
+                  {activeSection === 'print' && (
+                    <div className="border-t border-gray-200 bg-gray-50 p-8">
+                      <h3 className="mb-4 font-bold text-[#1F2942]">
+                        Print Collection
+                      </h3>
+                      <ul className="list-disc space-y-2 pl-5 text-gray-700">
+                        <li>Over 20,000 books covering all disciplines</li>
+                        <li>Current and bound journals</li>
+                        <li>Magazines and newspapers</li>
+                        <li>Reference materials</li>
+                        <li>Theses and dissertations</li>
+                      </ul>
+                    </div>
+                  )}
+
+                  {activeSection === 'digital' && (
+                    <div className="border-t border-gray-200 bg-gray-50 p-8">
+                      <h3 className="mb-4 font-bold text-[#1F2942]">
+                        Digital Resources
+                      </h3>
+                      <ul className="list-disc space-y-2 pl-5 text-gray-700">
+                        <li>E-books and e-journals</li>
+                        <li>Online databases</li>
+                        <li>Digital repositories</li>
+                        <li>Multimedia resources</li>
+                        <li>Online question papers</li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-
-        {/* Expandable Sections with Horizontal Headers */}
-        <div className="mb-16">
-          <div className="overflow-hidden rounded-lg shadow-lg">
-            {/* Header Row */}
-            <div className="grid grid-cols-3 bg-[#1F2942] text-white">
-              {/* User Orientation Section Header */}
-              <div
-                className={`flex cursor-pointer items-center justify-between border-r border-gray-700 px-6 py-4 ${activeSection === 'orientation' ? 'bg-[#357abd]' : ''}`}
-                onClick={() => toggleSection('orientation')}
-              >
-                <h3 className="font-semibold">
-                  User Orientation & Book Exhibition
-                </h3>
-                {activeSection === 'orientation' ? (
-                  <ChevronUp className="h-5 w-5" />
-                ) : (
-                  <ChevronDown className="h-5 w-5" />
-                )}
-              </div>
-
-              {/* Print Collection Section Header */}
-              <div
-                className={`flex cursor-pointer items-center justify-between border-r border-gray-700 px-6 py-4 ${activeSection === 'print' ? 'bg-[#357abd]' : ''}`}
-                onClick={() => toggleSection('print')}
-              >
-                <h3 className="font-semibold">Print Collection</h3>
-                {activeSection === 'print' ? (
-                  <ChevronUp className="h-5 w-5" />
-                ) : (
-                  <ChevronDown className="h-5 w-5" />
-                )}
-              </div>
-
-              {/* Digital Resources Section Header */}
-              <div
-                className={`flex cursor-pointer items-center justify-between px-6 py-4 ${activeSection === 'digital' ? 'bg-[#357abd]' : ''}`}
-                onClick={() => toggleSection('digital')}
-              >
-                <h3 className="font-semibold">Digital Resources</h3>
-                {activeSection === 'digital' ? (
-                  <ChevronUp className="h-5 w-5" />
-                ) : (
-                  <ChevronDown className="h-5 w-5" />
-                )}
-              </div>
-            </div>
-
-            {/* Expandable Content Sections */}
-            {activeSection === 'orientation' && (
-              <div className="border-t border-gray-200 bg-gray-50 p-8">
-                <p className="mb-4 text-gray-700">
-                  First-year students are given orientation about the library
-                  rules, services, and facilities. They are taken on a library
-                  tour, informed about various sections, and the rules to be
-                  followed.
-                </p>
-                <p className="text-gray-700">
-                  Additionally, a book exhibition is organized for students to
-                  explore new titles and research materials relevant to their
-                  courses.
-                </p>
-              </div>
-            )}
-
-            {activeSection === 'print' && (
-              <div className="border-t border-gray-200 bg-gray-50 p-8">
-                <h3 className="mb-4 font-bold text-[#1F2942]">
-                  Print Collection
-                </h3>
-                <ul className="list-disc space-y-2 pl-5 text-gray-700">
-                  <li>Over 20,000 books covering all disciplines</li>
-                  <li>Current and bound journals</li>
-                  <li>Magazines and newspapers</li>
-                  <li>Reference materials</li>
-                  <li>Theses and dissertations</li>
-                </ul>
-              </div>
-            )}
-
-            {activeSection === 'digital' && (
-              <div className="border-t border-gray-200 bg-gray-50 p-8">
-                <h3 className="mb-4 font-bold text-[#1F2942]">
-                  Digital Resources
-                </h3>
-                <ul className="list-disc space-y-2 pl-5 text-gray-700">
-                  <li>E-books and e-journals</li>
-                  <li>Online databases</li>
-                  <li>Digital repositories</li>
-                  <li>Multimedia resources</li>
-                  <li>Online question papers</li>
-                </ul>
-              </div>
-            )}
           </div>
         </div>
 
         {/* Contact Info Section */}
-        <div className="mb-16">
+        <div className="mb-16 mt-12">
           <h2 className={`mb-6 text-2xl font-bold text-[#0A244A] md:text-2xl`}>
             Contact Information
           </h2>
