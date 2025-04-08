@@ -410,7 +410,6 @@ const ComputerEngineeringPage = () => {
     )
   }
 
-  // Function to render preview content for tabs with "View More"
   const renderPreviewContent = (tabId: string) => {
     switch (tabId) {
       case 'infrastructure':
