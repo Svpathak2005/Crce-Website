@@ -41,5 +41,18 @@
   "overrides": {
     "@types/react": "19.0.12",
     "@types/react-dom": "19.0.4"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next-sitemap.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MetaSonic001/Crce-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MetaSonic001/Crce-Website/issues"
+  },
+  "homepage": "https://github.com/MetaSonic001/Crce-Website#readme"
 }
