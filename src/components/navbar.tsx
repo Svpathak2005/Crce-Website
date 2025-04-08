@@ -324,7 +324,7 @@ const Navbar: React.FC = () => {
     <>
       {/* Desktop Navigation */}
       <nav
-        className={`fixed top-0 z-50 hidden w-full bg-[hsl(224,37%,12%)] font-semibold text-white opacity-90 transition-transform duration-300 ease-in-out md:block ${
+        className={`fixed top-0 z-50 hidden w-full bg-[hsl(224,37%,12%)] font-semibold text-white opacity-90 transition-transform duration-300 ease-in-out lg:block ${
           hasScrolled
             ? visible
               ? 'translate-y-0'
@@ -441,7 +441,7 @@ const Navbar: React.FC = () => {
       </nav>
       {dropdown && dropdownContent[dropdown] && (
         <div
-          className={`fixed top-[165px] z-50 hidden w-full bg-white text-black shadow-lg transition-all duration-300 ease-out md:block ${
+          className={`fixed top-[165px] z-50 hidden w-full bg-white text-black shadow-lg transition-all duration-300 ease-out lg:block ${
             hasScrolled
               ? visible
                 ? 'md:translate-y-0'
@@ -485,7 +485,7 @@ const Navbar: React.FC = () => {
       )}{' '}
       {/* Mobile Navigation */}
       <nav
-        className={`bg-opacity-90 fixed top-0 z-50 w-full bg-gray-900 font-semibold text-white capitalize transition-transform duration-300 ease-in-out md:hidden ${
+        className={`bg-opacity-90 fixed top-0 z-50 w-full bg-gray-900 font-semibold text-white capitalize transition-transform duration-300 ease-in-out lg:hidden ${
           hasScrolled
             ? visible
               ? 'translate-y-0'
@@ -513,7 +513,7 @@ const Navbar: React.FC = () => {
       </nav>
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-50 transform overflow-y-auto bg-gray-900 text-white capitalize transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed inset-0 z-50 transform overflow-y-auto bg-gray-900 text-white capitalize transition-transform duration-300 ease-in-out lg:hidden ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -550,25 +550,25 @@ const Navbar: React.FC = () => {
           <div className="mt-6 space-y-2">
             <Link
               href="/news"
-              className="block py-2 text-sm hover:text-orange-500"
+              className="block py-2 text-sm "
             >
               News
             </Link>
             <Link
               href="/events"
-              className="block py-2 text-sm hover:text-orange-500"
+              className="block py-2 text-sm "
             >
               Events
             </Link>
             <Link
               href="/careers"
-              className="block py-2 text-sm hover:text-orange-500"
+              className="block py-2 text-sm "
             >
               Work at FrCrce
             </Link>
             <Link
               href="/student-links"
-              className="block py-2 text-sm hover:text-orange-500"
+              className="block py-2 text-sm "
             >
               Student Links
             </Link>
@@ -577,7 +577,7 @@ const Navbar: React.FC = () => {
       </div>
       {/* Mobile Submenu */}
       <div
-        className={`fixed inset-0 z-50 transform overflow-y-auto bg-gray-800 text-white capitalize transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed inset-0 z-50 transform overflow-y-auto bg-gray-800 text-white capitalize transition-transform duration-300 ease-in-out lg:hidden ${
           mobileSubmenu ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
