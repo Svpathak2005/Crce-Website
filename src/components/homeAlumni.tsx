@@ -33,7 +33,7 @@ export default function FamousAlumni() {
     <>
       <div className="w-3/4 border-t border-gray-300"></div>
 
-      <section className="relative mb-10 w-full px-4 pt-10 pb-24">
+      <section className="relative mb-10 w-full h-screen pt-21">
         {/* Mobile Alumni Row - Visible only on mobile */}
         <div className="md:hidden">
           <h2 className="mb-6 text-center text-3xl font-bold text-blue-900">
@@ -68,7 +68,7 @@ export default function FamousAlumni() {
         <div className="relative container mx-auto h-auto md:h-[600px]">
           <div className="relative h-full w-full">
             {/* Title - Visible on desktop, hidden on mobile */}
-            <h2 className="hidden md:block absolute top-20 left-2 z-10 text-center text-5xl font-bold text-blue-900">
+            <h2 className="hidden font-serif md:block absolute top-20 left-10 z-10 text-center text-5xl font-bold text-blue-900">
               Our Distinguished <br /> Alumni
             </h2>
             
@@ -112,18 +112,36 @@ export default function FamousAlumni() {
             {/* Alumni Cards - Only visible on desktop */}
             <div className="hidden md:block">
               {alumniData.map((alumni, index) => (
-                <motion.div
-                  key={alumni.id}
-                  initial={{
-                    opacity: 0,
-                    x: (index - 1) * 100,
-                    y: 50,
-                    rotate: (index - 1) * 5,
-                  }}
-                  animate={{ opacity: 1, x: 0, y: 0, rotate: (index - 1) * 5 }}
-                  transition={{ duration: 0.7, delay: index * 0.2 }}
-                  className={`absolute ${getPosition(index)} z-20 overflow-hidden rounded-lg shadow-lg`}
-                >
+              <motion.div
+              key={alumni.id}
+              initial={{
+                opacity: 0,
+                x: (index - 1) * 100,
+                y: 50,
+                rotate: (index - 1) * 5,
+              }}
+              animate={{ 
+                opacity: 1, 
+                x: 0, 
+                y: [0, -10, 0],  // Added floating animation
+                // rotate: [(index - 1) * 5, (index - 1) * 5 + 5, (index - 1) * 5]  // Combined rotation
+              }}
+              transition={{ 
+                duration: 0.7,
+                delay: index * 0.2,
+                y: {
+                  repeat: Infinity,
+                  duration: 8,
+                  ease: 'easeInOut'
+                },
+                rotate: {
+                  repeat: Infinity,
+                  duration: 8,
+                  ease: 'easeInOut'
+                }
+              }}
+              className={`absolute ${getPosition(index)} z-20 overflow-hidden rounded-lg shadow-lg`}
+            >
                   <div className="relative h-full w-full">
                     <Image
                       src={alumni.image}
