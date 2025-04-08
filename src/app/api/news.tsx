@@ -6,7 +6,9 @@ export interface News {
   date_created: string
   date_updated: string | null
   title: string
-  image : string
+  info: string
+  date: string
+  image: string
 }
 
 export interface NewsResponse {
@@ -14,7 +16,13 @@ export interface NewsResponse {
 }
 
 export default async function getNews(): Promise<NewsResponse> {
-  const response = await fetch('http://localhost:8055/items/news')
+  const url = `http://localhost:8055/items/news?filter[status][_eq]=published&sort[]=-date_created`
+
+  const response = await fetch(url, { cache: 'no-store' })
+  if (!response.ok) {
+    throw new Error(`Failed to fetch news: ${response.statusText}`)
+  }
+
   const data: NewsResponse = await response.json()
   return data
 }
