@@ -71,18 +71,18 @@ const HomeAchievements = () => {
           </h1>
         </div>
 
-        <div className="relative mx-auto max-w-6xl">
+        <div className="relative mx-auto  max-w-6xl">
           {/* Navigation Buttons */}
           <button
             onClick={handlePrevious}
-            className="absolute left-0 top-1/2 z-10 -translate-y-1/2 transform rounded-full bg-white p-2 shadow-lg transition-all hover:bg-gray-100 hover:shadow-xl focus:outline-none"
+            className="absolute left-0 lg:-left-15 top-1/2 z-10 -translate-y-1/2 transform rounded-full bg-white p-2 shadow-lg transition-all hover:bg-gray-100 hover:shadow-xl focus:outline-none"
           >
             <ChevronLeft className="h-6 w-6 text-gray-600" />
           </button>
 
           <button
             onClick={handleNext}
-            className="absolute right-0 top-1/2 z-10 -translate-y-1/2 transform rounded-full bg-white p-2 shadow-lg transition-all hover:bg-gray-100 hover:shadow-xl focus:outline-none"
+            className="absolute right-0 lg:-right-15 top-1/2 z-10 -translate-y-1/2 transform rounded-full bg-white p-2 shadow-lg transition-all hover:bg-gray-100 hover:shadow-xl focus:outline-none"
           >
             <ChevronRight className="h-6 w-6 text-gray-600" />
           </button>
@@ -96,7 +96,7 @@ const HomeAchievements = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5 }}
-                className="overflow-hidden rounded-2xl bg-gray-50 shadow-lg"
+                className="overflow-hidden rounded-2xl bg-gray-50 "
               >
                 <div className="flex flex-col md:flex-row">
                   {/* Image Section */}
