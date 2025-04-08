@@ -17,7 +17,8 @@ export interface EventsResponse {
 }
 
 export default async function getEvents(): Promise<EventsResponse> {
-  const url = `http://localhost:8055/items/events?filter[status][_eq]=published&sort[]=-date`
+  const baseUrl = process.env.DIRECTUS_URL || 'http://localhost:8055'
+  const url = `${baseUrl}/items/events?filter[status][_eq]=published&sort[]=-date`
 
   const response = await fetch(url, { cache: 'no-store' })
   if (!response.ok) {
