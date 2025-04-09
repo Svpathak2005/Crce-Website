@@ -11,7 +11,8 @@ export interface OneCouncil {
 }
 
 export async function getOneCouncil(id: string): Promise<OneCouncil> {
-  const url = `http://localhost:8055/items/councils/${id}?fields=id,status,name,report,image,website,data`
+  const baseUrl = process.env.DIRECTUS_URL || 'http://localhost:8055'
+  const url = `${baseUrl}/items/councils/${id}?fields=id,status,name,report,image,website,data`
 
   const response = await fetch(url, { cache: 'no-store' })
   if (!response.ok) {

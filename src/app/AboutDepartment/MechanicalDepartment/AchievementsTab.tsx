@@ -46,7 +46,7 @@ const AchievementsTab = () => {
   useEffect(() => {
     const fetchAchievements = async () => {
       try {
-        const result = await getDepartmentAchievements('computers') // now accepted
+        const result = await getDepartmentAchievements('mechanical') // now accepted
         console.log(result)
         setAchievements(result) // now matches expected type
       } catch (error) {

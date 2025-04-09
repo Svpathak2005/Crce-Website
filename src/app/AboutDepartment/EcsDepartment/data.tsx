@@ -75,7 +75,7 @@ export const hodsDesk = {
   name: 'Dr. Sapna Prabhu',
   title: 'Professor & HOD',
   bio: 'The Department of Electronics and Computer Science Engineering at CRCE is committed to providing quality education in the field of computer science and engineering.',
-  imageUrl: '/facultyecs/sapnaprabhu.png',
+  imageUrl: '/facultyecs/sapnaprabhu.jpg',
   content:
     'I am pleased to extend a warm welcome to the incoming students of the Electronics and Electronics and Computer Science Engineering program at our esteemed institute. The Department of Electronics and Computer Science Engineering is deeply committed to fostering your holistic development, paving the way for successful careers, and ultimately, shaping you into invaluable national assets. Our dedicated and experienced faculty is instrumental in nurturing your overall growth, encompassing analytical skill and the ability for creative thinking to compete on a global scale. In addition to the traditional engineering curriculum, our department offers Honour courses that prepare you to meet the dynamic demands of the modern business landscape, cultivating a professional mind-set.',
   extendedContent:

@@ -28,7 +28,8 @@ export default async function getTeachers(
   department: string
 ): Promise<MappedTeacher[]> {
   const encodedDepartment = encodeURIComponent(department)
-  const url = `http://localhost:8055/items/teachers?filter%5Bdepartment%5D%5B_eq%5D=${encodedDepartment}&filter%5Bstatus%5D%5B_eq%5D=published`
+  const baseUrl = process.env.DIRECTUS_URL || 'http://localhost:8055'
+  const url = `${baseUrl}/items/teachers?filter%5Bdepartment%5D%5B_eq%5D=${encodedDepartment}&filter%5Bstatus%5D%5B_eq%5D=published`
 
   const response = await fetch(url, { cache: 'no-store' })
   if (!response.ok) {

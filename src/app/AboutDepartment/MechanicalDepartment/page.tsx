@@ -41,7 +41,7 @@ const zilla = Zilla_Slab({
 const updatedTabs = [
   {
     id: 'about',
-    title: 'About Computer Department',
+    title: 'About Mechanical Department',
   },
   {
     id: 'hoddesk',
@@ -98,12 +98,8 @@ const updatedTabs = [
   },
   {
     id: 'FacultyPrograms',
-    title: 'Department Programs',
+    title: 'Faculty and Student Programs',
     viewMore: true,
-  },
-  {
-    id: 'AchievementsTab',
-    title: 'Achievements Tab',
   },
   {
     id: 'DepartmentsNotices',
@@ -122,7 +118,7 @@ const MechEngineringPage = () => {
   useEffect(() => {
     async function fetchFaculty() {
       try {
-        const data = await getTeachers('computers')
+        const data = await getTeachers('mechanical')
         console.log(data[0]?.photoUrl)
         setFacultyData(data)
       } catch (error) {
@@ -436,7 +432,7 @@ const MechEngineringPage = () => {
                 <h3
                   className={`${zilla.className} mb-2 text-xl font-semibold text-[#131929]`}
                 >
-                  6 Computer Labs
+                  6 Mechanical Labs
                 </h3>
               </div>
               <div className="rounded-lg bg-white p-4 shadow-md">
@@ -482,7 +478,7 @@ const MechEngineringPage = () => {
               NBA Accreditations
             </h2>
             <p className="mb-6 leading-relaxed text-gray-700">
-              Our Computer Engineering program is accredited by the National
+              Our Mechanical Engineering program is accredited by the National
               Board of Accreditation (NBA), affirming our commitment to quality
               education and continuous improvement.
             </p>
@@ -527,7 +523,7 @@ const MechEngineringPage = () => {
             <h2
               className={`${zilla.className} mb-6 text-3xl font-bold text-[#131929]`}
             >
-              Department Programs
+              FSD Program
             </h2>
             <p className="mb-6 leading-relaxed text-gray-700">
               Our department organizes various development programs, including
@@ -626,7 +622,7 @@ const MechEngineringPage = () => {
         <div className="relative z-10 container mx-auto flex h-full flex-col justify-center px-4 py-20">
           <div className="max-w-4xl md:max-w-6xl lg:max-w-7xl">
             <h1 className="mt-28 mb-6 p-28 text-6xl leading-tight font-bold md:text-5xl lg:text-6xl">
-              COMPUTER ENGINEERING
+              MECHANICAL ENGINEERING
             </h1>
           </div>
         </div>
@@ -683,10 +679,10 @@ const MechEngineringPage = () => {
           </div>
         </div>
 
-        {/* Placement data */}
+        {/*Achivement data */}
         <div className="bg-white px-20 py-8">
-          <div className="my-12">
-            <PlacementContent />
+          <div className="my-12 h-min overflow-hidden">
+            <AchievementsTab />
           </div>
         </div>
       </section>

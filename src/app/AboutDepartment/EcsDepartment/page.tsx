@@ -41,7 +41,7 @@ const zilla = Zilla_Slab({
 const updatedTabs = [
   {
     id: 'about',
-    title: 'About Computer Department',
+    title: 'About Electronics and Computer Science Department',
   },
   {
     id: 'hoddesk',
@@ -98,12 +98,8 @@ const updatedTabs = [
   },
   {
     id: 'FacultyPrograms',
-    title: 'Department Programs',
+    title: 'FSD Program',
     viewMore: true,
-  },
-  {
-    id: 'AchievementsTab',
-    title: 'Achievements Tab',
   },
   {
     id: 'DepartmentsNotices',
@@ -111,7 +107,7 @@ const updatedTabs = [
   },
 ]
 
-const ComputerEngineeringPage = () => {
+const EcsEngineeringPage = () => {
   // Initially, facultyData can be an empty array or dummy data.
   const [facultyData, setFacultyData] = useState<MappedTeacher[]>([])
   const [activeTab, setActiveTab] = useState('about')
@@ -527,7 +523,7 @@ const ComputerEngineeringPage = () => {
             <h2
               className={`${zilla.className} mb-6 text-3xl font-bold text-[#131929]`}
             >
-              Department Programs
+              FSD Program
             </h2>
             <p className="mb-6 leading-relaxed text-gray-700">
               Our department organizes various development programs, including
@@ -626,7 +622,7 @@ const ComputerEngineeringPage = () => {
         <div className="relative z-10 container mx-auto flex h-full flex-col justify-center px-4 py-20">
           <div className="max-w-4xl md:max-w-6xl lg:max-w-7xl">
             <h1 className="mt-28 mb-6 p-28 text-6xl leading-tight font-bold md:text-5xl lg:text-6xl">
-              COMPUTER ENGINEERING
+              ELECTRONICS AND COMPUTER SCIENCE ENGINEERING
             </h1>
           </div>
         </div>
@@ -683,10 +679,10 @@ const ComputerEngineeringPage = () => {
           </div>
         </div>
 
-        {/* Placement data */}
+        {/*Achivement data */}
         <div className="bg-white px-20 py-8">
-          <div className="my-12">
-            <PlacementContent />
+          <div className="my-12 h-min overflow-hidden">
+            <AchievementsTab />
           </div>
         </div>
       </section>
@@ -694,5 +690,4 @@ const ComputerEngineeringPage = () => {
   )
 }
 
-export default ComputerEngineeringPage
-
+export default EcsEngineeringPage

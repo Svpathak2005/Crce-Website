@@ -62,41 +62,48 @@ const FDPSDPPrograms = () => {
     <div className="container mx-auto px-6 py-8">
       {/* Section heading with decorative lines */}
       <div className="relative mb-12 flex items-center justify-center">
-        <div className="absolute left-0 top-1/2 h-px w-1/5 bg-gray-300"></div>
-        <h2 className={`${zilla.className} mx-8 text-center text-4xl font-bold text-[#131929]`}>
-          Faculty & Staff Development Programs
+        <div className="absolute top-1/2 left-0 h-px w-1/5 bg-gray-300"></div>
+        <h2
+          className={`${zilla.className} mx-8 text-center text-4xl font-bold text-[#131929]`}
+        >
+          Faculty & Student Development Programs
         </h2>
-        <div className="absolute right-0 top-1/2 h-px w-1/5 bg-gray-300"></div>
+        <div className="absolute top-1/2 right-0 h-px w-1/5 bg-gray-300"></div>
       </div>
-      
+
       <div className="rounded-lg bg-white p-6 shadow-md">
         <p className="mb-8 text-lg leading-relaxed text-gray-700">
-          The Computer Engineering Department regularly organizes Faculty Development Programs (FDPs) and Staff Development Programs (SDPs) to enhance the knowledge and skills of academic and industry professionals. These programs cover emerging technologies and pedagogical methods to keep pace with the evolving educational landscape.
+          The Computer Engineering Department regularly organizes Faculty
+          Development Programs (FDPs) and Staff Development Programs (SDPs) to
+          enhance the knowledge and skills of academic and industry
+          professionals. These programs cover emerging technologies and
+          pedagogical methods to keep pace with the evolving educational
+          landscape.
         </p>
-        
+
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200 rounded-lg bg-white">
             <thead className="bg-[#F5F8FF]">
               <tr>
-                <th className="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider text-[#131929]">
+                <th className="px-6 py-4 text-left text-sm font-semibold tracking-wider text-[#131929] uppercase">
                   Program Title
                 </th>
-                <th className="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider text-[#131929]">
+                <th className="px-6 py-4 text-left text-sm font-semibold tracking-wider text-[#131929] uppercase">
                   Type
                 </th>
-                <th className="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider text-[#131929]">
+                <th className="px-6 py-4 text-left text-sm font-semibold tracking-wider text-[#131929] uppercase">
                   Duration
                 </th>
-                <th className="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider text-[#131929]">
+                <th className="px-6 py-4 text-left text-sm font-semibold tracking-wider text-[#131929] uppercase">
                   Dates
                 </th>
-                <th className="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider text-[#131929]">
+                <th className="px-6 py-4 text-left text-sm font-semibold tracking-wider text-[#131929] uppercase">
                   Participants
                 </th>
-                <th className="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider text-[#131929]">
+                <th className="px-6 py-4 text-left text-sm font-semibold tracking-wider text-[#131929] uppercase">
                   Sponsor
                 </th>
-                <th className="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider text-[#131929]">
+                <th className="px-6 py-4 text-left text-sm font-semibold tracking-wider text-[#131929] uppercase">
                   Coordinators
                 </th>
               </tr>
@@ -110,26 +117,30 @@ const FDPSDPPrograms = () => {
                   <td className="px-6 py-4 text-sm font-medium text-[#131929]">
                     {data.title}
                   </td>
-                  <td className="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
-                    <span className={`rounded-full px-3 py-1 text-xs font-medium ${
-                      data.type === 'FDP' ? 'bg-blue-100 text-blue-800' : 'bg-green-100 text-green-800'
-                    }`}>
+                  <td className="px-6 py-4 text-sm whitespace-nowrap text-gray-700">
+                    <span
+                      className={`rounded-full px-3 py-1 text-xs font-medium ${
+                        data.type === 'FDP'
+                          ? 'bg-blue-100 text-blue-800'
+                          : 'bg-green-100 text-green-800'
+                      }`}
+                    >
                       {data.type}
                     </span>
                   </td>
-                  <td className="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
+                  <td className="px-6 py-4 text-sm whitespace-nowrap text-gray-700">
                     {data.duration}
                   </td>
-                  <td className="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
+                  <td className="px-6 py-4 text-sm whitespace-nowrap text-gray-700">
                     {data.dates}
                   </td>
                   <td className="px-6 py-4 text-sm text-gray-700">
                     {data.participants}
                   </td>
-                  <td className="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
+                  <td className="px-6 py-4 text-sm whitespace-nowrap text-gray-700">
                     {data.sponsor}
                   </td>
-                  <td className="whitespace-nowrap px-6 py-4 text-sm text-gray-700">
+                  <td className="px-6 py-4 text-sm whitespace-nowrap text-gray-700">
                     {data.coordinators}
                   </td>
                 </tr>

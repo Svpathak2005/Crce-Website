@@ -17,7 +17,7 @@ const DepartmentsNotices = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await getDepartmentNotices('computers')
+        const data = await getDepartmentNotices('mechanical')
         setNotices(data)
       } catch (error) {
         console.error('Error fetching department notices:', error)

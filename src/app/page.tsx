@@ -6,6 +6,8 @@ import getNews from '@/app/api/news'
 import getEvents from '@/app/api/events'
 import HomeAbout from '@/components/homeAbout'
 import HomeAChivements from '@/components/homeAchievements'
+import HomeAlumni from '@/components/homeAlumni'
+import ISP from '@/components/ISP'
 
 export default async function Home() {
   const newsRes = await getNews()
@@ -19,8 +21,10 @@ export default async function Home() {
       <HeroSection />
       <EventsCards events={events} />
       <NoticesSection />
-      <HomeAbout/>
-    <HomeAChivements />
+      <HomeAbout />
+      <HomeAChivements />
+      <HomeAlumni />
+      <ISP />
       {/* <Industry /> */}
     </main>
   )

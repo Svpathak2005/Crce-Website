@@ -399,23 +399,23 @@ const Navbar: React.FC = () => {
             <div className="flex w-3/4 flex-col pb-1.5">
               <div className="flex justify-end space-x-6 py-3 text-sm">
                 <Link
-                  href="#news"
+                  href="/#events"
                   className="transition duration-300 hover:text-yellow-300"
                 >
                   News and Events
                 </Link>
                 <Link
-                  href="#notices"
+                  href="/#notices"
                   className="transition duration-300 hover:text-yellow-300"
                 >
                   Notices
                 </Link>
-                <Link
+                {/* <Link
                   href="/careers"
                   className="transition duration-300 hover:text-yellow-300"
                 >
                   Careers
-                </Link>
+                </Link> */}
                 <Link
                   href="/about/contact-us"
                   className="transition duration-300 hover:text-yellow-300"
@@ -441,7 +441,7 @@ const Navbar: React.FC = () => {
       </nav>
       {dropdown && dropdownContent[dropdown] && (
         <div
-          className={`fixed top-[165px] z-50 hidden w-full bg-white text-black shadow-lg transition-all duration-300 ease-out md:block ${
+          className={`fixed top-[165px] z-50 hidden w-full bg-white text-black shadow-lg transition-all duration-300 ease-out lg:block ${
             hasScrolled
               ? visible
                 ? 'md:translate-y-0'
@@ -550,25 +550,25 @@ const Navbar: React.FC = () => {
           <div className="mt-6 space-y-2">
             <Link
               href="/news"
-              className="block py-2 text-sm hover:text-orange-500"
+              className="block py-2 text-sm "
             >
               News
             </Link>
             <Link
               href="/events"
-              className="block py-2 text-sm hover:text-orange-500"
+              className="block py-2 text-sm "
             >
               Events
             </Link>
             <Link
               href="/careers"
-              className="block py-2 text-sm hover:text-orange-500"
+              className="block py-2 text-sm "
             >
               Work at FrCrce
             </Link>
             <Link
               href="/student-links"
-              className="block py-2 text-sm hover:text-orange-500"
+              className="block py-2 text-sm "
             >
               Student Links
             </Link>
