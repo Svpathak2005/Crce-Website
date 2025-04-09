@@ -36,7 +36,7 @@ services:
       CACHE_TTL: "8 hrs"
       CACHE_SKIP_ALLOWED: "true"
       CORS_ENABLED: "true"
-      CORS_ORIGIN: "http://localhost:3000"
+      CORS_ORIGIN: "http://localhost:9500"
       CORS_METHODS: "GET,POST,PATCH,DELETE,OPTIONS"
       CORS_ALLOWED_HEADERS: "Content-Type,Authorization"
       CORS_EXPOSED_HEADERS: "Content-Range"

@@ -8,9 +8,8 @@ module.exports = {
       instances: 'max', // Uses all available CPU cores
       env: {
         NODE_ENV: 'production',
-        PORT: 3000,
+        PORT: 9500,
       },
     },
   ],
 }
-
