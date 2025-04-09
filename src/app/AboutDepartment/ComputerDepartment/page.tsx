@@ -98,7 +98,7 @@ const updatedTabs = [
   },
   {
     id: 'FacultyPrograms',
-    title: 'Department Programs',
+    title: 'FSD Program',
     viewMore: true,
   },
   {
@@ -522,7 +522,7 @@ const ComputerEngineeringPage = () => {
             <h2
               className={`${zilla.className} mb-6 text-3xl font-bold text-[#131929]`}
             >
-              Department Programs
+              FSD Program
             </h2>
             <p className="mb-6 leading-relaxed text-gray-700">
               Our department organizes various development programs, including
@@ -680,7 +680,7 @@ const ComputerEngineeringPage = () => {
 
         {/*Achivement data */}
         <div className="bg-white px-20 py-8">
-          <div className="my-12 h-min overflow-hidden ">
+          <div className="my-12 h-min overflow-hidden">
             <AchievementsTab />
           </div>
         </div>

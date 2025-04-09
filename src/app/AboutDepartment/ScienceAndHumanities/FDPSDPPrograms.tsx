@@ -64,7 +64,7 @@ const FDPSDPPrograms = () => {
       <div className="relative mb-12 flex items-center justify-center">
         <div className="absolute left-0 top-1/2 h-px w-1/5 bg-gray-300"></div>
         <h2 className={`${zilla.className} mx-8 text-center text-4xl font-bold text-[#131929]`}>
-          Faculty & Staff Development Programs
+          Faculty & Student Development Programs
         </h2>
         <div className="absolute right-0 top-1/2 h-px w-1/5 bg-gray-300"></div>
       </div>

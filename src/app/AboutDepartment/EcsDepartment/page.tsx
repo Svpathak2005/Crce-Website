@@ -98,7 +98,7 @@ const updatedTabs = [
   },
   {
     id: 'FacultyPrograms',
-    title: 'Department Programs',
+    title: 'FSD Program',
     viewMore: true,
   },
   {
@@ -523,7 +523,7 @@ const EcsEngineeringPage = () => {
             <h2
               className={`${zilla.className} mb-6 text-3xl font-bold text-[#131929]`}
             >
-              Department Programs
+              FSD Program
             </h2>
             <p className="mb-6 leading-relaxed text-gray-700">
               Our department organizes various development programs, including

@@ -79,14 +79,11 @@ const AboutHOD = ({
             Dear Students,
           </p>
           <p className="mb-4 text-gray-700 leading-relaxed">
-            Welcome to the Computer Engineering Department at Fr. CRCE. We are committed to providing you with a comprehensive education that blends theoretical knowledge with practical skills. Our goal is to prepare you not just for your first job, but for a successful and fulfilling career in the ever-evolving field of computer engineering.
-          </p>
+content           </p>
           <p className="mb-4 text-gray-700 leading-relaxed">
-            We encourage you to take advantage of the many resources and opportunities available to you during your time here. Participate actively in classes, engage with faculty, collaborate with your peers, and explore the various extracurricular activities that will enhance your educational experience.
-          </p>
+content          </p>
           <p className="text-gray-700 leading-relaxed">
-            Remember, your journey at Fr. CRCE is what you make of it. Embrace challenges, pursue your passions, and strive for excellence in all that you do. We are here to guide and support you every step of the way.
-          </p>
+content          </p>
           <p className="mt-6 text-right font-semibold text-[#131929]">{name}</p>
           <p className="text-right text-gray-700">{title}</p>
         </div>

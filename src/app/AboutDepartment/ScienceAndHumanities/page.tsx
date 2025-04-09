@@ -98,7 +98,7 @@ const updatedTabs = [
   },
   {
     id: 'FacultyPrograms',
-    title: 'Department Programs',
+    title: 'Faculty and Student Programs',
     viewMore: true,
   },
   {
@@ -122,7 +122,7 @@ const ComputerEngineeringPage = () => {
   useEffect(() => {
     async function fetchFaculty() {
       try {
-        const data = await getTeachers('computers')
+        const data = await getTeachers('humanities')
         console.log(data[0]?.photoUrl)
         setFacultyData(data)
       } catch (error) {
@@ -526,7 +526,7 @@ const ComputerEngineeringPage = () => {
             <h2
               className={`${zilla.className} mb-6 text-3xl font-bold text-[#131929]`}
             >
-              Department Programs
+              FSD Program
             </h2>
             <p className="mb-6 leading-relaxed text-gray-700">
               Our department organizes various development programs, including
@@ -625,7 +625,7 @@ const ComputerEngineeringPage = () => {
         <div className="relative z-10 container mx-auto flex h-full flex-col justify-center px-4 py-20">
           <div className="max-w-4xl md:max-w-6xl lg:max-w-7xl">
             <h1 className="mt-28 mb-6 p-28 text-6xl leading-tight font-bold md:text-5xl lg:text-6xl">
-             Science and Humanities
+              Science and Humanities
             </h1>
           </div>
         </div>
@@ -694,4 +694,3 @@ const ComputerEngineeringPage = () => {
 }
 
 export default ComputerEngineeringPage
-
