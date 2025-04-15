@@ -50,7 +50,7 @@ const AboutHOD = ({
             <p className="mb-4 text-sm text-black italic">{qualification || "Ph.D. in Computer Engineering"}</p>
             
             <a
-              href="#"
+              href="https://frcrce.ac.in/images/crce/department/comps/profile/sujata_deshmukh.pdf"
               className="mt-2 inline-block rounded-md bg-[#131929] px-5 py-2 text-sm font-medium text-white transition-all hover:bg-[#1f2639]"
             >
               View Profile

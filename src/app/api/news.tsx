@@ -16,7 +16,8 @@ export interface NewsResponse {
 }
 
 export default async function getNews(): Promise<NewsResponse> {
-  const url = `http://localhost:8055/items/news?filter[status][_eq]=published&sort[]=-date_created`
+  const baseUrl = process.env.DIRECTUS_URL || 'http://localhost:8055'
+  const url = `${baseUrl}/items/news?filter[status][_eq]=published&sort[]=-date_created`
 
   const response = await fetch(url, { cache: 'no-store' })
   if (!response.ok) {

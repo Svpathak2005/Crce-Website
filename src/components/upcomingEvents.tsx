@@ -32,13 +32,13 @@ const EventCards = ({ events }: EventsProps) => {
   const totalPages = Math.ceil(events.length / itemsPerPage)
 
   return (
-    <div className="w-screen max-w-full bg-white px-4 py-8">
+    <div id='events' className="w-screen max-w-full bg-white px-4 py-8">
       <div className="relative mt-10 mb-8 text-center">
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-3/4 border-t border-gray-300"></div>
         </div>
         <h1 className="relative z-10 inline-block bg-white px-4 font-serif text-4xl text-gray-800">
-          Upcoming Events
+          News and Events
         </h1>
       </div>
 
@@ -78,7 +78,9 @@ const EventCards = ({ events }: EventsProps) => {
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          onClick={() => handleEventClick(indexOfFirstItem + index)}
+                          onClick={() =>
+                            handleEventClick(indexOfFirstItem + index)
+                          }
                           className="mt-2 rounded-md bg-white/20 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/30"
                         >
                           View Details

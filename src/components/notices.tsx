@@ -54,19 +54,55 @@ const NoticesSection: React.FC = () => {
         if (!response?.data || !Array.isArray(response.data)) {
           throw new Error('Failed to fetch notices: Invalid data format')
         }
-        setNotices(response.data.filter((notice): notice is Notice => 
-          notice && typeof notice === 'object' && 'id' in notice
-        ))
+        setNotices(
+          response.data.filter(
+            (notice): notice is Notice =>
+              notice && typeof notice === 'object' && 'id' in notice
+          )
+        )
       } catch (err) {
+        console.error('Error fetching notices:', err)
         setError((err as Error).message)
-        setNotices([])
+
+        // Fallback dummy data
+        const dummyData: Notice[] = [
+          {
+            id: 1,
+            status: 'published',
+            date_created: '2025-04-01',
+            date_updated: null,
+            title: 'Midterm Exam Schedule Released',
+            info: 'The midterm exams will begin on April 15, 2025.',
+            about: 'exam',
+          },
+          {
+            id: 2,
+            status: 'published',
+            date_created: '2025-04-03',
+            date_updated: null,
+            title: 'Holiday on Ambedkar Jayanti',
+            info: 'College will remain closed on April 14, 2025.',
+            about: 'holiday',
+          },
+          {
+            id: 3,
+            status: 'published',
+            date_created: '2025-04-05',
+            date_updated: null,
+            title: 'Tech Talk: AI in Education',
+            info: 'Join us for an expert talk on the future of AI in the classroom.',
+            about: 'event',
+          },
+        ]
+
+        setNotices(dummyData)
       } finally {
         setLoading(false)
       }
     }
+
     fetchNotices()
   }, [])
-
   useEffect(() => {
     const updateVisibleNoticesCount = () => {
       if (window.innerWidth < 640) {
@@ -90,11 +126,8 @@ const NoticesSection: React.FC = () => {
   if (error) return <p className="text-red-500">Error: {error}</p>
 
   return (
-    <section
-      id="notices"
-      className="bg-white w-full text-black py-10"
-    >
-      <div className="mx-auto container px-4 sm:px-6 lg:px-8">
+    <section id="notices" className="w-full bg-white py-10 text-black">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative mt-10 mb-8 text-center">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-3/4 border-t border-gray-300"></div>

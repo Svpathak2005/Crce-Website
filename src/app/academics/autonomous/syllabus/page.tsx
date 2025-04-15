@@ -1,5 +1,10 @@
+'use server'
+
 import React from 'react'
+import Link from 'next/link'
 import { Zilla_Slab } from 'next/font/google'
+import getSyllabus from '@/app/api/syllabus'
+import type { Syllabus, SyllabusResponse } from '@/app/api/syllabus'
 
 const zilla = Zilla_Slab({
   weight: ['400', '700'],
@@ -8,56 +13,22 @@ const zilla = Zilla_Slab({
   display: 'swap',
 })
 
-const syllabusData = [
-  {
-    name: 'Computer Engineering',
-    years: [
-      { year: 'First Year (FE)', pdf: 'curriculum_FE_FrCRCE-1_CS.pdf' },
-      { year: 'Second Year (SE)', pdf: 'currirulum_SE_FrCRCE-1_CE_v2_AC.pdf' },
-      { year: 'Third Year (TE)', pdf: 'CE_TE_Syallbus_AC_2024-25.pdf' },
-      { year: 'Fourth Year (BE)', pdf: 'CE_BE_Syllabus_AC_2024-25.pdf' },
-    ],
-    mtech: { pdf: 'CE_MTech_Syllabus_2024-25.pdf' },
-  },
-  {
-    name: 'AI & Data Science',
-    years: [
-      { year: 'First Year (FE)', pdf: 'curriculum_FE_FrCRCE_ECS_1.pdf' },
-      { year: 'Second Year (SE)', pdf: 'currirulum_SE_FrCRCE-1_AIDS.pdf' },
-      { year: 'Third Year (TE)', pdf: 'currirulum_TE_FrCRCE-1_AIDS.pdf' },
-      { year: 'Fourth Year (BE)', pdf: 'currirulum_BE_FrCRCE-1_AIDS.pdf' },
-    ],
-  },
-  {
-    name: 'Electronics & Computer Science',
-    years: [
-      { year: 'First Year (FE)', pdf: 'curriculum_FE_FrCRCE_ECS_1.pdf' },
-      { year: 'Second Year (SE)', pdf: 'curriculum_SE_FrCRCE_ECS_1.pdf' },
-      { year: 'Third Year (TE)', pdf: 'currriculum_TE_FrCRCE_ECS_1.pdf' },
-      { year: 'Fourth Year (BE)', pdf: 'curriculum_BE_FrCRCE_ECS_1.pdf' },
-    ],
-  },
-  {
-    name: 'Mechanical Engineering',
-    years: [
-      { year: 'First Year (FE)', pdf: 'currirulum_FY_BTECH_FrCRCE-3_ME.pdf' },
-      { year: 'Second Year (SE)', pdf: 'currirulum_SE_FrCRCE-1_ME.pdf' },
-      { year: 'Third Year (TE)', pdf: 'currirulum_TE_FrCRCE-1_ME.pdf' },
-      { year: 'Fourth Year (BE)', pdf: 'currirulum_BE_FrCRCE-1_ME.pdf' },
-    ],
-    mtech: { pdf: 'currirulum_MTECH_FrCRCE-2_ME.pdf' },
-  },
-]
+interface SyllabusFileDisplay {
+  class: string
+  name: string
+  pdf: string // file ID
+}
 
-const specialCourses = [
-  {
-    name: 'Liberal Learning Courses (LLC)',
-    pdf: 'Liberal_Leanring_Courses_LLC.pdf',
-  },
-  { name: 'Honors/Minors', pdf: 'Curriculum_FrCRCE-Honors_minors.pdf' },
-]
+interface Course {
+  name: string
+  years: SyllabusFileDisplay[]
+}
 
-const SyllabusTable = ({ course }) => (
+interface Props {
+  syllabus: Syllabus[] | null
+}
+
+const SyllabusTable = ({ course }: { course: Course }) => (
   <div className="mb-8 w-full max-w-2xl overflow-hidden rounded-lg shadow-lg">
     <h3
       className={`${zilla.className} bg-blue-600 px-4 py-2 text-xl font-semibold text-white`}
@@ -77,68 +48,15 @@ const SyllabusTable = ({ course }) => (
             key={index}
             className="transition-colors duration-300 hover:bg-gray-50"
           >
-            <td className="border px-4 py-2">{item.year}</td>
+            <td className="border px-4 py-2">{item.class}</td>
             <td className="border px-4 py-2">
               <a
-                href={`/syllabus/${item.pdf}`}
+                href={`${process.env.NEXT_PUBLIC_ASSET_URL || ''}/${item.pdf}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline"
               >
-                View Syllabus
-              </a>
-            </td>
-          </tr>
-        ))}
-        {course.mtech && (
-          <tr className="transition-colors duration-300 hover:bg-gray-50">
-            <td className="border px-4 py-2">M.Tech</td>
-            <td className="border px-4 py-2">
-              <a
-                href={`/syllabus/${course.mtech.pdf}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                View M.Tech Syllabus
-              </a>
-            </td>
-          </tr>
-        )}
-      </tbody>
-    </table>
-  </div>
-)
-
-const SpecialCoursesSection = () => (
-  <div className="mb-8 w-full max-w-2xl overflow-hidden rounded-lg shadow-lg">
-    <h3
-      className={`${zilla.className} bg-green-600 px-4 py-2 text-xl font-semibold text-white`}
-    >
-      Special Courses
-    </h3>
-    <table className="min-w-full bg-white">
-      <thead className="bg-gray-100">
-        <tr>
-          <th className="px-4 py-2 text-left">Course Type</th>
-          <th className="px-4 py-2 text-left">Syllabus</th>
-        </tr>
-      </thead>
-      <tbody>
-        {specialCourses.map((course, index) => (
-          <tr
-            key={index}
-            className="transition-colors duration-300 hover:bg-gray-50"
-          >
-            <td className="border px-4 py-2">{course.name}</td>
-            <td className="border px-4 py-2">
-              <a
-                href={`/syllabus/${course.pdf}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                View Syllabus
+                {item.name}
               </a>
             </td>
           </tr>
@@ -148,7 +66,32 @@ const SpecialCoursesSection = () => (
   </div>
 )
 
-const AutonomousSyllabus = () => {
+const AutonomousSyllabus = ({ syllabus }: Props) => {
+  if (!syllabus || syllabus.length === 0) {
+    return (
+      <div className="mt-10 rounded-lg bg-red-100 px-6 py-8 text-center text-red-800 shadow-md">
+        <h2 className="mb-2 text-2xl font-bold">Oops!</h2>
+        <p className="text-lg">
+          Couldn’t load the syllabus at the moment. Please check back later.
+        </p>
+      </div>
+    )
+  }
+
+  const formattedCourses: Course[] = syllabus.map((s) => {
+    const years: SyllabusFileDisplay[] =
+      s.documents?.map((doc) => ({
+        class: s.class,
+        name: doc.name,
+        pdf: doc.file,
+      })) || []
+
+    return {
+      name: s.class,
+      years,
+    }
+  })
+
   return (
     <div className="flex flex-col items-center justify-center bg-gray-50 px-4 py-10">
       <h2
@@ -157,19 +100,33 @@ const AutonomousSyllabus = () => {
         Autonomous Syllabus
       </h2>
       <p className="mb-8 text-xl text-gray-600">A.Y. 2024-2025 (Autonomous)</p>
-      {syllabusData.map((course, index) => (
-        <SyllabusTable key={index} course={course} />
-      ))}
-      <SpecialCoursesSection />
+      {formattedCourses.length > 0 ? (
+        formattedCourses.map((course, index) => (
+          <SyllabusTable key={index} course={course} />
+        ))
+      ) : (
+        <p className="text-lg text-gray-600">
+          No syllabus files available yet.
+        </p>
+      )}
     </div>
   )
 }
 
-const Page = () => {
+export default async function Page() {
+  let syllabus: Syllabus[] | null = null
+
+  try {
+    const response: SyllabusResponse = await getSyllabus()
+    syllabus = response.data
+  } catch (error) {
+    syllabus = null
+  }
+
   return (
     <div className="flex h-fit w-full flex-col bg-white text-gray-900">
       <div
-        className="flex h-full w-full flex-col justify-center bg-linear-to-br from-[#001f3f] to-[#003366] md:flex-row md:pt-36"
+        className="flex h-full w-full flex-col justify-center bg-gradient-to-br from-[#001f3f] to-[#003366] md:flex-row md:pt-36"
         id="admission"
       >
         <div className="flex w-full flex-col items-center justify-center p-8 pt-40 text-white md:w-2/3 md:p-16 md:pt-16">
@@ -188,9 +145,7 @@ const Page = () => {
           </button>
         </div>
       </div>
-      <AutonomousSyllabus />
+      <AutonomousSyllabus syllabus={syllabus} />
     </div>
   )
 }
-
-export default Page

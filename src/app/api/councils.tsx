@@ -11,7 +11,8 @@ export interface Council {
 }
 
 export default async function getCouncils(): Promise<Council[]> {
-  const url = `http://localhost:8055/items/councils?filter[status][_eq]=published`
+  const baseUrl = process.env.DIRECTUS_URL || 'http://localhost:8055'
+  const url = `${baseUrl}/items/councils?filter[status][_eq]=published`
 
   const response = await fetch(url, { cache: 'no-store' })
   if (!response.ok) {

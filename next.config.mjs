@@ -12,6 +12,12 @@ const nextConfig = {
       {
         hostname: '*', // Allow images from all domains
       },
+      {
+        protocol: 'http',
+        hostname: '65.1.100.135',
+        port: '8055',
+        pathname: '/assets/**',
+      },
     ],
   },
   async headers() {

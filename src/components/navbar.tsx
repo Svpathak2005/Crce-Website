@@ -47,6 +47,7 @@ import {
   CreditCard,
   Images,
   ScrollText,
+  Folder,
 } from 'lucide-react'
 
 interface DropdownItem {
@@ -107,6 +108,11 @@ const dropdownContent: DropdownContent = {
       name: 'Contact Us',
       href: '/about/contact-us',
       icon: <Phone size={18} />,
+    },
+    {
+      name: 'Public File Browser',
+      href: '/folders',
+      icon: <Folder size={18} />,
     },
   ],
   Academics: [
@@ -176,8 +182,8 @@ const dropdownContent: DropdownContent = {
       name: 'Alumni',
       href: 'https://alumni.frcrce.ac.in',
       icon: <UserCheck size={18} />,
-      target: "_blank",
-      rel: "noopener noreferrer"
+      target: '_blank',
+      rel: 'noopener noreferrer',
     },
     {
       name: 'Project Groups',
@@ -318,7 +324,7 @@ const Navbar: React.FC = () => {
     <>
       {/* Desktop Navigation */}
       <nav
-        className={`fixed top-0 z-50 hidden w-full bg-[hsl(224,37%,12%)] opacity-90 font-semibold text-white transition-transform duration-300 ease-in-out md:block ${
+        className={`fixed top-0 z-50 hidden w-full bg-[hsl(224,37%,12%)] font-semibold text-white opacity-90 transition-transform duration-300 ease-in-out lg:block ${
           hasScrolled
             ? visible
               ? 'translate-y-0'
@@ -393,23 +399,23 @@ const Navbar: React.FC = () => {
             <div className="flex w-3/4 flex-col pb-1.5">
               <div className="flex justify-end space-x-6 py-3 text-sm">
                 <Link
-                  href="#news"
+                  href="/#events"
                   className="transition duration-300 hover:text-yellow-300"
                 >
                   News and Events
                 </Link>
                 <Link
-                  href="#notices"
+                  href="/#notices"
                   className="transition duration-300 hover:text-yellow-300"
                 >
                   Notices
                 </Link>
-                <Link
+                {/* <Link
                   href="/careers"
                   className="transition duration-300 hover:text-yellow-300"
                 >
                   Careers
-                </Link>
+                </Link> */}
                 <Link
                   href="/about/contact-us"
                   className="transition duration-300 hover:text-yellow-300"
@@ -435,7 +441,7 @@ const Navbar: React.FC = () => {
       </nav>
       {dropdown && dropdownContent[dropdown] && (
         <div
-          className={`fixed top-[165px] z-50 hidden w-full bg-white text-black shadow-lg transition-all duration-300 ease-out md:block ${
+          className={`fixed top-[165px] z-50 hidden w-full bg-white text-black shadow-lg transition-all duration-300 ease-out lg:block ${
             hasScrolled
               ? visible
                 ? 'md:translate-y-0'
@@ -479,7 +485,7 @@ const Navbar: React.FC = () => {
       )}{' '}
       {/* Mobile Navigation */}
       <nav
-        className={`bg-opacity-90 fixed top-0 z-50 w-full bg-gray-900 font-semibold text-white capitalize transition-transform duration-300 ease-in-out md:hidden ${
+        className={`bg-opacity-90 fixed top-0 z-50 w-full bg-gray-900 font-semibold text-white capitalize transition-transform duration-300 ease-in-out lg:hidden ${
           hasScrolled
             ? visible
               ? 'translate-y-0'
@@ -507,7 +513,7 @@ const Navbar: React.FC = () => {
       </nav>
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-50 transform overflow-y-auto bg-gray-900 text-white capitalize transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed inset-0 z-50 transform overflow-y-auto bg-gray-900 text-white capitalize transition-transform duration-300 ease-in-out lg:hidden ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -544,25 +550,25 @@ const Navbar: React.FC = () => {
           <div className="mt-6 space-y-2">
             <Link
               href="/news"
-              className="block py-2 text-sm hover:text-orange-500"
+              className="block py-2 text-sm "
             >
               News
             </Link>
             <Link
               href="/events"
-              className="block py-2 text-sm hover:text-orange-500"
+              className="block py-2 text-sm "
             >
               Events
             </Link>
             <Link
               href="/careers"
-              className="block py-2 text-sm hover:text-orange-500"
+              className="block py-2 text-sm "
             >
               Work at FrCrce
             </Link>
             <Link
               href="/student-links"
-              className="block py-2 text-sm hover:text-orange-500"
+              className="block py-2 text-sm "
             >
               Student Links
             </Link>
@@ -571,7 +577,7 @@ const Navbar: React.FC = () => {
       </div>
       {/* Mobile Submenu */}
       <div
-        className={`fixed inset-0 z-50 transform overflow-y-auto bg-gray-800 text-white capitalize transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed inset-0 z-50 transform overflow-y-auto bg-gray-800 text-white capitalize transition-transform duration-300 ease-in-out lg:hidden ${
           mobileSubmenu ? 'translate-x-0' : 'translate-x-full'
         }`}
       >

@@ -8,7 +8,7 @@ services:
       MINIO_ROOT_PASSWORD: "Zane123456"
       MINIO_DEFAULT_BUCKETS: "b11, d12"
     volumes:
-      - minio_data:/bitnami/minio/data
+      - crce-website_minio_data:/bitnami/minio/data
     ports:
       - 9000:9000
       - 9001:9001
@@ -36,7 +36,7 @@ services:
       CACHE_TTL: "8 hrs"
       CACHE_SKIP_ALLOWED: "true"
       CORS_ENABLED: "true"
-      CORS_ORIGIN: "http://localhost:3000"
+      CORS_ORIGIN: "http://localhost:9500"
       CORS_METHODS: "GET,POST,PATCH,DELETE,OPTIONS"
       CORS_ALLOWED_HEADERS: "Content-Type,Authorization"
       CORS_EXPOSED_HEADERS: "Content-Range"
@@ -53,22 +53,13 @@ services:
     environment:
       POSTGRES_PASSWORD: zane123456
     volumes:
-      - postgres_data:/bitnami/postgresql
+      - crce-website_postgres_data:/bitnami/postgresql
     ports:
       - 5432:5432
 
-
-  nginx:
-    image: nginx:latest
-    restart: always
-    container_name: nginx-proxy
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-    ports:
-      - 80:80
-    depends_on:
-      - directus
-
 volumes:
-  minio_data:
-  postgres_data:
+  crce-website_minio_data:
+    external: true
+
+  crce-website_postgres_data:
+    external: true

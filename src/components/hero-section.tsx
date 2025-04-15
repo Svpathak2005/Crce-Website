@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { ChevronRight, X } from 'lucide-react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -151,7 +152,7 @@ export default function HeroSection() {
                   <span className="flex pl-2">Faculty Recruitment Advt</span>
                 </motion.button>
                 <motion.button className="group text-md hover:to- w-full rounded-sm bg-gradient-to-r from-white to-gray-100 p-2 font-semibold text-[hsl(225,38%,20%)] shadow-sm duration-100 ease-in-out hover:bg-gradient-to-r hover:from-[hsl(225,38%,20%)] hover:text-white hover:shadow-md focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
-                  <span className="flex pl-2">NIRF</span>
+                  <Link href={"/nirf"} className="flex pl-2">NIRF</Link>
                 </motion.button>
                 <motion.button className="group text-md w-full rounded-sm bg-gradient-to-r from-white to-gray-100 p-2 font-semibold text-[hsl(225,38%,20%)] shadow-sm transition-all duration-100 ease-in-out hover:from-[hsl(225,38%,20%)] hover:to-gray-100 hover:text-white hover:shadow-md focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
                   <span className="flex pl-2">Students Bytes</span>
